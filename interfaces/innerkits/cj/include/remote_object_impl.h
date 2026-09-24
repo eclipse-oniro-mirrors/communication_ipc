@@ -24,7 +24,7 @@
 
 namespace OHOS {
 class CjRemoteObjectImpl : public CjIRemoteObjectImpl {
-    DECL_TYPE(CjRemoteObjectImpl, OHOS::FFI::FFIData)
+    DECL_TYPE(CjRemoteObjectImpl, CjIRemoteObjectImpl)
 public:
     explicit CjRemoteObjectImpl(RemoteObjectHolderImpl* holder);
     ~CjRemoteObjectImpl();

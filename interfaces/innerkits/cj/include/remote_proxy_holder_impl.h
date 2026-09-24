@@ -56,7 +56,7 @@ private:
 };
 
 class RemoteProxyHolderImpl : public CjIRemoteObjectImpl {
-    DECL_TYPE(RemoteProxyHolderImpl, OHOS::FFI::FFIData)
+    DECL_TYPE(RemoteProxyHolderImpl, CjIRemoteObjectImpl)
 public:
     RemoteProxyHolderImpl();
     ~RemoteProxyHolderImpl();
