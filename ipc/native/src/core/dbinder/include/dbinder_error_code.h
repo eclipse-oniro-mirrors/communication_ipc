@@ -38,9 +38,9 @@ public:
     static const int SOCKET_DRIVER_ERROR = 950000608;
 
     static constexpr char DSOFTBUS_DOMAIN[] = "DSOFTBUS";
-    static constexpr char DSOFTBUS_RPC_EVENT_NAME[] = "RPC_BEHAVIOR";
-    static constexpr char DSOFTBUS_RPC_NEGOTIATION_EVENT_NAME[] = "RPC_NEGOTIATION_STATISTIC";
-    static constexpr char DSOFTBUS_RPC_REQUEST_PROC_EVENT_NAME[] = "RPC_REQUEST_PROC_BEHAVIOR";
+    static constexpr char DSOFTBUS_RPC_EVENT_NAME[] = "IPC_BEHAVIOR";
+    static constexpr char DSOFTBUS_RPC_NEGOTIATION_EVENT_NAME[] = "IPC_NEGOTIATION_STATISTIC";
+    static constexpr char DSOFTBUS_RPC_REQUEST_PROC_EVENT_NAME[] = "IPC_REQUEST_PROC_BEHAVIOR";
     static constexpr char DSOFTBUS_RPC_PKG_NAME[] = "DSOFTBUS_RPC";
 
     // 601
