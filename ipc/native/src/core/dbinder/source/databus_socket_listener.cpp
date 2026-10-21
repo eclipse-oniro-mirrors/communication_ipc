@@ -127,7 +127,6 @@ void DatabusSocketListener::ClientOnShutdown(int32_t socket, ShutdownReason reas
         }
     }
     EraseDeviceLock(socketInfo);
-    RemoveSessionName();
     invoker->OnDatabusSessionClientSideClosed(socket);
 }
 
