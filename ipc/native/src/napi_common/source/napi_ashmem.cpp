@@ -148,7 +148,8 @@ napi_value NAPIAshmem::Create(napi_env env, napi_callback_info info)
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     if ((argc != argcExistingAshmem) && (argc != argcAshmem)) {
         ZLOGE(LOG_LABEL, "requires 1 or 2 parameter");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1 or 2, Actual: " + std::to_string(argc));
     }
 
     if (argc == argcExistingAshmem) {
@@ -159,26 +160,28 @@ napi_value NAPIAshmem::Create(napi_env env, napi_callback_info info)
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_string) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: string, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     size_t bufferSize = 0;
     napi_get_value_string_utf8(env, argv[ARGV_INDEX_0], nullptr, 0, &bufferSize);
     if (bufferSize == 0) {
         ZLOGE(LOG_LABEL, "invalid ashmem name");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] cannot be an empty string");
     }
 
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
 
     int32_t ashmemSize = 0;
     napi_get_value_int32(env, argv[ARGV_INDEX_1], &ashmemSize);
     if (ashmemSize <= 0) {
         ZLOGE(LOG_LABEL, "invalid ashmem size");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] must be greater than 0");
     }
 
     return GetAshmemConstructor(env, argv);
@@ -228,13 +231,15 @@ napi_value NAPIAshmem::GetAshmemFromExisting(napi_env env, napi_callback_info in
     napi_instanceof(env, argv[ARGV_INDEX_0], constructor, &isAshmem);
     if (isAshmem == false) {
         ZLOGE(LOG_LABEL, "parameter is not instanceof Ashmem");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: Ashmem, Actual: invalid object");
     }
     NAPIAshmem *napiAshmem = nullptr;
     napi_unwrap(env, argv[ARGV_INDEX_0], (void **)&napiAshmem);
     if (napiAshmem == nullptr) {
         ZLOGE(LOG_LABEL, "napiAshmem is null");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] is an invalid Ashmem object."
+            " The native object is null");
     }
     int32_t fd = napiAshmem->GetAshmem()->GetAshmemFd();
     uint32_t size = (uint32_t)(napiAshmem->GetAshmem()->GetAshmemSize());
@@ -251,13 +256,13 @@ napi_value NAPIAshmem::getNewAshmemConstructor(napi_env env, napi_value& constru
     int dupFd = dup(fd);
     if (dupFd < 0) {
         ZLOGE(LOG_LABEL, "fail to dup fd:%{public}d", dupFd);
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Failed to duplicate file descriptor");
     }
     sptr<Ashmem> newAshmem(new Ashmem(dupFd, size));
     if (newAshmem == nullptr) {
         close(dupFd);
         ZLOGE(LOG_LABEL, "newAshmem is null");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Failed to create Ashmem instance");
     }
 
     napi_value jsAshmem = nullptr;
@@ -319,19 +324,21 @@ napi_value NAPIAshmem::MapTypedAshmem(napi_env env, napi_callback_info info)
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     if (argc != 1) {
         ZLOGE(LOG_LABEL, "requires 1 parameter");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     uint32_t mapType = 0;
     napi_get_value_uint32(env, argv[ARGV_INDEX_0], &mapType);
     if (mapType > MMAP_PROT_MAX) {
         ZLOGE(LOG_LABEL, "napiAshmem mapType error");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] mapType exceeds the maximum allowed value");
     }
     NAPIAshmem *napiAshmem = nullptr;
     napi_unwrap(env, thisVar, (void **)&napiAshmem);
@@ -463,18 +470,21 @@ napi_value NAPIAshmem::ReadAshmem(napi_env env, napi_callback_info info)
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     if (argc != argNum) {
         ZLOGE(LOG_LABEL, "requires 2 parameter");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 2, Actual: " + std::to_string(argc));
     }
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     int64_t size = 0;
     napi_get_value_int64(env, argv[ARGV_INDEX_0], &size);
@@ -559,13 +569,15 @@ napi_value NAPIAshmem::SetProtectionType(napi_env env, napi_callback_info info)
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     if (argc != argNum) {
         ZLOGE(LOG_LABEL, "requires 1 parameter");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     uint32_t protectionType = 0;
     napi_get_value_uint32(env, argv[ARGV_INDEX_0], &protectionType);
@@ -671,7 +683,7 @@ napi_value NAPIAshmem::WriteAshmem(napi_env env, napi_callback_info info)
         napi_has_element(env, argv[ARGV_INDEX_0], i, &hasElement);
         if (!hasElement) {
             ZLOGE(LOG_LABEL, "parameter check error");
-            return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] contains an invalid array element");
         }
 
         napi_value element = nullptr;
@@ -712,24 +724,28 @@ napi_value NAPIAshmem::CheckWriteAshmemParams(napi_env env, size_t argc, napi_va
     size_t argNum = 3;
     if (argc != argNum) {
         ZLOGE(LOG_LABEL, "requires 3 parameter");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 3, Actual: " + std::to_string(argc));
     }
     bool isArray = false;
     napi_is_array(env, argv[ARGV_INDEX_0], &isArray);
     if (!isArray) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: array, Actual: non-array");
     }
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_2], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 4");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        ZLOGE(LOG_LABEL, "type mismatch for parameter 3");
+        return napiErr.ThrowParamError(env, "Parameter error: Param[2] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     return nullptr;
 }
@@ -738,27 +754,31 @@ napi_value NAPIAshmem::CheckWriteToAshmemParams(napi_env env, size_t argc, napi_
 {
     if (argc != ARGV_LENGTH_3) {
         ZLOGE(LOG_LABEL, "requires 3 parameter");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 3, Actual: " + std::to_string(argc));
     }
 
     bool isArrayBuffer = false;
     napi_is_arraybuffer(env, argv[ARGV_INDEX_0], &isArrayBuffer);
     if (!isArrayBuffer) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1, not ArrayBuffer");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: ArrayBuffer, Actual: non-ArrayBuffer");
     }
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
 
     napi_typeof(env, argv[ARGV_INDEX_2], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 3");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[2] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     return nullptr;
 }
@@ -779,7 +799,7 @@ napi_value NAPIAshmem::WriteDataToAshmem(napi_env env, napi_callback_info info)
     napi_status isGet = napi_get_arraybuffer_info(env, argv[ARGV_INDEX_0], (void **)&data, &byteLength);
     if (isGet != napi_ok) {
         ZLOGE(LOG_LABEL, "arraybuffer get info failed");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] is not a valid ArrayBuffer");
     }
 
     int64_t size = 0;
@@ -814,18 +834,21 @@ napi_value NAPIAshmem::CheckReadFromAshmemParams(napi_env env, size_t argc, napi
 {
     if (argc != ARGV_LENGTH_2) {
         ZLOGE(LOG_LABEL, "requires 2 parameter");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 2, Actual: " + std::to_string(argc));
     }
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
-        return napiErr.ThrowError(env, OHOS::errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     return nullptr;
 }

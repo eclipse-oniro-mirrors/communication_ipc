@@ -50,6 +50,7 @@ public:
     NapiError(int32_t errorCode) : errorCode_(errorCode) {};
     napi_value GetError(napi_env& env) const;
     napi_value ThrowError(napi_env& env, int32_t code = -1);
+    napi_value ThrowParamError(napi_env& env, const std::string& msg);
     inline void Error(int32_t errorCode)
     {
         errorCode_ = (errorCode != -1) ? errorCode : errorCode_;
@@ -60,6 +61,21 @@ public:
     };
 
     static napi_value NAPIRpcErrorEnumExport(napi_env env, napi_value exports);
+    static std::string NapiTypeToString(napi_valuetype type)
+    {
+        switch (type) {
+            case napi_undefined: return "undefined";
+            case napi_null: return "null";
+            case napi_boolean: return "boolean";
+            case napi_number: return "number";
+            case napi_string: return "string";
+            case napi_symbol: return "symbol";
+            case napi_object: return "object";
+            case napi_function: return "function";
+            case napi_bigint: return "bigint";
+            default: return "unknown";
+        }
+    }
 private:
     int32_t errorCode_{-1};
     static std::map<int32_t, errorInfo> napiErrMap_;

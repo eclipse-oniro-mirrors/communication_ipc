@@ -68,6 +68,20 @@ napi_value NapiError::ThrowError(napi_env& env, int32_t code)
     return nullptr;
 }
 
+napi_value NapiError::ThrowParamError(napi_env& env, const std::string& msg)
+{
+    napi_value napiCode = nullptr;
+    std::string codeStr = std::to_string(napiErrMap_[CHECK_PARAM_ERROR].errorCode);
+    napi_create_string_utf8(env, codeStr.c_str(), codeStr.size(), &napiCode);
+    napi_value napiMsg = nullptr;
+    napi_create_string_utf8(env, msg.c_str(), msg.size(), &napiMsg);
+    napi_value napiError = nullptr;
+    napi_create_error(env, napiCode, napiMsg, &napiError);
+    ZLOGD(LOG_LABEL, "throw error code:401, msg:%{public}s", msg.c_str());
+    napi_throw(env, napiError);
+    return nullptr;
+}
+
 napi_value EnumClassConstructor(napi_env env, napi_callback_info info)
 {
     size_t argc = 0;
