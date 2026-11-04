@@ -60,6 +60,8 @@ pub mod ffi {
         fn SetCallingIdentity(identity: &str) -> bool;
 
         fn IsHandlingTransaction() -> bool;
+
+        fn GetCallingAppUid() -> u64;
     }
 }
 
@@ -155,5 +157,9 @@ impl Skeleton {
     /// Sets calling identity.
     pub fn set_calling_identity(identity: &str) -> bool {
         SetCallingIdentity(identity)
+    }
+
+    pub fn calling_app_uid() -> u64 {
+        GetCallingAppUid()
     }
 }

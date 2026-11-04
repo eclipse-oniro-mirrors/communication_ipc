@@ -270,6 +270,13 @@ public:
     static pid_t GetDCallingUid();
 
     static std::optional<bool> HasSoUnreleasedRemoteObject(const std::unordered_set<std::string> &targets);
+
+    /**
+     * @brief Get calling application user id of caller.
+     * @return Returns the application UID of the caller; Returns a invalid value -1 in the rpc context.
+     * @since 26.0.0
+     */
+    static pid_t GetCallingAppUid();
 };
 
 class IPCDfx {

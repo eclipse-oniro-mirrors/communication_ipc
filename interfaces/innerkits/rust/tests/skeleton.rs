@@ -117,6 +117,7 @@ fn skeleton() {
         assert_eq!(Skeleton::calling_real_pid(), GetCallingRealPid());
         assert_eq!(Skeleton::calling_token_id(), GetCallingTokenID());
         assert_eq!(Skeleton::calling_uid(), GetCallingUid());
+        assert_eq!(Skeleton::calling_app_uid(), GetCallingAppUid());
         assert_eq!(Skeleton::first_full_token_id(), GetFirstFullTokenID());
         assert_eq!(Skeleton::first_token_id(), GetFirstTokenID());
         assert_eq!(Skeleton::self_token_id(), SelfTokenID());
@@ -151,6 +152,7 @@ extern "C" {
     fn GetCallingRealPid() -> u64;
     fn GetCallingTokenID() -> u32;
     fn GetCallingUid() -> u64;
+    fn GetCallingAppUid() -> u64;
     fn GetFirstFullTokenID() -> u64;
     fn GetFirstTokenID() -> u32;
     fn SelfTokenID() -> u64;

@@ -213,6 +213,10 @@ uint64_t GetCallingUid()
 {
     return IPCSkeleton::GetCallingUid();
 }
+uint64_t GetCallingAppUid()
+{
+    return IPCSkeleton::GetCallingAppUid();
+}
 uint64_t GetFirstFullTokenID()
 {
     return IPCSkeleton::GetFirstFullTokenID();
