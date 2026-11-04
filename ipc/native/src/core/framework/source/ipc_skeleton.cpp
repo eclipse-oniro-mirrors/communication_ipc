@@ -417,5 +417,8 @@ bool IPCDfx::SetIPCProxyLimit(uint64_t num, IPCProxyLimitCallback callback)
     return false;
 }
 
-
+pid_t IPCSkeleton::GetCallingAppUid()
+{
+    return IPCSkeleton::GetCallingUid();
+}
 } // namespace OHOS

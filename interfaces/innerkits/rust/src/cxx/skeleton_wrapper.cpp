@@ -127,5 +127,9 @@ bool IsHandlingTransaction()
     return false;
 }
 
+uint64_t GetCallingAppUid()
+{
+    return OHOS::IPCSkeleton::GetCallingAppUid();
+}
 } // namespace IpcRust
 } // namespace OHOS

@@ -46,6 +46,7 @@ uint64_t GetCallingPid();
 uint64_t GetCallingRealPid();
 uint32_t GetCallingTokenID();
 uint64_t GetCallingUid();
+uint64_t GetCallingAppUid();
 uint64_t GetFirstFullTokenID();
 uint32_t GetFirstTokenID();
 uint64_t SelfTokenID();

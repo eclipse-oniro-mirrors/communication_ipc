@@ -60,6 +60,7 @@ bool SetCallingIdentity(rust::str identity);
 
 bool IsHandlingTransaction();
 
+uint64_t GetCallingAppUid();
 } // namespace IpcRust
 } // namespace OHOS
 
