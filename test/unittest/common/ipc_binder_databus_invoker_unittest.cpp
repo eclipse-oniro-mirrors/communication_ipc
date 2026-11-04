@@ -792,7 +792,7 @@ HWTEST_F(IPCDbinderDataBusInvokerTest, SetCallingIdentityTest002, TestSize.Level
     uint64_t testCallerTokenID = 1;
     std::string testCallerDeviceID(DEVICEID_LENGTH_TEST, 'a');
     pid_t testCallerPid = getpid();
-    pid_t testCallerUid = getuid();
+    pid_t testCallerUid = getappuid();
 
     std::stringstream ss;
     ss << std::setw(DBinderDatabusInvoker::ACCESS_TOKEN_MAX_LEN) << std::setfill('0') << testCallerTokenID;

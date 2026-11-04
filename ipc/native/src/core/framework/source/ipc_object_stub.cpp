@@ -366,7 +366,7 @@ int IPCObjectStub::DBinderGetPidUid(uint32_t code, MessageParcel &data, MessageP
         return IPC_STUB_INVALID_DATA_ERR;
     }
 
-    if (!reply.WriteUint32(getpid()) || !reply.WriteUint32(getuid())) {
+    if (!reply.WriteUint32(getpid()) || !reply.WriteUint32(getappuid())) {
         ZLOGE(LABEL, "write to parcel fail");
         return IPC_STUB_INVALID_DATA_ERR;
     }

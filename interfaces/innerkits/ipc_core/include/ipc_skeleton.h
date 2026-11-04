@@ -72,6 +72,7 @@ public:
     /**
      * @brief Get calling user id of caller.
      * @return Returns the UID of the caller; Returns a invalid value -1 in the rpc context.
+     * @note To get the application UID of the caller, use {@link GetCallingAppUid()}.
      * @since 9
      */
     static pid_t GetCallingUid();
@@ -274,7 +275,7 @@ public:
     /**
      * @brief Get calling application user id of caller.
      * @return Returns the application UID of the caller; Returns a invalid value -1 in the rpc context.
-     * @since 26.0.0
+     * @since 26.1.0
      */
     static pid_t GetCallingAppUid();
 };

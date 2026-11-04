@@ -143,7 +143,7 @@ pid_t IPCSkeleton::GetCallingUid()
     if (invoker != nullptr) {
         return invoker->GetCallerUid();
     }
-    return getuid();
+    return getappuid();
 }
 // LCOV_EXCL_STOP
 

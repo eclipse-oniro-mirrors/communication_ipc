@@ -190,7 +190,7 @@ bool DBinderRemoteListener::StartListener()
 {
     DBINDER_LOGI(LOG_LABEL, "create socket server");
     int pid = static_cast<int>(getpid());
-    int uid = static_cast<int>(getuid());
+    int uid = static_cast<int>(getappuid());
 
     int32_t ret = DBinderSoftbusClient::GetInstance().DBinderGrantPermission(uid, pid, OWN_SESSION_NAME);
     if (ret != ERR_NONE) {

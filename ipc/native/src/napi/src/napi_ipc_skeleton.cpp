@@ -215,7 +215,7 @@ napi_value NAPI_IPCSkeleton_resetCallingIdentity(napi_env env, napi_callback_inf
     if (isLocalCalling) {
         int64_t identity = (static_cast<uint64_t>(callerUid) << PID_LEN) | static_cast<uint64_t>(callerPid);
         callerPid = getpid();
-        callerUid = getuid();
+        callerUid = getappuid();
         napi_value newCallingPid;
         napi_create_int32(env, callerPid, &newCallingPid);
         napi_set_named_property(env, global, "callingPid_", newCallingPid);
@@ -240,7 +240,7 @@ napi_value NAPI_IPCSkeleton_resetCallingIdentity(napi_env env, napi_callback_inf
         std::string token = std::to_string(((static_cast<uint64_t>(callerUid) << PID_LEN)
             | static_cast<uint64_t>(callerPid)));
         std::string identity = callerDeviceID + token;
-        callerUid = getuid();
+        callerUid = getappuid();
         napi_value newCallingUid;
         napi_create_uint32(env, callerUid, &newCallingUid);
         napi_set_named_property(env, global, "callingUid_", newCallingUid);

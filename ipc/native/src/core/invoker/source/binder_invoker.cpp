@@ -84,7 +84,7 @@ enum {
 
 BinderInvoker::BinderInvoker()
     : isMainWorkThread(false), stopWorkThread(false), callerPid_(getpid()),
-    callerRealPid_(getprocpid()), callerUid_(getuid()),
+    callerRealPid_(getprocpid()), callerUid_(getappuid()),
     callerTokenID_(0), firstTokenID_(0),
 #ifdef CALLING_USER_INFO_ENABLED
     callerUserId_(0),
@@ -1669,7 +1669,7 @@ uint64_t BinderInvoker::GetSelfTokenID() const
         return 0;
     }
     uint64_t selfTokenId = binderConnector_->GetSelfTokenID();
-    return (selfTokenId == 0) ? static_cast<uint64_t>(getuid()) : selfTokenId;
+    return (selfTokenId == 0) ? static_cast<uint64_t>(getappuid()) : selfTokenId;
 }
 // LCOV_EXCL_STOP
 
@@ -1680,7 +1680,7 @@ uint64_t BinderInvoker::GetSelfFirstCallerTokenID() const
         return 0;
     }
     uint64_t selfFirstCallerTokenId = binderConnector_->GetSelfFirstCallerTokenID();
-    return (selfFirstCallerTokenId == 0) ? static_cast<uint32_t>(getuid()) : selfFirstCallerTokenId;
+    return (selfFirstCallerTokenId == 0) ? static_cast<uint32_t>(getappuid()) : selfFirstCallerTokenId;
 }
 // LCOV_EXCL_STOP
 
@@ -1862,7 +1862,7 @@ std::string BinderInvoker::ResetCallingIdentity()
     std::string realPid(buf);
     std::string pidUid = std::to_string(((static_cast<uint64_t>(tempUid) << PID_LEN)
         | static_cast<uint64_t>(tempPid)));
-    callerUid_ = static_cast<pid_t>(getuid());
+    callerUid_ = static_cast<pid_t>(getappuid());
     callerPid_ = getpid();
     callerRealPid_ = getprocpid();
     callerTokenID_ = GetSelfTokenID();

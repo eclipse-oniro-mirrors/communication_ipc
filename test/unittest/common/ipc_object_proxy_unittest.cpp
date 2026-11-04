@@ -138,7 +138,7 @@ HWTEST_F(IPCObjectProxyTest, GetGrantedSessionNameTest001, TestSize.Level1)
 HWTEST_F(IPCObjectProxyTest, GetSessionNameForPidUidTest001, TestSize.Level1)
 {
     IPCObjectProxy object(1);
-    std::string ret = object.GetSessionNameForPidUid(getuid(), getpid());
+    std::string ret = object.GetSessionNameForPidUid(getappuid(), getpid());
     ASSERT_TRUE(ret.size() == 0);
 }
 

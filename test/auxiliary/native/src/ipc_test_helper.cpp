@@ -349,7 +349,7 @@ pid_t IPCTestHelper::GetPid()
 
 uid_t IPCTestHelper::GetUid()
 {
-    uid_t uid = getuid();
+    uid_t uid = getappuid();
     ZLOGI(LABEL, "Return uid = %{public}d", uid);
     return uid;
 }

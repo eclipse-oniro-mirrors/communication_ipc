@@ -33,7 +33,7 @@ namespace OHOS {
 using namespace OHOS::HiviewDFX;
 
 DBinderDatabusInvoker::DBinderDatabusInvoker()
-    : stopWorkThread_(false), callerPid_(getpid()), callerUid_(getuid()), callerDeviceID_(""),
+    : stopWorkThread_(false), callerPid_(getpid()), callerUid_(getappuid()), callerDeviceID_(""),
     callerTokenID_(0), firstTokenID_(0), status_(0)
 {
 }
@@ -1006,7 +1006,7 @@ std::string DBinderDatabusInvoker::ResetCallingIdentity()
         return "";
     }
     std::string accessToken(buf);
-    callerUid_ = (pid_t)getuid();
+    callerUid_ = (pid_t)getappuid();
     callerPid_ = getpid();
     callerDeviceID_ = GetLocalDeviceID();
     callerTokenID_ = GetSelfTokenID();
