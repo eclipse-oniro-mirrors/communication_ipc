@@ -93,7 +93,6 @@ void BrokerRegistration::Unregister(const std::u16string &descriptor)
     if (it != creators_.end()) {
         creators_.erase(it);
     }
-
     std::set<std::string> printedSoNames;
     for (auto iter = objects_.begin(); iter != objects_.end();) {
         std::string soPath = GetObjectSoPath(iter->first);
@@ -111,17 +110,16 @@ void BrokerRegistration::Unregister(const std::u16string &descriptor)
         }
         iter++;
     }
-
     if (printedSoNames.empty()) {
         return;
     }
-
     size_t totalSize = 0;
     for (const auto &name : printedSoNames) {
         totalSize += name.size();
     }
     std::string soNameList;
-    soNameList.reserve(totalSize + (printedSoNames.size() -1 ) * 2);
+    constexpr size_t SEPARATOR_LEN = 2;
+    soNameList.reserve(totalSize + (printedSoNames.size() -1) * SEPARATOR_LEN);
     for (const auto &name : printedSoNames) {
         if (!soNameList.empty()) {
             soNameList += ", ";
