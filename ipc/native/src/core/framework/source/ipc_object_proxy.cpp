@@ -584,9 +584,11 @@ void IPCObjectProxy::SendObituary()
     }
     {
         std::shared_lock<std::shared_mutex> lockGuard(descMutex_);
-        // hd is handle, ct is count, D is desc
-        ZLOGI_SENDOBITUARY(LABEL, "hd:%{public}d ct:%{public}zu D:%{public}s", handle_, toBeReport.size(),
-            remoteDescriptor_.c_str());
+        if (!remoteDescriptor_.empty()) {
+            // hd is handle, ct is count, D is desc
+            ZLOGI_SENDOBITUARY(LABEL, "hd:%{public}d ct:%{public}zu D:%{public}s", handle_,
+                toBeReport.size(), remoteDescriptor_.c_str());       
+        }
     }
 #ifndef CONFIG_IPC_SINGLE
     if (handle_ < IPCProcessSkeleton::DBINDER_HANDLE_BASE) {
@@ -755,8 +757,11 @@ void IPCObjectProxy::SendRefreshObituary()
     }
     {
         std::shared_lock<std::shared_mutex> lockGuard(descMutex_);
-        // hd is handle, ct is count
-        ZLOGI_SENDOBITUARY(LABEL, "hd:%{public}d ct:%{public}zu", handle_, toBeReport.size());
+        if (!remoteDescriptor_.empty()) {
+            // hd is handle, ct is count, D is desc
+            ZLOGI_SENDOBITUARY(LABEL, "hd:%{public}d ct:%{public}zu D:%{public}s", handle_,
+                toBeReport.size(), remoteDescriptor_.c_str());       
+        }
     }
     
     for (auto iter = toBeReport.begin(); iter != toBeReport.end(); iter++) {
