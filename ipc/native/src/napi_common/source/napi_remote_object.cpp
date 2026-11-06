@@ -58,17 +58,20 @@ static const uint64_t HITRACE_TAG_RPC = (1ULL << 46); // RPC and IPC tag.
 static std::atomic<int32_t> bytraceId = 1000;
 static NapiError napiErr;
 
-static bool IsValidParamWithNotify(napi_value value, CallbackParam *param, const char *errDesc)
+static bool IsValidParamWithNotify(napi_value value, CallbackParam *param, const char *errDesc,
+    bool notifyFlag = true)
 {
-    if (value == nullptr) {
-        ZLOGE(LOG_LABEL, "%{public}s", errDesc);
-        param->result = IPC_INVALID_PARAM_ERR;
+    if (value != nullptr) {
+        return true;
+    }
+    if (notifyFlag) {
         std::unique_lock<std::mutex> lock(param->lockInfo->mutex);
+        param->result = IPC_INVALID_PARAM_ERR;
         param->lockInfo->ready = true;
         param->lockInfo->condition.notify_all();
-        return false;
     }
-    return true;
+    ZLOGE(LOG_LABEL, "%{public}s", errDesc);
+    return false;
 }
 
 enum class OnRemoteRequestType {
@@ -81,7 +84,7 @@ static bool GetJsOnRemoteRequestCallback(CallbackParam *param, const napi_value 
     OnRemoteRequestType &requestType)
 {
     napi_get_named_property(param->env, thisVar, "onRemoteMessageRequest", &onRemoteRequest);
-    if (IsValidParamWithNotify(onRemoteRequest, param, "get function onRemoteMessageRequest failed")) {
+    if (IsValidParamWithNotify(onRemoteRequest, param, "get function onRemoteMessageRequest failed", false)) {
         napi_valuetype type = napi_undefined;
         napi_typeof(param->env, onRemoteRequest, &type);
         if (type == napi_function) {
@@ -98,7 +101,7 @@ static bool GetJsOnRemoteRequestCallback(CallbackParam *param, const napi_value 
     }
 
     napi_get_named_property(param->env, thisVar, "onRemoteRequest", &onRemoteRequest);
-    if (IsValidParamWithNotify(onRemoteRequest, param, "get function onRemoteRequest failed")) {
+    if (IsValidParamWithNotify(onRemoteRequest, param, "get function onRemoteMessageRequest failed", false)) {
         napi_valuetype type = napi_undefined;
         napi_typeof(param->env, onRemoteRequest, &type);
         if (type == napi_function) {
