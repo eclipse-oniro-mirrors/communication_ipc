@@ -587,7 +587,7 @@ void IPCObjectProxy::SendObituary()
         if (!remoteDescriptor_.empty()) {
             // hd is handle, ct is count, D is desc
             ZLOGI_SENDOBITUARY(LABEL, "hd:%{public}d ct:%{public}zu D:%{public}s", handle_,
-                toBeReport.size(), remoteDescriptor_.c_str());       
+                toBeReport.size(), remoteDescriptor_.c_str());
         }
     }
 #ifndef CONFIG_IPC_SINGLE
@@ -760,7 +760,7 @@ void IPCObjectProxy::SendRefreshObituary()
         if (!remoteDescriptor_.empty()) {
             // hd is handle, ct is count, D is desc
             ZLOGI_SENDOBITUARY(LABEL, "hd:%{public}d ct:%{public}zu D:%{public}s", handle_,
-                toBeReport.size(), remoteDescriptor_.c_str());       
+                toBeReport.size(), remoteDescriptor_.c_str());
         }
     }
     
