@@ -1787,10 +1787,10 @@ std::string IPCProcessSkeleton::GetUndestroyObject(const std::unordered_set<std:
         
         std::string descriptor = Str16ToStr8(it.second);
         result = soName + "-%-" + descriptor;
-        ZLOGI(LOG_LABEL, "result = %{public}s", result.c_str());
+        ZLOGD(LOG_LABEL, "result = %{public}s", result.c_str());
         return result;
     }
-    ZLOGI(LOG_LABEL, "result = %{public}s", result.c_str());
+    ZLOGD(LOG_LABEL, "result = %{public}s", result.c_str());
     return result;
 }
 #ifdef CONFIG_IPC_SINGLE
