@@ -95,16 +95,12 @@ void BrokerRegistration::Unregister(const std::u16string &descriptor)
     }
 
     std::set<std::string> printedSoNames;
-
     for (auto iter = objects_.begin(); iter != objects_.end();) {
         std::string soPath = GetObjectSoPath(iter->first);
         if (soPath.empty() || (soPath != iter->second)) {
             size_t pos = iter->second.find_last_of('/');
             std::string soName = (pos != std::string::npos) ? iter->second.substr(pos + 1) : iter->second;
-            if (printedSoNames.find(soName) == printedSoNames.end()) {
-                ZLOGW(LABEL, "%{public}s is dlclosed", soName.c_str());
-                printedSoNames.insert(soName);
-            }
+            printedSoNames.insert(soName);
             iter = objects_.erase(iter);
             continue;
         }
@@ -115,6 +111,24 @@ void BrokerRegistration::Unregister(const std::u16string &descriptor)
         }
         iter++;
     }
+
+    if (printedSoNames.empty()) {
+        return;
+    }
+
+    size_t totalSize = 0;
+    for (const auto &name : printedSoNames) {
+        totalSize += name.size();
+    }
+    std::string soNameList;
+    soNameList.reserve(totalSize + (printedSoNames.size() -1 ) * 2);
+    for (const auto &name : printedSoNames) {
+        if (!soNameList.empty()) {
+            soNameList += ", ";
+        }
+        soNameList += name;
+    }
+    ZLOGW(LABEL, "dlclosed so lise:%{public}s", soNameList.c_str());
 }
 
 sptr<IRemoteBroker> BrokerRegistration::NewInstance(const std::u16string &descriptor, const sptr<IRemoteObject> &object)
