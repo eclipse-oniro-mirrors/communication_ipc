@@ -1056,6 +1056,87 @@ HWTEST_F(IPCSkeletonTest, GetDCallingUidInRPC, TestSize.Level1)
     ASSERT_EQ(uid, 1000);
 }
 
+/**
+ * @tc.name: GetDCallingAppUidInIPC
+ * @tc.desc: Verify the GetDCallingAppUid function in IPC context.
+ * @tc.type: FUNC
+ */
+HWTEST_F(IPCSkeletonTest, GetDCallingAppUidInIPC, TestSize.Level1)
+{
+    IPCThreadSkeleton *current = IPCThreadSkeleton::GetCurrent();
+    ASSERT_NE(current, nullptr);
+    MockIRemoteInvoker *binderInvoker = new (std::nothrow) MockIRemoteInvoker();
+    ASSERT_NE(binderInvoker, nullptr);
+    MockIRemoteInvoker *dbinderInvoker = new (std::nothrow) MockIRemoteInvoker();
+    if (dbinderInvoker == nullptr) {
+        delete binderInvoker;
+        binderInvoker = nullptr;
+        FAIL() << "dbinderInvoker new fail";
+    }
+
+    current->invokers_[IRemoteObject::IF_PROT_DEFAULT] = binderInvoker;
+    current->invokers_[IRemoteObject::IF_PROT_DATABUS] = dbinderInvoker;
+
+    EXPECT_CALL(*binderInvoker, GetStatus())
+        .WillRepeatedly(testing::Return(IRemoteInvoker::ACTIVE_INVOKER));
+
+    EXPECT_CALL(*dbinderInvoker, GetStatus())
+        .WillRepeatedly(testing::Return(IRemoteInvoker::IDLE_INVOKER));
+
+    EXPECT_CALL(*binderInvoker, IsLocalCalling())
+        .WillRepeatedly(testing::Return(true));
+
+    pid_t appUid = IPCSkeleton::GetDCallingAppUid();
+
+    std::fill(current->invokers_, current->invokers_ + IPCThreadSkeleton::INVOKER_MAX_COUNT, nullptr);
+    delete binderInvoker;
+    delete dbinderInvoker;
+
+    ASSERT_EQ(appUid, -1);
+}
+
+/**
+ * @tc.name: GetDCallingAppUidInRPC
+ * @tc.desc: Verify the GetDCallingAppUid function in RPC context.
+ * @tc.type: FUNC
+ */
+HWTEST_F(IPCSkeletonTest, GetDCallingAppUidInRPC, TestSize.Level1)
+{
+    IPCThreadSkeleton *current = IPCThreadSkeleton::GetCurrent();
+    ASSERT_NE(current, nullptr);
+    MockIRemoteInvoker *binderInvoker = new (std::nothrow) MockIRemoteInvoker();
+    ASSERT_NE(binderInvoker, nullptr);
+    MockIRemoteInvoker *dbinderInvoker = new (std::nothrow) MockIRemoteInvoker();
+    if (dbinderInvoker == nullptr) {
+        delete binderInvoker;
+        binderInvoker = nullptr;
+        FAIL() << "dbinderInvoker new fail";
+    }
+
+    current->invokers_[IRemoteObject::IF_PROT_DEFAULT] = binderInvoker;
+    current->invokers_[IRemoteObject::IF_PROT_DATABUS] = dbinderInvoker;
+
+    EXPECT_CALL(*binderInvoker, GetStatus())
+        .WillRepeatedly(testing::Return(IRemoteInvoker::IDLE_INVOKER));
+
+    EXPECT_CALL(*dbinderInvoker, GetStatus())
+        .WillRepeatedly(testing::Return(IRemoteInvoker::ACTIVE_INVOKER));
+
+    EXPECT_CALL(*dbinderInvoker, IsLocalCalling())
+        .WillRepeatedly(testing::Return(false));
+
+    EXPECT_CALL(*dbinderInvoker, GetCallerUid())
+        .WillRepeatedly(testing::Return(1000));
+
+    pid_t appUid = IPCSkeleton::GetDCallingAppUid();
+
+    std::fill(current->invokers_, current->invokers_ + IPCThreadSkeleton::INVOKER_MAX_COUNT, nullptr);
+    delete binderInvoker;
+    delete dbinderInvoker;
+
+    ASSERT_EQ(appUid, 1000);
+}
+
 #ifdef FREEZE_PROCESS_ENABLED
 /**
  * @tc.name: FreezeProcessTest
