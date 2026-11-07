@@ -265,6 +265,7 @@ public:
      * @return Returns the UID of caller in the rpc context; Returns a invalid value -1 in the ipc context.
      * In the rpc context, the UID from the peer device is not trusted, it is not recommended to use it for
      * permission verification, if the business requires it, you must ensure cross-device security mechanisms yourself.
+     * @note To get the application UID of the caller, use {@link GetDCallingAppUid()}.
      * @since 26.0.0
      */
     static pid_t GetDCallingUid();
@@ -277,6 +278,15 @@ public:
      * @since 26.0.0
      */
     static pid_t GetCallingAppUid();
+
+    /**
+     * @brief Get calling application user id of caller on the peer device.
+     * @return Returns the application UID of caller in the rpc context; Returns a invalid value -1 in the ipc context.
+     * In the rpc context, the UID from the peer device is not trusted, it is not recommended to use it for
+     * permission verification, if the business requires it, you must ensure cross-device security mechanisms yourself.
+     * @since 26.1.0
+     */
+    static pid_t GetDCallingAppUid();
 };
 
 class IPCDfx {

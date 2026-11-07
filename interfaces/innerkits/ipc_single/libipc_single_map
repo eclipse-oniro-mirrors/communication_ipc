@@ -132,6 +132,7 @@
             "OHOS::IPCSkeleton::GetDCallingTokenID()";
             "OHOS::IPCSkeleton::GetDCallingUid()";
             "OHOS::IPCSkeleton::GetCallingAppUid()";
+            "OHOS::IPCSkeleton::GetDCallingAppUid()";
             "OHOS::IPCPayloadStatistics::StartStatistics()";
             "OHOS::IPCPayloadStatistics::StopStatistics()";
             "OHOS::IPCPayloadStatistics::GetTotalCount()";
