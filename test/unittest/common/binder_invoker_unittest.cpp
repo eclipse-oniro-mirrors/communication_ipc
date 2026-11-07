@@ -91,7 +91,7 @@ HWTEST_F(BinderInvokerUnitTest, SetCallingIdentityTest003, TestSize.Level1)
     uint64_t testCallerTokenID = 1;
     pid_t testCallerRealPid = 1;
     pid_t testCallerPid = getpid();
-    pid_t testCallerUid = getuid();
+    pid_t testCallerUid = getappuid();
 
     std::stringstream ss;
     ss << testCallerSid << "<";

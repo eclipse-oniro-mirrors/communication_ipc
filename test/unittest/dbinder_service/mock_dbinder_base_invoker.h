@@ -96,7 +96,7 @@ private:
 };
 
 MockDBinderBaseInvoker::MockDBinderBaseInvoker()
-    : callerPid_(getpid()), callerUid_(getuid()), callerDeviceID_(""),
+    : callerPid_(getpid()), callerUid_(getappuid()), callerDeviceID_(""),
     callerTokenID_(0), firstTokenID_(0), status_(0)
 {
 }

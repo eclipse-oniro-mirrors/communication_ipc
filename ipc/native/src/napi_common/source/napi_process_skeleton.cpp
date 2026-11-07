@@ -54,7 +54,7 @@ napi_value NAPI_getCallingUid(napi_env env, napi_callback_info info)
             return callingUid;
         }
     }
-    uint32_t uid = getuid();
+    uint32_t uid = getappuid();
     napi_value result = nullptr;
     napi_create_int32(env, static_cast<int32_t>(uid), &result);
     return result;

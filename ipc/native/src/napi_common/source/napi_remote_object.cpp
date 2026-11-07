@@ -877,7 +877,7 @@ void NAPI_RemoteObject_getCallingInfo(CallingInfo &newCallingInfoParam)
         newCallingInfoParam.activeStatus = IRemoteInvoker::ACTIVE_INVOKER;
     } else {
         newCallingInfoParam.callingPid = getpid();
-        newCallingInfoParam.callingUid = getuid();
+        newCallingInfoParam.callingUid = getappuid();
         newCallingInfoParam.callingTokenId = static_cast<uint32_t>(IPCSkeleton::GetSelfTokenID());
         newCallingInfoParam.activeStatus = IRemoteInvoker::IDLE_INVOKER;
     }
