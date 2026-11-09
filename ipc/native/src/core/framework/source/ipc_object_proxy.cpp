@@ -207,7 +207,7 @@ int IPCObjectProxy::SendRequest(uint32_t code, MessageParcel &data, MessageParce
 #endif
     auto timeInterval = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - beginTime).count();
     if (timeInterval > SEND_REQUEST_TIMEOUT) {
-        ZLOGW(LABEL, "DFX_BlockMonitor cost %{public}lld ms, code:%{public}u, desc:%{public}s", timeInterval,
+        ZLOGW_NOFUNC(LABEL, "proxy cost %{public}lld ms, code:%{public}u, desc:%{public}s", timeInterval,
             code, desc.c_str());
     }
     return err;
@@ -586,7 +586,7 @@ void IPCObjectProxy::SendObituary()
         std::shared_lock<std::shared_mutex> lockGuard(descMutex_);
         if (!remoteDescriptor_.empty()) {
             // hd is handle, ct is count, D is desc
-            ZLOGI_SENDOBITUARY(LABEL, "hd:%{public}d ct:%{public}zu D:%{public}s", handle_,
+            ZLOGI_NOFUNC(LABEL, "hd:%{public}d ct:%{public}zu D:%{public}s", handle_,
                 toBeReport.size(), remoteDescriptor_.c_str());
         }
     }
@@ -609,7 +609,7 @@ void IPCObjectProxy::SendObituary()
     }
     for (auto iter = toBeReport.begin(); iter != toBeReport.end(); iter++) {
         if ((*iter)->IsDlclosed()) {
-            ZLOGE(LABEL, "so has been dlclosed, sopath:%{public}s", (*iter)->soPath_.c_str());
+            ZLOGE_NOFUNC(LABEL, "so has been dlclosed, sopath:%{public}s", (*iter)->soPath_.c_str());
             continue;
         }
         sptr<DeathRecipient> recipient = (*iter)->recipient_;
@@ -759,14 +759,14 @@ void IPCObjectProxy::SendRefreshObituary()
         std::shared_lock<std::shared_mutex> lockGuard(descMutex_);
         if (!remoteDescriptor_.empty()) {
             // hd is handle, ct is count, D is desc
-            ZLOGI_SENDOBITUARY(LABEL, "hd:%{public}d ct:%{public}zu D:%{public}s", handle_,
+            ZLOGI_NOFUNC(LABEL, "RefreshObituary, hd:%{public}d ct:%{public}zu D:%{public}s", handle_,
                 toBeReport.size(), remoteDescriptor_.c_str());
         }
     }
     
     for (auto iter = toBeReport.begin(); iter != toBeReport.end(); iter++) {
         if ((*iter)->IsDlclosed()) {
-            ZLOGE(LABEL, "so has been dlclosed, sopath:%{public}s", (*iter)->soPath_.c_str());
+            ZLOGE_NOFUNC(LABEL, "RefreshObituary, so has been dlclosed, sopath:%{public}s", (*iter)->soPath_.c_str());
             continue;
         }
         sptr<RefreshRecipient> recipient = (*iter)->recipient_;

@@ -416,7 +416,7 @@ int IPCObjectStub::SendRequestInner(uint32_t code, MessageParcel &data, MessageP
     uint32_t duration = static_cast<uint32_t>(std::chrono::duration_cast<std::chrono::microseconds>(
         finish - start).count());
     if (duration >= IPC_CMD_PROCESS_WARN_TIME) {
-        ZLOGW(LABEL, "Stub(desc:%{public}s) code:%{public}u cost:%{public}ums", remoteDescriptor_.c_str(), code,
+        ZLOGW_NOFUNC(LABEL, "Stub(desc:%{public}s) code:%{public}u cost:%{public}ums", remoteDescriptor_.c_str(), code,
             duration / COEFF_MILLI_TO_MICRO);
         if (duration >= IPC_CMD_PROCESS_DFX_REPORT_TIME) {
             DfxReportRequestProcEvent(remoteDescriptor_.c_str(), static_cast<int32_t>(duration / COEFF_MILLI_TO_MICRO),

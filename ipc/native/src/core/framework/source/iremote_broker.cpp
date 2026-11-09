@@ -120,7 +120,7 @@ void BrokerRegistration::Unregister(const std::u16string &descriptor)
         }
         soNameList += name;
     }
-    ZLOGW(LABEL, "dlclosed so list:%{public}s", soNameList.c_str());
+    ZLOGW_NOFUNC(LABEL, "dlclosed so list:%{public}s", soNameList.c_str());
 }
 
 sptr<IRemoteBroker> BrokerRegistration::NewInstance(const std::u16string &descriptor, const sptr<IRemoteObject> &object)
