@@ -106,27 +106,21 @@ void BrokerRegistration::Unregister(const std::u16string &descriptor)
         const BrokerDelegatorBase *object = reinterpret_cast<BrokerDelegatorBase *>(iter->first);
         if (object->descriptor_ == descriptor) {
             objects_.erase(iter);
-            return;
+            break;
         }
         iter++;
     }
     if (printedSoNames.empty()) {
         return;
     }
-    size_t totalSize = 0;
-    for (const auto &name : printedSoNames) {
-        totalSize += name.size();
-    }
     std::string soNameList;
-    constexpr size_t SEPARATOR_LEN = 2;
-    soNameList.reserve(totalSize + (printedSoNames.size() -1) * SEPARATOR_LEN);
     for (const auto &name : printedSoNames) {
         if (!soNameList.empty()) {
             soNameList += ", ";
         }
         soNameList += name;
     }
-    ZLOGW(LABEL, "dlclosed so lise:%{public}s", soNameList.c_str());
+    ZLOGW(LABEL, "dlclosed so list:%{public}s", soNameList.c_str());
 }
 
 sptr<IRemoteBroker> BrokerRegistration::NewInstance(const std::u16string &descriptor, const sptr<IRemoteObject> &object)
