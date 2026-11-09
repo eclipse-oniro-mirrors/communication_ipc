@@ -759,14 +759,14 @@ void IPCObjectProxy::SendRefreshObituary()
         std::shared_lock<std::shared_mutex> lockGuard(descMutex_);
         if (!remoteDescriptor_.empty()) {
             // hd is handle, ct is count, D is desc
-            ZLOGI_NOFUNC(LABEL, "RefreshObituary, hd:%{public}d ct:%{public}zu D:%{public}s", handle_,
+            ZLOGI(LABEL, "hd:%{public}d ct:%{public}zu D:%{public}s", handle_,
                 toBeReport.size(), remoteDescriptor_.c_str());
         }
     }
     
     for (auto iter = toBeReport.begin(); iter != toBeReport.end(); iter++) {
         if ((*iter)->IsDlclosed()) {
-            ZLOGE_NOFUNC(LABEL, "RefreshObituary, so has been dlclosed, sopath:%{public}s", (*iter)->soPath_.c_str());
+            ZLOGE(LABEL, "so has been dlclosed, sopath:%{public}s", (*iter)->soPath_.c_str());
             continue;
         }
         sptr<RefreshRecipient> recipient = (*iter)->recipient_;
