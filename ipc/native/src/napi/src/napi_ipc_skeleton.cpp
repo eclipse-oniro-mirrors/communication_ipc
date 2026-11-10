@@ -167,14 +167,16 @@ napi_value NAPI_IPCSkeleton_flushCmdBuffer(napi_env env, napi_callback_info info
     napi_get_cb_info(env, info, &argc, argv, &thisVar, &data);
     if (argc != 1) {
         ZLOGE(LOG_LABEL, "requires 1 parameter");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count. Expected: 1, Actual: "
+            + std::to_string(argc));
     }
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_object) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: object, Actual: "
+            + NapiError::NapiTypeToString(valueType));
     }
 
     sptr<IRemoteObject> target = NAPI_ohos_rpc_getNativeRemoteObject(env, argv[ARGV_INDEX_0]);
@@ -424,27 +426,31 @@ napi_value NAPI_IPCSkeleton_restoreCallingIdentity(napi_env env, napi_callback_i
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     if (argc != expectedArgc) {
         ZLOGE(LOG_LABEL, "requires 1 parameter");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count. Expected: 1, Actual: "
+            + std::to_string(argc));
     }
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_string) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: string, Actual: "
+            + NapiError::NapiTypeToString(valueType));
     }
     size_t bufferSize = 0;
     size_t maxLen = 40960;
     napi_get_value_string_utf8(env, argv[ARGV_INDEX_0], nullptr, 0, &bufferSize);
     if (bufferSize >= maxLen) {
         ZLOGE(LOG_LABEL, "string length too large");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] string length too large. Expected: length"
+            " less than 40960, Actual: length " + std::to_string(bufferSize));
     }
     char stringValue[bufferSize + 1];
     size_t jsStringLength = 0;
     napi_get_value_string_utf8(env, argv[ARGV_INDEX_0], stringValue, bufferSize + 1, &jsStringLength);
     if (jsStringLength != bufferSize) {
         ZLOGE(LOG_LABEL, "string length wrong");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] string length mismatch. Expected: length "
+            + std::to_string(bufferSize) + ", Actual: length " + std::to_string(jsStringLength));
     }
 
     return NAPI_IPCSkeleton_restoreCallingIdentitySetProperty(env, global, stringValue);

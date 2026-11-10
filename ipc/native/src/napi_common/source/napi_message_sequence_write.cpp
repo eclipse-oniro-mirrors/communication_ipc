@@ -97,14 +97,16 @@ napi_value NAPI_MessageSequence::JS_writeByte(napi_env env, napi_callback_info i
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     if (argc != REQUIRED_ARGS_COUNT_1) {
         ZLOGE(LOG_LABEL, "requires 1 parameter");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
 
     int32_t value = 0;
@@ -135,14 +137,16 @@ napi_value NAPI_MessageSequence::JS_writeShort(napi_env env, napi_callback_info 
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     if (argc != REQUIRED_ARGS_COUNT_1) {
         ZLOGE(LOG_LABEL, "requires 1 parameter");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
 
     int32_t value = 0;
@@ -173,14 +177,16 @@ napi_value NAPI_MessageSequence::JS_writeInt(napi_env env, napi_callback_info in
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     if (argc != REQUIRED_ARGS_COUNT_1) {
         ZLOGE(LOG_LABEL, "requires 1 parameter");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
 
     int32_t value = 0;
@@ -211,14 +217,16 @@ napi_value NAPI_MessageSequence::JS_writeLong(napi_env env, napi_callback_info i
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     if (argc != REQUIRED_ARGS_COUNT_1) {
         ZLOGE(LOG_LABEL, "requires 1 parameter");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
 
     int64_t value = 0;
@@ -249,14 +257,16 @@ napi_value NAPI_MessageSequence::JS_writeFloat(napi_env env, napi_callback_info 
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     if (argc != REQUIRED_ARGS_COUNT_1) {
         ZLOGE(LOG_LABEL, "requires 1 parameter");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
 
     double value = 0;
@@ -293,14 +303,16 @@ napi_value NAPI_MessageSequence::JS_writeBoolean(napi_env env, napi_callback_inf
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     if (argc != REQUIRED_ARGS_COUNT_1) {
         ZLOGE(LOG_LABEL, "requires 1 parameter");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_boolean) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: boolean, Actual: " + NapiError::NapiTypeToString(valueType));
     }
 
     bool value = false;
@@ -331,14 +343,16 @@ napi_value NAPI_MessageSequence::JS_writeChar(napi_env env, napi_callback_info i
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     if (argc != REQUIRED_ARGS_COUNT_1) {
         ZLOGE(LOG_LABEL, "requires 1 parameter");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
 
     uint32_t value = 0;
@@ -390,7 +404,8 @@ napi_value NAPI_MessageSequence::JS_writeByteArray(napi_env env, napi_callback_i
         napi_has_element(env, argv[ARGV_INDEX_0], i, &hasElement);
         if (!hasElement) {
             ZLOGE(LOG_LABEL, "parameter check error");
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element is missing at "
+                "index " + std::to_string(i));
         }
 
         napi_value element = nullptr;
@@ -399,7 +414,8 @@ napi_value NAPI_MessageSequence::JS_writeByteArray(napi_env env, napi_callback_i
         napi_typeof(env, element, &valueType);
         if (valueType != napi_number) {
             ZLOGE(LOG_LABEL, "type mismatch. valueType %{public}d is not equal %{public}d", valueType, napi_number);
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element type mismatch."
+                " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
         }
 
         int32_t value = 0;
@@ -424,18 +440,19 @@ napi_value NAPI_MessageSequence::JS_checkWriteArrayArgs(napi_env env,
 {
     if (argv == nullptr) {
         ZLOGE(LOG_LABEL, "argv is nullptr");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Invalid argv");
     }
     if (argc != REQUIRED_ARGS_COUNT_1) {
         ZLOGE(LOG_LABEL, "requires 1 parameter");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
 
     bool isArray = false;
     napi_is_array(env, argv[ARGV_INDEX_0], &isArray);
     if (!isArray) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: array");
     }
     napi_get_array_length(env, argv[ARGV_INDEX_0], &arrayLength);
 
@@ -474,7 +491,8 @@ napi_value NAPI_MessageSequence::JS_writeShortArray(napi_env env, napi_callback_
         napi_has_element(env, argv[ARGV_INDEX_0], i, &hasElement);
         if (!hasElement) {
             ZLOGE(LOG_LABEL, "parameter check error");
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element is missing at "
+                "index " + std::to_string(i));
         }
 
         napi_value element = nullptr;
@@ -483,7 +501,8 @@ napi_value NAPI_MessageSequence::JS_writeShortArray(napi_env env, napi_callback_
         napi_typeof(env, element, &valueType);
         if (valueType != napi_number) {
             ZLOGE(LOG_LABEL, "type mismatch. valueType %{public}d is not equal %{public}d", valueType, napi_number);
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element type mismatch."
+                " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
         }
 
         int32_t value = 0;
@@ -531,7 +550,8 @@ napi_value NAPI_MessageSequence::JS_writeIntArray(napi_env env, napi_callback_in
         napi_has_element(env, argv[ARGV_INDEX_0], i, &hasElement);
         if (!hasElement) {
             ZLOGE(LOG_LABEL, "parameter check error");
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element is missing at "
+                "index " + std::to_string(i));
         }
 
         napi_value element = nullptr;
@@ -540,7 +560,8 @@ napi_value NAPI_MessageSequence::JS_writeIntArray(napi_env env, napi_callback_in
         napi_typeof(env, element, &valueType);
         if (valueType != napi_number) {
             ZLOGE(LOG_LABEL, "type mismatch. valueType %{public}d is not equal %{public}d", valueType, napi_number);
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element type mismatch."
+                " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
         }
 
         int32_t value = 0;
@@ -588,7 +609,8 @@ napi_value NAPI_MessageSequence::JS_writeLongArray(napi_env env, napi_callback_i
         napi_has_element(env, argv[ARGV_INDEX_0], i, &hasElement);
         if (!hasElement) {
             ZLOGE(LOG_LABEL, "parameter check error");
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element is missing at "
+                "index " + std::to_string(i));
         }
 
         napi_value element = nullptr;
@@ -597,7 +619,8 @@ napi_value NAPI_MessageSequence::JS_writeLongArray(napi_env env, napi_callback_i
         napi_typeof(env, element, &valueType);
         if (valueType != napi_number) {
             ZLOGE(LOG_LABEL, "type mismatch. valueType %{public}d is not equal %{public}d", valueType, napi_number);
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element type mismatch."
+                " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
         }
 
         int64_t value = 0;
@@ -645,7 +668,8 @@ napi_value NAPI_MessageSequence::JS_writeFloatArray(napi_env env, napi_callback_
         napi_has_element(env, argv[ARGV_INDEX_0], i, &hasElement);
         if (!hasElement) {
             ZLOGE(LOG_LABEL, "parameter check error");
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element is missing at "
+                "index " + std::to_string(i));
         }
 
         napi_value element = nullptr;
@@ -654,7 +678,8 @@ napi_value NAPI_MessageSequence::JS_writeFloatArray(napi_env env, napi_callback_
         napi_typeof(env, element, &valueType);
         if (valueType != napi_number) {
             ZLOGE(LOG_LABEL, "type mismatch. valueType %{public}d is not equal %{public}d", valueType, napi_number);
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element type mismatch."
+                " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
         }
 
         double value = 0;
@@ -702,7 +727,8 @@ napi_value NAPI_MessageSequence::JS_writeDoubleArray(napi_env env, napi_callback
         napi_has_element(env, argv[ARGV_INDEX_0], i, &hasElement);
         if (!hasElement) {
             ZLOGE(LOG_LABEL, "parameter check error");
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element is missing at "
+                "index " + std::to_string(i));
         }
 
         napi_value element = nullptr;
@@ -711,7 +737,8 @@ napi_value NAPI_MessageSequence::JS_writeDoubleArray(napi_env env, napi_callback
         napi_typeof(env, element, &valueType);
         if (valueType != napi_number) {
             ZLOGE(LOG_LABEL, "type mismatch. valueType %{public}d is not equal %{public}d", valueType, napi_number);
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element type mismatch."
+                " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
         }
 
         double value = 0;
@@ -759,7 +786,8 @@ napi_value NAPI_MessageSequence::JS_writeBooleanArray(napi_env env, napi_callbac
         napi_has_element(env, argv[ARGV_INDEX_0], i, &hasElement);
         if (!hasElement) {
             ZLOGE(LOG_LABEL, "parameter check error");
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element is missing at "
+                "index " + std::to_string(i));
         }
 
         napi_value element = nullptr;
@@ -810,7 +838,8 @@ napi_value NAPI_MessageSequence::JS_writeCharArray(napi_env env, napi_callback_i
         napi_has_element(env, argv[ARGV_INDEX_0], i, &hasElement);
         if (!hasElement) {
             ZLOGE(LOG_LABEL, "parameter check error");
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element is missing at "
+                "index " + std::to_string(i));
         }
 
         napi_value element = nullptr;
@@ -840,27 +869,29 @@ napi_value NAPI_MessageSequence::JS_writeString(napi_env env, napi_callback_info
     napi_get_cb_info(env, info, &argc, argv, &thisVar, &data);
     if (argc != 1) {
         ZLOGE(LOG_LABEL, "requires 1 parameters");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_string) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: string, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     size_t bufferSize = 0;
     size_t maxLen = MAX_BYTES_LENGTH;
     napi_get_value_string_utf16(env, argv[ARGV_INDEX_0], nullptr, 0, &bufferSize);
     if (bufferSize >= maxLen) {
         ZLOGE(LOG_LABEL, "string length too large");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] string length too large");
     }
     char16_t stringValue[bufferSize + 1];
     size_t jsStringLength = 0;
     napi_get_value_string_utf16(env, argv[ARGV_INDEX_0], stringValue, bufferSize + 1, &jsStringLength);
     if (jsStringLength != bufferSize) {
         ZLOGE(LOG_LABEL, "string length wrong");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] string length mismatch");
     }
 
     NAPI_MessageSequence *napiSequence = nullptr;
@@ -889,14 +920,15 @@ napi_value NAPI_MessageSequence::JS_checkWriteStringArrayElement(napi_env env,
 {
     if (argv == nullptr) {
         ZLOGE(LOG_LABEL, "argv is nullptr");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Invalid argv");
     }
     bool hasElement = false;
     size_t maxSize = MAX_BYTES_LENGTH;
     napi_has_element(env, argv[ARGV_INDEX_0], index, &hasElement);
     if (!hasElement) {
         ZLOGE(LOG_LABEL, "parameter check error");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element is missing at "
+            "index " + std::to_string(index));
     }
 
     napi_get_element(env, argv[ARGV_INDEX_0], index, &element);
@@ -904,13 +936,14 @@ napi_value NAPI_MessageSequence::JS_checkWriteStringArrayElement(napi_env env,
     napi_typeof(env, element, &valuetype);
     if (valuetype != napi_string) {
         ZLOGD(LOG_LABEL, "Parameter type error");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element type mismatch."
+            " Expected: string, Actual: " + NapiError::NapiTypeToString(valuetype));
     }
 
     napi_get_value_string_utf16(env, element, nullptr, 0, &bufferSize);
     if (bufferSize >= maxSize) {
         ZLOGE(LOG_LABEL, "string length too large");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element string length too large");
     }
     napi_value napiValue = nullptr;
     napi_get_undefined(env, &napiValue);
@@ -953,7 +986,7 @@ napi_value NAPI_MessageSequence::JS_writeStringArray(napi_env env, napi_callback
         napi_get_value_string_utf16(env, element, stringValue, bufferSize + 1, &jsStringLength);
         if (jsStringLength != bufferSize) {
             ZLOGE(LOG_LABEL, "string length wrong");
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element string length mismatch");
         }
 
         REWIND_IF_WRITE_CHECK_FAIL(env, BYTE_SIZE_32 * bufferSize, pos, napiSequence);
@@ -982,7 +1015,8 @@ napi_value NAPI_MessageSequence::JS_writeParcelable(napi_env env, napi_callback_
     napi_get_cb_info(env, info, &argc, argv, &thisVar, &data);
     if (argc != 1) {
         ZLOGE(LOG_LABEL, "requires 1 parameters");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
 
     NAPI_MessageSequence *napiSequence = nullptr;
@@ -996,7 +1030,7 @@ napi_value NAPI_MessageSequence::JS_writeParcelable(napi_env env, napi_callback_
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType == napi_null || valueType == napi_undefined) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] is required, cannot be null or undefined");
     }
     size_t pos = napiSequence->nativeParcel_->GetWritePosition();
     napiSequence->nativeParcel_->WriteInt32(1);
@@ -1080,7 +1114,8 @@ napi_value NAPI_MessageSequence::JS_writeParcelableArray(napi_env env, napi_call
         napi_has_element(env, argv[ARGV_INDEX_0], i, &hasElement);
         if (!hasElement) {
             ZLOGE(LOG_LABEL, "parameter check error");
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element is missing at "
+                "index " + std::to_string(i));
         }
 
         napi_value element = nullptr;
@@ -1129,7 +1164,7 @@ napi_value NAPI_MessageSequence::JS_writeRemoteObjectArray(napi_env env, napi_ca
     if (valueType == napi_null || valueType == napi_undefined) {
         napiSequence->nativeParcel_->WriteInt32(-1);
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] is required, cannot be null or undefined");
     }
     size_t pos = napiSequence->nativeParcel_->GetWritePosition();
     bool result =  napiSequence->nativeParcel_->WriteInt32(arrayLength);
@@ -1138,14 +1173,16 @@ napi_value NAPI_MessageSequence::JS_writeRemoteObjectArray(napi_env env, napi_ca
         napi_has_element(env, argv[ARGV_INDEX_0], i, &hasElement);
         if (!hasElement) {
             ZLOGE(LOG_LABEL, "parameter check error");
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element is missing at "
+                "index " + std::to_string(i));
         }
         napi_value element = nullptr;
         napi_get_element(env, argv[ARGV_INDEX_0], i, &element);
         sptr<IRemoteObject> remoteObject = NAPI_ohos_rpc_getNativeRemoteObject(env, element);
         if (remoteObject == nullptr) {
             ZLOGE(LOG_LABEL, "parameter check error");
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element is invalid remote object at "
+                "index " + std::to_string(i));
         }
         result = napiSequence->nativeParcel_->WriteRemoteObject(remoteObject);
         if (!result) {
@@ -1168,14 +1205,16 @@ napi_value NAPI_MessageSequence::JS_setSize(napi_env env, napi_callback_info inf
     napi_get_cb_info(env, info, &argc, argv, &thisVar, &data);
     if (argc != REQUIRED_ARGS_COUNT_1) {
         ZLOGE(LOG_LABEL, "requires 1 parameter");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
 
     uint32_t value = 0;
@@ -1206,14 +1245,16 @@ napi_value NAPI_MessageSequence::JS_setCapacity(napi_env env, napi_callback_info
     napi_get_cb_info(env, info, &argc, argv, &thisVar, &data);
     if (argc != REQUIRED_ARGS_COUNT_1) {
         ZLOGE(LOG_LABEL, "requires 1 parameter");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
 
     uint32_t value = 0;
@@ -1279,14 +1320,16 @@ napi_value NAPI_MessageSequence::JS_rewindWrite(napi_env env, napi_callback_info
     napi_get_cb_info(env, info, &argc, argv, &thisVar, &data);
     if (argc != 1) {
         ZLOGE(LOG_LABEL, "requires 1 parameters");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
 
     uint32_t pos = 0;
@@ -1334,11 +1377,12 @@ napi_value NAPI_MessageSequence::JS_checkReadArrayArgs(napi_env env,
 {
     if (argv == nullptr) {
         ZLOGE(LOG_LABEL, "argv is nullptr");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Invalid argv");
     }
     if (argc != 1) {
         ZLOGE(LOG_LABEL, "requires 1 parameters");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
     void *data = nullptr;
     napi_get_cb_info(env, info, &argc, argv, &thisVar, &data);
@@ -1347,7 +1391,7 @@ napi_value NAPI_MessageSequence::JS_checkReadArrayArgs(napi_env env,
     napi_is_array(env, argv[ARGV_INDEX_0], &isArray);
     if (!isArray) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: array");
     }
 
     napi_value napiValue = nullptr;
@@ -1420,13 +1464,15 @@ napi_value NAPI_MessageSequence::JS_writeRemoteObject(napi_env env, napi_callbac
     napi_get_cb_info(env, info, &argc, argv, &thisVar, &data);
     if (argc != REQUIRED_ARGS_COUNT_1) {
         ZLOGE(LOG_LABEL, "requires 1 parameter");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_object) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: object, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     sptr<IRemoteObject> remoteObject = NAPI_ohos_rpc_getNativeRemoteObject(env, argv[ARGV_INDEX_0]);
     if (remoteObject == nullptr) {
@@ -1458,27 +1504,29 @@ napi_value NAPI_MessageSequence::JS_writeInterfaceToken(napi_env env, napi_callb
     napi_get_cb_info(env, info, &argc, argv, &thisVar, &data);
     if (argc != REQUIRED_ARGS_COUNT_1) {
         ZLOGE(LOG_LABEL, "requires 1 parameter");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_string) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: string, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     size_t bufferSize = 0;
     size_t maxSize = MAX_BYTES_LENGTH;
     napi_get_value_string_utf16(env, argv[ARGV_INDEX_0], nullptr, 0, &bufferSize);
     if (bufferSize >= maxSize) {
         ZLOGE(LOG_LABEL, "string length too large");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] string length too large");
     }
     char16_t stringValue[bufferSize + 1];
     size_t jsStringLength = 0;
     napi_get_value_string_utf16(env, argv[ARGV_INDEX_0], stringValue, bufferSize + 1, &jsStringLength);
     if (jsStringLength != bufferSize) {
         ZLOGE(LOG_LABEL, "string length wrong");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] string length mismatch");
     }
 
     NAPI_MessageSequence *napiSequence = nullptr;
@@ -1506,13 +1554,15 @@ napi_value NAPI_MessageSequence::JS_CloseFileDescriptor(napi_env env, napi_callb
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     if (argc != 1) {
         ZLOGE(LOG_LABEL, "requires 1 parameters");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     int32_t fd = -1;
     napi_get_value_int32(env, argv[ARGV_INDEX_0], &fd);
@@ -1530,13 +1580,15 @@ napi_value NAPI_MessageSequence::JS_DupFileDescriptor(napi_env env, napi_callbac
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     if (argc != 1) {
         ZLOGE(LOG_LABEL, "requires 1 parameters");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     int32_t fd = -1;
     napi_get_value_int32(env, argv[ARGV_INDEX_0], &fd);
@@ -1576,13 +1628,15 @@ napi_value NAPI_MessageSequence::JS_WriteFileDescriptor(napi_env env, napi_callb
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     if (argc != 1) {
         ZLOGE(LOG_LABEL, "requires 1 parameters");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     int32_t fd = -1;
     napi_get_value_int32(env, argv[ARGV_INDEX_0], &fd);
@@ -1611,7 +1665,8 @@ napi_value NAPI_MessageSequence::JS_WriteAshmem(napi_env env, napi_callback_info
     napi_get_cb_info(env, info, &argc, argv, &thisVar, &data);
     if (argc != 1) {
         ZLOGE(LOG_LABEL, "requires 1 parameters");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 1, Actual: " + std::to_string(argc));
     }
     // check type is Ashmem
     napi_value global = nullptr;
@@ -1632,7 +1687,7 @@ napi_value NAPI_MessageSequence::JS_WriteAshmem(napi_env env, napi_callback_info
     napi_instanceof(env, argv[ARGV_INDEX_0], constructor, &isAshmem);
     if (!isAshmem) {
         ZLOGE(LOG_LABEL, "parameter is not instanceof Ashmem");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: Ashmem");
     }
     NAPIAshmem *napiAshmem = nullptr;
     napi_unwrap(env, argv[ARGV_INDEX_0], (void **)&napiAshmem);
@@ -1659,12 +1714,13 @@ napi_value NAPI_MessageSequence::JS_checkWriteRawDataArgs(napi_env env, size_t a
 {
     if (argv == nullptr) {
         ZLOGE(LOG_LABEL, "argv is nullptr");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Invalid argv");
     }
     size_t expectedArgc = 2;
     if (argc != expectedArgc) {
         ZLOGE(LOG_LABEL, "requires 2 parameters");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 2, Actual: " + std::to_string(argc));
     }
     bool isArray = false;
     napi_is_array(env, argv[ARGV_INDEX_0], &isArray);
@@ -1673,7 +1729,8 @@ napi_value NAPI_MessageSequence::JS_checkWriteRawDataArgs(napi_env env, size_t a
         napi_is_typedarray(env, argv[ARGV_INDEX_0], &isTypedArray);
         if (!isTypedArray) {
             ZLOGE(LOG_LABEL, "type mismatch for parameter 1, not array, not typedarray");
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
+                " Expected: array or typedarray");
         }
     }
 
@@ -1681,7 +1738,8 @@ napi_value NAPI_MessageSequence::JS_checkWriteRawDataArgs(napi_env env, size_t a
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
 
     napi_value napiValue = nullptr;
@@ -1700,7 +1758,8 @@ bool NAPI_MessageSequence::JS_WriteRawDataForArray(napi_env env, napi_value jsAr
         napi_has_element(env, jsArray, i, &hasElement);
         if (!hasElement) {
             ZLOGE(LOG_LABEL, "parameter check error");
-            return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+            return napiErr.ThrowParamError(env, "Parameter error: Param[0] array element is missing at "
+                "index " + std::to_string(i));
         }
 
         napi_value element = nullptr;
@@ -1733,12 +1792,12 @@ bool NAPI_MessageSequence::JS_WriteRawDataForTypedArray(napi_env env, napi_value
         &arrayLength, (void **)&data, &arrayBuffer, &byteOffset);
     if (isGet != napi_ok || type != napi_int32_array) {
         ZLOGE(LOG_LABEL, "typedarray get info failed or not napi_int32_array");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] typedarray info invalid");
     }
     if (arrayLength < size) {
         ZLOGE(LOG_LABEL, "typedarray length:%{public}zu less than parameter size:%{public}zu",
             arrayLength, size);
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] typedarray length less than size");
     }
     return napiSequence->nativeParcel_->WriteRawData(data - byteOffset, BYTE_SIZE_32 * size);
 }
@@ -1766,7 +1825,7 @@ napi_value NAPI_MessageSequence::JS_WriteRawData(napi_env env, napi_callback_inf
     napi_status isGetOk = napi_get_value_int32(env, argv[ARGV_INDEX_1], &size);
     if (isGetOk != napi_ok || size <= 0) {
         ZLOGE(LOG_LABEL, "error for parameter 2 size is %{public}d, get failed", size);
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] must be greater than 0");
     }
     bool result = false;
     bool isArray = false;
@@ -1794,21 +1853,23 @@ napi_value NAPI_MessageSequence::JS_WriteRawDataBuffer(napi_env env, napi_callba
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     if (argc != ARGV_LENGTH_2) {
         ZLOGE(LOG_LABEL, "requires 2 parameters");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 2, Actual: " + std::to_string(argc));
     }
 
     bool isArrayBuffer = false;
     napi_is_arraybuffer(env, argv[ARGV_INDEX_0], &isArrayBuffer);
     if (!isArrayBuffer) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1, not ArrayBuffer");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: ArrayBuffer");
     }
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
 
     void *data = nullptr;
@@ -1816,14 +1877,14 @@ napi_value NAPI_MessageSequence::JS_WriteRawDataBuffer(napi_env env, napi_callba
     napi_status isGet = napi_get_arraybuffer_info(env, argv[ARGV_INDEX_0], (void **)&data, &byteLength);
     if (isGet != napi_ok) {
         ZLOGE(LOG_LABEL, "arraybuffer get info failed");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] arraybuffer info invalid");
     }
 
     int64_t size = 0;
     napi_status isGetOk = napi_get_value_int64(env, argv[ARGV_INDEX_1], &size);
     if (isGetOk != napi_ok || size <= 0 || static_cast<size_t>(size) > byteLength) {
         ZLOGE(LOG_LABEL, "error for parameter 2 size is %{public}" PRId64, size);
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] size is invalid");
     }
 
     NAPI_MessageSequence *napiSequence = nullptr;
@@ -1861,32 +1922,34 @@ napi_value NAPI_MessageSequence::JS_checkWriteArrayBufferArgs(napi_env env, size
 {
     if (argv == nullptr) {
         ZLOGE(LOG_LABEL, "argv is nullptr");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Invalid argv");
     }
     if (argc != ARGV_LENGTH_2) {
         ZLOGE(LOG_LABEL, "requires 2 parameter");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count."
+            " Expected: 2, Actual: " + std::to_string(argc));
     }
 
     bool isArrayBuffer = false;
     napi_status status = napi_is_arraybuffer(env, argv[ARGV_INDEX_0], &isArrayBuffer);
     if (!isArrayBuffer) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1, not ArrayBuffer. status:%{public}d", status);
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: ArrayBuffer");
     }
 
     napi_valuetype valuetype = napi_null;
     status = napi_typeof(env, argv[ARGV_INDEX_1], &valuetype);
     if (valuetype != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 2, not number. status:%{public}d", status);
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch."
+            " Expected: number, Actual: " + NapiError::NapiTypeToString(valuetype));
     }
 
     int32_t typeCode = 0;
     napi_get_value_int32(env, argv[ARGV_INDEX_1], &typeCode);
     if (typeCode < INT8_ARRAY || typeCode > BIGUINT64_ARRAY) {
         ZLOGE(LOG_LABEL, "the value of parameter 2 is out of range. typeCode:%{public}d", typeCode);
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] is out of range");
     }
 
     napi_value napiValue = nullptr;
@@ -1920,7 +1983,7 @@ napi_value NAPI_MessageSequence::JS_writeArrayBuffer(napi_env env, napi_callback
     napi_status getStatus = napi_get_arraybuffer_info(env, argv[ARGV_INDEX_0], (void **)&data, &byteLength);
     if (getStatus != napi_ok) {
         ZLOGE(LOG_LABEL, "arraybuffer get info failed. getStatus:%{public}d", getStatus);
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] arraybuffer info invalid");
     }
     if (data == nullptr) {
         ZLOGE(LOG_LABEL, "data is null");

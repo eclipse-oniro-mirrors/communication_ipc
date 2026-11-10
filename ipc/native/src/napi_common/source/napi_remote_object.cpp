@@ -1197,27 +1197,31 @@ static napi_value NAPI_RemoteObject_getLocalInterface(napi_env env, napi_callbac
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     if (argc != expectedArgc) {
         ZLOGE(LOG_LABEL, "requires 1 parameters");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count. Expected: "
+            + std::to_string(expectedArgc) + ", Actual: " + std::to_string(argc));
     }
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_string) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: string, Actual: "
+            + NapiError::NapiTypeToString(valueType));
     }
     size_t bufferSize = 0;
     size_t maxLen = 40960;
     napi_get_value_string_utf8(env, argv[ARGV_INDEX_0], nullptr, 0, &bufferSize);
     if (bufferSize >= maxLen) {
         ZLOGE(LOG_LABEL, "string length too large");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] string length too large. Expected: length"
+            " less than 40960, Actual: length " + std::to_string(bufferSize));
     }
     char stringValue[bufferSize + 1];
     size_t jsStringLength = 0;
     napi_get_value_string_utf8(env, argv[ARGV_INDEX_0], stringValue, bufferSize + 1, &jsStringLength);
     if (jsStringLength != bufferSize) {
         ZLOGE(LOG_LABEL, "string length wrong");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] string length mismatch. Expected: length "
+            + std::to_string(bufferSize) + ", Actual: length " + std::to_string(jsStringLength));
     }
     std::string descriptor = stringValue;
     NAPIRemoteObjectHolder *holder = nullptr;
@@ -1508,28 +1512,34 @@ napi_value NAPI_RemoteObject_checkSendMessageRequestArgs(napi_env env,
 {
     if (argc != argcPromise && argc != argcCallback) {
         ZLOGE(LOG_LABEL, "requires 4 or 5 parameters");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count. Expected: "
+            + std::to_string(argcPromise) + " or " + std::to_string(argcCallback)
+            + ", Actual: " + std::to_string(argc));
     }
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: number, Actual: "
+            + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_object) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch. Expected: object, Actual: "
+            + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_2], &valueType);
     if (valueType != napi_object) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 3");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[2] type mismatch. Expected: object, Actual: "
+            + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_3], &valueType);
     if (valueType != napi_object) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 4");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[3] type mismatch. Expected: object, Actual: "
+            + NapiError::NapiTypeToString(valueType));
     }
     napi_value result = nullptr;
     napi_get_undefined(env, &result);
@@ -1553,19 +1563,22 @@ static napi_value NAPI_RemoteObject_sendMessageRequest(napi_env env, napi_callba
     napi_status status = napi_unwrap(env, argv[ARGV_INDEX_1], (void **)&data);
     if (status != napi_ok) {
         ZLOGE(LOG_LABEL, "failed to get data message sequence");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] is an invalid MessageSequence object."
+            " The native object is null");
     }
     NAPI_MessageSequence *reply = nullptr;
     status = napi_unwrap(env, argv[ARGV_INDEX_2], (void **)&reply);
     if (status != napi_ok) {
         ZLOGE(LOG_LABEL, "failed to get data message sequence");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[2] is an invalid MessageSequence object."
+            " The native object is null");
     }
     MessageOption *option = nullptr;
     status = napi_unwrap(env, argv[ARGV_INDEX_3], (void **)&option);
     if (status != napi_ok) {
         ZLOGE(LOG_LABEL, "failed to get message option");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[3] is an invalid MessageOption object."
+            " The native object is null");
     }
     int32_t code = 0;
     napi_get_value_int32(env, argv[ARGV_INDEX_0], &code);
@@ -1624,18 +1637,21 @@ napi_value NAPI_RemoteObject_checkModifyLocalInterfaceArgs(napi_env env, size_t 
 
     if (argc != expectedArgc) {
         ZLOGE(LOG_LABEL, "requires 2 parameters");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count. Expected: "
+            + std::to_string(expectedArgc) + ", Actual: " + std::to_string(argc));
     }
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_object) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: object, Actual: "
+            + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_string) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch. Expected: string, Actual: "
+            + NapiError::NapiTypeToString(valueType));
     }
     napi_value result = nullptr;
     napi_get_undefined(env, &result);
@@ -1657,14 +1673,16 @@ static napi_value NAPI_RemoteObject_modifyLocalInterface(napi_env env, napi_call
     napi_get_value_string_utf8(env, argv[ARGV_INDEX_1], nullptr, 0, &bufferSize);
     if (bufferSize >= maxLen) {
         ZLOGE(LOG_LABEL, "string length too large");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] string length too large. Expected: length"
+            " less than 40960, Actual: length " + std::to_string(bufferSize));
     }
     char stringValue[bufferSize + 1];
     size_t jsStringLength = 0;
     napi_get_value_string_utf8(env, argv[ARGV_INDEX_1], stringValue, bufferSize + 1, &jsStringLength);
     if (jsStringLength != bufferSize) {
         ZLOGE(LOG_LABEL, "string length wrong");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] string length mismatch. Expected: length "
+            + std::to_string(bufferSize) + ", Actual: length " + std::to_string(jsStringLength));
     }
     std::string descriptor = stringValue;
 

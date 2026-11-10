@@ -241,38 +241,45 @@ napi_value NAPI_RemoteProxy_checkSendMessageRequestArgs(napi_env env,
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: number, Actual: "
+            + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_object) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch. Expected: object, Actual: "
+            + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_2], &valueType);
     if (valueType != napi_object) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 3");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[2] type mismatch. Expected: object, Actual: "
+            + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_3], &valueType);
     if (valueType != napi_object) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 4");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[3] type mismatch. Expected: object, Actual: "
+            + NapiError::NapiTypeToString(valueType));
     }
 
     napi_status status = napi_unwrap(env, argv[ARGV_INDEX_1], reinterpret_cast<void **>(&data));
     if (status != napi_ok) {
         ZLOGE(LOG_LABEL, "failed to get data message parcel");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] is an invalid MessageSequence object."
+            " The native object is null");
     }
     status = napi_unwrap(env, argv[ARGV_INDEX_2], reinterpret_cast<void **>(&reply));
     if (status != napi_ok) {
         ZLOGE(LOG_LABEL, "failed to get reply message parcel");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[2] is an invalid MessageSequence object."
+            " The native object is null");
     }
     status = napi_unwrap(env, argv[ARGV_INDEX_3], reinterpret_cast<void **>(&option));
     if (status != napi_ok) {
         ZLOGE(LOG_LABEL, "failed to get message option");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[3] is an invalid MessageOption object."
+            " The native object is null");
     }
     napi_value result = nullptr;
     napi_get_undefined(env, &result);
@@ -289,7 +296,8 @@ napi_value NAPI_RemoteProxy_sendMessageRequest(napi_env env, napi_callback_info 
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     if (argc != argcPromise && argc != argcCallback) {
         ZLOGE(LOG_LABEL, "requires 4 or 5 parameters");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count. Expected: 4 or 5,"
+            " Actual: " + std::to_string(argc));
     }
     NAPI_MessageSequence *data = nullptr;
     NAPI_MessageSequence *reply = nullptr;
@@ -397,18 +405,21 @@ napi_value NAPI_RemoteProxy_checkRegisterDeathRecipientArgs(napi_env env, size_t
 
     if (argc != expectedArgc) {
         ZLOGE(LOG_LABEL, "requires 2 parameter");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count. Expected: 2, Actual: "
+            + std::to_string(argc));
     }
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_object) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: object, Actual: "
+            + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch. Expected: number, Actual: "
+            + NapiError::NapiTypeToString(valueType));
     }
     napi_value result = nullptr;
     napi_get_undefined(env, &result);
@@ -431,7 +442,7 @@ napi_value NAPI_RemoteProxy_registerDeathRecipient(napi_env env, napi_callback_i
 
     if (argv[ARGV_INDEX_0] == nullptr) {
         ZLOGE(LOG_LABEL, "invalid parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] is required, cannot be null or undefined");
     }
 
     NAPIRemoteProxyHolder *proxyHolder = nullptr;
@@ -521,22 +532,25 @@ napi_value NAPI_RemoteProxy_checkUnregisterDeathRecipientArgs(napi_env env, size
     size_t expectedArgc = 2;
     if (argc != expectedArgc) {
         ZLOGE(LOG_LABEL, "requires 2 parameter");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Incorrect parameter count. Expected: 2, Actual: "
+            + std::to_string(argc));
     }
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_object) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: object, Actual: "
+            + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_number) {
         ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch. Expected: number, Actual: "
+            + NapiError::NapiTypeToString(valueType));
     }
     if (argv[ARGV_INDEX_0] == nullptr) {
         ZLOGE(LOG_LABEL, "invalid parameter 1");
-        return napiErr.ThrowError(env, errorDesc::CHECK_PARAM_ERROR);
+        return napiErr.ThrowParamError(env, "Parameter error: Param[0] is required, cannot be null or undefined");
     }
     napi_value result = nullptr;
     napi_get_undefined(env, &result);
