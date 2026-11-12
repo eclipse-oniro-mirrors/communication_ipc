@@ -81,7 +81,7 @@ void NAPIDeathRecipient::OnRemoteDied(const wptr<IRemoteObject> &object)
     }
 
     if (env_ == nullptr) {
-        ZLOGE(LOG_LABEL, "js env has been destructed");
+        ZLOGE(LOG_LABEL, "env is null");
         return;
     }
 

@@ -669,7 +669,7 @@ napi_value RemoteObject_JS_Constructor(napi_env env, napi_callback_info info)
     NAPI_ASSERT(env, argc >= expectedArgc, "requires at least 1 parameters");
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_string, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_string, "type mismatch for param 1");
     size_t bufferSize = 0;
     size_t maxLen = 40960;
     napi_get_value_string_utf8(env, argv[ARGV_INDEX_0], nullptr, 0, &bufferSize);
@@ -988,7 +988,7 @@ int NAPIRemoteObject::OnJsRemoteRequest(CallbackParam *jsParam)
         return ERR_UNKNOWN_REASON;
     }
     if (thisVarRef_ == nullptr || env_ == nullptr) {
-        ZLOGE(LOG_LABEL, "Js env has been destructed");
+        ZLOGE(LOG_LABEL, "env is null");
         return ERR_UNKNOWN_REASON;
     }
 
@@ -1171,7 +1171,7 @@ static napi_value NAPI_RemoteObject_queryLocalInterface(napi_env env, napi_callb
     NAPI_ASSERT(env, argc == expectedArgc, "requires 1 parameters");
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_string, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_string, "type mismatch for param 1");
     size_t bufferSize = 0;
     size_t maxLen = 40960;
     napi_get_value_string_utf8(env, argv[ARGV_INDEX_0], nullptr, 0, &bufferSize);
@@ -1203,7 +1203,7 @@ static napi_value NAPI_RemoteObject_getLocalInterface(napi_env env, napi_callbac
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_string) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1");
         return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: string, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }
@@ -1469,13 +1469,13 @@ static napi_value NAPI_RemoteObject_sendRequest(napi_env env, napi_callback_info
     NAPI_ASSERT(env, argc == argcPromise || argc == argcCallback, "requires 4 or 5 parameters");
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
-    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for parameter 2");
+    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for param 2");
     napi_typeof(env, argv[ARGV_INDEX_2], &valueType);
-    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for parameter 3");
+    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for param 3");
     napi_typeof(env, argv[ARGV_INDEX_3], &valueType);
-    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for parameter 4");
+    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for param 4");
 
     NAPI_MessageParcel *data = nullptr;
     napi_status status = napi_unwrap(env, argv[ARGV_INDEX_1], (void **)&data);
@@ -1519,25 +1519,25 @@ napi_value NAPI_RemoteObject_checkSendMessageRequestArgs(napi_env env,
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1");
         return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: number, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_object) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
+        ZLOGE(LOG_LABEL, "type mismatch for param 2");
         return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch. Expected: object, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_2], &valueType);
     if (valueType != napi_object) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 3");
+        ZLOGE(LOG_LABEL, "type mismatch for param 3");
         return napiErr.ThrowParamError(env, "Parameter error: Param[2] type mismatch. Expected: object, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_3], &valueType);
     if (valueType != napi_object) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 4");
+        ZLOGE(LOG_LABEL, "type mismatch for param 4");
         return napiErr.ThrowParamError(env, "Parameter error: Param[3] type mismatch. Expected: object, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }
@@ -1608,9 +1608,9 @@ static napi_value NAPI_RemoteObject_attachLocalInterface(napi_env env, napi_call
     NAPI_ASSERT(env, argc == expectedArgc, "requires 2 parameters");
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for param 1");
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
-    NAPI_ASSERT(env, valueType == napi_string, "type mismatch for parameter 2");
+    NAPI_ASSERT(env, valueType == napi_string, "type mismatch for param 2");
     size_t bufferSize = 0;
     size_t maxLen = 40960;
     napi_get_value_string_utf8(env, argv[ARGV_INDEX_1], nullptr, 0, &bufferSize);
@@ -1643,13 +1643,13 @@ napi_value NAPI_RemoteObject_checkModifyLocalInterfaceArgs(napi_env env, size_t 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_object) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1");
         return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: object, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_string) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
+        ZLOGE(LOG_LABEL, "type mismatch for param 2");
         return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch. Expected: string, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }

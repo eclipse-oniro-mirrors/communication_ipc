@@ -1281,7 +1281,7 @@ int32_t MessageSequenceImpl::CJ_ReadFileDescriptor(int32_t* errCode)
     }
     int32_t result = nativeParcel_->ReadFileDescriptor();
     if (result == -1) {
-        ZLOGE(LOG_LABEL, "read file descriptor failed");
+        ZLOGE(LOG_LABEL, "read fd failed");
         *errCode = errorDesc::READ_DATA_FROM_MESSAGE_SEQUENCE_ERROR;
         return 0;
     }

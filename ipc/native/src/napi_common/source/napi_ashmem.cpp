@@ -67,7 +67,7 @@ napi_value NAPIAshmem::CreateAshmem(napi_env env, napi_callback_info info)
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_string) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1");
         return nullptr;
     }
     size_t bufferSize = 0;
@@ -78,7 +78,7 @@ napi_value NAPIAshmem::CreateAshmem(napi_env env, napi_callback_info info)
     }
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
+        ZLOGE(LOG_LABEL, "type mismatch for param 2");
         return nullptr;
     }
     int32_t ashmemSize = 0;
@@ -159,7 +159,7 @@ napi_value NAPIAshmem::Create(napi_env env, napi_callback_info info)
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_string) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1");
         return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
             " Expected: string, Actual: " + NapiError::NapiTypeToString(valueType));
     }
@@ -172,7 +172,7 @@ napi_value NAPIAshmem::Create(napi_env env, napi_callback_info info)
 
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
+        ZLOGE(LOG_LABEL, "type mismatch for param 2");
         return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch."
             " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
@@ -303,7 +303,7 @@ napi_value NAPIAshmem::MapAshmem(napi_env env, napi_callback_info info)
     NAPI_ASSERT(env, argc == 1, "requires 1 parameter");
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
     uint32_t mapType = 0;
     napi_get_value_uint32(env, argv[ARGV_INDEX_0], &mapType);
     NAPI_ASSERT(env, mapType <= MMAP_PROT_MAX, "napiAshmem mapType error");
@@ -330,7 +330,7 @@ napi_value NAPIAshmem::MapTypedAshmem(napi_env env, napi_callback_info info)
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1");
         return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
             " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
@@ -419,9 +419,9 @@ napi_value NAPIAshmem::ReadFromAshmem(napi_env env, napi_callback_info info)
     NAPI_ASSERT(env, argc == 2, "requires 2 parameter");
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 2");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 2");
     int64_t size = 0;
     napi_get_value_int64(env, argv[ARGV_INDEX_0], &size);
     int64_t offset = 0;
@@ -476,13 +476,13 @@ napi_value NAPIAshmem::ReadAshmem(napi_env env, napi_callback_info info)
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1");
         return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
             " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
+        ZLOGE(LOG_LABEL, "type mismatch for param 2");
         return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch."
             " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
@@ -548,7 +548,7 @@ napi_value NAPIAshmem::SetProtection(napi_env env, napi_callback_info info)
     NAPI_ASSERT(env, argc == 1, "requires 1 parameter");
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
     uint32_t protectionType = 0;
     napi_get_value_uint32(env, argv[ARGV_INDEX_0], &protectionType);
     NAPIAshmem *napiAshmem = nullptr;
@@ -575,7 +575,7 @@ napi_value NAPIAshmem::SetProtectionType(napi_env env, napi_callback_info info)
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1");
         return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
             " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
@@ -615,12 +615,12 @@ napi_value NAPIAshmem::WriteToAshmem(napi_env env, napi_callback_info info)
     NAPI_ASSERT(env, argc == 3, "requires 3 parameter");
     bool isArray = false;
     napi_is_array(env, argv[ARGV_INDEX_0], &isArray);
-    NAPI_ASSERT(env, isArray == true, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, isArray == true, "type mismatch for param 1");
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 2");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 2");
     napi_typeof(env, argv[ARGV_INDEX_2], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 3");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 3");
 
     std::vector<int32_t> array;
     uint32_t arrayLength = 0;
@@ -730,20 +730,20 @@ napi_value NAPIAshmem::CheckWriteAshmemParams(napi_env env, size_t argc, napi_va
     bool isArray = false;
     napi_is_array(env, argv[ARGV_INDEX_0], &isArray);
     if (!isArray) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1");
         return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
             " Expected: array, Actual: non-array");
     }
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
+        ZLOGE(LOG_LABEL, "type mismatch for param 2");
         return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch."
             " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_2], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 3");
+        ZLOGE(LOG_LABEL, "type mismatch for param 3");
         return napiErr.ThrowParamError(env, "Parameter error: Param[2] type mismatch."
             " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
@@ -761,7 +761,7 @@ napi_value NAPIAshmem::CheckWriteToAshmemParams(napi_env env, size_t argc, napi_
     bool isArrayBuffer = false;
     napi_is_arraybuffer(env, argv[ARGV_INDEX_0], &isArrayBuffer);
     if (!isArrayBuffer) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1, not ArrayBuffer");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1, not ArrayBuffer");
         return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
             " Expected: ArrayBuffer, Actual: non-ArrayBuffer");
     }
@@ -769,14 +769,14 @@ napi_value NAPIAshmem::CheckWriteToAshmemParams(napi_env env, size_t argc, napi_
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
+        ZLOGE(LOG_LABEL, "type mismatch for param 2");
         return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch."
             " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
 
     napi_typeof(env, argv[ARGV_INDEX_2], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 3");
+        ZLOGE(LOG_LABEL, "type mismatch for param 3");
         return napiErr.ThrowParamError(env, "Parameter error: Param[2] type mismatch."
             " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
@@ -840,13 +840,13 @@ napi_value NAPIAshmem::CheckReadFromAshmemParams(napi_env env, size_t argc, napi
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1");
         return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch."
             " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
+        ZLOGE(LOG_LABEL, "type mismatch for param 2");
         return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch."
             " Expected: number, Actual: " + NapiError::NapiTypeToString(valueType));
     }
@@ -968,9 +968,9 @@ napi_value NAPIAshmem::Ashmem_JS_Constructor(napi_env env, napi_callback_info in
         NAPI_ASSERT(env, argc == 2, "requires 2 parameter");
         napi_valuetype valueType = napi_null;
         napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-        NAPI_ASSERT(env, valueType == napi_string, "type mismatch for parameter 1");
+        NAPI_ASSERT(env, valueType == napi_string, "type mismatch for param 1");
         napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
-        NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 2");
+        NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 2");
         size_t bufferSize = 0;
         size_t maxLen = 40960;
         napi_get_value_string_utf8(env, argv[ARGV_INDEX_0], nullptr, 0, &bufferSize);

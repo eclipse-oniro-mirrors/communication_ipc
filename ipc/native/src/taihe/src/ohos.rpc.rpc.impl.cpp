@@ -1714,7 +1714,7 @@ void MessageSequenceImpl::ReadParcelableArray(::taihe::array_view<::ohos::rpc::r
         }
         parcelableArray[i]->Unmarshalling(*jsObjRef_);
         if (taihe::has_error()) {
-            ZLOGE(LOG_LABEL, "call unmarshalling failed");
+            ZLOGE(LOG_LABEL, "unmarshalling failed");
             RPC_TAIHE_ERROR(OHOS::RpcTaiheErrorCode::TAIHE_CALL_JS_METHOD_ERROR);
         }
     }
@@ -1736,7 +1736,7 @@ int32_t MessageSequenceImpl::ReadFileDescriptor()
         OHOS::RpcTaiheErrorCode::TAIHE_READ_DATA_FROM_MESSAGE_SEQUENCE_ERROR, 0);
     int32_t result = nativeParcel_->ReadFileDescriptor();
     if (result < 0) {
-        ZLOGE(LOG_LABEL, "read file descriptor failed");
+        ZLOGE(LOG_LABEL, "read fd failed");
         RPC_TAIHE_ERROR_WITH_RETVAL(OHOS::RpcTaiheErrorCode::TAIHE_READ_DATA_FROM_MESSAGE_SEQUENCE_ERROR, 0);
     }
     return result;

@@ -60,7 +60,7 @@ void ExecuteSendRequest(napi_env env, void *data)
 void SendRequestCbComplete(napi_env env, napi_status status, void *data)
 {
     SendRequestParam *param = reinterpret_cast<SendRequestParam *>(data);
-    ZLOGI(LOG_LABEL, "sendRequestCallback completed, errCode:%{public}d", param->errCode);
+    ZLOGD(LOG_LABEL, "sendRequestCallback completed, errCode:%{public}d", param->errCode);
     napi_value result = MakeSendRequestResult(param);
     napi_value callback = nullptr;
     napi_get_reference_value(env, param->callback, &callback);
@@ -193,13 +193,13 @@ napi_value NAPI_RemoteProxy_sendRequest(napi_env env, napi_callback_info info)
     NAPI_ASSERT(env, argc == argcPromise || argc == argcCallback, "requires 4 or 5 parameters");
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
-    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for parameter 2");
+    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for param 2");
     napi_typeof(env, argv[ARGV_INDEX_2], &valueType);
-    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for parameter 3");
+    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for param 3");
     napi_typeof(env, argv[ARGV_INDEX_3], &valueType);
-    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for parameter 4");
+    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for param 4");
 
     NAPI_MessageParcel *data = nullptr;
     napi_status status = napi_unwrap(env, argv[ARGV_INDEX_1], reinterpret_cast<void **>(&data));
@@ -240,25 +240,25 @@ napi_value NAPI_RemoteProxy_checkSendMessageRequestArgs(napi_env env,
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1");
         return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: number, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_object) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
+        ZLOGE(LOG_LABEL, "type mismatch for param 2");
         return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch. Expected: object, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_2], &valueType);
     if (valueType != napi_object) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 3");
+        ZLOGE(LOG_LABEL, "type mismatch for param 3");
         return napiErr.ThrowParamError(env, "Parameter error: Param[2] type mismatch. Expected: object, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_3], &valueType);
     if (valueType != napi_object) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 4");
+        ZLOGE(LOG_LABEL, "type mismatch for param 4");
         return napiErr.ThrowParamError(env, "Parameter error: Param[3] type mismatch. Expected: object, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }
@@ -360,9 +360,9 @@ napi_value NAPI_RemoteProxy_addDeathRecipient(napi_env env, napi_callback_info i
     NAPI_ASSERT(env, argc == expectedArgc, "requires 2 parameter");
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for param 1");
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 2");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 2");
     int32_t flag = 0;
     napi_get_value_int32(env, argv[ARGV_INDEX_1], &flag);
 
@@ -411,13 +411,13 @@ napi_value NAPI_RemoteProxy_checkRegisterDeathRecipientArgs(napi_env env, size_t
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_object) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1");
         return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: object, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
+        ZLOGE(LOG_LABEL, "type mismatch for param 2");
         return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch. Expected: number, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }
@@ -486,9 +486,9 @@ napi_value NAPI_RemoteProxy_removeDeathRecipient(napi_env env, napi_callback_inf
     NAPI_ASSERT(env, argc == expectedArgc, "requires 2 parameter");
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for param 1");
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 2");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 2");
     napi_value result;
     if (argv[ARGV_INDEX_0] == nullptr) {
         napi_get_boolean(env, false, &result);
@@ -538,13 +538,13 @@ napi_value NAPI_RemoteProxy_checkUnregisterDeathRecipientArgs(napi_env env, size
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_object) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1");
         return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: object, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
+        ZLOGE(LOG_LABEL, "type mismatch for param 2");
         return napiErr.ThrowParamError(env, "Parameter error: Param[1] type mismatch. Expected: number, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }
@@ -646,7 +646,7 @@ napi_value NAPI_RemoteProxy_getDescriptor(napi_env env, napi_callback_info info)
     }
     std::u16string remoteDescriptor = target->GetInterfaceDescriptor();
     if (remoteDescriptor == std::u16string()) {
-        ZLOGE(LOG_LABEL, "failed to get interface descriptor");
+        ZLOGE(LOG_LABEL, "get descriptor failed");
         return napiErr.ThrowError(env, errorDesc::COMMUNICATION_ERROR);
     }
     napi_create_string_utf8(env, Str16ToStr8(remoteDescriptor).c_str(), NAPI_AUTO_LENGTH, &result);

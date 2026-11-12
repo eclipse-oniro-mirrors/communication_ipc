@@ -126,7 +126,7 @@ char* RemoteProxyHolderImpl::GetDescriptor(int32_t* errCode)
     }
     std::u16string remoteDescriptor = object_->GetInterfaceDescriptor();
     if (remoteDescriptor == std::u16string()) {
-        ZLOGE(LOG_LABEL, "failed to get interface descriptor");
+        ZLOGE(LOG_LABEL, "get descriptor failed");
         *errCode = errorDesc::COMMUNICATION_ERROR;
         return nullptr;
     }

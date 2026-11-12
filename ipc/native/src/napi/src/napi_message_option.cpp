@@ -58,7 +58,7 @@ static napi_value NapiOhosRpcMessageOptionSetFlags(napi_env env, napi_callback_i
     NAPI_ASSERT(env, thisVar != nullptr, "failed to get js message option object");
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
     int32_t flags = 0;
     napi_status status = napi_get_value_int32(env, argv[ARGV_INDEX_0], &flags);
     NAPI_ASSERT(env, status == napi_ok, "failed to get int32 value");
@@ -101,7 +101,7 @@ static napi_value NapiOhosRpcMessageOptionSetAsync(napi_env env, napi_callback_i
     NAPI_ASSERT(env, thisVar != nullptr, "failed to get js message option object");
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_boolean, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_boolean, "type mismatch for param 1");
     bool flags = false;
     napi_status status = napi_get_value_bool(env, argv[ARGV_INDEX_0], &flags);
     NAPI_ASSERT(env, status == napi_ok, "failed to get boolean value");
@@ -144,7 +144,7 @@ static napi_value NapiOhosRpcMessageOptionSetWaittime(napi_env env, napi_callbac
     NAPI_ASSERT(env, thisVar != nullptr, "failed to get js message option object");
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
     int32_t waitTime = 0;
     napi_status status = napi_get_value_int32(env, argv[ARGV_INDEX_0], &waitTime);
     NAPI_ASSERT(env, status == napi_ok, "failed to get int32 value");
@@ -172,7 +172,7 @@ static napi_value NAPIMessageOption_JS_Constructor(napi_env env, napi_callback_i
     } else if (argc == 1) {
         napi_valuetype valueType;
         napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-        NAPI_ASSERT(env, valueType == napi_number || valueType == napi_boolean, "type mismatch for parameter 1");
+        NAPI_ASSERT(env, valueType == napi_number || valueType == napi_boolean, "type mismatch for param 1");
         if (valueType == napi_boolean) {
             bool jsBoolFlags = false;
             napi_get_value_bool(env, argv[ARGV_INDEX_0], &jsBoolFlags);
@@ -186,9 +186,9 @@ static napi_value NAPIMessageOption_JS_Constructor(napi_env env, napi_callback_i
     } else {
         napi_valuetype valueType = napi_null;
         napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-        NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+        NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
         napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
-        NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 2");
+        NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 2");
         int32_t jsFlags = 0;
         napi_get_value_int32(env, argv[ARGV_INDEX_0], &jsFlags);
         int32_t jsWaitTime = 0;
