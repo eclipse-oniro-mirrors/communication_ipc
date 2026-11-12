@@ -35,7 +35,7 @@ namespace OHOS {
             "%{public}s: " fmt, __FUNCTION__, ##args); \
     }
 
-//Allowed only when log message is unique within the codebase.
+// Allowed only when log message is unique within the codebase.
 #define ZLOGE_NOFUNC(LOG_LABEL, fmt, args...) \
     if (HiLogIsLoggable(LOG_LABEL.domain, LOG_LABEL.tag, LOG_ERROR)) {       \
         HILOG_IMPL(LOG_CORE, LOG_ERROR, LOG_LABEL.domain, LOG_LABEL.tag,     \
@@ -48,7 +48,7 @@ namespace OHOS {
             "%{public}s: " fmt, __FUNCTION__, ##args); \
     }
 
-//Allowed only when log message is unique within the codebase.
+// Allowed only when log message is unique within the codebase.
 #define ZLOGW_NOFUNC(LOG_LABEL, fmt, args...) \
     if (HiLogIsLoggable(LOG_LABEL.domain, LOG_LABEL.tag, LOG_WARN)) {       \
         HILOG_IMPL(LOG_CORE, LOG_WARN, LOG_LABEL.domain, LOG_LABEL.tag,     \
@@ -61,7 +61,7 @@ namespace OHOS {
             "%{public}s: " fmt, __FUNCTION__, ##args); \
     }
 
-//Allowed only when log message is unique within the codebase.
+// Allowed only when log message is unique within the codebase.
 #define ZLOGI_NOFUNC(LOG_LABEL, fmt, args...) \
     if (HiLogIsLoggable(LOG_LABEL.domain, LOG_LABEL.tag, LOG_INFO)) {       \
         HILOG_IMPL(LOG_CORE, LOG_INFO, LOG_LABEL.domain, LOG_LABEL.tag,     \
