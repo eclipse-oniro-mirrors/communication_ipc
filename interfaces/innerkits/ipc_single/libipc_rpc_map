@@ -1,0 +1,51 @@
+/*
+ * Copyright (c) 2026 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+ * Export list of libipc_rpc.z.so.
+ *
+ * IpcRpcGetOps is the only entry libipc_single.z.so loads; the
+ * DBinderSoftbusClient functions below are re-exported because libdbinder
+ * calls them directly (it links this library instead of libipc_single for
+ * them). Everything else stays local.
+ *
+ * Keep this list in sync with libipc_single_map: when the split is disabled the
+ * very same symbols are provided by libipc_single.z.so (the DBinderSoftbusClient
+ * block plus the "used by libipc_rpc" block). The list is limited to what
+ * libdbinder actually references (verified with llvm-nm -D --undefined-only on
+ * libdbinder.z.so), so no unrelated client methods are widened into the export
+ * surface.
+ *
+ * Note: lld in this toolchain matches only fully demangled names inside
+ * extern "C++" blocks, wildcards are silently ignored, so the list has to be
+ * written out explicitly.
+ */
+1.0 {
+    global:
+        IpcRpcGetOps;
+        extern "C++" {
+            "OHOS::DBinderSoftbusClient::GetInstance()";
+            "OHOS::DBinderSoftbusClient::GetLocalNodeDeviceId(std::__h::basic_string<char, std::__h::char_traits<char>, std::__h::allocator<char>> const&, std::__h::basic_string<char, std::__h::char_traits<char>, std::__h::allocator<char>>&)";
+            "OHOS::DBinderSoftbusClient::DBinderGrantPermission(int, int, std::__h::basic_string<char, std::__h::char_traits<char>, std::__h::allocator<char>> const&)";
+            "OHOS::DBinderSoftbusClient::Socket(SocketInfo)";
+            "OHOS::DBinderSoftbusClient::Bind(int, QosTV const*, unsigned int, ISocketListener const*)";
+            "OHOS::DBinderSoftbusClient::Shutdown(int)";
+            "OHOS::DBinderSoftbusClient::Listen(int, QosTV const*, unsigned int, ISocketListener const*)";
+            "OHOS::DBinderSoftbusClient::SendBytes(int, void const*, unsigned int)";
+            "OHOS::DBinderDatabusInvoker::DBinderDatabusInvoker()";
+        };
+    local:
+        *;
+};

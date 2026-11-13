@@ -39,7 +39,7 @@
 #include <link.h>
 
 #ifndef CONFIG_IPC_SINGLE
-#include "databus_socket_listener.h"
+#include "ipc_rpc_loader.h"
 #endif
 
 namespace OHOS {
@@ -110,7 +110,12 @@ IPCProcessSkeleton::~IPCProcessSkeleton()
     {
         std::unique_lock<std::shared_mutex> lockGuard(sessionNameMutex_);
         if (listenSocketId_ > 0) {
-            DBinderSoftbusClient::GetInstance().Shutdown(listenSocketId_);
+            // Shutdown path: only use the already cached table, never trigger
+            // a load while the process is tearing down.
+            const IpcRpcOps *ops = IpcRpcOpsPeek();
+            if (ops != nullptr) {
+                ops->shutdownListenSocket(listenSocketId_);
+            }
             listenSocketId_ = 0;
             sessionName_.clear();
         }
@@ -534,13 +539,20 @@ uint32_t IPCProcessSkeleton::ConvertChannelID2Int(int64_t databusChannelId)
 std::string IPCProcessSkeleton::GetLocalDeviceID()
 {
     CHECK_INSTANCE_EXIT_WITH_RETVAL(exitFlag_, "");
+    // Resolve the table before taking databusProcMutex_: the first call may
+    // dlopen libipc_rpc.z.so and run its static initializers, which must not
+    // observe a framework lock held by this thread.
+    const IpcRpcOps *ops = IpcRpcOpsGet();
     std::lock_guard<std::mutex> lockGuard(databusProcMutex_);
 
     std::string pkgName = std::string(DBINDER_PKG_NAME) + "_" + std::to_string(getpid());
     std::string networkId;
 
-    if (DBinderSoftbusClient::GetInstance().GetLocalNodeDeviceId(
-        pkgName.c_str(), networkId) != SOFTBUS_CLIENT_SUCCESS) {
+    if (ops == nullptr) {
+        ZLOGE(LOG_LABEL, "rpc capability is unavailable");
+        return networkId;
+    }
+    if (ops->getLocalNodeDeviceId(pkgName, networkId) != IPC_RPC_SOFTBUS_SUCCESS) {
         ZLOGE(LOG_LABEL, "Get local node device id failed");
     }
 
@@ -1307,13 +1319,13 @@ bool IPCProcessSkeleton::CreateSoftbusServer(const std::string &name)
             return true;
         }
     }
-    std::shared_ptr<DatabusSocketListener> listener = DelayedSingleton<DatabusSocketListener>::GetInstance();
-    if (listener == nullptr) {
-        ZLOGE(LOG_LABEL, "fail to get socket listener");
+    const IpcRpcOps *ops = IpcRpcOpsGet();
+    if (ops == nullptr) {
+        ZLOGE(LOG_LABEL, "rpc capability is unavailable");
         return false;
     }
 
-    int32_t socketId = listener->StartServerListener(name);
+    int32_t socketId = ops->startServerListener(name);
     if (socketId <= 0) {
         ZLOGE(LOG_LABEL, "fail to start server listener, sessionName:%{public}s", name.c_str());
         return false;

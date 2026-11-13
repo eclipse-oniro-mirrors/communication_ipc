@@ -44,8 +44,8 @@
 #include "vector"
 
 #ifndef CONFIG_IPC_SINGLE
-#include "dbinder_databus_invoker.h"
 #include "dbinder_error_code.h"
+#include "ipc_rpc_loader.h"
 #endif
 
 namespace OHOS {
@@ -236,10 +236,14 @@ int IPCObjectStub::DBinderIncRefsTransaction(uint32_t code, MessageParcel &data,
         ZLOGE(LABEL, "dbinder incref in the same device is invalid");
         return IPC_STUB_INVALID_DATA_ERR;
     }
-    DBinderDatabusInvoker *invoker = reinterpret_cast<DBinderDatabusInvoker *>(
-        IPCThreadSkeleton::GetRemoteInvoker(IRemoteObject::IF_PROT_DATABUS));
+    IRemoteInvoker *invoker = IPCThreadSkeleton::GetRemoteInvoker(IRemoteObject::IF_PROT_DATABUS);
     if (invoker == nullptr) {
         ZLOGE(LABEL, "get dbinder databus invoker fail");
+        return IPC_STUB_INVALID_DATA_ERR;
+    }
+    const IpcRpcOps *ops = IpcRpcOpsGet();
+    if (ops == nullptr) {
+        ZLOGE(LABEL, "rpc capability is unavailable");
         return IPC_STUB_INVALID_DATA_ERR;
     }
 
@@ -253,7 +257,7 @@ int IPCObjectStub::DBinderIncRefsTransaction(uint32_t code, MessageParcel &data,
         return IPC_STUB_INVALID_DATA_ERR;
     }
     uint64_t stubIndex = current->QueryStubIndex(this);
-    int32_t listenFd = invoker->GetClientFd();
+    int32_t listenFd = ops->getClientFd(invoker);
     // update listenFd
     ZLOGW(LABEL, "update app info, listenFd:%{public}d stubIndex:%{public}" PRIu64 " tokenId:%{public}u", listenFd,
         stubIndex, tokenId);
@@ -271,10 +275,14 @@ int IPCObjectStub::DBinderDecRefsTransaction(uint32_t code, MessageParcel &data,
     }
     // stub's refcount will be decreased either in this case or OnSessionClosed callback
     // we may race with OnSessionClosed callback, thus dec refcount only when removing appInfo sucessfully
-    DBinderDatabusInvoker *invoker = reinterpret_cast<DBinderDatabusInvoker *>(
-        IPCThreadSkeleton::GetRemoteInvoker(IRemoteObject::IF_PROT_DATABUS));
+    IRemoteInvoker *invoker = IPCThreadSkeleton::GetRemoteInvoker(IRemoteObject::IF_PROT_DATABUS);
     if (invoker == nullptr) {
         ZLOGE(LABEL, "get dbinder databus invoker fail");
+        return IPC_STUB_INVALID_DATA_ERR;
+    }
+    const IpcRpcOps *ops = IpcRpcOpsGet();
+    if (ops == nullptr) {
+        ZLOGE(LABEL, "rpc capability is unavailable");
         return IPC_STUB_INVALID_DATA_ERR;
     }
     pid_t callerPid = invoker->GetCallerPid();
@@ -287,7 +295,7 @@ int IPCObjectStub::DBinderDecRefsTransaction(uint32_t code, MessageParcel &data,
         return IPC_STUB_INVALID_DATA_ERR;
     }
     uint64_t stubIndex = current->QueryStubIndex(this);
-    int32_t listenFd = invoker->GetClientFd();
+    int32_t listenFd = ops->getClientFd(invoker);
     // detach info whose listen fd equals the given one
     AppAuthInfo appAuthInfo = { callerPid, callerUid, tokenId, listenFd, stubIndex, this, callerDevId };
     if (current->DetachAppAuthInfo(appAuthInfo)) {
@@ -304,8 +312,7 @@ int IPCObjectStub::DBinderAddCommAuth(uint32_t code, MessageParcel &data, Messag
         return IPC_STUB_INVALID_DATA_ERR;
     }
 
-    DBinderDatabusInvoker *invoker = reinterpret_cast<DBinderDatabusInvoker *>(
-        IPCThreadSkeleton::GetRemoteInvoker(IRemoteObject::IF_PROT_DATABUS));
+    IRemoteInvoker *invoker = IPCThreadSkeleton::GetRemoteInvoker(IRemoteObject::IF_PROT_DATABUS);
     if (invoker == nullptr) {
         ZLOGE(LABEL, "get dbinder databus invoker failed");
         return IPC_STUB_INVALID_DATA_ERR;
@@ -774,8 +781,14 @@ int32_t IPCObjectStub::GetSessionNameForPidUid(uint32_t code, MessageParcel &dat
 
 std::string IPCObjectStub::CreateSessionName(int uid, int pid)
 {
-    std::string sessionName = DBINDER_SOCKET_NAME_PREFIX + std::to_string(uid) + std::string("_") + std::to_string(pid);
-    if (DBinderSoftbusClient::GetInstance().DBinderGrantPermission(uid, pid, sessionName) != ERR_NONE) {
+    std::string sessionName = DBINDER_SOCKET_NAME_PREFIX + std::to_string(uid) + DBINDER_UID_PID_SEPARATOR +
+        std::to_string(pid);
+    const IpcRpcOps *ops = IpcRpcOpsGet();
+    if (ops == nullptr) {
+        ZLOGE(LABEL, "rpc capability is unavailable");
+        return "";
+    }
+    if (ops->grantPermission(uid, pid, sessionName) != ERR_NONE) {
         ZLOGE(LABEL, "DBinderGrantPermission fail, %{public}s", sessionName.c_str());
         return "";
     }
@@ -790,7 +803,12 @@ int IPCObjectStub::RemoveSessionName(MessageParcel &data)
         ZLOGE(LABEL, "read parcel fail");
         return IPC_STUB_INVALID_DATA_ERR;
     }
-    if (DBinderSoftbusClient::GetInstance().DBinderRemovePermission(sessionName) != ERR_NONE) {
+    const IpcRpcOps *ops = IpcRpcOpsGet();
+    if (ops == nullptr) {
+        ZLOGE(LABEL, "rpc capability is unavailable");
+        return IPC_STUB_REMOVE_SESSION_NAME_ERR;
+    }
+    if (ops->removePermission(sessionName) != ERR_NONE) {
         ZLOGE(LABEL, "DBinderRemovePermission fail, %{public}s", sessionName.c_str());
         return IPC_STUB_REMOVE_SESSION_NAME_ERR;
     }

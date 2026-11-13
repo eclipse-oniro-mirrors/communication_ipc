@@ -20,8 +20,9 @@
 #include <string>
 
 #include "buffer_object.h"
-#include "databus_socket_listener.h"
 #include "ipc_object_proxy.h"
+#include "ipc_rpc_ops.h"
+#include "ipc_types.h"
 #include "nocopyable.h"
 
 namespace OHOS {

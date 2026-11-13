@@ -18,6 +18,19 @@ IPC_MODULETEST_ROOT_PATH = "$IPC_ROOT_PATH/test/moduletest"
 IPC_FUZZTEST_ROOT_PATH = "$IPC_ROOT_PATH/test/fuzztest"
 
 declare_args() {
+  # Ship the DBinder/RPC implementation as a separate libipc_rpc.z.so that
+  # libipc_single.z.so loads on first cross-device use. Set to false to build the
+  # pre-split shape: the four RPC translation units and the entry TU are compiled
+  # into libipc_single.z.so and the loader calls IpcRpcGetOps() directly.
+  #
+  # Scope of the rollback: it restores the link structure (no companion library,
+  # no libipc_rpc DT_NEEDED, no loader dlopen) but not the pre-split export
+  # surface. Both shapes share libipc_single_map, so the disabled shape still
+  # exports the entries marked "used by libipc_rpc" (245 versus 167 before the
+  # split; no entry is lost). The switch also does not cover pre-existing
+  # dlopen() calls elsewhere in the component (for example the SoftBus client
+  # and the thread pool), which are unchanged by the split.
+  ipc_feature_rpc_split_enabled = true
   ipc_feature_rpc_enabled = false
   ipc_feature_test_enabled = false
   ipc_feature_trace_enabled = false

@@ -42,15 +42,23 @@ common_include = [
   "$SUBSYSTEM_DIR/utils/include",
 ]
 
-common_source = [
-  "$IPC_CORE_ROOT/c/adapter/access_token/src/access_token_adapter.c",
-  "$IPC_CORE_ROOT/c/rpc/src/rpc_feature_set.c",
+# RPC/DBinder implementation that ships in libipc_rpc.z.so. These four
+# translation units are the only ones the split removes from libipc_single;
+# everything else stays in the core library and is reused over the version
+# scripted export list.
+rpc_source = [
   "$IPC_CORE_ROOT/src/core/dbinder/source/databus_socket_listener.cpp",
-  "$IPC_CORE_ROOT/src/core/dbinder/source/dbinder_callback_stub.cpp",
   "$IPC_CORE_ROOT/src/core/dbinder/source/dbinder_databus_invoker.cpp",
-  "$IPC_CORE_ROOT/src/core/dbinder/source/dbinder_session_object.cpp",
   "$IPC_CORE_ROOT/src/core/dbinder/source/dbinder_softbus_client.cpp",
   "$IPC_CORE_ROOT/src/core/dbinder/source/dbinder_softbus_client_death_recipient.cpp",
+]
+
+core_source = [
+  "$IPC_CORE_ROOT/c/adapter/access_token/src/access_token_adapter.c",
+  "$IPC_CORE_ROOT/c/rpc/src/rpc_feature_set.c",
+  "$IPC_CORE_ROOT/src/core/dbinder/source/dbinder_callback_stub.cpp",
+  "$IPC_CORE_ROOT/src/core/dbinder/source/dbinder_session_object.cpp",
+  "$IPC_CORE_ROOT/src/core/dbinder/source/ipc_rpc_loader.cpp",
   "$IPC_CORE_ROOT/src/core/framework/source/binder_debug.cpp",
   "$IPC_CORE_ROOT/src/core/framework/source/buffer_object.cpp",
   "$IPC_CORE_ROOT/src/core/framework/source/comm_auth_info.cpp",
@@ -75,6 +83,10 @@ common_source = [
   "$IPC_CORE_ROOT/src/core/invoker/source/invoker_rawdata.cpp",
 ]
 
+# Kept whole for the test variant, which still needs every RPC symbol in one
+# library (see the TASK-5 test assembly).
+common_source = core_source + rpc_source
+
 common_configs = [
   "$SUBSYSTEM_DIR/config:ipc_util_config",
   ":libipc_single_private_config",
@@ -85,6 +97,35 @@ common_public_configs = [
   "$SUBSYSTEM_DIR/config:ipc_util_config",
   ":ipc_all_deps_config",
 ]
+
+# Defines that change the content or layout of headers shared by libipc_single,
+# libipc_rpc and the test libraries (for example
+# FREEZE_PROCESS_ENABLED switches enum members in ipc_types.h and methods in
+# ipc_skeleton.h). They must be identical for every target that compiles those
+# headers, otherwise the same class can get two layouts in two DSOs and the
+# capability-table abiVersion check cannot detect it. Keep this as the single
+# source of truth instead of copying the list per target.
+config("ipc_rpc_abi_defines") {
+  defines = [ "FFRT_IPC_ENABLE" ]
+  if (build_selinux) {
+    defines += [ "WITH_SELINUX" ]
+  }
+  if (ipc_feature_trace_enabled) {
+    defines += [ "ENABLE_IPC_TRACE" ]
+  }
+  if (ipc_proxy_dfx_backtrace_enabled) {
+    defines += [ "ENABLE_IPC_PROXY_DFX_BACKTRACE" ]
+  }
+  if (hiviewdfx_hisysevent_support) {
+    defines += [ "HIVIEWDFX_HISYSEVENT_SUPPORT" ]
+  }
+  if (ipc_feature_freeze_enabled) {
+    defines += [ "FREEZE_PROCESS_ENABLED" ]
+  }
+  if (ipc_feature_calling_user_info_enabled) {
+    defines += [ "CALLING_USER_INFO_ENABLED" ]
+  }
+}
 
 common_external_deps = [
   "bounds_checking_function:libsec_shared",
@@ -107,7 +148,16 @@ ohos_shared_library("ipc_single") {
   branch_protector_ret = "pac_ret"
   include_dirs = common_include
 
-  sources = common_source
+  if (ipc_feature_rpc_split_enabled) {
+    sources = core_source
+  } else {
+    # Split disabled: restore the pre-split shape, where the four RPC
+    # translation units and the entry TU are part of the core library. The
+    # loader then calls IpcRpcGetOps() directly (IPC_RPC_STATIC_LINK) instead of
+    # opening a companion library, so no second so and no dlopen are produced.
+    sources = common_source +
+              [ "$IPC_CORE_ROOT/src/core/dbinder/source/ipc_rpc_entry.cpp" ]
+  }
 
   configs = common_configs
   public_configs = common_public_configs
@@ -117,25 +167,12 @@ ohos_shared_library("ipc_single") {
   public_external_deps = [ "c_utils:utils" ]
 
   external_deps = common_external_deps
-  defines = [ "FFRT_IPC_ENABLE" ]
-  if (build_selinux) {
-    defines += [ "WITH_SELINUX" ]
+  configs += [ ":ipc_rpc_abi_defines" ]
+  if (!ipc_feature_rpc_split_enabled) {
+    defines = [ "IPC_RPC_STATIC_LINK" ]
   }
   if (ipc_feature_trace_enabled) {
-    defines += [ "ENABLE_IPC_TRACE" ]
     sources += [ "$IPC_CORE_ROOT/src/core/framework/source/ipc_trace.cpp" ]
-  }
-  if (ipc_proxy_dfx_backtrace_enabled) {
-    defines += [ "ENABLE_IPC_PROXY_DFX_BACKTRACE" ]
-  }
-  if (hiviewdfx_hisysevent_support) {
-    defines += [ "HIVIEWDFX_HISYSEVENT_SUPPORT" ]
-  }
-  if (ipc_feature_freeze_enabled) {
-    defines += [ "FREEZE_PROCESS_ENABLED" ]
-  }
-  if (ipc_feature_calling_user_info_enabled) {
-    defines += [ "CALLING_USER_INFO_ENABLED" ]
   }
   innerapi_tags = [
     "chipsetsdk",
@@ -143,10 +180,10 @@ ohos_shared_library("ipc_single") {
     "sasdk",
   ]
   if (is_ohos && is_clang && target_cpu == "arm64" && defined(build_ext_path)) {
-    ldflags = [ 
+    ldflags = [
       "-Wl,--emit-relocs",
-      "-Wl,--no-relax", 
-      "-mno-fix-cortex-a53-843419" 
+      "-Wl,--no-relax",
+      "-mno-fix-cortex-a53-843419",
     ]
   }
 
@@ -159,6 +196,74 @@ ohos_shared_library("ipc_single") {
   part_name = "ipc"
 }
 
+# RPC/DBinder capability delivered as its own shared object. libipc_single
+# loads it lazily through IpcRpcGetOps() on the first cross-device call, so the
+# dependency stays one-way: libipc_rpc -> libipc_single (never the reverse).
+# With ipc_feature_rpc_split_enabled false there is no companion library at all:
+# the same sources are compiled into ipc_single and no target may reference
+# :ipc_rpc (see the guards in ipc_core/BUILD.gn and libdbinder/BUILD.gn).
+if (ipc_feature_rpc_split_enabled) {
+  ohos_shared_library("ipc_rpc") {
+    visibility = [ "$SUBSYSTEM_DIR/*" ]
+    sanitize = {
+      integer_overflow = true
+    }
+    version_script = "libipc_rpc_map"
+    branch_protector_ret = "pac_ret"
+    include_dirs = common_include
+
+    sources = [ "$IPC_CORE_ROOT/src/core/dbinder/source/ipc_rpc_entry.cpp" ] +
+              rpc_source
+
+    configs = common_configs
+    public_configs = common_public_configs
+
+    # ipc_single provides every migrated-type symbol; ipc_common provides the
+    # handful of ProcessSkeleton helpers the databus invoker still uses directly.
+    # Both are already loaded by any process that uses ipc.
+    deps = [
+      ":ipc_single",
+      "$IPC_CORE_ROOT/src/core:ipc_common",
+    ]
+
+    public_external_deps = [ "c_utils:utils" ]
+
+    external_deps = common_external_deps
+    configs += [ ":ipc_rpc_abi_defines" ]
+
+    # Every core symbol must resolve through libipc_single's export list; a
+    # missing entry has to fail the build instead of becoming a runtime dlsym
+    # surprise.
+    ldflags = [ "-Wl,--no-undefined" ]
+
+    # These four RPC translation units used to be linked into libipc_single, so
+    # they inherited its arm64 adlt link options (see the same block in the
+    # ipc_single target above). Keep the new companion library eligible for the
+    # same post-link tooling: --emit-relocs keeps relocation records,
+    # --no-relax stops the linker from rewriting sequences the tool patches, and
+    # -mno-fix-cortex-a53-843419 avoids erratum stubs. build_ext_path is only
+    # defined by that external build, so normal product builds are unaffected.
+    if (is_ohos && is_clang && target_cpu == "arm64" &&
+        defined(build_ext_path)) {
+      ldflags += [
+        "-Wl,--emit-relocs",
+        "-Wl,--no-relax",
+        "-mno-fix-cortex-a53-843419",
+      ]
+    }
+
+    innerapi_tags = [ "platformsdk_indirect" ]
+
+    install_images = [
+      system_base_dir,
+      updater_base_dir,
+    ]
+    install_enable = false
+    subsystem_name = "communication"
+    part_name = "ipc"
+  }
+}
+
 ohos_shared_library("ipc_single_test") {
   visibility = [ "$SUBSYSTEM_DIR/*" ]
   sanitize = {
@@ -168,7 +273,16 @@ ohos_shared_library("ipc_single_test") {
   branch_protector_ret = "pac_ret"
   include_dirs = common_include
 
-  sources = common_source
+  # This library deliberately keeps the whole implementation (common_source,
+  # including the four migrated RPC translation units) in one image so the
+  # existing tests can reach every symbol. It must therefore always use the
+  # static-link shape: the loader then calls IpcRpcGetOps() in this same image
+  # instead of dlopen()ing libipc_rpc.z.so, which would load a second copy of
+  # the core library and duplicate its process-wide state. The entry TU has to
+  # be compiled in for that direct call to resolve.
+  sources = common_source +
+            [ "$IPC_CORE_ROOT/src/core/dbinder/source/ipc_rpc_entry.cpp" ]
+  defines = [ "IPC_RPC_STATIC_LINK" ]
 
   configs = common_configs
   public_configs = common_public_configs
@@ -176,22 +290,9 @@ ohos_shared_library("ipc_single_test") {
   deps = [ "$IPC_CORE_ROOT/src/core:ipc_common" ]
   external_deps = common_external_deps
   external_deps += [ "c_utils:utils" ]
-  defines = [ "FFRT_IPC_ENABLE" ]
-  if (build_selinux) {
-    defines += [ "WITH_SELINUX" ]
-  }
+  configs += [ ":ipc_rpc_abi_defines" ]
   if (ipc_feature_trace_enabled) {
-    defines += [ "ENABLE_IPC_TRACE" ]
     sources += [ "$IPC_CORE_ROOT/src/core/framework/source/ipc_trace.cpp" ]
-  }
-  if (hiviewdfx_hisysevent_support) {
-    defines += [ "HIVIEWDFX_HISYSEVENT_SUPPORT" ]
-  }
-  if (ipc_feature_freeze_enabled) {
-    defines += [ "FREEZE_PROCESS_ENABLED" ]
-  }
-  if (ipc_feature_calling_user_info_enabled) {
-    defines += [ "CALLING_USER_INFO_ENABLED" ]
   }
   innerapi_tags = [
     "chipsetsdk_sp",

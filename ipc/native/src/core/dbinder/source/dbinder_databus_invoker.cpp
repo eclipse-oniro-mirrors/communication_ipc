@@ -32,6 +32,15 @@
 namespace OHOS {
 using namespace OHOS::HiviewDFX;
 
+/*
+ * Registers the DATABUS invoker with InvokerFactory when this image is loaded.
+ * Lives here rather than in dbinder_databus_invoker.h so that including the
+ * header does not drag a reference to DBinderDatabusInvoker into translation
+ * units that only speak IPC. See the declaration for details.
+ */
+InvokerDelegator<DBinderDatabusInvoker> DBinderDatabusInvoker::DBinderDatabusDelegator_
+    { IRemoteObject::IF_PROT_DATABUS };
+
 DBinderDatabusInvoker::DBinderDatabusInvoker()
     : stopWorkThread_(false), callerPid_(getpid()), callerUid_(getappuid()), callerDeviceID_(""),
     callerTokenID_(0), firstTokenID_(0), status_(0)

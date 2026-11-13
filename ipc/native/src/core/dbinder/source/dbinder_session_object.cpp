@@ -17,6 +17,7 @@
 
 #include "ipc_debug.h"
 #include "ipc_process_skeleton.h"
+#include "ipc_rpc_loader.h"
 #include "log_tags.h"
 
 namespace OHOS {
@@ -37,14 +38,13 @@ DBinderSessionObject::~DBinderSessionObject()
 // LCOV_EXCL_START
 void DBinderSessionObject::CloseDatabusSession()
 {
-    std::shared_ptr<DatabusSocketListener> listener = DelayedSingleton<DatabusSocketListener>::GetInstance();
-    if (listener == nullptr) {
-        ZLOGE(LOG_LABEL, "fail to get socket listener");
-        return;
-    }
     ZLOGI(LOG_LABEL, "Shutdown, deviceId:%{public}s socketId:%{public}d",
         IPCProcessSkeleton::ConvertToSecureString(GetDeviceId()).c_str(), socket_);
-    listener->ShutdownSocket(socket_);
+    // Shutdown path: only use the already cached table, never trigger a load.
+    const IpcRpcOps *ops = IpcRpcOpsPeek();
+    if (ops != nullptr) {
+        ops->shutdownSocket(socket_);
+    }
     socket_ = SOCKET_ID_INVALID;
 }
 // LCOV_EXCL_STOP

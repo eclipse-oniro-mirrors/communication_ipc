@@ -48,7 +48,7 @@
 
 #ifndef CONFIG_IPC_SINGLE
 #include "access_token_adapter.h"
-#include "dbinder_databus_invoker.h"
+#include "ipc_rpc_loader.h"
 #endif
 
 namespace OHOS {
@@ -1065,10 +1065,14 @@ bool IPCObjectProxy::CheckHaveSession()
 
 bool IPCObjectProxy::MakeDBinderTransSession(const DBinderNegotiationData &data)
 {
-    DBinderDatabusInvoker *invoker =
-        reinterpret_cast<DBinderDatabusInvoker *>(IPCThreadSkeleton::GetRemoteInvoker(IRemoteObject::IF_PROT_DATABUS));
+    IRemoteInvoker *invoker = IPCThreadSkeleton::GetRemoteInvoker(IRemoteObject::IF_PROT_DATABUS);
     if (invoker == nullptr) {
         ZLOGE(LABEL, "invoker is null");
+        return false;
+    }
+    const IpcRpcOps *ops = IpcRpcOpsGet();
+    if (ops == nullptr) {
+        ZLOGE(LABEL, "rpc capability is unavailable");
         return false;
     }
     IPCProcessSkeleton *current = IPCProcessSkeleton::GetCurrent();
@@ -1095,7 +1099,7 @@ bool IPCObjectProxy::MakeDBinderTransSession(const DBinderNegotiationData &data)
             IPCProcessSkeleton::ConvertToSecureString(data.localDeviceId).c_str());
         return false;
     }
-    if (!invoker->UpdateClientSession(dbinderSession)) {
+    if (!ops->updateClientSession(invoker, dbinderSession)) {
         // no need to remove softbus server
         ZLOGE(LABEL, "UpdateClientSession fail!");
         return false;
@@ -1128,10 +1132,15 @@ int IPCObjectProxy::GetDBinderNegotiationData(int handle, MessageParcel &reply, 
         return ERR_INVALID_DATA;
     }
 
+    const IpcRpcOps *ops = IpcRpcOpsGet();
+    if (ops == nullptr) {
+        ZLOGE(LABEL, "rpc capability is unavailable");
+        return ERR_INVALID_DATA;
+    }
     int32_t peerPid = -1;
     int32_t peerUid = -1;
-    if (!DatabusSocketListener::GetPidAndUidFromServiceName(dbinderData.peerServiceName, peerPid, peerUid)) {
-        ZLOGE(LOG_LABEL, "failed to get peerpid and peeruid from serviceName");
+    if (!ops->getPidAndUidFromServiceName(dbinderData.peerServiceName, peerPid, peerUid)) {
+        ZLOGE(LABEL, "failed to get peerpid and peeruid from serviceName");
         return ERR_INVALID_DATA;
     }
 
@@ -1163,10 +1172,15 @@ int IPCObjectProxy::GetDBinderNegotiationData(DBinderNegotiationData &dbinderDat
     dbinderData.localServiceName = data->local_name;
     dbinderData.peerTokenId = data->tokenid;
 
+    const IpcRpcOps *ops = IpcRpcOpsGet();
+    if (ops == nullptr) {
+        ZLOGE(LABEL, "rpc capability is unavailable");
+        return ERR_INVALID_DATA;
+    }
     int32_t peerPid = -1;
     int32_t peerUid = -1;
-    if (!DatabusSocketListener::GetPidAndUidFromServiceName(dbinderData.peerServiceName, peerPid, peerUid)) {
-        ZLOGE(LOG_LABEL, "failed to get peerpid and peeruid from serviceName");
+    if (!ops->getPidAndUidFromServiceName(dbinderData.peerServiceName, peerPid, peerUid)) {
+        ZLOGE(LABEL, "failed to get peerpid and peeruid from serviceName");
         return ERR_INVALID_DATA;
     }
 
@@ -1217,7 +1231,7 @@ void IPCObjectProxy::ReleaseDatabusProto()
             // close session in lock
             toBeDelete->CloseDatabusSession();
         } else {
-            ZLOGI(LOG_LABEL, "the session is using by others, can't close it, handle:%{public}u socketId:%{public}d "
+            ZLOGI(LABEL, "the session is using by others, can't close it, handle:%{public}u socketId:%{public}d "
                 "sessionName:%{public}s deviceId:%{public}s", handle_, toBeDelete->GetSocketId(),
                 toBeDelete->GetServiceName().c_str(),
                 IPCProcessSkeleton::ConvertToSecureString(toBeDelete->GetDeviceId()).c_str());

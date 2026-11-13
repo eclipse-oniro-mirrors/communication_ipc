@@ -167,6 +167,75 @@ ipc_unittest("IPCWorkThreadUnitTest") {
   sources = [ "ipc_workthread_unittest.cpp" ]
 }
 
+# Standalone target: it compiles the loader with IPC_RPC_UNIT_TEST and must not
+# link ipc_single_test, whose loader copy is built without the test hooks.
+ohos_unittest("IpcRpcLoaderUnitTest") {
+  module_out_path = MODULE_OUTPUT_PATH
+
+  include_dirs = [ "$IPC_CORE_ROOT/src/core/dbinder/include" ]
+
+  configs = [ "$IPC_ROOT_PATH/config:ipc_util_config" ]
+
+  defines = [ "IPC_RPC_UNIT_TEST" ]
+
+  sources = [
+    "$IPC_CORE_ROOT/src/core/dbinder/source/ipc_rpc_loader.cpp",
+    "ipc_rpc_loader_unittest.cpp",
+  ]
+
+  external_deps = [ "googletest:gmock" ]
+
+  ldflags = [
+    "-ldl",
+    "-lpthread",
+  ]
+
+  resource_config_file = "$IPC_ROOT_PATH/test/resource/unittest/ohos_test.xml"
+}
+
+# Closed build shape: ipc_single_test compiles the RPC implementation and the
+# entry TU into one image with IPC_RPC_STATIC_LINK, so these cases cover the
+# table published by the static loader branch.
+ipc_unittest("IpcRpcStaticLinkUnitTest") {
+  sources = [ "ipc_rpc_static_link_unittest.cpp" ]
+}
+
+# Failure branch of the same static shape. Kept in its own binary because the
+# loader caches its first result per process: a successful load cannot be
+# followed by a rejected one.
+#
+# This target defines its own IpcRpcGetOps() and links ipc_rpc_loader.cpp
+# directly. It must never depend on ipc_single_test/libipc_single: an ELF
+# definition in the executable would preempt the library's provider, the case
+# would still pass, and it would no longer test the rejected-table path.
+ohos_unittest("IpcRpcStaticLinkFailureUnitTest") {
+  module_out_path = MODULE_OUTPUT_PATH
+
+  include_dirs = [
+    "$IPC_CORE_ROOT/src/core/dbinder/include",
+    "$IPC_ROOT_PATH/utils/include",
+  ]
+
+  configs = [ "$IPC_ROOT_PATH/config:ipc_util_config" ]
+
+  defines = [ "IPC_RPC_STATIC_LINK" ]
+
+  sources = [
+    "$IPC_CORE_ROOT/src/core/dbinder/source/ipc_rpc_loader.cpp",
+    "ipc_rpc_static_link_failure_unittest.cpp",
+  ]
+
+  external_deps = [
+    "c_utils:utils",
+    "googletest:gmock",
+    "hilog:libhilog",
+  ]
+
+  ldflags = [ "-lpthread" ]
+
+  resource_config_file = "$IPC_ROOT_PATH/test/resource/unittest/ohos_test.xml"
+}
+
 ###############################################################################
 group("ipc_nativecore_unittest") {
   testonly = true
@@ -189,6 +258,9 @@ group("ipc_nativecore_unittest") {
     ":ProcessSkeletonUnitTest",
     ":IPCTraceNativeCoreUnitTest",
     ":IPCWorkThreadUnitTest",
+    ":IpcRpcLoaderUnitTest",
+    ":IpcRpcStaticLinkUnitTest",
+    ":IpcRpcStaticLinkFailureUnitTest",
   ]
 }
 ###############################################################################

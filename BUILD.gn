@@ -27,6 +27,9 @@ group("ipc_components") {
       "$SUBSYSTEM_DIR/interfaces/kits/ndk:ipc_capi",
       "$SUBSYSTEM_DIR/ipc/native/src/core:ipc_common",
     ]
+    if (ipc_feature_rpc_split_enabled) {
+      deps += [ "$SUBSYSTEM_DIR/interfaces/innerkits/ipc_core:ipc_rpc_core" ]
+    }
     if (support_jsapi) {
       deps += [
         "$SUBSYSTEM_DIR/interfaces/innerkits/ipc_napi_common:ipc_napi",

@@ -27,6 +27,9 @@
 #include "invoker_factory.h"
 #include "ipc_debug.h"
 #include "ipc_object_proxy.h"
+#ifndef CONFIG_IPC_SINGLE
+#include "ipc_rpc_loader.h"
+#endif
 #include "iremote_invoker.h"
 #include "iremote_object.h"
 #include "log_tags.h"
@@ -228,6 +231,21 @@ IRemoteInvoker *IPCThreadSkeleton::GetRemoteInvoker(int proto)
     } else {
         InvokerFactory &factory = InvokerFactory::Get();
         invoker = factory.newInstance(proto);
+#ifndef CONFIG_IPC_SINGLE
+        // The RPC invoker is registered by the static initializers of
+        // libipc_rpc.z.so, which is not loaded yet on the first DATABUS use.
+        // Reset the using flag before loading: the load runs foreign static
+        // initializers and must not observe a half-updated framework state.
+        // Only the first miss reaches this point; later calls hit
+        // invokers_[proto] above.
+        if (invoker == nullptr && proto == IRemoteObject::IF_PROT_DATABUS) {
+            current->usingFlag_ = INVOKER_IDLE_MAGIC;
+            if (IpcRpcOpsGet() != nullptr) {
+                current->usingFlag_ = INVOKER_USE_MAGIC;
+                invoker = factory.newInstance(proto);
+            }
+        }
+#endif
         if (invoker == nullptr) {
             current->usingFlag_ = INVOKER_IDLE_MAGIC;
             uint64_t curTime = static_cast<uint64_t>(std::chrono::duration_cast<std::chrono::nanoseconds>(

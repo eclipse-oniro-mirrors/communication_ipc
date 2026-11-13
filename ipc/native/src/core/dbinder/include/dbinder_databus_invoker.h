@@ -120,7 +120,16 @@ private:
     int32_t clientFd_ = 0;
     uint32_t status_;
     static constexpr int ACCESS_TOKEN_MAX_LEN = 20;
-    static inline InvokerDelegator<DBinderDatabusInvoker> DBinderDatabusDelegator_ = { IRemoteObject::IF_PROT_DATABUS };
+    /*
+     * Defined in dbinder_databus_invoker.cpp, which now ships in libipc_rpc.z.so.
+     * The definition must not stay inline in this header: an inline definition
+     * makes every including translation unit reference the invoker constructor
+     * and destructor, so core-only consumers (and their unit tests) would have to
+     * link the RPC library just to include this header. Registration still
+     * happens through the static initializers of the library that owns the
+     * implementation, which is exactly when libipc_rpc.z.so is loaded.
+     */
+    static InvokerDelegator<DBinderDatabusInvoker> DBinderDatabusDelegator_;
 };
 } // namespace OHOS
 #endif // OHOS_IPC_DBINDER_DATABUS_INVOKER_H
