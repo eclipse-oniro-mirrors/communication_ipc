@@ -34,7 +34,7 @@
 #include "comm_auth_info.h"
 #include "dbinder_callback_stub.h"
 #include "dbinder_session_object.h"
-#include "dbinder_softbus_client.h"
+#include "ipc_rpc_ops.h"
 #include "stub_refcount_object.h"
 #endif
 

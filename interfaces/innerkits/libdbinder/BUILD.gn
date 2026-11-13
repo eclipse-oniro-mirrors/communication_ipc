@@ -84,6 +84,13 @@ ohos_shared_library("libdbinder") {
     "$IPC_CORE_ROOT/src/core:ipc_common",
     "$SUBSYSTEM_DIR/interfaces/innerkits/ipc_core:ipc_core",
   ]
+  if (ipc_feature_rpc_split_enabled) {
+    # DBinderSoftbusClient lives in the split RPC library now; libdbinder calls
+    # it directly, so this is the rpc side of the one-way
+    # libdbinder -> libipc_rpc -> libipc_single chain. With the split disabled
+    # the same symbols are exported by libipc_single (ipc_core dep above).
+    deps += [ "$SUBSYSTEM_DIR/interfaces/innerkits/ipc_single:ipc_rpc" ]
+  }
 
   external_deps = [
     "bounds_checking_function:libsec_shared",

@@ -20,6 +20,7 @@
 #include <unordered_map>
 
 #include "dbinder_softbus_client.h"
+#include "ipc_rpc_ops.h"
 #include "ipc_types.h"
 #include "singleton.h"
 
@@ -30,10 +31,6 @@ static constexpr QosTV QOS_TV[] = {
     { .qos = QOS_TYPE_MIN_LATENCY, .value = RPC_QOS_MIN_LATENCY }
 };
 static constexpr uint32_t QOS_COUNT = static_cast<uint32_t>(sizeof(QOS_TV) / sizeof(QosTV));
-
-static const std::string DBINDER_PKG_NAME = "DBinderBus";
-static const std::string DBINDER_SOCKET_NAME_PREFIX = "DBinder";
-static const std::string DBINDER_UID_PID_SEPARATOR = "_";
 
 class DBinderSocketInfo {
 public:

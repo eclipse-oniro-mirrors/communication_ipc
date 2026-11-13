@@ -28,7 +28,9 @@ ohos_fuzztest("DBinderGrantPermissionFuzzTest") {
   ]
   sources = [ "dbindergrantpermission_fuzzer.cpp" ]
 
-  deps = [ "$SUBSYSTEM_DIR/interfaces/innerkits/ipc_single:ipc_single" ]
+  # RPC 实现已迁出 libipc_single.z.so（见 codespec split-rpc-so），
+  # DBinderSoftbusClient 不再由共享库动态导出，故与同目录其他 fuzzer 一致改用静态聚合目标。
+  deps = [ "$SUBSYSTEM_DIR/test:ipc_single_test_static" ]
 
   external_deps = [
     "c_utils:utils",

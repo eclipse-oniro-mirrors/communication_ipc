@@ -58,3 +58,43 @@ ohos_prebuilt_shared_library("ipc_core") {
   subsystem_name = "communication"
   part_name = "ipc"
 }
+
+# Install libipc_rpc.z.so next to libipc_single.z.so; the loader in
+# ipc_rpc_loader.cpp derives that directory from the core library's own path.
+# This is an internal companion library, so it is tagged like the source
+# target's platformsdk_indirect rather than as a direct platformsdk interface.
+# Install location is intentionally identical to ipc_core (platformsdk in the
+# system and updater images): the pair is only usable together, so any change to
+# ipc_core's install_images/relative_install_dir must be mirrored here. The
+# non-installed ipc_single target still declares chipsetsdk tags; do not turn
+# that target into an install without also installing ipc_rpc for every one of
+# its destination directories.
+#
+# With ipc_feature_rpc_split_enabled false there is no companion library: the
+# RPC sources are compiled into ipc_single, so this install target must not be
+# declared (and ipc_components must not depend on it).
+if (ipc_feature_rpc_split_enabled) {
+  ohos_prebuilt_shared_library("ipc_rpc_core") {
+    source = "${root_out_dir}/communication/ipc/libipc_rpc.z.so"
+
+    public_configs = [
+      "$SUBSYSTEM_DIR/config:dsoftbus_header_deps_config",
+      "$SUBSYSTEM_DIR/config:ipc_util_config",
+      ":ipc_all_deps_config",
+    ]
+    public_external_deps = [ "c_utils:utils" ]
+
+    deps = [ "$SUBSYSTEM_DIR/interfaces/innerkits/ipc_single:ipc_rpc" ]
+
+    install_enable = true
+    relative_install_dir = "platformsdk"
+    innerapi_tags = [ "platformsdk_indirect" ]
+
+    install_images = [
+      system_base_dir,
+      updater_base_dir,
+    ]
+    subsystem_name = "communication"
+    part_name = "ipc"
+  }
+}

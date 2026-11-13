@@ -20,6 +20,7 @@
 #include <gtest/gtest.h>
 #include <iostream>
 
+#include "databus_socket_listener.h"
 #include "ipc_process_skeleton.h"
 #include "ipc_thread_skeleton.h"
 #include "process_skeleton.h"

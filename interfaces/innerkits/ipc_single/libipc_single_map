@@ -16,6 +16,11 @@
 1.0 {
     global:
         extern "C++" {
+            /* DBinder RPC client surface. Split on (ipc_feature_rpc_split_enabled
+             * = true): the implementations live in libipc_rpc.z.so and these
+             * entries are inert in this library. Split off (the flag is false,
+             * the static-link shape): the four RPC translation units are
+             * compiled in here, so these entries are live and required. */
             "OHOS::DBinderSoftbusClient::GetInstance()";
             "OHOS::DBinderSoftbusClient::GetLocalNodeDeviceId(std::__h::basic_string<char, std::__h::char_traits<char>, std::__h::allocator<char>> const&, std::__h::basic_string<char, std::__h::char_traits<char>, std::__h::allocator<char>>&)";
             "OHOS::DBinderSoftbusClient::DBinderGrantPermission(int, int, std::__h::basic_string<char, std::__h::char_traits<char>, std::__h::allocator<char>> const&)";
@@ -198,6 +203,82 @@
             "virtual thunk to OHOS::IPCObjectStub::GetAndSaveDBinderData(int, unsigned int)";
             "OHOS::IPCObjectStub::DBinderClearServiceState(unsigned int, OHOS::MessageParcel&, OHOS::MessageParcel&, OHOS::MessageOption&)";
             "virtual thunk to OHOS::IPCObjectStub::DBinderClearServiceState(unsigned int, OHOS::MessageParcel&, OHOS::MessageParcel&, OHOS::MessageOption&)";
+
+            /* used by libipc_rpc: core symbols the split RPC library resolves at load time */
+            "OHOS::BufferObject::AcquireSendBuffer(unsigned int)";
+            "OHOS::BufferObject::GetSendBufferReadCursor() const";
+            "OHOS::BufferObject::GetSendBufferSizeEx() const";
+            "OHOS::BufferObject::GetSendBufferWriteCursor() const";
+            "OHOS::BufferObject::SetSendBufferReadCursorEx(long)";
+            "OHOS::BufferObject::SetSendBufferWriteCursorEx(long)";
+            "OHOS::BufferObject::UpdateSendBufferLocked(unsigned int)";
+            "OHOS::DBinderSessionObject::CloseDatabusSession()";
+            "OHOS::DBinderSessionObject::DBinderSessionObject(std::__h::basic_string<char, std::__h::char_traits<char>, std::__h::allocator<char>> const&, std::__h::basic_string<char, std::__h::char_traits<char>, std::__h::allocator<char>> const&, unsigned long, OHOS::IPCObjectProxy*, unsigned int)";
+            "OHOS::DBinderSessionObject::GetDeviceId() const";
+            "OHOS::DBinderSessionObject::GetFlatSessionLen()";
+            "OHOS::DBinderSessionObject::GetPeerPid() const";
+            "OHOS::DBinderSessionObject::GetPeerUid() const";
+            "OHOS::DBinderSessionObject::GetServiceName() const";
+            "OHOS::DBinderSessionObject::GetSessionBuff()";
+            "OHOS::DBinderSessionObject::GetSocketId() const";
+            "OHOS::DBinderSessionObject::GetStubIndex() const";
+            "OHOS::DBinderSessionObject::GetTokenId() const";
+            "OHOS::DBinderSessionObject::SetPeerPid(int)";
+            "OHOS::DBinderSessionObject::SetPeerUid(int)";
+            "OHOS::DBinderSessionObject::SetSocketId(int)";
+            "OHOS::DBinderSessionObject::~DBinderSessionObject()";
+            "OHOS::HitraceInvoker::TraceClientReceive(int, unsigned int, unsigned int, OHOS::HiviewDFX::HiTraceId const&, OHOS::HiviewDFX::HiTraceId const&)";
+            "OHOS::HitraceInvoker::TraceClientSend(int, unsigned int, OHOS::MessageParcel&, unsigned int&, OHOS::HiviewDFX::HiTraceId const&)";
+            "OHOS::HitraceInvoker::TraceServerReceive(unsigned long, unsigned int, OHOS::MessageParcel&, unsigned int&)";
+            "OHOS::HitraceInvoker::TraceServerSend(unsigned long, unsigned int, bool, unsigned int)";
+            "OHOS::IPCObjectProxy::ClearDBinderServiceState()";
+            "OHOS::IPCObjectProxy::GetProto() const";
+            "OHOS::IPCObjectProxy::SetObjectDied(bool)";
+            "OHOS::IPCProcessSkeleton::AddDataInfoToThread(std::__h::__thread_id const&, std::__h::shared_ptr<OHOS::ThreadProcessInfo>)";
+            "OHOS::IPCProcessSkeleton::AddDataThreadInWait(std::__h::__thread_id const&)";
+            "OHOS::IPCProcessSkeleton::AddSendThreadInWait(unsigned long, std::__h::shared_ptr<OHOS::ThreadMessageInfo>, int)";
+            "OHOS::IPCProcessSkeleton::AddStubByIndex(OHOS::IRemoteObject*)";
+            "OHOS::IPCProcessSkeleton::AttachOrUpdateAppAuthInfo(OHOS::AppAuthInfo const&)";
+            "OHOS::IPCProcessSkeleton::AttachRawData(int, unsigned long, std::__h::shared_ptr<OHOS::InvokerRawData>)";
+            "OHOS::IPCProcessSkeleton::DetachAppAuthInfoBySocketId(int)";
+            "OHOS::IPCProcessSkeleton::DetachRawData(int, unsigned long)";
+            "OHOS::IPCProcessSkeleton::EraseThreadBySeqNumber(unsigned long)";
+            "OHOS::IPCProcessSkeleton::FindOrNewObject(int, dbinder_negotiation_data const*)";
+            "OHOS::IPCProcessSkeleton::GetCurrent()";
+            "OHOS::IPCProcessSkeleton::GetDBinderIdleHandle(std::__h::shared_ptr<OHOS::DBinderSessionObject>)";
+            "OHOS::IPCProcessSkeleton::GetDatabusName()";
+            "OHOS::IPCProcessSkeleton::GetIdleDataThread()";
+            "OHOS::IPCProcessSkeleton::GetLocalDeviceID()";
+            "OHOS::IPCProcessSkeleton::GetSeqNumber()";
+            "OHOS::IPCProcessSkeleton::GetSocketIdleThreadNum() const";
+            "OHOS::IPCProcessSkeleton::GetSocketTotalThreadNum() const";
+            "OHOS::IPCProcessSkeleton::IsContainsObject(OHOS::IRemoteObject*)";
+            "OHOS::IPCProcessSkeleton::MakeHandleDescriptor(int)";
+            "OHOS::IPCProcessSkeleton::PopDataInfoFromThread(std::__h::__thread_id const&)";
+            "OHOS::IPCProcessSkeleton::ProxyDetachDBinderSession(unsigned int, OHOS::IPCObjectProxy*)";
+            "OHOS::IPCProcessSkeleton::ProxyQueryDBinderSession(unsigned int)";
+            "OHOS::IPCProcessSkeleton::QueryAppInfoToStubIndex(OHOS::AppAuthInfo const&)";
+            "OHOS::IPCProcessSkeleton::QueryCommAuthInfo(OHOS::AppAuthInfo&)";
+            "OHOS::IPCProcessSkeleton::QueryHandleByDatabusSession(std::__h::basic_string<char, std::__h::char_traits<char>, std::__h::allocator<char>> const&, std::__h::basic_string<char, std::__h::char_traits<char>, std::__h::allocator<char>> const&, unsigned long)";
+            "OHOS::IPCProcessSkeleton::QueryObject(std::__h::basic_string<char16_t, std::__h::char_traits<char16_t>, std::__h::allocator<char16_t>> const&, bool)";
+            "OHOS::IPCProcessSkeleton::QueryProxyBySocketId(int, std::__h::vector<unsigned int, std::__h::allocator<unsigned int>>&)";
+            "OHOS::IPCProcessSkeleton::QueryRawData(int, unsigned long)";
+            "OHOS::IPCProcessSkeleton::QuerySessionByInfo(std::__h::basic_string<char, std::__h::char_traits<char>, std::__h::allocator<char>> const&, std::__h::basic_string<char, std::__h::char_traits<char>, std::__h::allocator<char>> const&)";
+            "OHOS::IPCProcessSkeleton::QueryStubByIndex(unsigned long)";
+            "OHOS::IPCProcessSkeleton::QueryThreadBySeqNumber(unsigned long)";
+            "OHOS::IPCProcessSkeleton::RemoveSoftbusServer()";
+            "OHOS::IPCProcessSkeleton::SpawnThread(int, int)";
+            "OHOS::IPCProcessSkeleton::StubAttachDBinderSession(unsigned int, std::__h::shared_ptr<OHOS::DBinderSessionObject>)";
+            "OHOS::IPCProcessSkeleton::StubDetachDBinderSession(unsigned int, unsigned int&)";
+            "OHOS::IPCProcessSkeleton::StubQueryDBinderSession(unsigned int)";
+            "OHOS::IPCProcessSkeleton::WakeUpDataThread(std::__h::__thread_id const&)";
+            "OHOS::IPCProcessSkeleton::WakeUpThreadBySeqNumber(unsigned long, unsigned int)";
+            "OHOS::InvokerRawData::GetData() const";
+            "OHOS::InvokerRawData::GetSize() const";
+            "OHOS::InvokerRawData::InvokerRawData(unsigned long)";
+            "OHOS::InvokerRawData::~InvokerRawData()";
+            "OHOS::MessageParcel::GetRawData() const";
+            "OHOS::MessageParcel::RestoreRawData(std::__h::shared_ptr<char>, unsigned long)";
         };
     local:
         *;

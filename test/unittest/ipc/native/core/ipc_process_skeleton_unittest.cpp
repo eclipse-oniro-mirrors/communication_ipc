@@ -17,6 +17,7 @@
 #include <gtest/gtest.h>
 
 #include "binder_invoker.h"
+#include "databus_socket_listener.h"
 #include "dbinder_session_object.h"
 #include "ipc_object_proxy.h"
 #include "ipc_object_stub.h"

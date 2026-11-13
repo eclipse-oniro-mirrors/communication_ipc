@@ -20,6 +20,7 @@
 
 #include "dbinder_databus_invoker.h"
 #include "dbinder_softbus_client.h"
+#include "ipc_rpc_ops.h"
 #include "ipc_skeleton.h"
 #include "ipc_object_proxy.h"
 #include "ipc_object_stub.h"
