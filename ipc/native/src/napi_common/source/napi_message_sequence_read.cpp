@@ -111,7 +111,7 @@ napi_value NAPI_MessageSequence::JS_rewindRead(napi_env env, napi_callback_info 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1");
         return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: number, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }
@@ -389,7 +389,7 @@ napi_value NAPI_MessageSequence::JS_readParcelable(napi_env env, napi_callback_i
         if (callResult != nullptr) {
             return callResult;
         }
-        ZLOGI(LOG_LABEL, "call unmarshalling failed");
+        ZLOGI(LOG_LABEL, "unmarshalling failed");
     }
 
     return napiErr.ThrowError(env, errorDesc::CALL_JS_METHOD_ERROR);
@@ -873,7 +873,7 @@ napi_value NAPI_MessageSequence::JS_readParcelableArray(napi_env env, napi_callb
             napi_get_element(env, argv[ARGV_INDEX_0], i, &element);
             napi_value callJsFuncResult = JS_readParcelableArrayCallJsFunc(env, element, thisVar);
             if (callJsFuncResult == nullptr) {
-                ZLOGE(LOG_LABEL, "call unmarshalling failed, element index:%{public}d", i);
+                ZLOGE(LOG_LABEL, "unmarshalling failed, element index:%{public}d", i);
                 return callJsFuncResult;
             }
         }
@@ -949,7 +949,7 @@ napi_value NAPI_MessageSequence::JS_ReadFileDescriptor(napi_env env, napi_callba
     }
     int32_t result = napiSequence->nativeParcel_->ReadFileDescriptor();
     if (result == -1) {
-        ZLOGE(LOG_LABEL, "read file descriptor failed");
+        ZLOGE(LOG_LABEL, "read fd failed");
         return napiErr.ThrowError(env, errorDesc::READ_DATA_FROM_MESSAGE_SEQUENCE_ERROR);
     }
     napi_value napiValue;
@@ -1018,7 +1018,7 @@ static int32_t GetArraySize(napi_env env, napi_callback_info info, napi_value &t
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1");
         result = napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: number, Actual: "
             + NapiError::NapiTypeToString(valueType));
         return -1;
@@ -1090,7 +1090,7 @@ napi_value NAPI_MessageSequence::JS_ReadRawDataBuffer(napi_env env, napi_callbac
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
-        ZLOGD(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGD(LOG_LABEL, "type mismatch for param 1");
         return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: number, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }
@@ -1160,7 +1160,7 @@ napi_value NAPI_MessageSequence::JS_readArrayBuffer(napi_env env, napi_callback_
     napi_valuetype valueType = napi_null;
     napi_status status = napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1, not number. status:%{public}d", status);
+        ZLOGE(LOG_LABEL, "type mismatch for param 1, not number. status:%{public}d", status);
         return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: number, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }

@@ -61,7 +61,7 @@ NAPIRemoteObjectHolder::NAPIRemoteObjectHolder(napi_env env, const std::u16strin
 void NAPIRemoteObjectHolder::DeleteJsObjectRefInUvWork()
 {
     if (env_ == nullptr) {
-        ZLOGE(LOG_LABEL, "js env has been destructed");
+        ZLOGE(LOG_LABEL, "env is null");
         return;
     }
     OperateJsRefParam *param = new (std::nothrow) OperateJsRefParam {
@@ -96,7 +96,7 @@ void NAPIRemoteObjectHolder::DeleteJsObjectRefInUvWork()
 NAPIRemoteObjectHolder::~NAPIRemoteObjectHolder()
 {
     if (env_ == nullptr) {
-        ZLOGE(LOG_LABEL, "js env has been destructed");
+        ZLOGE(LOG_LABEL, "env is null");
         return;
     }
 
@@ -181,7 +181,7 @@ void NAPIRemoteObjectHolder::CleanJsEnv()
 void NAPIRemoteObjectHolder::attachLocalInterface(napi_value localInterface, std::string &descriptor)
 {
     if (env_ == nullptr) {
-        ZLOGE(LOG_LABEL, "Js env has been destructed");
+        ZLOGE(LOG_LABEL, "env is null");
         return;
     }
     if (localInterfaceRef_ != nullptr) {
@@ -194,7 +194,7 @@ void NAPIRemoteObjectHolder::attachLocalInterface(napi_value localInterface, std
 napi_value NAPIRemoteObjectHolder::queryLocalInterface(std::string &descriptor)
 {
     if (env_ == nullptr) {
-        ZLOGE(LOG_LABEL, "Js env has been destructed");
+        ZLOGE(LOG_LABEL, "env is null");
         return nullptr;
     }
     if (!descriptor_.empty() && strcmp(Str16ToStr8(descriptor_).c_str(), descriptor.c_str()) == 0) {

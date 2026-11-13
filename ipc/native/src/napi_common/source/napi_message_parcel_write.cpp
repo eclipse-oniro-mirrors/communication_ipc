@@ -70,7 +70,7 @@ napi_value NAPI_MessageParcel::JS_writeByte(napi_env env, napi_callback_info inf
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
 
     int32_t value = 0;
     napi_get_value_int32(env, argv[ARGV_INDEX_0], &value);
@@ -95,7 +95,7 @@ napi_value NAPI_MessageParcel::JS_writeShort(napi_env env, napi_callback_info in
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
 
     int32_t value = 0;
     napi_get_value_int32(env, argv[ARGV_INDEX_0], &value);
@@ -120,7 +120,7 @@ napi_value NAPI_MessageParcel::JS_writeInt(napi_env env, napi_callback_info info
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
 
     int32_t value = 0;
     napi_get_value_int32(env, argv[ARGV_INDEX_0], &value);
@@ -145,7 +145,7 @@ napi_value NAPI_MessageParcel::JS_writeLong(napi_env env, napi_callback_info inf
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
 
     int64_t value = 0;
     napi_get_value_int64(env, argv[ARGV_INDEX_0], &value);
@@ -170,7 +170,7 @@ napi_value NAPI_MessageParcel::JS_writeFloat(napi_env env, napi_callback_info in
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
 
     double value = 0;
     napi_get_value_double(env, argv[ARGV_INDEX_0], &value);
@@ -195,7 +195,7 @@ napi_value NAPI_MessageParcel::JS_writeDouble(napi_env env, napi_callback_info i
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
 
     double value = 0;
     napi_get_value_double(env, argv[ARGV_INDEX_0], &value);
@@ -220,7 +220,7 @@ napi_value NAPI_MessageParcel::JS_writeBoolean(napi_env env, napi_callback_info 
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_boolean, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_boolean, "type mismatch for param 1");
 
     bool value = 0;
     napi_get_value_bool(env, argv[ARGV_INDEX_0], &value);
@@ -245,7 +245,7 @@ napi_value NAPI_MessageParcel::JS_writeChar(napi_env env, napi_callback_info inf
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
 
     uint32_t value = 0;
     napi_get_value_uint32(env, argv[ARGV_INDEX_0], &value);
@@ -270,7 +270,7 @@ napi_value NAPI_MessageParcel::JS_writeByteArray(napi_env env, napi_callback_inf
 
     bool isArray = false;
     napi_is_array(env, argv[ARGV_INDEX_0], &isArray);
-    NAPI_ASSERT(env, isArray == true, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, isArray == true, "type mismatch for param 1");
 
     uint32_t arrayLength = 0;
     uint32_t maxBytesLen = 40960;
@@ -318,7 +318,7 @@ napi_value NAPI_MessageParcel::JS_writeShortArray(napi_env env, napi_callback_in
 
     bool isArray = false;
     napi_is_array(env, argv[ARGV_INDEX_0], &isArray);
-    NAPI_ASSERT(env, isArray == true, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, isArray == true, "type mismatch for param 1");
 
     uint32_t arrayLength = 0;
     napi_get_array_length(env, argv[ARGV_INDEX_0], &arrayLength);
@@ -364,7 +364,7 @@ napi_value NAPI_MessageParcel::JS_writeIntArray(napi_env env, napi_callback_info
 
     bool isArray = false;
     napi_is_array(env, argv[ARGV_INDEX_0], &isArray);
-    NAPI_ASSERT(env, isArray == true, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, isArray == true, "type mismatch for param 1");
 
     uint32_t arrayLength = 0;
     napi_get_array_length(env, argv[ARGV_INDEX_0], &arrayLength);
@@ -414,7 +414,7 @@ napi_value NAPI_MessageParcel::JS_writeLongArray(napi_env env, napi_callback_inf
 
     bool isArray = false;
     napi_is_array(env, argv[ARGV_INDEX_0], &isArray);
-    NAPI_ASSERT(env, isArray == true, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, isArray == true, "type mismatch for param 1");
 
     uint32_t arrayLength = 0;
     napi_get_array_length(env, argv[ARGV_INDEX_0], &arrayLength);
@@ -462,7 +462,7 @@ napi_value NAPI_MessageParcel::JS_writeFloatArray(napi_env env, napi_callback_in
 
     bool isArray = false;
     napi_is_array(env, argv[ARGV_INDEX_0], &isArray);
-    NAPI_ASSERT(env, isArray == true, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, isArray == true, "type mismatch for param 1");
 
     uint32_t arrayLength = 0;
     napi_get_array_length(env, argv[ARGV_INDEX_0], &arrayLength);
@@ -509,7 +509,7 @@ napi_value NAPI_MessageParcel::JS_writeDoubleArray(napi_env env, napi_callback_i
 
     bool isArray = false;
     napi_is_array(env, argv[ARGV_INDEX_0], &isArray);
-    NAPI_ASSERT(env, isArray == true, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, isArray == true, "type mismatch for param 1");
 
     uint32_t arrayLength = 0;
     napi_get_array_length(env, argv[ARGV_INDEX_0], &arrayLength);
@@ -556,7 +556,7 @@ napi_value NAPI_MessageParcel::JS_writeBooleanArray(napi_env env, napi_callback_
 
     bool isArray = false;
     napi_is_array(env, argv[ARGV_INDEX_0], &isArray);
-    NAPI_ASSERT(env, isArray == true, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, isArray == true, "type mismatch for param 1");
 
     uint32_t arrayLength = 0;
     napi_get_array_length(env, argv[ARGV_INDEX_0], &arrayLength);
@@ -603,7 +603,7 @@ napi_value NAPI_MessageParcel::JS_writeCharArray(napi_env env, napi_callback_inf
 
     bool isArray = false;
     napi_is_array(env, argv[ARGV_INDEX_0], &isArray);
-    NAPI_ASSERT(env, isArray == true, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, isArray == true, "type mismatch for param 1");
 
     uint32_t arrayLength = 0;
     napi_get_array_length(env, argv[ARGV_INDEX_0], &arrayLength);
@@ -653,7 +653,7 @@ napi_value NAPI_MessageParcel::JS_writeString(napi_env env, napi_callback_info i
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_string, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_string, "type mismatch for param 1");
 
     size_t bufferSize = 0;
     size_t maxLen = 40960;
@@ -685,7 +685,7 @@ napi_value NAPI_MessageParcel::JS_writeStringArray(napi_env env, napi_callback_i
 
     bool isArray = false;
     napi_is_array(env, argv[ARGV_INDEX_0], &isArray);
-    NAPI_ASSERT(env, isArray == true, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, isArray == true, "type mismatch for param 1");
 
     uint32_t arrayLength = 0;
     napi_get_array_length(env, argv[ARGV_INDEX_0], &arrayLength);
@@ -787,7 +787,7 @@ napi_value NAPI_MessageParcel::JS_writeSequenceableArray(napi_env env, napi_call
 
     bool isArray = false;
     napi_is_array(env, argv[ARGV_INDEX_0], &isArray);
-    NAPI_ASSERT_BASE(env, isArray == true, "type mismatch for parameter 1", retValue);
+    NAPI_ASSERT_BASE(env, isArray == true, "type mismatch for param 1", retValue);
     uint32_t arrayLength = 0;
     napi_get_array_length(env, argv[ARGV_INDEX_0], &arrayLength);
 
@@ -856,7 +856,7 @@ napi_value NAPI_MessageParcel::JS_writeRemoteObjectArray(napi_env env, napi_call
 
     bool isArray = false;
     napi_is_array(env, argv[ARGV_INDEX_0], &isArray);
-    NAPI_ASSERT_BASE(env, isArray == true, "type mismatch for parameter 1", retValue);
+    NAPI_ASSERT_BASE(env, isArray == true, "type mismatch for param 1", retValue);
 
     uint32_t arrayLength = 0;
     napi_get_array_length(env, argv[ARGV_INDEX_0], &arrayLength);
@@ -923,7 +923,7 @@ napi_value NAPI_MessageParcel::JS_setSize(napi_env env, napi_callback_info info)
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
 
     uint32_t value = 0;
     napi_get_value_uint32(env, argv[ARGV_INDEX_0], &value);
@@ -949,7 +949,7 @@ napi_value NAPI_MessageParcel::JS_setCapacity(napi_env env, napi_callback_info i
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
 
     uint32_t value = 0;
     napi_get_value_uint32(env, argv[ARGV_INDEX_0], &value);
@@ -1026,7 +1026,7 @@ napi_value NAPI_MessageParcel::JS_rewindRead(napi_env env, napi_callback_info in
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
 
     uint32_t pos = 0;
     napi_get_value_uint32(env, argv[ARGV_INDEX_0], &pos);
@@ -1068,7 +1068,7 @@ napi_value NAPI_MessageParcel::JS_rewindWrite(napi_env env, napi_callback_info i
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
 
     uint32_t pos = 0;
     napi_get_value_uint32(env, argv[ARGV_INDEX_0], &pos);
@@ -1170,7 +1170,7 @@ napi_value NAPI_MessageParcel::JS_writeInterfaceToken(napi_env env, napi_callbac
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_string, "type mismatch for parameter");
+    NAPI_ASSERT(env, valueType == napi_string, "type mismatch for param");
 
     size_t bufferSize = 0;
     size_t maxSize = 40960;
@@ -1203,7 +1203,7 @@ napi_value NAPI_MessageParcel::JS_CloseFileDescriptor(napi_env env, napi_callbac
     NAPI_ASSERT(env, argc == 1, "requires 1 parameters");
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
     int32_t fd = -1;
     napi_get_value_int32(env, argv[ARGV_INDEX_0], &fd);
     close(fd);
@@ -1221,7 +1221,7 @@ napi_value NAPI_MessageParcel::JS_DupFileDescriptor(napi_env env, napi_callback_
     NAPI_ASSERT(env, argc == 1, "requires 1 parameters");
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
     int32_t fd = -1;
     napi_get_value_int32(env, argv[ARGV_INDEX_0], &fd);
     int32_t dupResult = dup(fd);
@@ -1254,7 +1254,7 @@ napi_value NAPI_MessageParcel::JS_WriteFileDescriptor(napi_env env, napi_callbac
     NAPI_ASSERT(env, argc == 1, "requires 1 parameters");
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 1");
     int32_t fd = -1;
     napi_get_value_int32(env, argv[ARGV_INDEX_0], &fd);
     NAPI_MessageParcel *napiParcel = nullptr;
@@ -1306,7 +1306,7 @@ napi_value NAPI_MessageParcel::JS_WriteRawData(napi_env env, napi_callback_info 
     NAPI_ASSERT(env, argc == ARGV_LENGTH_2, "requires 2 parameter");
     bool isArray = false;
     napi_is_array(env, argv[ARGV_INDEX_0], &isArray);
-    NAPI_ASSERT(env, isArray == true, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, isArray == true, "type mismatch for param 1");
 
     std::vector<int32_t> array;
     uint32_t arrayLength = 0;
@@ -1327,7 +1327,7 @@ napi_value NAPI_MessageParcel::JS_WriteRawData(napi_env env, napi_callback_info 
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_1], &valueType);
-    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for parameter 2");
+    NAPI_ASSERT(env, valueType == napi_number, "type mismatch for param 2");
     int32_t size = 0;
     napi_get_value_int32(env, argv[ARGV_INDEX_1], &size);
     NAPI_MessageParcel *napiParcel = nullptr;

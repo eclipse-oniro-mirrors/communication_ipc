@@ -146,7 +146,7 @@ napi_value NAPI_IPCSkeleton_flushCommands(napi_env env, napi_callback_info info)
 
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for parameter 1");
+    NAPI_ASSERT(env, valueType == napi_object, "type mismatch for param 1");
 
     sptr<IRemoteObject> target = NAPI_ohos_rpc_getNativeRemoteObject(env, argv[ARGV_INDEX_0]);
     if (target == nullptr) {
@@ -174,7 +174,7 @@ napi_value NAPI_IPCSkeleton_flushCmdBuffer(napi_env env, napi_callback_info info
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_object) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1");
         return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: object, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }
@@ -285,7 +285,7 @@ napi_value NAPI_IPCSkeleton_setCallingIdentity(napi_env env, napi_callback_info 
     NAPI_ASSERT_BASE(env, argc == expectedArgc, "requires 1 parameters", retValue);
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
-    NAPI_ASSERT_BASE(env, valueType == napi_string, "type mismatch for parameter 1", retValue);
+    NAPI_ASSERT_BASE(env, valueType == napi_string, "type mismatch for param 1", retValue);
     size_t bufferSize = 0;
     size_t maxLen = 40960;
     napi_get_value_string_utf8(env, argv[ARGV_INDEX_0], nullptr, 0, &bufferSize);
@@ -432,7 +432,7 @@ napi_value NAPI_IPCSkeleton_restoreCallingIdentity(napi_env env, napi_callback_i
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ARGV_INDEX_0], &valueType);
     if (valueType != napi_string) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1");
         return napiErr.ThrowParamError(env, "Parameter error: Param[0] type mismatch. Expected: string, Actual: "
             + NapiError::NapiTypeToString(valueType));
     }

@@ -124,32 +124,32 @@ static bool IsParametersTypeValid(napi_env env, napi_value argv[], size_t argc)
     napi_valuetype valueType = napi_null;
     napi_typeof(env, argv[ArgIndex::ARGV_INDEX_0], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 1");
+        ZLOGE(LOG_LABEL, "type mismatch for param 1");
         return false;
     }
     napi_typeof(env, argv[ArgIndex::ARGV_INDEX_1], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 2");
+        ZLOGE(LOG_LABEL, "type mismatch for param 2");
         return false;
     }
     napi_typeof(env, argv[ArgIndex::ARGV_INDEX_2], &valueType);
     if (valueType != napi_number) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 3");
+        ZLOGE(LOG_LABEL, "type mismatch for param 3");
         return false;
     }
     napi_typeof(env, argv[ArgIndex::ARGV_INDEX_3], &valueType);
     if (valueType != napi_string) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 4");
+        ZLOGE(LOG_LABEL, "type mismatch for param 4");
         return false;
     }
     napi_typeof(env, argv[ArgIndex::ARGV_INDEX_4], &valueType);
     if (valueType != napi_string) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 5");
+        ZLOGE(LOG_LABEL, "type mismatch for param 5");
         return false;
     }
     napi_typeof(env, argv[ArgIndex::ARGV_INDEX_5], &valueType);
     if (valueType != napi_boolean) {
-        ZLOGE(LOG_LABEL, "type mismatch for parameter 6");
+        ZLOGE(LOG_LABEL, "type mismatch for param 6");
         return false;
     }
     return true;
@@ -162,7 +162,7 @@ static napi_value NAPICallingInfo_JS_Constructor(napi_env env, napi_callback_inf
     napi_value thisVar = nullptr;
     napi_get_cb_info(env, info, &argc, argv, &thisVar, nullptr);
     NAPI_ASSERT(env, argc == ArgcLength::ARGC_LENGTH_6, "invalid parameter count");
-    NAPI_ASSERT(env, IsParametersTypeValid(env, argv, argc), "type mismatch for parameter");
+    NAPI_ASSERT(env, IsParametersTypeValid(env, argv, argc), "type mismatch for param");
     int32_t callingPid = 0;
     napi_status status = napi_get_value_int32(env, argv[ArgIndex::ARGV_INDEX_0], &callingPid);
     NAPI_ASSERT(env, status == napi_ok, "failed to get int32 value");
