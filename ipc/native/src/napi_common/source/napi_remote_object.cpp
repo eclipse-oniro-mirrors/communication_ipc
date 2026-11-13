@@ -988,7 +988,7 @@ int NAPIRemoteObject::OnJsRemoteRequest(CallbackParam *jsParam)
         return ERR_UNKNOWN_REASON;
     }
     if (thisVarRef_ == nullptr || env_ == nullptr) {
-        ZLOGE(LOG_LABEL, "env is null");
+        ZLOGE(LOG_LABEL, "Js env has been destructed");
         return ERR_UNKNOWN_REASON;
     }
 
