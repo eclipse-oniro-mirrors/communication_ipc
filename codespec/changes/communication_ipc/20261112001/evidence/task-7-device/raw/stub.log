@@ -1,0 +1,44 @@
+Running main() from ../../third_party/googletest/googletest/src/gtest_main.cc
+[==========] Running 79 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 79 tests from IPCObjectStubTest
+[ RUN      ] IPCObjectStubTest.OnRemoteDumpTest001
+[       OK ] IPCObjectStubTest.OnRemoteDumpTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.OnRemoteDumpTest002
+[       OK ] IPCObjectStubTest.OnRemoteDumpTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderPingTransactionTest001
+[       OK ] IPCObjectStubTest.DBinderPingTransactionTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderSearchDescriptorTest001
+[       OK ] IPCObjectStubTest.DBinderSearchDescriptorTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderSearchDescriptorTest002
+[       OK ] IPCObjectStubTest.DBinderSearchDescriptorTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderDumpTransactionTest001
+[       OK ] IPCObjectStubTest.DBinderDumpTransactionTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderDumpTransactionTest002
+[       OK ] IPCObjectStubTest.DBinderDumpTransactionTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderDumpTransactionTest003
+[       OK ] IPCObjectStubTest.DBinderDumpTransactionTest003 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderDumpTransactionTest004
+[       OK ] IPCObjectStubTest.DBinderDumpTransactionTest004 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderDumpTransactionTest005
+[       OK ] IPCObjectStubTest.DBinderDumpTransactionTest005 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderIncRefsTransactionTest001
+[       OK ] IPCObjectStubTest.DBinderIncRefsTransactionTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderIncRefsTransactionTest002
+[       OK ] IPCObjectStubTest.DBinderIncRefsTransactionTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderIncRefsTransactionTest003
+[       OK ] IPCObjectStubTest.DBinderIncRefsTransactionTest003 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderDecRefsTransactionTest001
+[       OK ] IPCObjectStubTest.DBinderDecRefsTransactionTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderDecRefsTransactionTest002
+[       OK ] IPCObjectStubTest.DBinderDecRefsTransactionTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderGetSessionNameTest001
+[       OK ] IPCObjectStubTest.DBinderGetSessionNameTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderGetSessionNameTest002
+[       OK ] IPCObjectStubTest.DBinderGetSessionNameTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderGetSessionNameTest003
+[       OK ] IPCObjectStubTest.DBinderGetSessionNameTest003 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderGetSessionNameTest004
+../../third_party/googletest/googlemock/src/gmock-spec-builders.cc:366: Failure
+Name() must not be called before SetOwnerAndName() has been called.
+

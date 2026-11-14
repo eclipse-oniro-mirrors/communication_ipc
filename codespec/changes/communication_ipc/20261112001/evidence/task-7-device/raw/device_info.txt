@@ -1,0 +1,18 @@
+Linux localhost 6.6.101-gc0c10d57367a-dirty #1 SMP PREEMPT_DYNAMIC Thu Nov 12 03:44:48 CST 2026 x86_64 Toybox
+---
+OpenHarmony 3.2 
+ohos 
+OpenHarmony 7.1.0.25 
+true 
+---
+b0b3dc07f2e503023df7e76673dc099c  /data/local/tmp/ipc_rpc_test/libipc_single.z.so
+0ae4812cb495f0034ade6fed575e94bd  /data/local/tmp/ipc_rpc_test/libipc_rpc.z.so
+6b273e873a0826354e23bd357829190e  /data/local/tmp/ipc_rpc_test/libipc_common.z.so
+68c4062a940b34775730cd5cbae27420  /data/local/tmp/ipc_rpc_test/libdbinder.z.so
+dcaaaa35df0e0449e51118db8d75e852  /data/local/tmp/ipc_rpc_test/libipc_single_test.z.so
+---
+d2ee52661cd246e2a986643de9ba0426  /system/lib64/platformsdk/libipc_single.z.so
+ls: /system/lib64/platformsdk/libipc_rpc.z.so: No such file or directory
+---
+model name	: Intel(R) Xeon(R) Gold 6161 CPU @ 2.20GHz
+4

@@ -1,0 +1,86 @@
+# TASK-6 依赖方向原始证据
+
+## baseline (baseline_libipc_single.z.so)
+NEEDED  libutils.z.so
+NEEDED  libipc_common.z.so
+NEEDED  libsec_shared.z.so
+NEEDED  libbacktrace_local.so
+NEEDED  libffrt.so
+NEEDED  libhilog.so
+NEEDED  libhitracechain.so
+NEEDED  libselinux.z.so
+NEEDED  libhisysevent.z.so
+NEEDED  libc.so
+NEEDED  libc++.so
+NEEDED  libclang_rt.ubsan_minimal.so
+
+## on-single (libipc_single.z.so)
+NEEDED  libutils.z.so
+NEEDED  libipc_common.z.so
+NEEDED  libsec_shared.z.so
+NEEDED  libbacktrace_local.so
+NEEDED  libffrt.so
+NEEDED  libhilog.so
+NEEDED  libhitracechain.so
+NEEDED  libselinux.z.so
+NEEDED  libhisysevent.z.so
+NEEDED  libc.so
+NEEDED  libc++.so
+NEEDED  libclang_rt.ubsan_minimal.so
+
+## on-rpc (libipc_rpc.z.so)
+NEEDED  libutils.z.so
+NEEDED  libipc_single.z.so
+NEEDED  libipc_common.z.so
+NEEDED  libsec_shared.z.so
+NEEDED  libhilog.so
+NEEDED  libhitracechain.so
+NEEDED  libhisysevent.z.so
+NEEDED  libc.so
+NEEDED  libc++.so
+NEEDED  libclang_rt.ubsan_minimal.so
+
+## off-single (split_off_libipc_single.z.so)
+NEEDED  libutils.z.so
+NEEDED  libipc_common.z.so
+NEEDED  libsec_shared.z.so
+NEEDED  libbacktrace_local.so
+NEEDED  libffrt.so
+NEEDED  libhilog.so
+NEEDED  libhitracechain.so
+NEEDED  libselinux.z.so
+NEEDED  libhisysevent.z.so
+NEEDED  libc.so
+NEEDED  libc++.so
+NEEDED  libclang_rt.ubsan_minimal.so
+
+## on-test-so (libipc_single_test.z.so)
+NEEDED  libipc_common.z.so
+NEEDED  libsec_shared.z.so
+NEEDED  libbacktrace_local.so
+NEEDED  libffrt.so
+NEEDED  libhilog.so
+NEEDED  libhitracechain.so
+NEEDED  libselinux.z.so
+NEEDED  libhisysevent.z.so
+NEEDED  libutils.z.so
+NEEDED  libc.so
+NEEDED  libc++.so
+NEEDED  libclang_rt.ubsan_minimal.so
+
+## on-dbinder (libdbinder.z.so)
+NEEDED  libipc_common.z.so
+NEEDED  libipc_rpc.z.so
+NEEDED  libsec_shared.z.so
+NEEDED  libutils.z.so
+NEEDED  libffrt.so
+NEEDED  libhilog.so
+NEEDED  libc.so
+NEEDED  libipc_single.z.so
+NEEDED  libc++.so
+NEEDED  libclang_rt.ubsan_minimal.so
+
+## 反向依赖判定
+libipc_single NEEDED libipc_rpc.z.so: NO
+libipc_rpc NEEDED libipc_single.z.so: YES
+libdbinder NEEDED libipc_rpc.z.so: YES

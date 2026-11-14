@@ -1,0 +1,44 @@
+# 被测件指纹：镜像内库 vs 构建产物
+
+口径：`out/x86_64_virt/packages/phone/images/system.img` 内库（本目录 `raw/elf.txt` 由 `debugfs dump` 抽出的副本计算）
+对比 `out/x86_64_virt/communication/ipc/` 下构建产物。两者逐条一致。
+
+| 库 | 镜像内路径 | 字节 | md5（镜像内） | md5（构建产物） | 一致 |
+|----|-----------|-----:|---------------|-----------------|:----:|
+| `libipc_single.z.so` | `/system/lib64/platformsdk/` | 371,584 | `b0b3dc07f2e503023df7e76673dc099c` | `b0b3dc07f2e503023df7e76673dc099c` | 是 |
+| `libipc_rpc.z.so` | `/system/lib64/platformsdk/` | 177,304 | `0ae4812cb495f0034ade6fed575e94bd` | `0ae4812cb495f0034ade6fed575e94bd` | 是 |
+| `libipc_common.z.so` | `/system/lib64/platformsdk/` | 75,192 | `6b273e873a0826354e23bd357829190e` | `6b273e873a0826354e23bd357829190e` | 是 |
+| `libdbinder.z.so` | `/system/lib64/` | 166,624 | `68c4062a940b34775730cd5cbae27420` | `68c4062a940b34775730cd5cbae27420` | 是 |
+
+设备侧 `md5sum` 复核（`raw/device_info.txt`）与上表完全一致。
+
+## 与拆分前基线的差异
+
+| 项 | 基线（TASK-7 时的镜像） | 本次镜像 |
+|----|------------------------|----------|
+| `libipc_single.z.so` | 492,056 B，md5 `d2ee5266…` | 371,584 B，md5 `b0b3dc07…` |
+| `libipc_rpc.z.so` | 不存在 | 177,304 B，md5 `0ae4812c…` |
+
+## 镜像内 ELF 事实（`raw/elf.txt`）
+
+- `libipc_single.z.so`：NEEDED **不含** `libipc_rpc.z.so`；导出 235。
+- `libipc_rpc.z.so`：NEEDED **含** `libipc_single.z.so`；导出 11。
+- `libdbinder.z.so`：NEEDED 同时含 `libipc_single.z.so` 与 `libipc_rpc.z.so`。→ 依赖方向为 `libdbinder → libipc_rpc → libipc_single`，与设计一致，无反向 `DT_NEEDED`。
+
+## 设备侧被测件（仅测试辅助库走推送）
+
+| 文件 | 来源 | 说明 |
+|------|------|------|
+| `libipc_single.z.so` / `libipc_rpc.z.so` / `libipc_common.z.so` / `libdbinder.z.so` | **镜像内** `/system/...` | 本目录验证目标，未推送覆盖 |
+| `libipc_single_test.z.so` | 推送 `/data/local/tmp/imgverify/` | 测试桩库（606,944 B，md5 `dcaaaa35df0e0449e51118db8d75e852`），不随镜像发布 |
+| `realdl` | 推送 `/data/local/tmp/imgverify/` | 源码见 `../task-7-device/realdl.c`（9,856 B，md5 `0b39b14b870d6c59485e65ec2c2b9a70`） |
+| `IpcRpcLoaderUnitTest` | 推送 | 331,288 B，md5 `a2d50e74e980e3c846f826e73fa085fb` |
+| `IpcRpcStaticLinkUnitTest` | 推送 | 291,912 B，md5 `e136ba08716a9f681cb0e10f939c0cc8` |
+| `IpcRpcStaticLinkFailureUnitTest` | 推送 | 278,976 B，md5 `8e513fc6da8eba093542cae36415984f` |
+| `IPCProcessSkeletonUnitTest` | 推送 | 625,944 B，md5 `104aa2201b28f5287e78cf5d01f5f1f2` |
+| `IPCObjectProxyUnitTest` | 推送 | 766,024 B，md5 `dd3a8080c13b7109ef41b37c8807b133` |
+| `DbinderDataBusInvokerUnitTest` | 推送 | 945,672 B，md5 `e723fc0f7e6331940943fb31b8c149b2` |
+| `IpcObjectStubUnitTest` | 推送 | 679,208 B，md5 `014298e90ca703f2bce27261930d23fa` |
+
+推送目录同时**不含**任何 IPC 核心库，因此测试期间 `libipc_single` / `libipc_rpc` / `libipc_common` / `libdbinder`
+只能来自 `/system/lib64`，这一点由 `raw/realdl_*.txt` 的 `maps` 路径与 `raw/device_info.txt` 的 md5 共同证明。

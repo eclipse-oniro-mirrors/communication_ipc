@@ -1,0 +1,18 @@
+Running main() from ../../third_party/googletest/googletest/src/gtest_main.cc
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from IpcRpcStaticLinkTest
+[ RUN      ] IpcRpcStaticLinkTest.ProviderEntryResolvesToTheSameTable
+[       OK ] IpcRpcStaticLinkTest.ProviderEntryResolvesToTheSameTable (1 ms)
+[ RUN      ] IpcRpcStaticLinkTest.CapabilityTableReportsExpectedAbiVersion
+[       OK ] IpcRpcStaticLinkTest.CapabilityTableReportsExpectedAbiVersion (0 ms)
+[ RUN      ] IpcRpcStaticLinkTest.EveryCapabilitySlotIsPopulated
+[       OK ] IpcRpcStaticLinkTest.EveryCapabilitySlotIsPopulated (0 ms)
+[ RUN      ] IpcRpcStaticLinkTest.DatabusInvokerIsRegisteredInTheSameImage
+[       OK ] IpcRpcStaticLinkTest.DatabusInvokerIsRegisteredInTheSameImage (8 ms)
+[----------] 4 tests from IpcRpcStaticLinkTest (13 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (18 ms total)
+[  PASSED  ] 4 tests.
+EXIT=0

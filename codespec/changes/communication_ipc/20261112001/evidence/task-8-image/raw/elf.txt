@@ -1,0 +1,35 @@
+# ELF facts for libraries extracted from out/x86_64_virt/packages/phone/images/system.img
+
+## libipc_single.z.so
+size: 371584  md5: b0b3dc07f2e503023df7e76673dc099c
+machine:                           Advanced Micro Devices X86-64
+SONAME: libipc_single.z.so
+NEEDED: libutils.z.so libipc_common.z.so libsec_shared.z.so libbacktrace_local.so libffrt.so libhilog.so libhitracechain.so libselinux.z.so libhisysevent.z.so libc.so libc++.so libclang_rt.ubsan_minimal.so 
+exported defined symbols: 235
+
+## libipc_rpc.z.so
+size: 177304  md5: 0ae4812cb495f0034ade6fed575e94bd
+machine:                           Advanced Micro Devices X86-64
+SONAME: libipc_rpc.z.so
+NEEDED: libutils.z.so libipc_single.z.so libipc_common.z.so libsec_shared.z.so libhilog.so libhitracechain.so libhisysevent.z.so libc.so libc++.so libclang_rt.ubsan_minimal.so 
+exported defined symbols: 11
+
+## libipc_common.z.so
+size: 75192  md5: 6b273e873a0826354e23bd357829190e
+machine:                           Advanced Micro Devices X86-64
+SONAME: libipc_common.z.so
+NEEDED: libsec_shared.z.so libutils.z.so libhilog.so libc.so libc++.so libclang_rt.ubsan_minimal.so 
+exported defined symbols: 78
+
+## libdbinder.z.so
+size: 166624  md5: 68c4062a940b34775730cd5cbae27420
+machine:                           Advanced Micro Devices X86-64
+SONAME: libdbinder.z.so
+NEEDED: libipc_common.z.so libipc_rpc.z.so libsec_shared.z.so libutils.z.so libffrt.so libhilog.so libc.so libipc_single.z.so libc++.so libclang_rt.ubsan_minimal.so 
+exported defined symbols: 183
+
+## system.img inode map (debugfs)
+   5030  100644 (1)      0      0   75192 12-Nov-2026 21:44 libipc_common.z.so
+   5033  100644 (1)      0      0   177304 13-Nov-2026 16:47 libipc_rpc.z.so
+   5034  100644 (1)      0      0   371584 13-Nov-2026 16:41 libipc_single.z.so
+   2832  100644 (1)      0      0   166624 13-Nov-2026 16:48 libdbinder.z.so

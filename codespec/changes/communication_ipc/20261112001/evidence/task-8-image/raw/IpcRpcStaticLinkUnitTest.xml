@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="0" disabled="0" errors="0" time="0." timestamp="2026-11-13T18:29:23.320" name="AllTests">
+  <testsuite name="IpcRpcStaticLinkTest" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-11-13T18:29:23.320">
+    <testcase name="ProviderEntryResolvesToTheSameTable" file="../../foundation/communication/ipc/test/unittest/ipc/native/core/ipc_rpc_static_link_unittest.cpp" line="62" status="run" result="completed" time="0." timestamp="2026-11-13T18:29:23.320" classname="IpcRpcStaticLinkTest" level="1" />
+    <testcase name="CapabilityTableReportsExpectedAbiVersion" file="../../foundation/communication/ipc/test/unittest/ipc/native/core/ipc_rpc_static_link_unittest.cpp" line="76" status="run" result="completed" time="0." timestamp="2026-11-13T18:29:23.320" classname="IpcRpcStaticLinkTest" level="1" />
+    <testcase name="EveryCapabilitySlotIsPopulated" file="../../foundation/communication/ipc/test/unittest/ipc/native/core/ipc_rpc_static_link_unittest.cpp" line="89" status="run" result="completed" time="0." timestamp="2026-11-13T18:29:23.320" classname="IpcRpcStaticLinkTest" level="1" />
+    <testcase name="DatabusInvokerIsRegisteredInTheSameImage" file="../../foundation/communication/ipc/test/unittest/ipc/native/core/ipc_rpc_static_link_unittest.cpp" line="110" status="run" result="completed" time="0." timestamp="2026-11-13T18:29:23.320" classname="IpcRpcStaticLinkTest" level="1" />
+  </testsuite>
+</testsuites>

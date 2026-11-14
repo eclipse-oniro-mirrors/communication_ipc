@@ -1,0 +1,33 @@
+# arm64 镜像内库符号事实（llvm-nm）
+
+## libipc_rpc.z.so 导出定义符号（11）
+IpcRpcGetOps@@1.0
+_ZN4OHOS20DBinderSoftbusClient11GetInstanceEv@@1.0
+_ZN4OHOS20DBinderSoftbusClient20GetLocalNodeDeviceIdERKNSt3__h12basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEERS7_@@1.0
+_ZN4OHOS20DBinderSoftbusClient22DBinderGrantPermissionEiiRKNSt3__h12basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@1.0
+_ZN4OHOS20DBinderSoftbusClient4BindEiPK5QosTVjPK15ISocketListener@@1.0
+_ZN4OHOS20DBinderSoftbusClient6ListenEiPK5QosTVjPK15ISocketListener@@1.0
+_ZN4OHOS20DBinderSoftbusClient6SocketE10SocketInfo@@1.0
+_ZN4OHOS20DBinderSoftbusClient8ShutdownEi@@1.0
+_ZN4OHOS20DBinderSoftbusClient9SendBytesEiPKvj@@1.0
+_ZN4OHOS21DBinderDatabusInvokerC1Ev@@1.0
+_ZN4OHOS21DBinderDatabusInvokerC2Ev@@1.0
+
+## libipc_single.z.so 中 IpcRpc* 定义符号数
+0
+
+## libipc_single.z.so 中 IpcRpc* 未定义引用
+(以上为空即无)
+
+## libdbinder.z.so 从 rpc 库导入的 DBinderSoftbusClient/DBinderDatabusInvoker 符号（8）
+_ZN4OHOS20DBinderSoftbusClient11GetInstanceEv@1.0
+_ZN4OHOS20DBinderSoftbusClient20GetLocalNodeDeviceIdERKNSt3__h12basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEERS7_@1.0
+_ZN4OHOS20DBinderSoftbusClient22DBinderGrantPermissionEiiRKNSt3__h12basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@1.0
+_ZN4OHOS20DBinderSoftbusClient4BindEiPK5QosTVjPK15ISocketListener@1.0
+_ZN4OHOS20DBinderSoftbusClient6ListenEiPK5QosTVjPK15ISocketListener@1.0
+_ZN4OHOS20DBinderSoftbusClient6SocketE10SocketInfo@1.0
+_ZN4OHOS20DBinderSoftbusClient8ShutdownEi@1.0
+_ZN4OHOS20DBinderSoftbusClient9SendBytesEiPKvj@1.0
+
+## libipc_single.z.so 同组导入数
+0

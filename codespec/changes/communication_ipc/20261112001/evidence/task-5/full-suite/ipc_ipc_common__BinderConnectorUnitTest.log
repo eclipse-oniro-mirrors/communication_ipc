@@ -1,0 +1,54 @@
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+Running main() from ../../third_party/googletest/googletest/src/gtest_main.cc
+[==========] Running 13 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 13 tests from BinderConnectorTest
+[ RUN      ] BinderConnectorTest.OpenDriver001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] BinderConnectorTest.OpenDriver001 (0 ms)
+[ RUN      ] BinderConnectorTest.CloseDriverFd001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+timeout: the monitored command dumped core
+/tmp/opencode/scope_run_all2.sh: line 21: 749796 Segmentation fault      timeout 90 "$LD" "./$name"

@@ -1,0 +1,72 @@
+# arm64_virt system.img 内 IPC 库抽取与比对
+# image: /srv/workspace/openharmony_master_default_x86_64_virt_ai_20261111185909_huawei_c9e7dfc75/code/out/arm64_virt/packages/phone/images/system.img
+-rw-r--r-- 1 huawei users 2147483648 Nov 13 20:51 /srv/workspace/openharmony_master_default_x86_64_virt_ai_20261111185909_huawei_c9e7dfc75/code/out/arm64_virt/packages/phone/images/system.img
+
+libipc_single.z.so       img=   359560 B  048197efed141efff0bc720000bad07f   build=   359560 B  048197efed141efff0bc720000bad07f  SAME  Inode: 4988
+libipc_rpc.z.so          img=   169544 B  4fbf631d0a1b5146debc6da6941c1ee7   build=   169544 B  4fbf631d0a1b5146debc6da6941c1ee7  SAME  Inode: 4987
+libipc_common.z.so       img=    71280 B  0d966297efcccd2334b29595fd0a2608   build=    71280 B  0d966297efcccd2334b29595fd0a2608  SAME  Inode: 4984
+libdbinder.z.so          img=   158472 B  0c6734f9ad9ba0840c0664140d71c07b   build=   158472 B  0c6734f9ad9ba0840c0664140d71c07b  SAME  Inode: 2768
+
+## ELF 事实（镜像内副本）
+
+### libipc_single.z.so
+size: 359560  md5: 048197efed141efff0bc720000bad07f
+  Machine:                           AArch64
+0x0000000000000001 (NEEDED)         Shared library: [libutils.z.so]
+0x0000000000000001 (NEEDED)         Shared library: [libipc_common.z.so]
+0x0000000000000001 (NEEDED)         Shared library: [libsec_shared.z.so]
+0x0000000000000001 (NEEDED)         Shared library: [libbacktrace_local.so]
+0x0000000000000001 (NEEDED)         Shared library: [libffrt.so]
+0x0000000000000001 (NEEDED)         Shared library: [libhilog.so]
+0x0000000000000001 (NEEDED)         Shared library: [libhitracechain.so]
+0x0000000000000001 (NEEDED)         Shared library: [libselinux.z.so]
+0x0000000000000001 (NEEDED)         Shared library: [libhisysevent.z.so]
+0x0000000000000001 (NEEDED)         Shared library: [libc.so]
+0x0000000000000001 (NEEDED)         Shared library: [libc++.so]
+0x0000000000000001 (NEEDED)         Shared library: [libclang_rt.ubsan_minimal.so]
+0x000000000000000e (SONAME)         Library soname: [libipc_single.z.so]
+exported defined symbols: 235
+
+### libipc_rpc.z.so
+size: 169544  md5: 4fbf631d0a1b5146debc6da6941c1ee7
+  Machine:                           AArch64
+0x0000000000000001 (NEEDED)         Shared library: [libutils.z.so]
+0x0000000000000001 (NEEDED)         Shared library: [libipc_single.z.so]
+0x0000000000000001 (NEEDED)         Shared library: [libipc_common.z.so]
+0x0000000000000001 (NEEDED)         Shared library: [libsec_shared.z.so]
+0x0000000000000001 (NEEDED)         Shared library: [libhilog.so]
+0x0000000000000001 (NEEDED)         Shared library: [libhitracechain.so]
+0x0000000000000001 (NEEDED)         Shared library: [libhisysevent.z.so]
+0x0000000000000001 (NEEDED)         Shared library: [libc.so]
+0x0000000000000001 (NEEDED)         Shared library: [libc++.so]
+0x0000000000000001 (NEEDED)         Shared library: [libclang_rt.ubsan_minimal.so]
+0x000000000000000e (SONAME)         Library soname: [libipc_rpc.z.so]
+exported defined symbols: 11
+
+### libipc_common.z.so
+size: 71280  md5: 0d966297efcccd2334b29595fd0a2608
+  Machine:                           AArch64
+0x0000000000000001 (NEEDED)         Shared library: [libsec_shared.z.so]
+0x0000000000000001 (NEEDED)         Shared library: [libutils.z.so]
+0x0000000000000001 (NEEDED)         Shared library: [libhilog.so]
+0x0000000000000001 (NEEDED)         Shared library: [libc.so]
+0x0000000000000001 (NEEDED)         Shared library: [libc++.so]
+0x0000000000000001 (NEEDED)         Shared library: [libclang_rt.ubsan_minimal.so]
+0x000000000000000e (SONAME)         Library soname: [libipc_common.z.so]
+exported defined symbols: 78
+
+### libdbinder.z.so
+size: 158472  md5: 0c6734f9ad9ba0840c0664140d71c07b
+  Machine:                           AArch64
+0x0000000000000001 (NEEDED)         Shared library: [libipc_common.z.so]
+0x0000000000000001 (NEEDED)         Shared library: [libipc_rpc.z.so]
+0x0000000000000001 (NEEDED)         Shared library: [libsec_shared.z.so]
+0x0000000000000001 (NEEDED)         Shared library: [libutils.z.so]
+0x0000000000000001 (NEEDED)         Shared library: [libffrt.so]
+0x0000000000000001 (NEEDED)         Shared library: [libhilog.so]
+0x0000000000000001 (NEEDED)         Shared library: [libc.so]
+0x0000000000000001 (NEEDED)         Shared library: [libipc_single.z.so]
+0x0000000000000001 (NEEDED)         Shared library: [libc++.so]
+0x0000000000000001 (NEEDED)         Shared library: [libclang_rt.ubsan_minimal.so]
+0x000000000000000e (SONAME)         Library soname: [libdbinder.z.so]
+exported defined symbols: 183

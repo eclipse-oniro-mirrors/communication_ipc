@@ -1,0 +1,69 @@
+# TASK-6 导出面与加载点原始证据
+
+## 导出计数（llvm-nm -D --defined-only | wc -l）
+baseline(single)          167
+on-single                 235
+on-rpc                    11
+off-single                245
+
+## libipc_rpc.z.so 导出清单
+0000000000010660 T IpcRpcGetOps@@1.0
+0000000000024250 T _ZN4OHOS20DBinderSoftbusClient11GetInstanceEv@@1.0
+00000000000252c0 T _ZN4OHOS20DBinderSoftbusClient20GetLocalNodeDeviceIdERKNSt3__h12basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEERS7_@@1.0
+0000000000024d90 T _ZN4OHOS20DBinderSoftbusClient22DBinderGrantPermissionEiiRKNSt3__h12basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@1.0
+0000000000025750 T _ZN4OHOS20DBinderSoftbusClient4BindEiPK5QosTVjPK15ISocketListener@@1.0
+00000000000255e0 T _ZN4OHOS20DBinderSoftbusClient6ListenEiPK5QosTVjPK15ISocketListener@@1.0
+0000000000025480 T _ZN4OHOS20DBinderSoftbusClient6SocketE10SocketInfo@@1.0
+0000000000025a20 T _ZN4OHOS20DBinderSoftbusClient8ShutdownEi@@1.0
+00000000000258c0 T _ZN4OHOS20DBinderSoftbusClient9SendBytesEiPKvj@@1.0
+00000000000154a0 T _ZN4OHOS21DBinderDatabusInvokerC1Ev@@1.0
+00000000000154a0 T _ZN4OHOS21DBinderDatabusInvokerC2Ev@@1.0
+
+## 入口符号可见性
+on-rpc     IpcRpc* 动态符号 1 条
+    0000000000010660 T IpcRpcGetOps@@1.0
+on-single  IpcRpc* 动态符号 0 条
+off-single IpcRpc* 动态符号 0 条
+baseline   IpcRpc* 动态符号 0 条
+
+## 核心库是否仍引用 IpcRpc（符号 + 重定位）
+on-single  nm -D 命中 0 / readelf -r 命中 0
+off-single nm -D 命中 0 / readelf -r 命中 0
+baseline   nm -D 命中 0 / readelf -r 命中 0
+
+## 核心库 dlopen/dlsym 引用点
+on-single  2 条
+    U dlopen
+    U dlsym
+off-single 2 条
+    U dlopen
+    U dlsym
+baseline   2 条
+    U dlopen
+    U dlsym
+
+## 迁出 TU 的符号归属（定义侧，dynsym）
+on-single  DBinderDatabusInvoker      0
+on-single  DBinderSoftbusClient       0
+on-single  DatabusSocketListener      0
+on-single  DBinderSessionObject       19
+on-single  DBinderCallbackStub        0
+on-rpc     DBinderDatabusInvoker      2
+on-rpc     DBinderSoftbusClient       8
+on-rpc     DatabusSocketListener      0
+on-rpc     DBinderSessionObject       0
+on-rpc     DBinderCallbackStub        0
+
+## 符号归属（未剥离件 --defined-only，含 internal）
+libipc_single.z.so           DBinderDatabusInvoker      0
+libipc_single.z.so           DBinderSoftbusClient       0
+libipc_single.z.so           DatabusSocketListener      0
+libipc_single.z.so           DBinderSessionObject       31
+libipc_single.z.so           DBinderCallbackStub        27
+libipc_single.z.so           IpcRpcGetOps               0
+libipc_rpc.z.so              DBinderDatabusInvoker      78
+libipc_rpc.z.so              DBinderSoftbusClient       17
+libipc_rpc.z.so              DatabusSocketListener      33
+libipc_rpc.z.so              DBinderSessionObject       71
+libipc_rpc.z.so              DBinderCallbackStub        0
+libipc_rpc.z.so              IpcRpcGetOps               1

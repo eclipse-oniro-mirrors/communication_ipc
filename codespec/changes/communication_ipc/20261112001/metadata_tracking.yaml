@@ -1,0 +1,13 @@
+# Prepared locally after a confirmed source PR; refreshed before design-docs submission.
+proposal_id: "20261112001"
+target_release: "7.1"
+repos:
+  - repo: "openharmony/communication_ipc"
+    repository_url: "https://gitcode.com/openharmony/communication_ipc"
+    pull_requests:
+      - url: "https://gitcode.com/openharmony/communication_ipc/pull/2602"
+        title: "feat: 拆分 RPC 能力为独立 so，降低仅使用 IPC 的进程内存占用"
+        state: "open"
+        commit: "67bdd3e770731e078d229af55835f1c7f5db5fc1"
+sessions:
+  - ses_e30c4a9c3ffeXW2oydHcNICAXE

@@ -1,0 +1,36 @@
+Running main() from ../../third_party/googletest/googletest/src/gtest_main.cc
+[==========] Running 80 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 80 tests from IPCProcessSkeletonUnitTest
+[ RUN      ] IPCProcessSkeletonUnitTest.IsContainsObjectTest001
+[       OK ] IPCProcessSkeletonUnitTest.IsContainsObjectTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.IsContainsObjectTest002
+[       OK ] IPCProcessSkeletonUnitTest.IsContainsObjectTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.AttachObjectTest001
+[       OK ] IPCProcessSkeletonUnitTest.AttachObjectTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.AttachObjectTest002
+[       OK ] IPCProcessSkeletonUnitTest.AttachObjectTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.AttachObjectTest003
+[       OK ] IPCProcessSkeletonUnitTest.AttachObjectTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.DetachObjectTest001
+[       OK ] IPCProcessSkeletonUnitTest.DetachObjectTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.DetachObjectTest002
+[       OK ] IPCProcessSkeletonUnitTest.DetachObjectTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.DetachObjectTest003
+[       OK ] IPCProcessSkeletonUnitTest.DetachObjectTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.DetachObjectTest004
+[       OK ] IPCProcessSkeletonUnitTest.DetachObjectTest004 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryAppInfoToStubIndexTest001
+[       OK ] IPCProcessSkeletonUnitTest.QueryAppInfoToStubIndexTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.CreateSoftbusServerTest001
+[       OK ] IPCProcessSkeletonUnitTest.CreateSoftbusServerTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.CreateSoftbusServerTest002
+[       OK ] IPCProcessSkeletonUnitTest.CreateSoftbusServerTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.CreateSoftbusServerTest003
+[       OK ] IPCProcessSkeletonUnitTest.CreateSoftbusServerTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.CreateSoftbusServerTest004
+[       OK ] IPCProcessSkeletonUnitTest.CreateSoftbusServerTest004 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.GetRegistryObjectTest001
+../../third_party/googletest/googlemock/src/gmock-spec-builders.cc:366: Failure
+Name() must not be called before SetOwnerAndName() has been called.
+

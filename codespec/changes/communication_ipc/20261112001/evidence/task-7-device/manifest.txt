@@ -1,0 +1,26 @@
+# TASK-7 设备侧验证：被测件指纹
+#
+# 采集时间：2026-11-13 09:18（模拟器实例 00）
+# 仓库 HEAD：968c34144d6e0c4a2258438277df0de97259735c（工作区脏，33 项改动未提交）
+# 说明：md5 与 out/x86_64_virt 下构建产物逐一对应，推送到
+#       /data/local/tmp/ipc_rpc_test 的库即为本轮拆分产物，非系统镜像内基线件。
+
+## 共享库（推送件 = 构建产物）
+b0b3dc07f2e503023df7e76673dc099c  libipc_single.z.so        371584 B
+0ae4812cb495f0034ade6fed575e94bd  libipc_rpc.z.so           177304 B
+6b273e873a0826354e23bd357829190e  libipc_common.z.so         75192 B
+68c4062a940b34775730cd5cbae27420  libdbinder.z.so           166624 B
+dcaaaa35df0e0449e51118db8d75e852  libipc_single_test.z.so   606944 B
+
+## 测试二进制
+a2d50e74e980e3c846f826e73fa085fb  IpcRpcLoaderUnitTest
+e136ba08716a9f681cb0e10f939c0cc8  IpcRpcStaticLinkUnitTest
+8e513fc6da8eba093542cae36415984f  IpcRpcStaticLinkFailureUnitTest
+104aa2201b28f5287e78cf5d01f5f1f2  IPCProcessSkeletonUnitTest
+dd3a8080c13b7109ef41b37c8807b133  IPCObjectProxyUnitTest
+014298e90ca703f2bce27261930d23fa  IpcObjectStubUnitTest
+e723fc0f7e6331940943fb31b8c149b2  DbinderDataBusInvokerUnitTest
+
+## 系统镜像内基线件（对照，不作为被测件）
+d2ee52661cd246e2a986643de9ba0426  /system/lib64/platformsdk/libipc_single.z.so   492056 B
+                                    /system/lib64/platformsdk/libipc_rpc.z.so      不存在

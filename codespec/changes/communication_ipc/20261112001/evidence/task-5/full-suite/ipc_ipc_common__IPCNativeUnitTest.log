@@ -1,0 +1,604 @@
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+Running main() from ../../third_party/googletest/googletest/src/gtest_main.cc
+[==========] Running 553 tests from 15 test suites.
+[----------] Global test environment set-up.
+[----------] 88 tests from BufferObjectUnitTest
+[ RUN      ] BufferObjectUnitTest.UpdateSendBufferTest001
+[       OK ] BufferObjectUnitTest.UpdateSendBufferTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.UpdateSendBufferTest002
+[       OK ] BufferObjectUnitTest.UpdateSendBufferTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.UpdateSendBufferTest003
+[       OK ] BufferObjectUnitTest.UpdateSendBufferTest003 (0 ms)
+[ RUN      ] BufferObjectUnitTest.UpdateSendBufferTest004
+[       OK ] BufferObjectUnitTest.UpdateSendBufferTest004 (0 ms)
+[ RUN      ] BufferObjectUnitTest.UpdateSendBufferTest005
+[       OK ] BufferObjectUnitTest.UpdateSendBufferTest005 (0 ms)
+[ RUN      ] BufferObjectUnitTest.UpdateReceiveBufferTest001
+[       OK ] BufferObjectUnitTest.UpdateReceiveBufferTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.UpdateReceiveBufferTest002
+[       OK ] BufferObjectUnitTest.UpdateReceiveBufferTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.UpdateReceiveBufferTest003
+[       OK ] BufferObjectUnitTest.UpdateReceiveBufferTest003 (0 ms)
+[ RUN      ] BufferObjectUnitTest.UpdateReceiveBufferTest004
+[       OK ] BufferObjectUnitTest.UpdateReceiveBufferTest004 (0 ms)
+[ RUN      ] BufferObjectUnitTest.UpdateReceiveBufferTest005
+[       OK ] BufferObjectUnitTest.UpdateReceiveBufferTest005 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetSendBufferAndLockTest001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] BufferObjectUnitTest.GetSendBufferAndLockTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetSendBufferAndLockTest002
+[       OK ] BufferObjectUnitTest.GetSendBufferAndLockTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetSendBufferAndLockTest003
+[       OK ] BufferObjectUnitTest.GetSendBufferAndLockTest003 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetSendBufferAndLockTest004
+[       OK ] BufferObjectUnitTest.GetSendBufferAndLockTest004 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetReceiveBufferAndLockTest001
+[       OK ] BufferObjectUnitTest.GetReceiveBufferAndLockTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetReceiveBufferAndLockTest002
+[       OK ] BufferObjectUnitTest.GetReceiveBufferAndLockTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetReceiveBufferAndLockTest003
+[       OK ] BufferObjectUnitTest.GetReceiveBufferAndLockTest003 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetReceiveBufferAndLockTest004
+[       OK ] BufferObjectUnitTest.GetReceiveBufferAndLockTest004 (0 ms)
+[ RUN      ] BufferObjectUnitTest.SetSendBufferWriteCursorTest001
+[       OK ] BufferObjectUnitTest.SetSendBufferWriteCursorTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.SetSendBufferWriteCursorTest002
+[       OK ] BufferObjectUnitTest.SetSendBufferWriteCursorTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.SetSendBufferReadTest001
+[       OK ] BufferObjectUnitTest.SetSendBufferReadTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.SetSendBufferReadCursorTest002
+[       OK ] BufferObjectUnitTest.SetSendBufferReadCursorTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.SetReceiveBufferWriteCursorTest001
+[       OK ] BufferObjectUnitTest.SetReceiveBufferWriteCursorTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.SetReceiveBufferWriteCursorTest002
+[       OK ] BufferObjectUnitTest.SetReceiveBufferWriteCursorTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.SetReceiveBufferReadCursorTest001
+[       OK ] BufferObjectUnitTest.SetReceiveBufferReadCursorTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.SetReceiveBufferReadCursorTest002
+[       OK ] BufferObjectUnitTest.SetReceiveBufferReadCursorTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetNeedBufferSizeTest001
+[       OK ] BufferObjectUnitTest.GetNeedBufferSizeTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetNeedBufferSizeTest002
+[       OK ] BufferObjectUnitTest.GetNeedBufferSizeTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetNeedBufferSizeTest003
+[       OK ] BufferObjectUnitTest.GetNeedBufferSizeTest003 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetNeedBufferSizeTest004
+[       OK ] BufferObjectUnitTest.GetNeedBufferSizeTest004 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetNeedBufferSizeTest005
+[       OK ] BufferObjectUnitTest.GetNeedBufferSizeTest005 (0 ms)
+[ RUN      ] BufferObjectUnitTest.DeleteTest005
+[       OK ] BufferObjectUnitTest.DeleteTest005 (0 ms)
+[ RUN      ] BufferObjectUnitTest.ExpandSendBufferTest001
+[       OK ] BufferObjectUnitTest.ExpandSendBufferTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.ExpandSendBufferTest002
+[       OK ] BufferObjectUnitTest.ExpandSendBufferTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.ExpandSendBufferTest003
+[       OK ] BufferObjectUnitTest.ExpandSendBufferTest003 (0 ms)
+[ RUN      ] BufferObjectUnitTest.ReleaseSendBufferLockTest001
+[       OK ] BufferObjectUnitTest.ReleaseSendBufferLockTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.ReleaseReceiveBufferLockTest001
+[       OK ] BufferObjectUnitTest.ReleaseReceiveBufferLockTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetSendBufferSizeTest001
+[       OK ] BufferObjectUnitTest.GetSendBufferSizeTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetRecvBufferSizeTest001
+[       OK ] BufferObjectUnitTest.GetRecvBufferSizeTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.BufferLockGuardTest001
+[       OK ] BufferObjectUnitTest.BufferLockGuardTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.AcquireSendBufferTest001
+[       OK ] BufferObjectUnitTest.AcquireSendBufferTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.AcquireSendBufferTest002
+[       OK ] BufferObjectUnitTest.AcquireSendBufferTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.AcquireSendBufferTest003
+[       OK ] BufferObjectUnitTest.AcquireSendBufferTest003 (0 ms)
+[ RUN      ] BufferObjectUnitTest.AcquireReceiveBufferTest001
+[       OK ] BufferObjectUnitTest.AcquireReceiveBufferTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.AcquireReceiveBufferTest002
+[       OK ] BufferObjectUnitTest.AcquireReceiveBufferTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.AcquireReceiveBufferTest003
+[       OK ] BufferObjectUnitTest.AcquireReceiveBufferTest003 (0 ms)
+[ RUN      ] BufferObjectUnitTest.UpdateSendBufferLockedTest001
+[       OK ] BufferObjectUnitTest.UpdateSendBufferLockedTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.UpdateSendBufferLockedTest002
+[       OK ] BufferObjectUnitTest.UpdateSendBufferLockedTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.UpdateSendBufferLockedTest003
+[       OK ] BufferObjectUnitTest.UpdateSendBufferLockedTest003 (0 ms)
+[ RUN      ] BufferObjectUnitTest.UpdateSendBufferLockedTest004
+[       OK ] BufferObjectUnitTest.UpdateSendBufferLockedTest004 (0 ms)
+[ RUN      ] BufferObjectUnitTest.UpdateReceiveBufferLockedTest001
+[       OK ] BufferObjectUnitTest.UpdateReceiveBufferLockedTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.UpdateReceiveBufferLockedTest002
+[       OK ] BufferObjectUnitTest.UpdateReceiveBufferLockedTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.UpdateReceiveBufferLockedTest003
+[       OK ] BufferObjectUnitTest.UpdateReceiveBufferLockedTest003 (0 ms)
+[ RUN      ] BufferObjectUnitTest.UpdateReceiveBufferLockedTest004
+[       OK ] BufferObjectUnitTest.UpdateReceiveBufferLockedTest004 (0 ms)
+[ RUN      ] BufferObjectUnitTest.SetSendBufferWriteCursorExTest001
+[       OK ] BufferObjectUnitTest.SetSendBufferWriteCursorExTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.SetSendBufferWriteCursorExTest002
+[       OK ] BufferObjectUnitTest.SetSendBufferWriteCursorExTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.SetSendBufferWriteCursorExTest003
+[       OK ] BufferObjectUnitTest.SetSendBufferWriteCursorExTest003 (0 ms)
+[ RUN      ] BufferObjectUnitTest.SetSendBufferReadCursorExTest001
+[       OK ] BufferObjectUnitTest.SetSendBufferReadCursorExTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.SetSendBufferReadCursorExTest002
+[       OK ] BufferObjectUnitTest.SetSendBufferReadCursorExTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.SetReceiveBufferWriteCursorExTest001
+[       OK ] BufferObjectUnitTest.SetReceiveBufferWriteCursorExTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.SetReceiveBufferWriteCursorExTest002
+[       OK ] BufferObjectUnitTest.SetReceiveBufferWriteCursorExTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.SetReceiveBufferReadCursorExTest001
+[       OK ] BufferObjectUnitTest.SetReceiveBufferReadCursorExTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.SetReceiveBufferReadCursorExTest002
+[       OK ] BufferObjectUnitTest.SetReceiveBufferReadCursorExTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetSendBufferSizeExTest001
+[       OK ] BufferObjectUnitTest.GetSendBufferSizeExTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetRecvBufferSizeExTest001
+[       OK ] BufferObjectUnitTest.GetRecvBufferSizeExTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.ShrinkSendBufferIfNeededTest001
+[       OK ] BufferObjectUnitTest.ShrinkSendBufferIfNeededTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.ShrinkSendBufferIfNeededTest002
+[       OK ] BufferObjectUnitTest.ShrinkSendBufferIfNeededTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.ShrinkReceiveBufferIfNeededTest001
+[       OK ] BufferObjectUnitTest.ShrinkReceiveBufferIfNeededTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.ShrinkReceiveBufferIfNeededTest002
+[       OK ] BufferObjectUnitTest.ShrinkReceiveBufferIfNeededTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetProgressiveBufferSizeTest001
+[       OK ] BufferObjectUnitTest.GetProgressiveBufferSizeTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.GetExpandedBufferSizeTest001
+[       OK ] BufferObjectUnitTest.GetExpandedBufferSizeTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.TryExpandSendBufferLockedTest001
+[       OK ] BufferObjectUnitTest.TryExpandSendBufferLockedTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.TryExpandSendBufferLockedTest002
+[       OK ] BufferObjectUnitTest.TryExpandSendBufferLockedTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.TryExpandSendBufferLockedTest003
+[       OK ] BufferObjectUnitTest.TryExpandSendBufferLockedTest003 (0 ms)
+[ RUN      ] BufferObjectUnitTest.TryExpandSendBufferLockedTest004
+[       OK ] BufferObjectUnitTest.TryExpandSendBufferLockedTest004 (0 ms)
+[ RUN      ] BufferObjectUnitTest.TryExpandReceiveBufferLockedTest001
+[       OK ] BufferObjectUnitTest.TryExpandReceiveBufferLockedTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.TryExpandReceiveBufferLockedTest002
+[       OK ] BufferObjectUnitTest.TryExpandReceiveBufferLockedTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.TryExpandReceiveBufferLockedTest003
+[       OK ] BufferObjectUnitTest.TryExpandReceiveBufferLockedTest003 (0 ms)
+[ RUN      ] BufferObjectUnitTest.TryExpandReceiveBufferLockedTest004
+[       OK ] BufferObjectUnitTest.TryExpandReceiveBufferLockedTest004 (0 ms)
+[ RUN      ] BufferObjectUnitTest.TryMemmoveSendBufferTest001
+[       OK ] BufferObjectUnitTest.TryMemmoveSendBufferTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.TryMemmoveReceiveBufferTest001
+[       OK ] BufferObjectUnitTest.TryMemmoveReceiveBufferTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.MemmoveSendBufferIfInsufficientTest001
+[       OK ] BufferObjectUnitTest.MemmoveSendBufferIfInsufficientTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.MemmoveSendBufferIfInsufficientTest002
+[       OK ] BufferObjectUnitTest.MemmoveSendBufferIfInsufficientTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.MemmoveSendBufferIfInsufficientTest003
+[       OK ] BufferObjectUnitTest.MemmoveSendBufferIfInsufficientTest003 (0 ms)
+[ RUN      ] BufferObjectUnitTest.MemmoveReceiveBufferIfInsufficientTest001
+[       OK ] BufferObjectUnitTest.MemmoveReceiveBufferIfInsufficientTest001 (0 ms)
+[ RUN      ] BufferObjectUnitTest.MemmoveReceiveBufferIfInsufficientTest002
+[       OK ] BufferObjectUnitTest.MemmoveReceiveBufferIfInsufficientTest002 (0 ms)
+[ RUN      ] BufferObjectUnitTest.MemmoveReceiveBufferIfInsufficientTest003
+[       OK ] BufferObjectUnitTest.MemmoveReceiveBufferIfInsufficientTest003 (0 ms)
+[ RUN      ] BufferObjectUnitTest.SmartExpandAvoidDoubleExpandTest
+[       OK ] BufferObjectUnitTest.SmartExpandAvoidDoubleExpandTest (0 ms)
+[----------] 88 tests from BufferObjectUnitTest (1 ms total)
+
+[----------] 9 tests from DBinderCallbackStubTest
+[ RUN      ] DBinderCallbackStubTest.GetServiceNameTest001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] DBinderCallbackStubTest.GetServiceNameTest001 (0 ms)
+[ RUN      ] DBinderCallbackStubTest.GetTokenIdTest001
+[       OK ] DBinderCallbackStubTest.GetTokenIdTest001 (0 ms)
+[ RUN      ] DBinderCallbackStubTest.GetDeviceIDTest001
+[       OK ] DBinderCallbackStubTest.GetDeviceIDTest001 (0 ms)
+[ RUN      ] DBinderCallbackStubTest.GetStubIndexTest001
+[       OK ] DBinderCallbackStubTest.GetStubIndexTest001 (0 ms)
+[ RUN      ] DBinderCallbackStubTest.ProcessProtoTest001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+../../foundation/communication/ipc/test/unittest/common/dbinder_callback_stub_unittest.cpp:158: Failure
+Expected equality of these values:
+  ret
+    Which is: 903
+  BINDER_CALLBACK_AUTHCOMM_ERR
+    Which is: 907
+
+[  FAILED  ] DBinderCallbackStubTest.ProcessProtoTest001 (0 ms)
+[ RUN      ] DBinderCallbackStubTest.OnRemoteRequestTest001
+../../foundation/communication/ipc/test/unittest/common/dbinder_callback_stub_unittest.cpp:179: Failure
+Expected equality of these values:
+  ret
+    Which is: 903
+  DBINDER_SERVICE_WRONG_SESSION
+    Which is: 707
+
+[  FAILED  ] DBinderCallbackStubTest.OnRemoteRequestTest001 (0 ms)
+[ RUN      ] DBinderCallbackStubTest.OnRemoteRequestTest002
+[       OK ] DBinderCallbackStubTest.OnRemoteRequestTest002 (0 ms)
+[ RUN      ] DBinderCallbackStubTest.ProcessProtoTest002
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: IsLocalCalling()
+          Returns: false
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/main/docs/gmock_cook_book.md#knowing-when-to-expect-useoncall for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: IsLocalCalling()
+          Returns: false
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/main/docs/gmock_cook_book.md#knowing-when-to-expect-useoncall for details.
+[       OK ] DBinderCallbackStubTest.ProcessProtoTest002 (0 ms)
+[ RUN      ] DBinderCallbackStubTest.ProcessProtoTest003
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: IsLocalCalling()
+          Returns: false
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/main/docs/gmock_cook_book.md#knowing-when-to-expect-useoncall for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: IsLocalCalling()
+          Returns: false
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/main/docs/gmock_cook_book.md#knowing-when-to-expect-useoncall for details.
+[       OK ] DBinderCallbackStubTest.ProcessProtoTest003 (0 ms)
+[----------] 9 tests from DBinderCallbackStubTest (1 ms total)
+
+[----------] 14 tests from DBinderSessionObjectTest
+[ RUN      ] DBinderSessionObjectTest.SetServiceNameTest001
+[       OK ] DBinderSessionObjectTest.SetServiceNameTest001 (0 ms)
+[ RUN      ] DBinderSessionObjectTest.SetDeviceIdTest001
+[       OK ] DBinderSessionObjectTest.SetDeviceIdTest001 (0 ms)
+[ RUN      ] DBinderSessionObjectTest.SetProxyTest001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] DBinderSessionObjectTest.SetProxyTest001 (0 ms)
+[ RUN      ] DBinderSessionObjectTest.GetFlatSessionLenTest001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] DBinderSessionObjectTest.GetFlatSessionLenTest001 (0 ms)
+[ RUN      ] DBinderSessionObjectTest.GetSessionBuffTest001
+[       OK ] DBinderSessionObjectTest.GetSessionBuffTest001 (0 ms)
+[ RUN      ] DBinderSessionObjectTest.ConstructorBranchTest001
+[       OK ] DBinderSessionObjectTest.ConstructorBranchTest001 (0 ms)
+[ RUN      ] DBinderSessionObjectTest.GetSessionBuffBranch001
+[       OK ] DBinderSessionObjectTest.GetSessionBuffBranch001 (0 ms)
+[ RUN      ] DBinderSessionObjectTest.SetProxyBranch001
+[       OK ] DBinderSessionObjectTest.SetProxyBranch001 (0 ms)
+[ RUN      ] DBinderSessionObjectTest.GetStubIndexTest001
+[       OK ] DBinderSessionObjectTest.GetStubIndexTest001 (0 ms)
+[ RUN      ] DBinderSessionObjectTest.GetTokenIdTest001
+[       OK ] DBinderSessionObjectTest.GetTokenIdTest001 (0 ms)
+[ RUN      ] DBinderSessionObjectTest.SetSocketIdTest001
+[       OK ] DBinderSessionObjectTest.SetSocketIdTest001 (0 ms)
+[ RUN      ] DBinderSessionObjectTest.SetPeerPidTest001
+[       OK ] DBinderSessionObjectTest.SetPeerPidTest001 (0 ms)
+[ RUN      ] DBinderSessionObjectTest.SetPeerUidTest001
+[       OK ] DBinderSessionObjectTest.SetPeerUidTest001 (0 ms)
+[ RUN      ] DBinderSessionObjectTest.CloseDatabusSessionTest001
+[       OK ] DBinderSessionObjectTest.CloseDatabusSessionTest001 (0 ms)
+[----------] 14 tests from DBinderSessionObjectTest (0 ms total)
+
+[----------] 46 tests from IPCNativeUnitTest
+[ RUN      ] IPCNativeUnitTest.DeathRecipient001
+[       OK ] IPCNativeUnitTest.DeathRecipient001 (0 ms)
+[ RUN      ] IPCNativeUnitTest.DeathRecipient002
+[       OK ] IPCNativeUnitTest.DeathRecipient002 (0 ms)
+[ RUN      ] IPCNativeUnitTest.GetObjectRefCountTest001
+[       OK ] IPCNativeUnitTest.GetObjectRefCountTest001 (0 ms)
+[ RUN      ] IPCNativeUnitTest.DumpTest001
+[       OK ] IPCNativeUnitTest.DumpTest001 (0 ms)
+[ RUN      ] IPCNativeUnitTest.ProxyJudgment001
+[       OK ] IPCNativeUnitTest.ProxyJudgment001 (0 ms)
+[ RUN      ] IPCNativeUnitTest.GetCallingPidTest001
+[       OK ] IPCNativeUnitTest.GetCallingPidTest001 (0 ms)
+[ RUN      ] IPCNativeUnitTest.GetCallingUidTest001
+[       OK ] IPCNativeUnitTest.GetCallingUidTest001 (0 ms)
+[ RUN      ] IPCNativeUnitTest.GetCallingTokenIDTest001
+../../foundation/communication/ipc/test/unittest/common/ipc_core_unittest.cpp:155: Failure
+Expected: (token) != (INVAL_TOKEN_ID), actual: 0 vs 0
+
+[  FAILED  ] IPCNativeUnitTest.GetCallingTokenIDTest001 (0 ms)
+[ RUN      ] IPCNativeUnitTest.GetCallingFullTokenIDTest001
+../../foundation/communication/ipc/test/unittest/common/ipc_core_unittest.cpp:168: Failure
+Expected: (token1) != (INVAL_TOKEN_ID), actual: 0 vs 0
+
+[  FAILED  ] IPCNativeUnitTest.GetCallingFullTokenIDTest001 (0 ms)
+[ RUN      ] IPCNativeUnitTest.GetCallingFullTokenIDTest002
+../../foundation/communication/ipc/test/unittest/common/ipc_core_unittest.cpp:182: Failure
+Expected: (token1) != (INVAL_TOKEN_ID), actual: 0 vs 0
+
+[  FAILED  ] IPCNativeUnitTest.GetCallingFullTokenIDTest002 (0 ms)
+[ RUN      ] IPCNativeUnitTest.GetFirstTokenIDTest001
+[       OK ] IPCNativeUnitTest.GetFirstTokenIDTest001 (0 ms)
+[ RUN      ] IPCNativeUnitTest.GetFirstFullTokenIDTest001
+[       OK ] IPCNativeUnitTest.GetFirstFullTokenIDTest001 (0 ms)
+[ RUN      ] IPCNativeUnitTest.GetObjectTypeTest001
+[       OK ] IPCNativeUnitTest.GetObjectTypeTest001 (0 ms)
+[ RUN      ] IPCNativeUnitTest.IsDeviceIdIllegalTest001
+[       OK ] IPCNativeUnitTest.IsDeviceIdIllegalTest001 (0 ms)
+[ RUN      ] IPCNativeUnitTest.IsDeviceIdIllegalTest002
+[       OK ] IPCNativeUnitTest.IsDeviceIdIllegalTest002 (0 ms)
+[ RUN      ] IPCNativeUnitTest.IsDeviceIdIllegalTest003
+[       OK ] IPCNativeUnitTest.IsDeviceIdIllegalTest003 (0 ms)
+[ RUN      ] IPCNativeUnitTest.MessageOptionBranchTest001
+[       OK ] IPCNativeUnitTest.MessageOptionBranchTest001 (0 ms)
+[ RUN      ] IPCNativeUnitTest.MessageOptionBranchTest002
+[       OK ] IPCNativeUnitTest.MessageOptionBranchTest002 (0 ms)
+[ RUN      ] IPCNativeUnitTest.MessageOptionBranchTest003
+[       OK ] IPCNativeUnitTest.MessageOptionBranchTest003 (0 ms)
+[ RUN      ] IPCNativeUnitTest.MessageOptionBranchTest004
+[       OK ] IPCNativeUnitTest.MessageOptionBranchTest004 (0 ms)
+[ RUN      ] IPCNativeUnitTest.CommAuthInfoTest001
+[       OK ] IPCNativeUnitTest.CommAuthInfoTest001 (0 ms)
+[ RUN      ] IPCNativeUnitTest.CommAuthInfoTest002
+[       OK ] IPCNativeUnitTest.CommAuthInfoTest002 (0 ms)
+[ RUN      ] IPCNativeUnitTest.OnRemoteRequestTest001
+[       OK ] IPCNativeUnitTest.OnRemoteRequestTest001 (0 ms)
+[ RUN      ] IPCNativeUnitTest.OnRemoteRequestTest002
+[       OK ] IPCNativeUnitTest.OnRemoteRequestTest002 (0 ms)
+[ RUN      ] IPCNativeUnitTest.OnRemoteRequestTest003
+[       OK ] IPCNativeUnitTest.OnRemoteRequestTest003 (0 ms)
+[ RUN      ] IPCNativeUnitTest.OnRemoteRequestTest004
+[       OK ] IPCNativeUnitTest.OnRemoteRequestTest004 (0 ms)
+[ RUN      ] IPCNativeUnitTest.ProxyJudgment003
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+open /dev/kmsg failed, fd=-1. 
+../../foundation/communication/ipc/test/unittest/common/ipc_core_unittest.cpp:467: Failure
+Value of: saMgr != nullptr
+  Actual: false
+Expected: true
+
+[  FAILED  ] IPCNativeUnitTest.ProxyJudgment003 (0 ms)
+[ RUN      ] IPCNativeUnitTest.ProxyJudgment004
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+open /dev/kmsg failed, fd=-1. 
+../../foundation/communication/ipc/test/unittest/common/ipc_core_unittest.cpp:485: Failure
+Value of: registryObjs[i] != nullptr
+  Actual: false
+Expected: true
+
+[  FAILED  ] IPCNativeUnitTest.ProxyJudgment004 (3 ms)
+[ RUN      ] IPCNativeUnitTest.SyncTransaction005
+../../foundation/communication/ipc/test/unittest/common/ipc_core_unittest.cpp:498: Failure
+Value of: remote != nullptr
+  Actual: false
+Expected: true
+
+[  FAILED  ] IPCNativeUnitTest.SyncTransaction005 (2 ms)
+[ RUN      ] IPCNativeUnitTest.SyncTransaction006
+../../foundation/communication/ipc/test/unittest/common/ipc_core_unittest.cpp:511: Failure
+Value of: remoteObj != nullptr
+  Actual: false
+Expected: true
+
+[  FAILED  ] IPCNativeUnitTest.SyncTransaction006 (2 ms)
+[ RUN      ] IPCNativeUnitTest.SyncTransaction008
+[       OK ] IPCNativeUnitTest.SyncTransaction008 (0 ms)
+[ RUN      ] IPCNativeUnitTest.MessageOptionTest001
+[       OK ] IPCNativeUnitTest.MessageOptionTest001 (0 ms)
+[ RUN      ] IPCNativeUnitTest.MessageOptionTest002
+[       OK ] IPCNativeUnitTest.MessageOptionTest002 (0 ms)
+[ RUN      ] IPCNativeUnitTest.MessageOptionTest003
+[       OK ] IPCNativeUnitTest.MessageOptionTest003 (0 ms)
+[ RUN      ] IPCNativeUnitTest.GetStubObjectTest001
+../../foundation/communication/ipc/test/unittest/common/ipc_core_unittest.cpp:579: Failure
+Value of: remoteObj != nullptr
+  Actual: false
+Expected: true
+
+[  FAILED  ] IPCNativeUnitTest.GetStubObjectTest001 (3 ms)
+[ RUN      ] IPCNativeUnitTest.GetRemotePidTest002
+../../foundation/communication/ipc/test/unittest/common/ipc_core_unittest.cpp:596: Failure
+Value of: remoteObj != nullptr
+  Actual: false
+Expected: true
+
+[  FAILED  ] IPCNativeUnitTest.GetRemotePidTest002 (2 ms)
+[ RUN      ] IPCNativeUnitTest.GetDeviceIdTest003
+../../foundation/communication/ipc/test/unittest/common/ipc_core_unittest.cpp:614: Failure
+Value of: remoteObj != nullptr
+  Actual: false
+Expected: true
+
+[  FAILED  ] IPCNativeUnitTest.GetDeviceIdTest003 (2 ms)
+[ RUN      ] IPCNativeUnitTest.FlushCommandsTest001
+../../foundation/communication/ipc/test/unittest/common/ipc_core_unittest.cpp:632: Failure
+Value of: remoteObj != nullptr
+  Actual: false
+Expected: true
+
+[  FAILED  ] IPCNativeUnitTest.FlushCommandsTest001 (2 ms)
+[ RUN      ] IPCNativeUnitTest.CommAuthInfo_GetStubObjectTest001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+timeout: the monitored command dumped core
+/tmp/opencode/scope_run_all2.sh: line 21: 750015 Segmentation fault      timeout 90 "$LD" "./$name"

@@ -1,0 +1,19 @@
+# device_info (x86_64_virt, image-internal run)
+UTC 2026-11-13 10:30:03
+
+Linux localhost 6.6.101-gc0c10d57367a-dirty #1 SMP PREEMPT_DYNAMIC Fri Nov 13 17:22:04 CST 2026 x86_64 Toybox
+OpenHarmony 3.2 
+OpenHarmony 7.1.0.25 
+true 
+x86_64 
+Linux version 6.6.101-gc0c10d57367a-dirty (huawei@cn-north-4a-05c33b7301779950797697-68c5bb5964-dmjq2) (gcc (Ubuntu 12.3.0-1ubuntu1~22.04.3) 12.3.0, GNU ld (GNU Binutils for Ubuntu) 2.38) #1 SMP PREEMPT_DYNAMIC Fri Nov 13 17:22:04 CST 2026
+
+## image libs
+-rw-r--r-- 1 root root 166624 2026-11-13 16:48 /system/lib64/libdbinder.z.so
+-rw-r--r-- 1 root root  75192 2026-11-12 21:44 /system/lib64/platformsdk/libipc_common.z.so
+-rw-r--r-- 1 root root 177304 2026-11-13 16:47 /system/lib64/platformsdk/libipc_rpc.z.so
+-rw-r--r-- 1 root root 371584 2026-11-13 16:41 /system/lib64/platformsdk/libipc_single.z.so
+b0b3dc07f2e503023df7e76673dc099c  /system/lib64/platformsdk/libipc_single.z.so
+0ae4812cb495f0034ade6fed575e94bd  /system/lib64/platformsdk/libipc_rpc.z.so
+6b273e873a0826354e23bd357829190e  /system/lib64/platformsdk/libipc_common.z.so
+68c4062a940b34775730cd5cbae27420  /system/lib64/libdbinder.z.so

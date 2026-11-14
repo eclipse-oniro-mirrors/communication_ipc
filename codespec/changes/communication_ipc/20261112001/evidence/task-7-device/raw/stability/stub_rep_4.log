@@ -1,0 +1,167 @@
+Running main() from ../../third_party/googletest/googletest/src/gtest_main.cc
+[==========] Running 79 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 79 tests from IPCObjectStubTest
+[ RUN      ] IPCObjectStubTest.OnRemoteDumpTest001
+[       OK ] IPCObjectStubTest.OnRemoteDumpTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.OnRemoteDumpTest002
+[       OK ] IPCObjectStubTest.OnRemoteDumpTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderPingTransactionTest001
+[       OK ] IPCObjectStubTest.DBinderPingTransactionTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderSearchDescriptorTest001
+[       OK ] IPCObjectStubTest.DBinderSearchDescriptorTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderSearchDescriptorTest002
+[       OK ] IPCObjectStubTest.DBinderSearchDescriptorTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderDumpTransactionTest001
+[       OK ] IPCObjectStubTest.DBinderDumpTransactionTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderDumpTransactionTest002
+[       OK ] IPCObjectStubTest.DBinderDumpTransactionTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderDumpTransactionTest003
+[       OK ] IPCObjectStubTest.DBinderDumpTransactionTest003 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderDumpTransactionTest004
+[       OK ] IPCObjectStubTest.DBinderDumpTransactionTest004 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderDumpTransactionTest005
+[       OK ] IPCObjectStubTest.DBinderDumpTransactionTest005 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderIncRefsTransactionTest001
+[       OK ] IPCObjectStubTest.DBinderIncRefsTransactionTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderIncRefsTransactionTest002
+[       OK ] IPCObjectStubTest.DBinderIncRefsTransactionTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderIncRefsTransactionTest003
+[       OK ] IPCObjectStubTest.DBinderIncRefsTransactionTest003 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderDecRefsTransactionTest001
+[       OK ] IPCObjectStubTest.DBinderDecRefsTransactionTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderDecRefsTransactionTest002
+[       OK ] IPCObjectStubTest.DBinderDecRefsTransactionTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderGetSessionNameTest001
+[       OK ] IPCObjectStubTest.DBinderGetSessionNameTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderGetSessionNameTest002
+[       OK ] IPCObjectStubTest.DBinderGetSessionNameTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderGetSessionNameTest003
+[       OK ] IPCObjectStubTest.DBinderGetSessionNameTest003 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderGetSessionNameTest004
+[       OK ] IPCObjectStubTest.DBinderGetSessionNameTest004 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderGetGrantedSessionNameTest001
+[       OK ] IPCObjectStubTest.DBinderGetGrantedSessionNameTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderGetGrantedSessionNameTest002
+[       OK ] IPCObjectStubTest.DBinderGetGrantedSessionNameTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderGetGrantedSessionNameTest003
+[       OK ] IPCObjectStubTest.DBinderGetGrantedSessionNameTest003 (12 ms)
+[ RUN      ] IPCObjectStubTest.OnFirstStrongRefTest001
+[       OK ] IPCObjectStubTest.OnFirstStrongRefTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.NoticeServiceDieTest001
+[       OK ] IPCObjectStubTest.NoticeServiceDieTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.NoticeServiceDieTest002
+[       OK ] IPCObjectStubTest.NoticeServiceDieTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.IsDeviceIdIllegalTest001
+[       OK ] IPCObjectStubTest.IsDeviceIdIllegalTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.GetSessionNameTest001
+[       OK ] IPCObjectStubTest.GetSessionNameTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.GetSessionNameTest002
+[       OK ] IPCObjectStubTest.GetSessionNameTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.GetSessionNameTest003
+[       OK ] IPCObjectStubTest.GetSessionNameTest003 (0 ms)
+[ RUN      ] IPCObjectStubTest.GetGrantedSessionNameTest001
+[       OK ] IPCObjectStubTest.GetGrantedSessionNameTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.GetGrantedSessionNameTest002
+[       OK ] IPCObjectStubTest.GetGrantedSessionNameTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.GetGrantedSessionNameTest003
+[       OK ] IPCObjectStubTest.GetGrantedSessionNameTest003 (0 ms)
+[ RUN      ] IPCObjectStubTest.GetGrantedSessionNameTest004
+[       OK ] IPCObjectStubTest.GetGrantedSessionNameTest004 (0 ms)
+[ RUN      ] IPCObjectStubTest.AddAuthInfoTest001
+[       OK ] IPCObjectStubTest.AddAuthInfoTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.AddAuthInfoTest002
+[       OK ] IPCObjectStubTest.AddAuthInfoTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.InvokerDataBusThreadTest001
+[       OK ] IPCObjectStubTest.InvokerDataBusThreadTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.InvokerDataBusThreadTest002
+[       OK ] IPCObjectStubTest.InvokerDataBusThreadTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.InvokerDataBusThreadTest003
+[       OK ] IPCObjectStubTest.InvokerDataBusThreadTest003 (1 ms)
+[ RUN      ] IPCObjectStubTest.InvokerDataBusThreadTest004
+[       OK ] IPCObjectStubTest.InvokerDataBusThreadTest004 (0 ms)
+[ RUN      ] IPCObjectStubTest.InvokerDataBusThreadTest005
+[       OK ] IPCObjectStubTest.InvokerDataBusThreadTest005 (1 ms)
+[ RUN      ] IPCObjectStubTest.InvokerDataBusThreadTest006
+[       OK ] IPCObjectStubTest.InvokerDataBusThreadTest006 (0 ms)
+[ RUN      ] IPCObjectStubTest.InvokerDataBusThreadTest007
+[       OK ] IPCObjectStubTest.InvokerDataBusThreadTest007 (3 ms)
+[ RUN      ] IPCObjectStubTest.InvokerDataBusThreadTest008
+[       OK ] IPCObjectStubTest.InvokerDataBusThreadTest008 (1 ms)
+[ RUN      ] IPCObjectStubTest.InvokerDataBusThreadTest009
+[       OK ] IPCObjectStubTest.InvokerDataBusThreadTest009 (1 ms)
+[ RUN      ] IPCObjectStubTest.InvokerDataBusThreadTest010
+[       OK ] IPCObjectStubTest.InvokerDataBusThreadTest010 (1 ms)
+[ RUN      ] IPCObjectStubTest.InvokerDataBusThreadTest011
+[       OK ] IPCObjectStubTest.InvokerDataBusThreadTest011 (1 ms)
+[ RUN      ] IPCObjectStubTest.InvokerDataBusThreadTest012
+[       OK ] IPCObjectStubTest.InvokerDataBusThreadTest012 (1 ms)
+[ RUN      ] IPCObjectStubTest.DBinderGetSessionNameForPidUidTest001
+[       OK ] IPCObjectStubTest.DBinderGetSessionNameForPidUidTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderGetSessionNameForPidUidTest002
+[       OK ] IPCObjectStubTest.DBinderGetSessionNameForPidUidTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderGetSessionNameForPidUidTest003
+[       OK ] IPCObjectStubTest.DBinderGetSessionNameForPidUidTest003 (0 ms)
+[ RUN      ] IPCObjectStubTest.GetSessionNameForPidUidTest001
+[       OK ] IPCObjectStubTest.GetSessionNameForPidUidTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.GetSessionNameForPidUidTest002
+[       OK ] IPCObjectStubTest.GetSessionNameForPidUidTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.GetSessionNameForPidUidTest003
+[       OK ] IPCObjectStubTest.GetSessionNameForPidUidTest003 (0 ms)
+[ RUN      ] IPCObjectStubTest.CreateSessionNameTest001
+[       OK ] IPCObjectStubTest.CreateSessionNameTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.RemoveSessionNameTest001
+[       OK ] IPCObjectStubTest.RemoveSessionNameTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderGetPidUidTest001
+[       OK ] IPCObjectStubTest.DBinderGetPidUidTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderGetPidUidTest002
+[       OK ] IPCObjectStubTest.DBinderGetPidUidTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderRemoveSessionNameTest001
+[       OK ] IPCObjectStubTest.DBinderRemoveSessionNameTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderRemoveSessionNameTest002
+[       OK ] IPCObjectStubTest.DBinderRemoveSessionNameTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.DBinderRemoveSessionNameTest003
+[       OK ] IPCObjectStubTest.DBinderRemoveSessionNameTest003 (0 ms)
+[ RUN      ] IPCObjectStubTest.ProcessProtoTest001
+[       OK ] IPCObjectStubTest.ProcessProtoTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.ProcessProtoTest002
+[       OK ] IPCObjectStubTest.ProcessProtoTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.ProcessProtoTest003
+[       OK ] IPCObjectStubTest.ProcessProtoTest003 (0 ms)
+[ RUN      ] IPCObjectStubTest.InvokerThreadTest001
+[       OK ] IPCObjectStubTest.InvokerThreadTest001 (1 ms)
+[ RUN      ] IPCObjectStubTest.InvokerThreadTest002
+[       OK ] IPCObjectStubTest.InvokerThreadTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.AddRefreshRecipientTest001
+[       OK ] IPCObjectStubTest.AddRefreshRecipientTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.AddRefreshRecipientTest002
+[       OK ] IPCObjectStubTest.AddRefreshRecipientTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.RemoveRefreshRecipientTest001
+[       OK ] IPCObjectStubTest.RemoveRefreshRecipientTest001 (0 ms)
+[ RUN      ] IPCObjectStubTest.RemoveRefreshRecipientTest002
+[       OK ] IPCObjectStubTest.RemoveRefreshRecipientTest002 (0 ms)
+[ RUN      ] IPCObjectStubTest.StubReserved1Test001
+[       OK ] IPCObjectStubTest.StubReserved1Test001 (0 ms)
+[ RUN      ] IPCObjectStubTest.StubReserved2Test001
+[       OK ] IPCObjectStubTest.StubReserved2Test001 (0 ms)
+[ RUN      ] IPCObjectStubTest.StubReserved3Test001
+[       OK ] IPCObjectStubTest.StubReserved3Test001 (0 ms)
+[ RUN      ] IPCObjectStubTest.StubReserved4Test001
+[       OK ] IPCObjectStubTest.StubReserved4Test001 (0 ms)
+[ RUN      ] IPCObjectStubTest.StubReserved5Test001
+[       OK ] IPCObjectStubTest.StubReserved5Test001 (0 ms)
+[ RUN      ] IPCObjectStubTest.StubReserved6Test001
+[       OK ] IPCObjectStubTest.StubReserved6Test001 (0 ms)
+[ RUN      ] IPCObjectStubTest.StubReserved7Test001
+[       OK ] IPCObjectStubTest.StubReserved7Test001 (0 ms)
+[ RUN      ] IPCObjectStubTest.StubReserved8Test001
+[       OK ] IPCObjectStubTest.StubReserved8Test001 (0 ms)
+[ RUN      ] IPCObjectStubTest.StubReserved9Test001
+[       OK ] IPCObjectStubTest.StubReserved9Test001 (0 ms)
+[ RUN      ] IPCObjectStubTest.StubReserved10Test001
+[       OK ] IPCObjectStubTest.StubReserved10Test001 (0 ms)
+[----------] 79 tests from IPCObjectStubTest (38 ms total)
+
+[----------] Global test environment tear-down
+[==========] 79 tests from 1 test suite ran. (38 ms total)
+[  PASSED  ] 79 tests.

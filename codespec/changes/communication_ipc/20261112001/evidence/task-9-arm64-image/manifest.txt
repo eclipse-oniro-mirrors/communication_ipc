@@ -1,0 +1,36 @@
+# TASK-9 清单（arm64_virt）
+
+口径：`out/arm64_virt/packages/phone/images/system.img`（2,147,483,648 B，2026-11-13 20:51）内库，由 `debugfs dump` 抽出副本计算；
+构建产物取自 `out/arm64_virt/communication/ipc/`。
+
+## 1. 镜像内库 vs 构建产物
+
+| 库 | 镜像内路径 | 字节 | md5（镜像内） | md5（构建产物） | 一致 | 镜像 inode |
+| --- | --- | ---: | --- | --- | --- | ---: |
+| `libipc_single.z.so` | `/system/lib64/platformsdk/` | 359,560 | `048197efed141efff0bc720000bad07f` | `048197efed141efff0bc720000bad07f` | 是 | 4988 |
+| `libipc_rpc.z.so` | `/system/lib64/platformsdk/` | 169,544 | `4fbf631d0a1b5146debc6da6941c1ee7` | `4fbf631d0a1b5146debc6da6941c1ee7` | 是 | 4987 |
+| `libipc_common.z.so` | `/system/lib64/platformsdk/` | 71,280 | `0d966297efcccd2334b29595fd0a2608` | `0d966297efcccd2334b29595fd0a2608` | 是 | 4984 |
+| `libdbinder.z.so` | `/system/lib64/` | 158,472 | `0c6734f9ad9ba0840c0664140d71c07b` | `0c6734f9ad9ba0840c0664140d71c07b` | 是 | 2768 |
+
+四库 `Machine` 均为 `AArch64`；导出定义符号数：`libipc_single` 235、`libipc_rpc` 11、`libipc_common` 78、`libdbinder` 183。
+
+## 2. 依赖方向（NEEDED）
+
+| 库 | 含 `libipc_single` | 含 `libipc_rpc` | 结论 |
+| --- | --- | --- | --- |
+| `libipc_single.z.so` | — | **否** | 核心库无反向依赖 |
+| `libipc_rpc.z.so` | 是 | — | rpc 依赖核心库，方向正确 |
+| `libdbinder.z.so` | 是 | 是 | 上层同时依赖两者 |
+
+## 3. 与拆分前基线对比
+
+| 库 | 拆分前（x86 基线参照） | 拆分后（arm64 本轮） |
+| --- | --- | --- |
+| `libipc_single.z.so` | 492,056 B（含 RPC 实现） | 359,560 B |
+| `libipc_rpc.z.so` | 不存在 | 169,544 B |
+
+> 注：跨架构绝对值不可直接相减，此处只说明「rpc 库从无到有、核心库不再包含 rpc 实现」这一结构事实。
+
+## 4. 构建产物指纹（供设备侧复核）
+
+见 `raw/device_info.txt` 中设备侧 `md5sum` 输出，须与上表 md5 完全一致。

@@ -1,0 +1,14 @@
+MODE=rpc
+PSS_BEFORE_KB=468
+RPC_MAPPED_BEFORE=0
+MAPS_HIT 7f65282c0000-7f65282d0000 r--p 00000000 fe:50 2791                       /data/local/tmp/ipc_rpc_test/libipc_rpc.z.so
+MAPS_HIT 7f65282d0000-7f65282e8000 r-xp 00010000 fe:50 2791                       /data/local/tmp/ipc_rpc_test/libipc_rpc.z.so
+MAPS_HIT 7f65282e8000-7f65282ea000 r--p 00028000 fe:50 2791                       /data/local/tmp/ipc_rpc_test/libipc_rpc.z.so
+MAPS_HIT 7f65282ea000-7f65282eb000 rw-p 00029000 fe:50 2791                       /data/local/tmp/ipc_rpc_test/libipc_rpc.z.so
+INVOKER_FIRST=0x7f65a958c610
+INVOKER_SECOND=0x7f65a958c610
+PSS_AFTER_KB=1299
+PSS_DELTA_KB=831
+RPC_MAPPED_AFTER=1
+RESULT=PASS
+EXIT=0

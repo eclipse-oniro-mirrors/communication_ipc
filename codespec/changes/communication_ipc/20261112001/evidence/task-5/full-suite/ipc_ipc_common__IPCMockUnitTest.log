@@ -1,0 +1,743 @@
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+Running main() from ../../third_party/googletest/googletest/src/gtest_main.cc
+[==========] Running 87 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 87 tests from IPCDbinderDataBusInvokerTest
+[ RUN      ] IPCDbinderDataBusInvokerTest.AcquireHandle001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IPCDbinderDataBusInvokerTest.AcquireHandle001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.ReleaseHandle001
+[       OK ] IPCDbinderDataBusInvokerTest.ReleaseHandle001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.StopWorkThreadTest001
+[       OK ] IPCDbinderDataBusInvokerTest.StopWorkThreadTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.FlattenObjectTest001
+[       OK ] IPCDbinderDataBusInvokerTest.FlattenObjectTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.UnflattenObjectTest001
+[       OK ] IPCDbinderDataBusInvokerTest.UnflattenObjectTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.ReadFileDescriptorTest001
+[       OK ] IPCDbinderDataBusInvokerTest.ReadFileDescriptorTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.WriteFileDescriptorTest001
+[       OK ] IPCDbinderDataBusInvokerTest.WriteFileDescriptorTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.GetCallerPidTest001
+[       OK ] IPCDbinderDataBusInvokerTest.GetCallerPidTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.GetCallerTokenIDTest001
+[       OK ] IPCDbinderDataBusInvokerTest.GetCallerTokenIDTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.GetFirstCallerTokenIDTest001
+[       OK ] IPCDbinderDataBusInvokerTest.GetFirstCallerTokenIDTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.GetStatusTest001
+[       OK ] IPCDbinderDataBusInvokerTest.GetStatusTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.IsLocalCallingTest001
+[       OK ] IPCDbinderDataBusInvokerTest.IsLocalCallingTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.GetLocalDeviceIDTest001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IPCDbinderDataBusInvokerTest.GetLocalDeviceIDTest001 (25 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.GetCallerDeviceIDTest001
+[       OK ] IPCDbinderDataBusInvokerTest.GetCallerDeviceIDTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.NewSessionOfBinderProxy001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IPCDbinderDataBusInvokerTest.NewSessionOfBinderProxy001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.NewSessionOfBinderProxy002
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IPCDbinderDataBusInvokerTest.NewSessionOfBinderProxy002 (3 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.NewSessionOfBinderProxy003
+[       OK ] IPCDbinderDataBusInvokerTest.NewSessionOfBinderProxy003 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.NewSessionOfBinderProxy004
+[       OK ] IPCDbinderDataBusInvokerTest.NewSessionOfBinderProxy004 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.NewSessionOfBinderProxy005
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IPCDbinderDataBusInvokerTest.NewSessionOfBinderProxy005 (3 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.NewSessionOfBinderProxy006
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IPCDbinderDataBusInvokerTest.NewSessionOfBinderProxy006 (3 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.GetSessionForProxy001
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: IsObjectDead()
+          Returns: false
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/main/docs/gmock_cook_book.md#knowing-when-to-expect-useoncall for details.
+[       OK ] IPCDbinderDataBusInvokerTest.GetSessionForProxy001 (3 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.AuthSession2Proxy001
+[       OK ] IPCDbinderDataBusInvokerTest.AuthSession2Proxy001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.AuthSession2Proxy002
+[       OK ] IPCDbinderDataBusInvokerTest.AuthSession2Proxy002 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.AuthSession2Proxy003
+[       OK ] IPCDbinderDataBusInvokerTest.AuthSession2Proxy003 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.QuerySessionOfBinderProxy001
+[       OK ] IPCDbinderDataBusInvokerTest.QuerySessionOfBinderProxy001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.QueryClientSessionObjectTest001
+[       OK ] IPCDbinderDataBusInvokerTest.QueryClientSessionObjectTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.QueryClientSessionObjectTest002
+[       OK ] IPCDbinderDataBusInvokerTest.QueryClientSessionObjectTest002 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.QueryClientSessionObjectTest003
+[       OK ] IPCDbinderDataBusInvokerTest.QueryClientSessionObjectTest003 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.QueryServerSessionObjectTest001
+[       OK ] IPCDbinderDataBusInvokerTest.QueryServerSessionObjectTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.QueryServerSessionObjectTest002
+[       OK ] IPCDbinderDataBusInvokerTest.QueryServerSessionObjectTest002 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.QueryServerSessionObjectTest003
+[       OK ] IPCDbinderDataBusInvokerTest.QueryServerSessionObjectTest003 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.CreateProcessThreadTest001
+[       OK ] IPCDbinderDataBusInvokerTest.CreateProcessThreadTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.CreateProcessThreadTest002
+../../foundation/communication/ipc/test/unittest/common/ipc_binder_databus_invoker_unittest.cpp:608: Failure
+Value of: current->SetMaxWorkThread(maxThreadNum)
+  Actual: false
+Expected: true
+
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[  FAILED  ] IPCDbinderDataBusInvokerTest.CreateProcessThreadTest002 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.CreateServerSessionObjectTest001
+[       OK ] IPCDbinderDataBusInvokerTest.CreateServerSessionObjectTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.CreateServerSessionObjectTest002
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IPCDbinderDataBusInvokerTest.CreateServerSessionObjectTest002 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.MakeDefaultServerSessionObjectTest001
+[       OK ] IPCDbinderDataBusInvokerTest.MakeDefaultServerSessionObjectTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.FlushCommandsTest001
+[       OK ] IPCDbinderDataBusInvokerTest.FlushCommandsTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.OnReceiveNewConnectionTest001
+[       OK ] IPCDbinderDataBusInvokerTest.OnReceiveNewConnectionTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.OnReceiveNewConnectionTest002
+[       OK ] IPCDbinderDataBusInvokerTest.OnReceiveNewConnectionTest002 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.ResetCallingIdentityTest001
+[       OK ] IPCDbinderDataBusInvokerTest.ResetCallingIdentityTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.SetCallingIdentityTest001
+[       OK ] IPCDbinderDataBusInvokerTest.SetCallingIdentityTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.SetCallingIdentityTest002
+identity=00000000000000000001aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa17575006925181
+[       OK ] IPCDbinderDataBusInvokerTest.SetCallingIdentityTest002 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.OnRawDataAvailable001
+[       OK ] IPCDbinderDataBusInvokerTest.OnRawDataAvailable001 (1 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.HasCompletePackage001
+[       OK ] IPCDbinderDataBusInvokerTest.HasCompletePackage001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.CheckAndSetCallerInfo001
+[       OK ] IPCDbinderDataBusInvokerTest.CheckAndSetCallerInfo001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.CheckAndSetCallerInfo002
+[       OK ] IPCDbinderDataBusInvokerTest.CheckAndSetCallerInfo002 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.UpdateClientSession001
+[       OK ] IPCDbinderDataBusInvokerTest.UpdateClientSession001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.OnSendMessage001
+[       OK ] IPCDbinderDataBusInvokerTest.OnSendMessage001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.OnSendMessage002
+[       OK ] IPCDbinderDataBusInvokerTest.OnSendMessage002 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.OnSendMessage003
+[       OK ] IPCDbinderDataBusInvokerTest.OnSendMessage003 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.OnSendMessage004
+[       OK ] IPCDbinderDataBusInvokerTest.OnSendMessage004 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.OnSendMessage005
+[       OK ] IPCDbinderDataBusInvokerTest.OnSendMessage005 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.SendData001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IPCDbinderDataBusInvokerTest.SendData001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.SendData002
+[       OK ] IPCDbinderDataBusInvokerTest.SendData002 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.OnSendRawData001
+[       OK ] IPCDbinderDataBusInvokerTest.OnSendRawData001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.OnSendRawData002
+[       OK ] IPCDbinderDataBusInvokerTest.OnSendRawData002 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.OnSendRawData003
+[       OK ] IPCDbinderDataBusInvokerTest.OnSendRawData003 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.SetCallerPid001
+[       OK ] IPCDbinderDataBusInvokerTest.SetCallerPid001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.GetCallerUid001
+[       OK ] IPCDbinderDataBusInvokerTest.GetCallerUid001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.SetCallerUid001
+[       OK ] IPCDbinderDataBusInvokerTest.SetCallerUid001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.SetCallerDeviceID001
+[       OK ] IPCDbinderDataBusInvokerTest.SetCallerDeviceID001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.SetCallerTokenID001
+[       OK ] IPCDbinderDataBusInvokerTest.SetCallerTokenID001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.ConnectRemoteObject2Session001
+[       OK ] IPCDbinderDataBusInvokerTest.ConnectRemoteObject2Session001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.FlattenSession001
+[       OK ] IPCDbinderDataBusInvokerTest.FlattenSession001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.FlattenSession002
+[       OK ] IPCDbinderDataBusInvokerTest.FlattenSession002 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.FlattenSession003
+[       OK ] IPCDbinderDataBusInvokerTest.FlattenSession003 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.UnFlattenSession001
+[       OK ] IPCDbinderDataBusInvokerTest.UnFlattenSession001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.UnFlattenSession002
+[       OK ] IPCDbinderDataBusInvokerTest.UnFlattenSession002 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.QueryHandleBySession001
+[       OK ] IPCDbinderDataBusInvokerTest.QueryHandleBySession001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.QueryHandleBySession002
+[       OK ] IPCDbinderDataBusInvokerTest.QueryHandleBySession002 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.MakeStubIndexByRemoteObject001
+[       OK ] IPCDbinderDataBusInvokerTest.MakeStubIndexByRemoteObject001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.GetSelfFirstCallerTokenIDTest001
+[       OK ] IPCDbinderDataBusInvokerTest.GetSelfFirstCallerTokenIDTest001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.GetSelfFirstCallerTokenIDTest002
+[       OK ] IPCDbinderDataBusInvokerTest.GetSelfFirstCallerTokenIDTest002 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.CheckAndSetCallerInfo003
+[       OK ] IPCDbinderDataBusInvokerTest.CheckAndSetCallerInfo003 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.CheckAndSetCallerInfo004
+[       OK ] IPCDbinderDataBusInvokerTest.CheckAndSetCallerInfo004 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.CheckAndSetCallerInfo005
+[       OK ] IPCDbinderDataBusInvokerTest.CheckAndSetCallerInfo005 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.CheckAndSetCallerInfo006
+[       OK ] IPCDbinderDataBusInvokerTest.CheckAndSetCallerInfo006 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.ConnectRemoteObject2Session002
+[       OK ] IPCDbinderDataBusInvokerTest.ConnectRemoteObject2Session002 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.ConnectRemoteObject2Session003
+[       OK ] IPCDbinderDataBusInvokerTest.ConnectRemoteObject2Session003 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.HasRawDataPackage001
+[       OK ] IPCDbinderDataBusInvokerTest.HasRawDataPackage001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.JoinProcessThread001
+[       OK ] IPCDbinderDataBusInvokerTest.JoinProcessThread001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.UnFlattenSession003
+[       OK ] IPCDbinderDataBusInvokerTest.UnFlattenSession003 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.UnFlattenSession004
+[       OK ] IPCDbinderDataBusInvokerTest.UnFlattenSession004 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.UnFlattenSession005
+[       OK ] IPCDbinderDataBusInvokerTest.UnFlattenSession005 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.UnFlattenSession006
+[       OK ] IPCDbinderDataBusInvokerTest.UnFlattenSession006 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.OnMessageAvailable001
+[       OK ] IPCDbinderDataBusInvokerTest.OnMessageAvailable001 (0 ms)
+[ RUN      ] IPCDbinderDataBusInvokerTest.OnMessageAvailable002
+[       OK ] IPCDbinderDataBusInvokerTest.OnMessageAvailable002 (0 ms)
+[----------] 87 tests from IPCDbinderDataBusInvokerTest (45 ms total)
+
+[----------] Global test environment tear-down
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[==========] 87 tests from 1 test suite ran. (45 ms total)
+[  PASSED  ] 86 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] IPCDbinderDataBusInvokerTest.CreateProcessThreadTest002
+
+ 1 FAILED TEST
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+
+../../foundation/communication/ipc/test/unittest/common/ipc_binder_databus_invoker_unittest.cpp:1001: ERROR: this mock object (used in test IPCDbinderDataBusInvokerTest.OnSendMessage004) should be deleted but never is. Its address is @0x7ff478d33420.
+../../foundation/communication/ipc/test/unittest/common/ipc_binder_databus_invoker_unittest.cpp:1024: ERROR: this mock object (used in test IPCDbinderDataBusInvokerTest.OnSendMessage005) should be deleted but never is. Its address is @0x7ff478d33570.
+../../foundation/communication/ipc/test/unittest/common/ipc_binder_databus_invoker_unittest.cpp:1030: ERROR: this mock object (used in test IPCDbinderDataBusInvokerTest.OnSendMessage005) should be deleted but never is. Its address is @0x7ff478d969f8.
+ERROR: 3 leaked mock objects found at program exit. Expectations on a mock object are verified when the object is destructed. Leaking a mock means that its expectations aren't verified, which is usually a test bug. If you really intend to leak a mock, you can suppress this error using testing::Mock::AllowLeak(mock_object), or you may use a fake or stub instead of a mock.
