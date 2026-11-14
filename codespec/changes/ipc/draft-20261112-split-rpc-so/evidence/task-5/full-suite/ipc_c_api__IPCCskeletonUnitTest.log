@@ -1,0 +1,166 @@
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+Running main() from ../../third_party/googletest/googletest/src/gtest_main.cc
+[==========] Running 17 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 17 tests from IPCCskeletonTest
+[ RUN      ] IPCCskeletonTest.OH_IPCSkeleton_SetMaxWorkThreadNumTest001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IPCCskeletonTest.OH_IPCSkeleton_SetMaxWorkThreadNumTest001 (0 ms)
+[ RUN      ] IPCCskeletonTest.OH_IPCSkeleton_SetMaxWorkThreadNumTest002
+[       OK ] IPCCskeletonTest.OH_IPCSkeleton_SetMaxWorkThreadNumTest002 (0 ms)
+[ RUN      ] IPCCskeletonTest.OH_IPCSkeleton_SetMaxWorkThreadNumTest003
+[       OK ] IPCCskeletonTest.OH_IPCSkeleton_SetMaxWorkThreadNumTest003 (0 ms)
+[ RUN      ] IPCCskeletonTest.OH_IPCSkeleton_SetMaxWorkThreadNumTest004
+[       OK ] IPCCskeletonTest.OH_IPCSkeleton_SetMaxWorkThreadNumTest004 (0 ms)
+[ RUN      ] IPCCskeletonTest.OH_IPCSkeleton_SetCallingIdentityTest001
+[       OK ] IPCCskeletonTest.OH_IPCSkeleton_SetCallingIdentityTest001 (0 ms)
+[ RUN      ] IPCCskeletonTest.OH_IPCSkeleton_SetCallingIdentityTest002
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IPCCskeletonTest.OH_IPCSkeleton_SetCallingIdentityTest002 (0 ms)
+[ RUN      ] IPCCskeletonTest.OH_IPCSkeleton_ResetCallingIdentityTest001
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: ResetCallingIdentity()
+          Returns: ""
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/main/docs/gmock_cook_book.md#knowing-when-to-expect-useoncall for details.
+[       OK ] IPCCskeletonTest.OH_IPCSkeleton_ResetCallingIdentityTest001 (0 ms)
+[ RUN      ] IPCCskeletonTest.OH_IPCSkeleton_ResetCallingIdentityTest002
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: ResetCallingIdentity()
+          Returns: ""
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/main/docs/gmock_cook_book.md#knowing-when-to-expect-useoncall for details.
+[       OK ] IPCCskeletonTest.OH_IPCSkeleton_ResetCallingIdentityTest002 (0 ms)
+[ RUN      ] IPCCskeletonTest.OH_IPCSkeleton_ResetCallingIdentityTest003
+[       OK ] IPCCskeletonTest.OH_IPCSkeleton_ResetCallingIdentityTest003 (0 ms)
+[ RUN      ] IPCCskeletonTest.OH_IPCSkeleton_ResetCallingIdentityTest004
+[       OK ] IPCCskeletonTest.OH_IPCSkeleton_ResetCallingIdentityTest004 (0 ms)
+[ RUN      ] IPCCskeletonTest.OH_IPCSkeleton_GetCallingTokenIdTest001
+[       OK ] IPCCskeletonTest.OH_IPCSkeleton_GetCallingTokenIdTest001 (0 ms)
+[ RUN      ] IPCCskeletonTest.OH_IPCSkeleton_GetFirstTokenIdTest001
+[       OK ] IPCCskeletonTest.OH_IPCSkeleton_GetFirstTokenIdTest001 (0 ms)
+[ RUN      ] IPCCskeletonTest.OH_IPCSkeleton_GetSelfTokenIdTest001
+[       OK ] IPCCskeletonTest.OH_IPCSkeleton_GetSelfTokenIdTest001 (0 ms)
+[ RUN      ] IPCCskeletonTest.OH_IPCSkeleton_GetCallingPidTest001
+[       OK ] IPCCskeletonTest.OH_IPCSkeleton_GetCallingPidTest001 (0 ms)
+[ RUN      ] IPCCskeletonTest.OH_IPCSkeleton_GetCallingUidTest001
+[       OK ] IPCCskeletonTest.OH_IPCSkeleton_GetCallingUidTest001 (0 ms)
+[ RUN      ] IPCCskeletonTest.OH_IPCSkeleton_IsLocalCallingTest001
+[       OK ] IPCCskeletonTest.OH_IPCSkeleton_IsLocalCallingTest001 (0 ms)
+[ RUN      ] IPCCskeletonTest.OH_IPCSkeleton_IsLocalCallingTest002
+[       OK ] IPCCskeletonTest.OH_IPCSkeleton_IsLocalCallingTest002 (0 ms)
+[----------] 17 tests from IPCCskeletonTest (0 ms total)
+
+[----------] Global test environment tear-down
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[==========] 17 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 17 tests.
+
+../../foundation/communication/ipc/test/unittest/ipc/native/c_api/ipc_cskeleton_unittest.cpp:258: ERROR: this mock object (used in test IPCCskeletonTest.OH_IPCSkeleton_ResetCallingIdentityTest002) should be deleted but never is. Its address is @0x7f7b811202f0.
+../../foundation/communication/ipc/test/unittest/ipc/native/c_api/ipc_cskeleton_unittest.cpp:150: ERROR: this mock object (used in test IPCCskeletonTest.OH_IPCSkeleton_SetMaxWorkThreadNumTest001) should be deleted but never is. Its address is @0x7f7b81120338.
+ERROR: 2 leaked mock objects found at program exit. Expectations on a mock object are verified when the object is destructed. Leaking a mock means that its expectations aren't verified, which is usually a test bug. If you really intend to leak a mock, you can suppress this error using testing::Mock::AllowLeak(mock_object), or you may use a fake or stub instead of a mock.

@@ -1,0 +1,930 @@
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+Running main() from ../../third_party/googletest/googletest/src/gtest_main.cc
+[==========] Running 134 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 134 tests from BinderInvokerTest
+[ RUN      ] BinderInvokerTest.AcquireHandleTest001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] BinderInvokerTest.AcquireHandleTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.AcquireHandleTest002
+[       OK ] BinderInvokerTest.AcquireHandleTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.AcquireHandleTest003
+[       OK ] BinderInvokerTest.AcquireHandleTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.AcquireHandleTest004
+[       OK ] BinderInvokerTest.AcquireHandleTest004 (0 ms)
+[ RUN      ] BinderInvokerTest.AcquireHandleTest005
+[       OK ] BinderInvokerTest.AcquireHandleTest005 (0 ms)
+[ RUN      ] BinderInvokerTest.ReleaseHandleTest001
+[       OK ] BinderInvokerTest.ReleaseHandleTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.ReleaseHandleTest002
+[       OK ] BinderInvokerTest.ReleaseHandleTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.ReleaseHandleTest003
+[       OK ] BinderInvokerTest.ReleaseHandleTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.ReleaseHandleTest004
+[       OK ] BinderInvokerTest.ReleaseHandleTest004 (0 ms)
+[ RUN      ] BinderInvokerTest.AddDeathRecipientTest001
+[       OK ] BinderInvokerTest.AddDeathRecipientTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.AddDeathRecipientTest002
+[       OK ] BinderInvokerTest.AddDeathRecipientTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.AddDeathRecipientTest003
+[       OK ] BinderInvokerTest.AddDeathRecipientTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.AddDeathRecipientTest004
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:690: Failure
+Value of: ret
+  Actual: false
+Expected: true
+
+[  FAILED  ] BinderInvokerTest.AddDeathRecipientTest004 (0 ms)
+[ RUN      ] BinderInvokerTest.AddDeathRecipientTest005
+[       OK ] BinderInvokerTest.AddDeathRecipientTest005 (0 ms)
+[ RUN      ] BinderInvokerTest.AddDeathRecipientTest006
+[       OK ] BinderInvokerTest.AddDeathRecipientTest006 (0 ms)
+[ RUN      ] BinderInvokerTest.AddDeathRecipientTest007
+[       OK ] BinderInvokerTest.AddDeathRecipientTest007 (0 ms)
+[ RUN      ] BinderInvokerTest.RemoveDeathRecipientTest001
+[       OK ] BinderInvokerTest.RemoveDeathRecipientTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.RemoveDeathRecipientTest002
+[       OK ] BinderInvokerTest.RemoveDeathRecipientTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.RemoveDeathRecipientTest003
+[       OK ] BinderInvokerTest.RemoveDeathRecipientTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.RemoveDeathRecipientTest004
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:836: Failure
+Value of: ret
+  Actual: false
+Expected: true
+
+[  FAILED  ] BinderInvokerTest.RemoveDeathRecipientTest004 (0 ms)
+[ RUN      ] BinderInvokerTest.RemoveDeathRecipientTest005
+[       OK ] BinderInvokerTest.RemoveDeathRecipientTest005 (0 ms)
+[ RUN      ] BinderInvokerTest.AddRefreshRecipientTest001
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:873: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WriteInt32(testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:872: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, GetWritePosition())...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+[  FAILED  ] BinderInvokerTest.AddRefreshRecipientTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.AddRefreshRecipientTest002
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:895: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, RewindWrite(testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:892: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WriteInt32(testing::_))...
+         Expected: to be called twice
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:891: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, GetWritePosition())...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+[  FAILED  ] BinderInvokerTest.AddRefreshRecipientTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.AddRefreshRecipientTest003
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:917: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WritePointer(testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:918: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, RewindWrite(testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:914: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WriteInt32(testing::_))...
+         Expected: to be called twice
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:913: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, GetWritePosition())...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+[  FAILED  ] BinderInvokerTest.AddRefreshRecipientTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.AddRefreshRecipientTest004
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:944: Failure
+Value of: ret
+  Actual: false
+Expected: true
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:940: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WritePointer(testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:937: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WriteInt32(testing::_))...
+         Expected: to be called twice
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:936: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, GetWritePosition())...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+[  FAILED  ] BinderInvokerTest.AddRefreshRecipientTest004 (0 ms)
+[ RUN      ] BinderInvokerTest.AddRefreshRecipientTest005
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:963: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WritePointer(testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:960: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WriteInt32(testing::_))...
+         Expected: to be called twice
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:959: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, GetWritePosition())...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+[  FAILED  ] BinderInvokerTest.AddRefreshRecipientTest005 (0 ms)
+[ RUN      ] BinderInvokerTest.AddRefreshRecipientTest006
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:987: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, RewindWrite(testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:983: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WriteInt32(testing::_))...
+         Expected: to be called twice
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:982: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, GetWritePosition())...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+[  FAILED  ] BinderInvokerTest.AddRefreshRecipientTest006 (0 ms)
+[ RUN      ] BinderInvokerTest.AddRefreshRecipientTest007
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1010: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WritePointer(testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1011: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, RewindWrite(testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1006: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WriteInt32(testing::_))...
+         Expected: to be called twice
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1005: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, GetWritePosition())...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+[  FAILED  ] BinderInvokerTest.AddRefreshRecipientTest007 (0 ms)
+[ RUN      ] BinderInvokerTest.AddRefreshRecipientTest008
+[       OK ] BinderInvokerTest.AddRefreshRecipientTest008 (0 ms)
+[ RUN      ] BinderInvokerTest.RemoveRefreshRecipientTest001
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1045: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WriteInt32(testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1044: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, GetWritePosition())...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+[  FAILED  ] BinderInvokerTest.RemoveRefreshRecipientTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.RemoveRefreshRecipientTest002
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1067: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, RewindWrite(testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1064: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WriteInt32(testing::_))...
+         Expected: to be called twice
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1063: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, GetWritePosition())...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+[  FAILED  ] BinderInvokerTest.RemoveRefreshRecipientTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.RemoveRefreshRecipientTest003
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1089: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WritePointer(testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1090: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, RewindWrite(testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1086: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WriteInt32(testing::_))...
+         Expected: to be called twice
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1085: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, GetWritePosition())...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+[  FAILED  ] BinderInvokerTest.RemoveRefreshRecipientTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.RemoveRefreshRecipientTest004
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1116: Failure
+Value of: ret
+  Actual: false
+Expected: true
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1112: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WritePointer(testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1109: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WriteInt32(testing::_))...
+         Expected: to be called twice
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1108: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, GetWritePosition())...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+[  FAILED  ] BinderInvokerTest.RemoveRefreshRecipientTest004 (0 ms)
+[ RUN      ] BinderInvokerTest.RemoveRefreshRecipientTest005
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1135: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WritePointer(testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1132: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WriteInt32(testing::_))...
+         Expected: to be called twice
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1131: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, GetWritePosition())...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+[  FAILED  ] BinderInvokerTest.RemoveRefreshRecipientTest005 (0 ms)
+[ RUN      ] BinderInvokerTest.RemoveRefreshRecipientTest006
+[       OK ] BinderInvokerTest.RemoveRefreshRecipientTest006 (0 ms)
+[ RUN      ] BinderInvokerTest.OnBinderRefreshedTest001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] BinderInvokerTest.OnBinderRefreshedTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.OnBinderRefreshedTest002
+[       OK ] BinderInvokerTest.OnBinderRefreshedTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.OnBinderRefreshedTest003
+[       OK ] BinderInvokerTest.OnBinderRefreshedTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.OnBinderDiedTest001
+[       OK ] BinderInvokerTest.OnBinderDiedTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.OnBinderDiedTest002
+[       OK ] BinderInvokerTest.OnBinderDiedTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.OnBinderDiedTest003
+[       OK ] BinderInvokerTest.OnBinderDiedTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.OnBinderDiedTest004
+[       OK ] BinderInvokerTest.OnBinderDiedTest004 (0 ms)
+[ RUN      ] BinderInvokerTest.OnBinderRefreshedTest004
+[       OK ] BinderInvokerTest.OnBinderRefreshedTest004 (0 ms)
+[ RUN      ] BinderInvokerTest.OnBinderRefreshedTest005
+[       OK ] BinderInvokerTest.OnBinderRefreshedTest005 (0 ms)
+[ RUN      ] BinderInvokerTest.OnBinderRefreshedTest006
+[       OK ] BinderInvokerTest.OnBinderRefreshedTest006 (0 ms)
+[ RUN      ] BinderInvokerTest.GetDBinderCallingPidUidTest001
+[       OK ] BinderInvokerTest.GetDBinderCallingPidUidTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.GetDBinderCallingPidUidTest003
+[       OK ] BinderInvokerTest.GetDBinderCallingPidUidTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.UnFlattenDBinderObjectTest001
+[       OK ] BinderInvokerTest.UnFlattenDBinderObjectTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.UnFlattenDBinderObjectTest002
+[       OK ] BinderInvokerTest.UnFlattenDBinderObjectTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.UnFlattenDBinderObjectTest003
+[       OK ] BinderInvokerTest.UnFlattenDBinderObjectTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.UnFlattenDBinderObjectTest004
+[       OK ] BinderInvokerTest.UnFlattenDBinderObjectTest004 (0 ms)
+[ RUN      ] BinderInvokerTest.UnFlattenDBinderObjectTest005
+[       OK ] BinderInvokerTest.UnFlattenDBinderObjectTest005 (0 ms)
+[ RUN      ] BinderInvokerTest.UnFlattenDBinderObjectTest006
+[       OK ] BinderInvokerTest.UnFlattenDBinderObjectTest006 (0 ms)
+[ RUN      ] BinderInvokerTest.FlushCommandsTest001
+[       OK ] BinderInvokerTest.FlushCommandsTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.OnAcquireObjectTest001
+[       OK ] BinderInvokerTest.OnAcquireObjectTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.OnAcquireObjectTest002
+[       OK ] BinderInvokerTest.OnAcquireObjectTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.OnAcquireObjectTest003
+[       OK ] BinderInvokerTest.OnAcquireObjectTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.OnAcquireObjectTest004
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] BinderInvokerTest.OnAcquireObjectTest004 (0 ms)
+[ RUN      ] BinderInvokerTest.OnAcquireObjectTest005
+[       OK ] BinderInvokerTest.OnAcquireObjectTest005 (0 ms)
+[ RUN      ] BinderInvokerTest.OnAcquireObjectTest006
+[       OK ] BinderInvokerTest.OnAcquireObjectTest006 (0 ms)
+[ RUN      ] BinderInvokerTest.OnAcquireObjectTest007
+[       OK ] BinderInvokerTest.OnAcquireObjectTest007 (0 ms)
+[ RUN      ] BinderInvokerTest.OnReleaseObjectTest001
+[       OK ] BinderInvokerTest.OnReleaseObjectTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.GeneralServiceSendRequestTest001
+[       OK ] BinderInvokerTest.GeneralServiceSendRequestTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.SetCallingIdentityTest001
+[       OK ] BinderInvokerTest.SetCallingIdentityTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.SetCallingIdentityTest002
+[       OK ] BinderInvokerTest.SetCallingIdentityTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.SetCallingIdentityTest003
+[       OK ] BinderInvokerTest.SetCallingIdentityTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.SetCallingIdentityTest004
+[       OK ] BinderInvokerTest.SetCallingIdentityTest004 (0 ms)
+[ RUN      ] BinderInvokerTest.SetCallingIdentityTest005
+[       OK ] BinderInvokerTest.SetCallingIdentityTest005 (0 ms)
+[ RUN      ] BinderInvokerTest.SetCallingIdentityTest006
+[       OK ] BinderInvokerTest.SetCallingIdentityTest006 (0 ms)
+[ RUN      ] BinderInvokerTest.SetCallingIdentityTest007
+[       OK ] BinderInvokerTest.SetCallingIdentityTest007 (0 ms)
+[ RUN      ] BinderInvokerTest.SetCallingIdentityTest008
+[       OK ] BinderInvokerTest.SetCallingIdentityTest008 (0 ms)
+[ RUN      ] BinderInvokerTest.SetCallingIdentityTest009
+[       OK ] BinderInvokerTest.SetCallingIdentityTest009 (0 ms)
+[ RUN      ] BinderInvokerTest.TriggerSystemIPCThreadReclaimTest001
+[       OK ] BinderInvokerTest.TriggerSystemIPCThreadReclaimTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.TriggerSystemIPCThreadReclaimTest002
+[       OK ] BinderInvokerTest.TriggerSystemIPCThreadReclaimTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.TriggerSystemIPCThreadReclaimTest003
+[       OK ] BinderInvokerTest.TriggerSystemIPCThreadReclaimTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.TriggerSystemIPCThreadReclaimTest004
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1958: Failure
+Value of: result
+  Actual: false
+Expected: true
+
+[  FAILED  ] BinderInvokerTest.TriggerSystemIPCThreadReclaimTest004 (0 ms)
+[ RUN      ] BinderInvokerTest.EnableIPCThreadReclaimTest001
+[       OK ] BinderInvokerTest.EnableIPCThreadReclaimTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.EnableIPCThreadReclaimTest002
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1985: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WriteBinder(testing::_, testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:1984: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, IsDriverAlive())...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+[  FAILED  ] BinderInvokerTest.EnableIPCThreadReclaimTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.GetStrongRefCountForStubTest001
+[       OK ] BinderInvokerTest.GetStrongRefCountForStubTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.GetStrongRefCountForStubTest002
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:2025: Failure
+Expected equality of these values:
+  result
+    Which is: 0
+  strongCount
+    Which is: 1
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:2018: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, WriteBinder(testing::_, testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:2017: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, IsDriverAlive())...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+[  FAILED  ] BinderInvokerTest.GetStrongRefCountForStubTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.IsSendRequestingTest001
+[       OK ] BinderInvokerTest.IsSendRequestingTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.IsSendRequestingTest002
+[       OK ] BinderInvokerTest.IsSendRequestingTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.GetUint64ValueByStrSliceTest001
+[       OK ] BinderInvokerTest.GetUint64ValueByStrSliceTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.GetUint64ValueByStrSliceTest002
+[       OK ] BinderInvokerTest.GetUint64ValueByStrSliceTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.GetUint64ValueByStrSliceTest003
+[       OK ] BinderInvokerTest.GetUint64ValueByStrSliceTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.GetUint64ValueByStrSliceTest004
+[       OK ] BinderInvokerTest.GetUint64ValueByStrSliceTest004 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerRealPidByStrTest001
+[       OK ] BinderInvokerTest.GetCallerRealPidByStrTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerRealPidByStrTest002
+[       OK ] BinderInvokerTest.GetCallerRealPidByStrTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerRealPidByStrTest003
+[       OK ] BinderInvokerTest.GetCallerRealPidByStrTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerRealPidByStrTest004
+[       OK ] BinderInvokerTest.GetCallerRealPidByStrTest004 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerPidAndUidByStrTest001
+[       OK ] BinderInvokerTest.GetCallerPidAndUidByStrTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerPidAndUidByStrTest002
+[       OK ] BinderInvokerTest.GetCallerPidAndUidByStrTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.UnflattenObjectTest001
+[       OK ] BinderInvokerTest.UnflattenObjectTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.UnflattenObjectTest002
+[       OK ] BinderInvokerTest.UnflattenObjectTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.UnflattenObjectTest003
+[       OK ] BinderInvokerTest.UnflattenObjectTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.GetSAMgrObjectTest001
+[       OK ] BinderInvokerTest.GetSAMgrObjectTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.GetSAMgrObjectTest002
+[       OK ] BinderInvokerTest.GetSAMgrObjectTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.GetSAMgrObjectTest003
+[       OK ] BinderInvokerTest.GetSAMgrObjectTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.WriteTransactionTest001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] BinderInvokerTest.WriteTransactionTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.WriteTransactionTest002
+[       OK ] BinderInvokerTest.WriteTransactionTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.SamgrServiceSendRequestTest001
+[       OK ] BinderInvokerTest.SamgrServiceSendRequestTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.SamgrServiceSendRequestTest002
+[       OK ] BinderInvokerTest.SamgrServiceSendRequestTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.FreeBufferTest001
+[       OK ] BinderInvokerTest.FreeBufferTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.FreeBufferTest002
+[       OK ] BinderInvokerTest.FreeBufferTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.FreeBufferTest003
+[       OK ] BinderInvokerTest.FreeBufferTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerPidTest001
+[       OK ] BinderInvokerTest.GetCallerPidTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerPidTest002
+[       OK ] BinderInvokerTest.GetCallerPidTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerPidTest003
+[       OK ] BinderInvokerTest.GetCallerPidTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerSidTest001
+[       OK ] BinderInvokerTest.GetCallerSidTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerSidTest002
+[       OK ] BinderInvokerTest.GetCallerSidTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerSidTest003
+[       OK ] BinderInvokerTest.GetCallerSidTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerRealPidTest001
+[       OK ] BinderInvokerTest.GetCallerRealPidTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerRealPidTest002
+[       OK ] BinderInvokerTest.GetCallerRealPidTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerRealPidTest003
+[       OK ] BinderInvokerTest.GetCallerRealPidTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerUidTest001
+[       OK ] BinderInvokerTest.GetCallerUidTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerUidTest002
+[       OK ] BinderInvokerTest.GetCallerUidTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerUidTest003
+[       OK ] BinderInvokerTest.GetCallerUidTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerTokenIDTest001
+[       OK ] BinderInvokerTest.GetCallerTokenIDTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerTokenIDTest002
+[       OK ] BinderInvokerTest.GetCallerTokenIDTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerTokenIDTest003
+[       OK ] BinderInvokerTest.GetCallerTokenIDTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.GetCallerTokenIDTest004
+[       OK ] BinderInvokerTest.GetCallerTokenIDTest004 (0 ms)
+[ RUN      ] BinderInvokerTest.GetFirstCallerTokenIDTest001
+[       OK ] BinderInvokerTest.GetFirstCallerTokenIDTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.GetFirstCallerTokenIDTest002
+[       OK ] BinderInvokerTest.GetFirstCallerTokenIDTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.GetFirstCallerTokenIDTest003
+[       OK ] BinderInvokerTest.GetFirstCallerTokenIDTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.UpdateConsumedDataTest001
+[       OK ] BinderInvokerTest.UpdateConsumedDataTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.UpdateConsumedDataTest002
+[       OK ] BinderInvokerTest.UpdateConsumedDataTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.SetRegistryObjectTest001
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:2892: Failure
+Value of: binderInvoker.SetRegistryObject(object)
+  Actual: false
+Expected: true
+
+[  FAILED  ] BinderInvokerTest.SetRegistryObjectTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.DealWithCmdTest001
+[       OK ] BinderInvokerTest.DealWithCmdTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.OnTransactionTest001
+[       OK ] BinderInvokerTest.OnTransactionTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.SendRequestTest001
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:2948: Failure
+Expected equality of these values:
+  ret
+    Which is: 407
+  IPC_INVOKER_WRITE_TRANS_ERR
+    Which is: 401
+
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:2941: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, TranslateDBinderProxy(testing::_, testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+[  FAILED  ] BinderInvokerTest.SendRequestTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.SendRequestTest002
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:2961: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, TranslateDBinderProxy(testing::_, testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+[  FAILED  ] BinderInvokerTest.SendRequestTest002 (0 ms)
+[ RUN      ] BinderInvokerTest.SendRequestTest003
+../../foundation/communication/ipc/test/unittest/ipc/native/core/binder_invoker_unittest.cpp:2981: Failure
+Actual function call count doesn't match EXPECT_CALL(mock, TranslateDBinderProxy(testing::_, testing::_))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+[  FAILED  ] BinderInvokerTest.SendRequestTest003 (0 ms)
+[ RUN      ] BinderInvokerTest.SendReplyTest001
+[       OK ] BinderInvokerTest.SendReplyTest001 (0 ms)
+[ RUN      ] BinderInvokerTest.SendReplyTest002
+[       OK ] BinderInvokerTest.SendReplyTest002 (0 ms)
+[----------] 134 tests from BinderInvokerTest (9 ms total)
+
+[----------] Global test environment tear-down
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[==========] 134 tests from 1 test suite ran. (9 ms total)
+[  PASSED  ] 113 tests.
+[  FAILED  ] 21 tests, listed below:
+[  FAILED  ] BinderInvokerTest.AddDeathRecipientTest004
+[  FAILED  ] BinderInvokerTest.RemoveDeathRecipientTest004
+[  FAILED  ] BinderInvokerTest.AddRefreshRecipientTest001
+[  FAILED  ] BinderInvokerTest.AddRefreshRecipientTest002
+[  FAILED  ] BinderInvokerTest.AddRefreshRecipientTest003
+[  FAILED  ] BinderInvokerTest.AddRefreshRecipientTest004
+[  FAILED  ] BinderInvokerTest.AddRefreshRecipientTest005
+[  FAILED  ] BinderInvokerTest.AddRefreshRecipientTest006
+[  FAILED  ] BinderInvokerTest.AddRefreshRecipientTest007
+[  FAILED  ] BinderInvokerTest.RemoveRefreshRecipientTest001
+[  FAILED  ] BinderInvokerTest.RemoveRefreshRecipientTest002
+[  FAILED  ] BinderInvokerTest.RemoveRefreshRecipientTest003
+[  FAILED  ] BinderInvokerTest.RemoveRefreshRecipientTest004
+[  FAILED  ] BinderInvokerTest.RemoveRefreshRecipientTest005
+[  FAILED  ] BinderInvokerTest.TriggerSystemIPCThreadReclaimTest004
+[  FAILED  ] BinderInvokerTest.EnableIPCThreadReclaimTest002
+[  FAILED  ] BinderInvokerTest.GetStrongRefCountForStubTest002
+[  FAILED  ] BinderInvokerTest.SetRegistryObjectTest001
+[  FAILED  ] BinderInvokerTest.SendRequestTest001
+[  FAILED  ] BinderInvokerTest.SendRequestTest002
+[  FAILED  ] BinderInvokerTest.SendRequestTest003
+
+21 FAILED TESTS

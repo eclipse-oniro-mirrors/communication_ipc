@@ -1,0 +1,169 @@
+Running main() from ../../third_party/googletest/googletest/src/gtest_main.cc
+[==========] Running 80 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 80 tests from IPCProcessSkeletonUnitTest
+[ RUN      ] IPCProcessSkeletonUnitTest.IsContainsObjectTest001
+[       OK ] IPCProcessSkeletonUnitTest.IsContainsObjectTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.IsContainsObjectTest002
+[       OK ] IPCProcessSkeletonUnitTest.IsContainsObjectTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.AttachObjectTest001
+[       OK ] IPCProcessSkeletonUnitTest.AttachObjectTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.AttachObjectTest002
+[       OK ] IPCProcessSkeletonUnitTest.AttachObjectTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.AttachObjectTest003
+[       OK ] IPCProcessSkeletonUnitTest.AttachObjectTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.DetachObjectTest001
+[       OK ] IPCProcessSkeletonUnitTest.DetachObjectTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.DetachObjectTest002
+[       OK ] IPCProcessSkeletonUnitTest.DetachObjectTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.DetachObjectTest003
+[       OK ] IPCProcessSkeletonUnitTest.DetachObjectTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.DetachObjectTest004
+[       OK ] IPCProcessSkeletonUnitTest.DetachObjectTest004 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryAppInfoToStubIndexTest001
+[       OK ] IPCProcessSkeletonUnitTest.QueryAppInfoToStubIndexTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.CreateSoftbusServerTest001
+[       OK ] IPCProcessSkeletonUnitTest.CreateSoftbusServerTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.CreateSoftbusServerTest002
+[       OK ] IPCProcessSkeletonUnitTest.CreateSoftbusServerTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.CreateSoftbusServerTest003
+[       OK ] IPCProcessSkeletonUnitTest.CreateSoftbusServerTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.CreateSoftbusServerTest004
+[       OK ] IPCProcessSkeletonUnitTest.CreateSoftbusServerTest004 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.GetRegistryObjectTest001
+[       OK ] IPCProcessSkeletonUnitTest.GetRegistryObjectTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.GetRegistryObjectTest002
+[       OK ] IPCProcessSkeletonUnitTest.GetRegistryObjectTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.GetRegistryObjectTest003
+[       OK ] IPCProcessSkeletonUnitTest.GetRegistryObjectTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.GetProxyObjectTest001
+[       OK ] IPCProcessSkeletonUnitTest.GetProxyObjectTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.GetProxyObjectTest002
+[       OK ] IPCProcessSkeletonUnitTest.GetProxyObjectTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.GetProxyObjectTest003
+[       OK ] IPCProcessSkeletonUnitTest.GetProxyObjectTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.GetProxyObjectTest004
+[       OK ] IPCProcessSkeletonUnitTest.GetProxyObjectTest004 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.GetProxyObjectTest005
+[       OK ] IPCProcessSkeletonUnitTest.GetProxyObjectTest005 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.GetProxyObjectTest006
+[       OK ] IPCProcessSkeletonUnitTest.GetProxyObjectTest006 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.SetRegistryObjectTest001
+[       OK ] IPCProcessSkeletonUnitTest.SetRegistryObjectTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.SetRegistryObjectTest002
+[       OK ] IPCProcessSkeletonUnitTest.SetRegistryObjectTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.SetRegistryObjectTest003
+[       OK ] IPCProcessSkeletonUnitTest.SetRegistryObjectTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.SetRegistryObjectTest004
+[       OK ] IPCProcessSkeletonUnitTest.SetRegistryObjectTest004 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.SetRegistryObjectTest005
+[       OK ] IPCProcessSkeletonUnitTest.SetRegistryObjectTest005 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.SpawnThreadTest001
+[       OK ] IPCProcessSkeletonUnitTest.SpawnThreadTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.SpawnThreadTest002
+[       OK ] IPCProcessSkeletonUnitTest.SpawnThreadTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryObjectTest001
+[       OK ] IPCProcessSkeletonUnitTest.QueryObjectTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryObjectTest002
+[       OK ] IPCProcessSkeletonUnitTest.QueryObjectTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryObjectTest003
+[       OK ] IPCProcessSkeletonUnitTest.QueryObjectTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.SetIPCProxyLimitTest001
+[       OK ] IPCProcessSkeletonUnitTest.SetIPCProxyLimitTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.SetIPCProxyLimitTest002
+[       OK ] IPCProcessSkeletonUnitTest.SetIPCProxyLimitTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.GetSAMgrObjectTest001
+[       OK ] IPCProcessSkeletonUnitTest.GetSAMgrObjectTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.ProxyMoveDBinderSessionTest001
+[       OK ] IPCProcessSkeletonUnitTest.ProxyMoveDBinderSessionTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.ProxyMoveDBinderSessionTest002
+[       OK ] IPCProcessSkeletonUnitTest.ProxyMoveDBinderSessionTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.ProxyMoveDBinderSessionTest003
+[       OK ] IPCProcessSkeletonUnitTest.ProxyMoveDBinderSessionTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryProxyBySocketIdTest001
+[       OK ] IPCProcessSkeletonUnitTest.QueryProxyBySocketIdTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryProxyBySocketIdTest002
+[       OK ] IPCProcessSkeletonUnitTest.QueryProxyBySocketIdTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryProxyBySocketIdTest003
+[       OK ] IPCProcessSkeletonUnitTest.QueryProxyBySocketIdTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryHandleByDatabusSessionTest001
+[       OK ] IPCProcessSkeletonUnitTest.QueryHandleByDatabusSessionTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryHandleByDatabusSessionTest002
+[       OK ] IPCProcessSkeletonUnitTest.QueryHandleByDatabusSessionTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryHandleByDatabusSessionTest003
+[       OK ] IPCProcessSkeletonUnitTest.QueryHandleByDatabusSessionTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QuerySessionByInfoTest001
+[       OK ] IPCProcessSkeletonUnitTest.QuerySessionByInfoTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QuerySessionByInfoTest002
+[       OK ] IPCProcessSkeletonUnitTest.QuerySessionByInfoTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QuerySessionByInfoTest003
+[       OK ] IPCProcessSkeletonUnitTest.QuerySessionByInfoTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.StubDetachDBinderSessionTest001
+[       OK ] IPCProcessSkeletonUnitTest.StubDetachDBinderSessionTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.StubDetachDBinderSessionTest002
+[       OK ] IPCProcessSkeletonUnitTest.StubDetachDBinderSessionTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.StubDetachDBinderSessionTest003
+[       OK ] IPCProcessSkeletonUnitTest.StubDetachDBinderSessionTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.StubQueryDBinderSessionTest001
+[       OK ] IPCProcessSkeletonUnitTest.StubQueryDBinderSessionTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.StubQueryDBinderSessionTest002
+[       OK ] IPCProcessSkeletonUnitTest.StubQueryDBinderSessionTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.AddSendThreadInWaitTest001
+[       OK ] IPCProcessSkeletonUnitTest.AddSendThreadInWaitTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.AddSendThreadInWaitTest002
+[       OK ] IPCProcessSkeletonUnitTest.AddSendThreadInWaitTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.AddSendThreadInWaitTest003
+[       OK ] IPCProcessSkeletonUnitTest.AddSendThreadInWaitTest003 (1000 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.AddSendThreadInWaitTest004
+[       OK ] IPCProcessSkeletonUnitTest.AddSendThreadInWaitTest004 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryStubByIndexTest001
+[       OK ] IPCProcessSkeletonUnitTest.QueryStubByIndexTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryStubByIndexTest002
+[       OK ] IPCProcessSkeletonUnitTest.QueryStubByIndexTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryStubByIndexTest003
+[       OK ] IPCProcessSkeletonUnitTest.QueryStubByIndexTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.DetachCommAuthInfoTest001
+[       OK ] IPCProcessSkeletonUnitTest.DetachCommAuthInfoTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.DetachCommAuthInfoTest002
+[       OK ] IPCProcessSkeletonUnitTest.DetachCommAuthInfoTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryCommAuthInfoTest001
+[       OK ] IPCProcessSkeletonUnitTest.QueryCommAuthInfoTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryCommAuthInfoTest002
+[       OK ] IPCProcessSkeletonUnitTest.QueryCommAuthInfoTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.UpdateCommAuthSocketInfoTest001
+[       OK ] IPCProcessSkeletonUnitTest.UpdateCommAuthSocketInfoTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.AttachOrUpdateAppAuthInfoTest001
+[       OK ] IPCProcessSkeletonUnitTest.AttachOrUpdateAppAuthInfoTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.AttachOrUpdateAppAuthInfoTest002
+[       OK ] IPCProcessSkeletonUnitTest.AttachOrUpdateAppAuthInfoTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.AttachOrUpdateAppAuthInfoTest003
+[       OK ] IPCProcessSkeletonUnitTest.AttachOrUpdateAppAuthInfoTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.AttachOrUpdateAppAuthInfoTest004
+[       OK ] IPCProcessSkeletonUnitTest.AttachOrUpdateAppAuthInfoTest004 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.DetachAppAuthInfoTest001
+[       OK ] IPCProcessSkeletonUnitTest.DetachAppAuthInfoTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.DetachAppAuthInfoTest002
+[       OK ] IPCProcessSkeletonUnitTest.DetachAppAuthInfoTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.DetachAppAuthInfoBySocketIdTest001
+[       OK ] IPCProcessSkeletonUnitTest.DetachAppAuthInfoBySocketIdTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.DetachAppAuthInfoBySocketIdTest002
+[       OK ] IPCProcessSkeletonUnitTest.DetachAppAuthInfoBySocketIdTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.DetachAppAuthInfoBySocketIdTest003
+[       OK ] IPCProcessSkeletonUnitTest.DetachAppAuthInfoBySocketIdTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.DetachAppAuthInfoBySocketIdTest004
+[       OK ] IPCProcessSkeletonUnitTest.DetachAppAuthInfoBySocketIdTest004 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryAppInfoToStubIndexTest002
+[       OK ] IPCProcessSkeletonUnitTest.QueryAppInfoToStubIndexTest002 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryAppInfoToStubIndexTest003
+[       OK ] IPCProcessSkeletonUnitTest.QueryAppInfoToStubIndexTest003 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryAppInfoToStubIndexTest004
+[       OK ] IPCProcessSkeletonUnitTest.QueryAppInfoToStubIndexTest004 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.DetachCommAuthInfoByStubTest001
+[       OK ] IPCProcessSkeletonUnitTest.DetachCommAuthInfoByStubTest001 (0 ms)
+[ RUN      ] IPCProcessSkeletonUnitTest.QueryCommAuthInfoTest003
+[       OK ] IPCProcessSkeletonUnitTest.QueryCommAuthInfoTest003 (0 ms)
+[----------] 80 tests from IPCProcessSkeletonUnitTest (1003 ms total)
+
+[----------] Global test environment tear-down
+[==========] 80 tests from 1 test suite ran. (1003 ms total)
+[  PASSED  ] 80 tests.

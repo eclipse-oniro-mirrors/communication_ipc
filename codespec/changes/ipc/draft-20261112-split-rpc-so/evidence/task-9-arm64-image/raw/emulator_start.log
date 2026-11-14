@@ -1,0 +1,74 @@
+=== images
+-rw-r--r-- 1 huawei users   67108864 Nov 13 20:50 /srv/workspace/openharmony_master_default_x86_64_virt_ai_20261111185909_huawei_c9e7dfc75/code/out/arm64_virt/packages/phone/images/chip_prod.img
+-rw-r--r-- 1 huawei users   12582912 Nov 13 20:50 /srv/workspace/openharmony_master_default_x86_64_virt_ai_20261111185909_huawei_c9e7dfc75/code/out/arm64_virt/packages/phone/images/eng_system.img
+-rw-rw-r-- 1 huawei users    2870972 Nov 13 20:50 /srv/workspace/openharmony_master_default_x86_64_virt_ai_20261111185909_huawei_c9e7dfc75/code/out/arm64_virt/packages/phone/images/ramdisk.img
+-rw-r--r-- 1 huawei users   67108864 Nov 13 20:50 /srv/workspace/openharmony_master_default_x86_64_virt_ai_20261111185909_huawei_c9e7dfc75/code/out/arm64_virt/packages/phone/images/sys_prod.img
+-rw-r--r-- 1 huawei users 2147483648 Nov 13 20:51 /srv/workspace/openharmony_master_default_x86_64_virt_ai_20261111185909_huawei_c9e7dfc75/code/out/arm64_virt/packages/phone/images/system.img
+-rw-rw-r-- 1 huawei users   22623910 Nov 13 20:50 /srv/workspace/openharmony_master_default_x86_64_virt_ai_20261111185909_huawei_c9e7dfc75/code/out/arm64_virt/packages/phone/images/updater.img
+-rw-r--r-- 1 huawei users 2147483648 Nov 13 20:50 /srv/workspace/openharmony_master_default_x86_64_virt_ai_20261111185909_huawei_c9e7dfc75/code/out/arm64_virt/packages/phone/images/userdata.img
+-rw-r--r-- 1 huawei users  536870912 Nov 13 20:50 /srv/workspace/openharmony_master_default_x86_64_virt_ai_20261111185909_huawei_c9e7dfc75/code/out/arm64_virt/packages/phone/images/vendor.img
+=== start instance 00 (TCG, reset-before-run)
+Reset instance 00: /home/huawei/.local/state/openharmony-qemu/instances/arm64_linux_full/00dc4fdbcfe621ca/00
+Profile:    arm64_linux_full (aarch64)
+Host:       linux / x86_64
+QEMU:       /usr/bin/qemu-system-aarch64 (QEMU emulator version 6.2.0 (Debian 1:6.2+dfsg-2ubuntu6.31))
+Accel:      tcg
+Display:    vnc
+Network:    user
+Images:     /srv/workspace/openharmony_master_default_x86_64_virt_ai_20261111185909_huawei_c9e7dfc75/code/out/arm64_virt/packages/phone/images
+Instance:   /home/huawei/.local/state/openharmony-qemu/instances/arm64_linux_full/00dc4fdbcfe621ca/00
+Runtime:    /tmp/ohos-qemu-4092/ea3a62f15fe4/arm64_linux_full/00
+SN/MAC:     0023456789 / 52:54:01:58:00:00
+HDC:        127.0.0.1:5655
+VNC:        127.0.0.1:6021 (display :121)
+Background supervisor PID: 3988820
+QEMU PID: 3988918
+Log: /tmp/ohos-qemu-4092/ea3a62f15fe4/arm64_linux_full/00/qemu.log
+START_EXIT=0
+=== wait boot (max 25min)
+[try 1] tconn=[Fail]Connect failed
+[E002106] Failed to communicate with daemon boot=[Fail][E001005] Device not found or connected
+[try 2] tconn=[Fail]Connect failed
+[E002106] Failed to communicate with daemon: end of file boot=[Fail][E001005] Device not found or connected
+[E002106] Failed to communicate with daemon: end of file
+[try 3] tconn=[Fail]Connect failed
+[E002106] Failed to communicate with daemon: end of file boot=[Fail][E001005] Device not found or connected
+[E002106] Failed to communicate with daemon: end of file
+[try 4] tconn=[Fail]Connect failed
+[E002106] Failed to communicate with daemon: connection reset by peer boot=[Fail][E001005] Device not found or connected
+[E002106] Failed to communicate with daemon: connection reset by peer
+[try 5] tconn=[Fail]Connect failed
+[E002106] Failed to communicate with daemon: end of file boot=[Fail][E001005] Device not found or connected
+[E002106] Failed to communicate with daemon: end of file
+[try 6] tconn=[Fail]Connect failed
+[E002106] Failed to communicate with daemon: connection reset by peer boot=[Fail][E001005] Device not found or connected
+[E002106] Failed to communicate with daemon: connection reset by peer
+[try 7] tconn=[Fail]Connect failed
+[E002106] Failed to communicate with daemon: end of file boot=[Fail][E001005] Device not found or connected
+[E002106] Failed to communicate with daemon: end of file
+[try 8] tconn=[Fail]Connect failed
+[E002106] Failed to communicate with daemon: end of file boot=[Fail][E001005] Device not found or connected
+[E002106] Failed to communicate with daemon: end of file
+[try 9] tconn=[Fail]Connect failed
+[E002106] Failed to communicate with daemon: connection reset by peer boot=[Fail][E001005] Device not found or connected
+[E002106] Failed to communicate with daemon: connection reset by peer
+[try 10] tconn=[Fail]Connect failed
+[E002106] Failed to communicate with daemon: end of file boot=[Fail][E001005] Device not found or connected
+[E002106] Failed to communicate with daemon: end of file
+[try 11] tconn=[Fail]Connect failed
+[E002106] Failed to communicate with daemon: connection reset by peer boot=[Fail][E001005] Device not found or connected
+[E002106] Failed to communicate with daemon: connection reset by peer
+[try 12] tconn=[Fail]Connect failed
+[E002106] Failed to communicate with daemon: end of file boot=[Fail][E001005] Device not found or connected
+[E002106] Failed to communicate with daemon: end of file
+[try 13] tconn=[Fail]Connect failed
+[E002106] Failed to communicate with daemon: connection reset by peer boot=[Fail][E001005] Device not found or connected
+[E002106] Failed to communicate with daemon: connection reset by peer
+[try 14] tconn=[Fail]Connect failed
+[E002106] Failed to communicate with daemon boot=[Fail][E001005] Device not found or connected
+[try 15] tconn=[Fail]Connect failed
+[E002106] Failed to communicate with daemon boot=[Fail][E001005] Device not found or connected
+[try 16] tconn=[Fail]Connect failed
+[E002106] Failed to communicate with daemon boot=[Fail][E001005] Device not found or connected
+[try 17] tconn=[Fail]Connect failed
+[E002106] Failed to communicate with daemon boot=[Fail][E001005] Device not found or connected

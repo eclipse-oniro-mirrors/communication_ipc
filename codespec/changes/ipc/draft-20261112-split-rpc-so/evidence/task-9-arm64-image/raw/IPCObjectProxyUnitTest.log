@@ -1,0 +1,138 @@
+Running main() from ../../third_party/googletest/googletest/src/gtest_main.cc
+[==========] Running 64 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 64 tests from IPCObjectProxyTest
+[ RUN      ] IPCObjectProxyTest.GetInterfaceDescriptorTest001
+[       OK ] IPCObjectProxyTest.GetInterfaceDescriptorTest001 (13 ms)
+[ RUN      ] IPCObjectProxyTest.GetInterfaceDescriptorTest002
+[       OK ] IPCObjectProxyTest.GetInterfaceDescriptorTest002 (0 ms)
+[ RUN      ] IPCObjectProxyTest.GetInterfaceDescriptorTest003
+[       OK ] IPCObjectProxyTest.GetInterfaceDescriptorTest003 (7 ms)
+[ RUN      ] IPCObjectProxyTest.GetInterfaceDescriptorTest004
+[       OK ] IPCObjectProxyTest.GetInterfaceDescriptorTest004 (20 ms)
+[ RUN      ] IPCObjectProxyTest.GetProtoInfoTest001
+[       OK ] IPCObjectProxyTest.GetProtoInfoTest001 (2 ms)
+[ RUN      ] IPCObjectProxyTest.GetProtoInfoTest002
+[       OK ] IPCObjectProxyTest.GetProtoInfoTest002 (1 ms)
+[ RUN      ] IPCObjectProxyTest.GetProtoInfoTest003
+[       OK ] IPCObjectProxyTest.GetProtoInfoTest003 (7 ms)
+[ RUN      ] IPCObjectProxyTest.GetProtoInfoTest004
+[       OK ] IPCObjectProxyTest.GetProtoInfoTest004 (4 ms)
+[ RUN      ] IPCObjectProxyTest.GetProtoInfoTest005
+[       OK ] IPCObjectProxyTest.GetProtoInfoTest005 (4 ms)
+[ RUN      ] IPCObjectProxyTest.AddDeathRecipient001
+[       OK ] IPCObjectProxyTest.AddDeathRecipient001 (0 ms)
+[ RUN      ] IPCObjectProxyTest.AddDeathRecipient002
+[       OK ] IPCObjectProxyTest.AddDeathRecipient002 (1 ms)
+[ RUN      ] IPCObjectProxyTest.AddDeathRecipient003
+[       OK ] IPCObjectProxyTest.AddDeathRecipient003 (3 ms)
+[ RUN      ] IPCObjectProxyTest.AddDeathRecipient004
+[       OK ] IPCObjectProxyTest.AddDeathRecipient004 (0 ms)
+[ RUN      ] IPCObjectProxyTest.AddDeathRecipient005
+[       OK ] IPCObjectProxyTest.AddDeathRecipient005 (1 ms)
+[ RUN      ] IPCObjectProxyTest.AddDeathRecipient006
+[       OK ] IPCObjectProxyTest.AddDeathRecipient006 (1 ms)
+[ RUN      ] IPCObjectProxyTest.RemoveDeathRecipientTest001
+[       OK ] IPCObjectProxyTest.RemoveDeathRecipientTest001 (0 ms)
+[ RUN      ] IPCObjectProxyTest.RemoveDeathRecipientTest002
+[       OK ] IPCObjectProxyTest.RemoveDeathRecipientTest002 (0 ms)
+[ RUN      ] IPCObjectProxyTest.RemoveDeathRecipientTest003
+[       OK ] IPCObjectProxyTest.RemoveDeathRecipientTest003 (1 ms)
+[ RUN      ] IPCObjectProxyTest.RemoveDeathRecipientTest004
+[       OK ] IPCObjectProxyTest.RemoveDeathRecipientTest004 (3 ms)
+[ RUN      ] IPCObjectProxyTest.AddRefreshRecipientTest001
+[       OK ] IPCObjectProxyTest.AddRefreshRecipientTest001 (0 ms)
+[ RUN      ] IPCObjectProxyTest.AddRefreshRecipientTest002
+[       OK ] IPCObjectProxyTest.AddRefreshRecipientTest002 (0 ms)
+[ RUN      ] IPCObjectProxyTest.AddRefreshRecipientTest003
+[       OK ] IPCObjectProxyTest.AddRefreshRecipientTest003 (0 ms)
+[ RUN      ] IPCObjectProxyTest.AddRefreshRecipientTest004
+[       OK ] IPCObjectProxyTest.AddRefreshRecipientTest004 (1 ms)
+[ RUN      ] IPCObjectProxyTest.AddRefreshRecipientTest005
+[       OK ] IPCObjectProxyTest.AddRefreshRecipientTest005 (0 ms)
+[ RUN      ] IPCObjectProxyTest.AddRefreshRecipientTest006
+[       OK ] IPCObjectProxyTest.AddRefreshRecipientTest006 (2 ms)
+[ RUN      ] IPCObjectProxyTest.AddRefreshRecipientTest007
+[       OK ] IPCObjectProxyTest.AddRefreshRecipientTest007 (1 ms)
+[ RUN      ] IPCObjectProxyTest.AddRefreshRecipientTest008
+[       OK ] IPCObjectProxyTest.AddRefreshRecipientTest008 (2 ms)
+[ RUN      ] IPCObjectProxyTest.RemoveRefreshRecipientTest001
+[       OK ] IPCObjectProxyTest.RemoveRefreshRecipientTest001 (0 ms)
+[ RUN      ] IPCObjectProxyTest.RemoveRefreshRecipientTest002
+[       OK ] IPCObjectProxyTest.RemoveRefreshRecipientTest002 (0 ms)
+[ RUN      ] IPCObjectProxyTest.RemoveRefreshRecipientTest003
+[       OK ] IPCObjectProxyTest.RemoveRefreshRecipientTest003 (1 ms)
+[ RUN      ] IPCObjectProxyTest.RemoveRefreshRecipientTest004
+[       OK ] IPCObjectProxyTest.RemoveRefreshRecipientTest004 (2 ms)
+[ RUN      ] IPCObjectProxyTest.RemoveRefreshRecipientTest005
+[       OK ] IPCObjectProxyTest.RemoveRefreshRecipientTest005 (1 ms)
+[ RUN      ] IPCObjectProxyTest.ClearRefreshRecipientsTest001
+[       OK ] IPCObjectProxyTest.ClearRefreshRecipientsTest001 (1 ms)
+[ RUN      ] IPCObjectProxyTest.ClearRefreshRecipientsTest002
+[       OK ] IPCObjectProxyTest.ClearRefreshRecipientsTest002 (1 ms)
+[ RUN      ] IPCObjectProxyTest.ClearRefreshRecipientsTest003
+[       OK ] IPCObjectProxyTest.ClearRefreshRecipientsTest003 (2 ms)
+[ RUN      ] IPCObjectProxyTest.UnRegisterBinderRefreshRecipientTest001
+[       OK ] IPCObjectProxyTest.UnRegisterBinderRefreshRecipientTest001 (0 ms)
+[ RUN      ] IPCObjectProxyTest.UnRegisterBinderRefreshRecipientTest002
+[       OK ] IPCObjectProxyTest.UnRegisterBinderRefreshRecipientTest002 (4 ms)
+[ RUN      ] IPCObjectProxyTest.UnRegisterBinderRefreshRecipientTest003
+[       OK ] IPCObjectProxyTest.UnRegisterBinderRefreshRecipientTest003 (2 ms)
+[ RUN      ] IPCObjectProxyTest.RefreshRecipientAddrInfoTest001
+[       OK ] IPCObjectProxyTest.RefreshRecipientAddrInfoTest001 (0 ms)
+[ RUN      ] IPCObjectProxyTest.RefreshRecipientAddrInfoTest002
+[       OK ] IPCObjectProxyTest.RefreshRecipientAddrInfoTest002 (0 ms)
+[ RUN      ] IPCObjectProxyTest.RefreshRecipientAddrIsDlclosedTest001
+[       OK ] IPCObjectProxyTest.RefreshRecipientAddrIsDlclosedTest001 (1 ms)
+[ RUN      ] IPCObjectProxyTest.SendRefreshObituaryTest001
+[       OK ] IPCObjectProxyTest.SendRefreshObituaryTest001 (0 ms)
+[ RUN      ] IPCObjectProxyTest.SendRefreshObituaryTest002
+[       OK ] IPCObjectProxyTest.SendRefreshObituaryTest002 (0 ms)
+[ RUN      ] IPCObjectProxyTest.UpdateProtoTest001
+[       OK ] IPCObjectProxyTest.UpdateProtoTest001 (2 ms)
+[ RUN      ] IPCObjectProxyTest.UpdateProtoTest002
+[       OK ] IPCObjectProxyTest.UpdateProtoTest002 (2 ms)
+[ RUN      ] IPCObjectProxyTest.UpdateProtoTest003
+[       OK ] IPCObjectProxyTest.UpdateProtoTest003 (1 ms)
+[ RUN      ] IPCObjectProxyTest.GetStrongRefCountForStubTest001
+[       OK ] IPCObjectProxyTest.GetStrongRefCountForStubTest001 (1 ms)
+[ RUN      ] IPCObjectProxyTest.AddDbinderDeathRecipientTest001
+[       OK ] IPCObjectProxyTest.AddDbinderDeathRecipientTest001 (1 ms)
+[ RUN      ] IPCObjectProxyTest.MakeDBinderTransSessionTest001
+[       OK ] IPCObjectProxyTest.MakeDBinderTransSessionTest001 (1 ms)
+[ RUN      ] IPCObjectProxyTest.MakeDBinderTransSessionTest002
+[       OK ] IPCObjectProxyTest.MakeDBinderTransSessionTest002 (2 ms)
+[ RUN      ] IPCObjectProxyTest.MakeDBinderTransSessionTest003
+[       OK ] IPCObjectProxyTest.MakeDBinderTransSessionTest003 (5 ms)
+[ RUN      ] IPCObjectProxyTest.MakeDBinderTransSessionTest004
+[       OK ] IPCObjectProxyTest.MakeDBinderTransSessionTest004 (6 ms)
+[ RUN      ] IPCObjectProxyTest.DeathRecipientAddrInfoTest001
+[       OK ] IPCObjectProxyTest.DeathRecipientAddrInfoTest001 (0 ms)
+[ RUN      ] IPCObjectProxyTest.DeathRecipientAddrInfoTest002
+[       OK ] IPCObjectProxyTest.DeathRecipientAddrInfoTest002 (0 ms)
+[ RUN      ] IPCObjectProxyTest.ProxyReserved1Test001
+[       OK ] IPCObjectProxyTest.ProxyReserved1Test001 (0 ms)
+[ RUN      ] IPCObjectProxyTest.ProxyReserved2Test001
+[       OK ] IPCObjectProxyTest.ProxyReserved2Test001 (0 ms)
+[ RUN      ] IPCObjectProxyTest.ProxyReserved3Test001
+[       OK ] IPCObjectProxyTest.ProxyReserved3Test001 (0 ms)
+[ RUN      ] IPCObjectProxyTest.ProxyReserved4Test001
+[       OK ] IPCObjectProxyTest.ProxyReserved4Test001 (0 ms)
+[ RUN      ] IPCObjectProxyTest.ProxyReserved5Test001
+[       OK ] IPCObjectProxyTest.ProxyReserved5Test001 (0 ms)
+[ RUN      ] IPCObjectProxyTest.ProxyReserved6Test001
+[       OK ] IPCObjectProxyTest.ProxyReserved6Test001 (0 ms)
+[ RUN      ] IPCObjectProxyTest.ProxyReserved7Test001
+[       OK ] IPCObjectProxyTest.ProxyReserved7Test001 (0 ms)
+[ RUN      ] IPCObjectProxyTest.ProxyReserved8Test001
+[       OK ] IPCObjectProxyTest.ProxyReserved8Test001 (0 ms)
+[ RUN      ] IPCObjectProxyTest.ProxyReserved9Test001
+[       OK ] IPCObjectProxyTest.ProxyReserved9Test001 (0 ms)
+[ RUN      ] IPCObjectProxyTest.ProxyReserved10Test001
+[       OK ] IPCObjectProxyTest.ProxyReserved10Test001 (0 ms)
+[----------] 64 tests from IPCObjectProxyTest (166 ms total)
+
+[----------] Global test environment tear-down
+[==========] 64 tests from 1 test suite ran. (171 ms total)
+[  PASSED  ] 64 tests.
+EXIT=0

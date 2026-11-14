@@ -1,0 +1,49 @@
+Running main() from ../../third_party/googletest/googletest/src/gtest_main.cc
+[==========] Running 16 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 16 tests from IpcRpcLoaderTest
+[ RUN      ] IpcRpcLoaderTest.LoadFailureIsCachedOnce
+[IpcRpcLoader] load /system/lib64/platformsdk/libipc_rpc.z.so failed, reason: dlopen failed
+[       OK ] IpcRpcLoaderTest.LoadFailureIsCachedOnce (2 ms)
+[ RUN      ] IpcRpcLoaderTest.LoadUsesResolvedAbsolutePath
+[       OK ] IpcRpcLoaderTest.LoadUsesResolvedAbsolutePath (0 ms)
+[ RUN      ] IpcRpcLoaderTest.UnresolvableLibraryPathIsRejected
+[IpcRpcLoader] load <unresolved> failed, reason: cannot resolve the directory of the core library
+[       OK ] IpcRpcLoaderTest.UnresolvableLibraryPathIsRejected (0 ms)
+[ RUN      ] IpcRpcLoaderTest.PathVerificationFailureIsRejected
+[IpcRpcLoader] load /system/lib64/platformsdk/libipc_rpc.z.so failed, reason: resolved entry is not provided by the expected library
+[       OK ] IpcRpcLoaderTest.PathVerificationFailureIsRejected (0 ms)
+[ RUN      ] IpcRpcLoaderTest.LoadSuccessIsCached
+[       OK ] IpcRpcLoaderTest.LoadSuccessIsCached (0 ms)
+[ RUN      ] IpcRpcLoaderTest.ConcurrentFirstUseReturnsSameOps
+[       OK ] IpcRpcLoaderTest.ConcurrentFirstUseReturnsSameOps (31 ms)
+[ RUN      ] IpcRpcLoaderTest.AbiVersionMismatchIsRejected
+[IpcRpcLoader] load /system/lib64/platformsdk/libipc_rpc.z.so failed, reason: capability table ABI version mismatch
+[       OK ] IpcRpcLoaderTest.AbiVersionMismatchIsRejected (0 ms)
+[ RUN      ] IpcRpcLoaderTest.MissingSymbolIsRejected
+[IpcRpcLoader] load /system/lib64/platformsdk/libipc_rpc.z.so failed, reason: dlsym IpcRpcGetOps failed
+[       OK ] IpcRpcLoaderTest.MissingSymbolIsRejected (0 ms)
+[ RUN      ] IpcRpcLoaderTest.NullFunctionPointerIsRejected
+[IpcRpcLoader] load /system/lib64/platformsdk/libipc_rpc.z.so failed, reason: capability table has null entries
+[       OK ] IpcRpcLoaderTest.NullFunctionPointerIsRejected (0 ms)
+[ RUN      ] IpcRpcLoaderTest.GetOpsNullResultIsRejected
+[IpcRpcLoader] load /system/lib64/platformsdk/libipc_rpc.z.so failed, reason: IpcRpcGetOps returned null
+[       OK ] IpcRpcLoaderTest.GetOpsNullResultIsRejected (0 ms)
+[ RUN      ] IpcRpcLoaderTest.PeekAfterGetReturnsSameOps
+[       OK ] IpcRpcLoaderTest.PeekAfterGetReturnsSameOps (0 ms)
+[ RUN      ] IpcRpcLoaderTest.PeekDoesNotLoad
+[       OK ] IpcRpcLoaderTest.PeekDoesNotLoad (0 ms)
+[ RUN      ] IpcRpcLoaderTest.OwnLibraryDirectoryIsResolvedWithoutHooks
+[       OK ] IpcRpcLoaderTest.OwnLibraryDirectoryIsResolvedWithoutHooks (1 ms)
+[ RUN      ] IpcRpcLoaderTest.RelativeOwnLibraryPathIsRejected
+[       OK ] IpcRpcLoaderTest.RelativeOwnLibraryPathIsRejected (0 ms)
+[ RUN      ] IpcRpcLoaderTest.PreloadedImageWithEquivalentPathIsAccepted
+[       OK ] IpcRpcLoaderTest.PreloadedImageWithEquivalentPathIsAccepted (2 ms)
+[ RUN      ] IpcRpcLoaderTest.ExistingDifferentFileIsRejected
+[       OK ] IpcRpcLoaderTest.ExistingDifferentFileIsRejected (0 ms)
+[----------] 16 tests from IpcRpcLoaderTest (50 ms total)
+
+[----------] Global test environment tear-down
+[==========] 16 tests from 1 test suite ran. (55 ms total)
+[  PASSED  ] 16 tests.
+EXIT=0

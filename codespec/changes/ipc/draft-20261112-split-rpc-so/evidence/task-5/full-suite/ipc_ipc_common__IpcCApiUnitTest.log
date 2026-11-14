@@ -1,0 +1,1138 @@
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+Running main() from ../../third_party/googletest/googletest/src/gtest_main.cc
+[==========] Running 53 tests from 3 test suites.
+[----------] Global test environment set-up.
+[----------] 37 tests from IpcCApiParcelUnitTest
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_Create_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_Create_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_Destroy_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_Destroy_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_GetDataSize_001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_GetDataSize_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_GetWritableBytes_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_GetWritableBytes_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_GetReadableBytes_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_GetReadableBytes_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_GetReadPosition_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_GetReadPosition_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_GetWritePosition_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_GetWritePosition_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_RewindReadPosition_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_RewindReadPosition_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_RewindWritePosition_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_RewindWritePosition_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestDataInfo_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestDataInfo_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteInt8_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteInt8_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteInt16_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteInt16_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteInt32_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteInt32_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteInt64_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteInt64_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint8_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint8_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint8_002
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint8_002 (2 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint8_003
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint8_003 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint16_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint16_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint16_002
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint16_002 (2 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint16_003
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint16_003 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint32_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint32_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint32_002
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint32_002 (2 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint32_003
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint32_003 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint64_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint64_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint64_002
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint64_002 (1 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint64_003
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteUint64_003 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteFloat_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteFloat_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteDouble_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteDouble_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteString_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteString_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteFileDescriptor_001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteFileDescriptor_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteRemoteStub_001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteRemoteStub_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_Append_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_Append_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteBuffer_001
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteBuffer_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteInterfaceToken_001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteInterfaceToken_001 (0 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteStringPerformance_001
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:171319, avg:114553]ns
+MessageParcel WriteCString spend:[min:100, max:441916, avg:114097]ns
+OHIPCParcel ReadCString spend:[min:100, max:64671, avg:29153]ns
+MessageParcel ReadCString spend:[min:100, max:65464, avg:29108]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:163448, avg:113695]ns
+MessageParcel WriteCString spend:[min:100, max:196214, avg:113449]ns
+OHIPCParcel ReadCString spend:[min:100, max:68896, avg:29202]ns
+MessageParcel ReadCString spend:[min:100, max:62211, avg:29193]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:174425, avg:113229]ns
+MessageParcel WriteCString spend:[min:100, max:189116, avg:112698]ns
+OHIPCParcel ReadCString spend:[min:100, max:68415, avg:29063]ns
+MessageParcel ReadCString spend:[min:100, max:69539, avg:29072]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:163122, avg:113058]ns
+MessageParcel WriteCString spend:[min:100, max:149487, avg:112606]ns
+OHIPCParcel ReadCString spend:[min:100, max:62796, avg:28812]ns
+MessageParcel ReadCString spend:[min:100, max:50208, avg:28755]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:279830, avg:115275]ns
+MessageParcel WriteCString spend:[min:100, max:272228, avg:114906]ns
+OHIPCParcel ReadCString spend:[min:100, max:61861, avg:28964]ns
+MessageParcel ReadCString spend:[min:100, max:60695, avg:28962]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:172930, avg:115906]ns
+MessageParcel WriteCString spend:[min:100, max:177236, avg:115312]ns
+OHIPCParcel ReadCString spend:[min:100, max:60284, avg:29085]ns
+MessageParcel ReadCString spend:[min:100, max:64949, avg:29015]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:280929, avg:115462]ns
+MessageParcel WriteCString spend:[min:100, max:279192, avg:115344]ns
+OHIPCParcel ReadCString spend:[min:100, max:68237, avg:28991]ns
+MessageParcel ReadCString spend:[min:100, max:60852, avg:29080]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:238897, avg:130680]ns
+MessageParcel WriteCString spend:[min:100, max:251674, avg:130477]ns
+OHIPCParcel ReadCString spend:[min:100, max:82618, avg:33376]ns
+MessageParcel ReadCString spend:[min:100, max:90633, avg:33429]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:274133, avg:140474]ns
+MessageParcel WriteCString spend:[min:100, max:239478, avg:139965]ns
+OHIPCParcel ReadCString spend:[min:100, max:80230, avg:35915]ns
+MessageParcel ReadCString spend:[min:100, max:83312, avg:35839]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:244607, avg:139675]ns
+MessageParcel WriteCString spend:[min:100, max:240785, avg:139496]ns
+OHIPCParcel ReadCString spend:[min:100, max:87749, avg:35965]ns
+MessageParcel ReadCString spend:[min:100, max:88784, avg:35911]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:196634, avg:138053]ns
+MessageParcel WriteCString spend:[min:100, max:191339, avg:137804]ns
+OHIPCParcel ReadCString spend:[min:100, max:69526, avg:35357]ns
+MessageParcel ReadCString spend:[min:100, max:74522, avg:35331]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:251592, avg:139625]ns
+MessageParcel WriteCString spend:[min:100, max:234864, avg:139543]ns
+OHIPCParcel ReadCString spend:[min:100, max:83161, avg:36068]ns
+MessageParcel ReadCString spend:[min:100, max:83472, avg:36021]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:203723, avg:138877]ns
+MessageParcel WriteCString spend:[min:100, max:210702, avg:138631]ns
+OHIPCParcel ReadCString spend:[min:100, max:80700, avg:35468]ns
+MessageParcel ReadCString spend:[min:100, max:79929, avg:35437]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:226202, avg:138663]ns
+MessageParcel WriteCString spend:[min:100, max:247556, avg:138441]ns
+OHIPCParcel ReadCString spend:[min:100, max:77619, avg:35490]ns
+MessageParcel ReadCString spend:[min:100, max:77919, avg:35449]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:213944, avg:140399]ns
+MessageParcel WriteCString spend:[min:100, max:220926, avg:140142]ns
+OHIPCParcel ReadCString spend:[min:100, max:81925, avg:35983]ns
+MessageParcel ReadCString spend:[min:100, max:85904, avg:35966]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:340282, avg:139895]ns
+MessageParcel WriteCString spend:[min:100, max:292625, avg:139556]ns
+OHIPCParcel ReadCString spend:[min:100, max:80047, avg:35548]ns
+MessageParcel ReadCString spend:[min:100, max:76893, avg:35571]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:238235, avg:139882]ns
+MessageParcel WriteCString spend:[min:100, max:223507, avg:139823]ns
+OHIPCParcel ReadCString spend:[min:100, max:84414, avg:35504]ns
+MessageParcel ReadCString spend:[min:100, max:79821, avg:35478]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:360545, avg:139914]ns
+MessageParcel WriteCString spend:[min:100, max:232203, avg:139337]ns
+OHIPCParcel ReadCString spend:[min:100, max:86999, avg:36106]ns
+MessageParcel ReadCString spend:[min:100, max:86117, avg:36031]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:195905, avg:131387]ns
+MessageParcel WriteCString spend:[min:100, max:200925, avg:131239]ns
+OHIPCParcel ReadCString spend:[min:100, max:75721, avg:32794]ns
+MessageParcel ReadCString spend:[min:100, max:76311, avg:32783]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:272065, avg:116995]ns
+MessageParcel WriteCString spend:[min:100, max:254539, avg:116568]ns
+OHIPCParcel ReadCString spend:[min:100, max:161910, avg:29209]ns
+MessageParcel ReadCString spend:[min:100, max:70099, avg:29146]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:233492, avg:115746]ns
+MessageParcel WriteCString spend:[min:100, max:310099, avg:115347]ns
+OHIPCParcel ReadCString spend:[min:100, max:56673, avg:28897]ns
+MessageParcel ReadCString spend:[min:100, max:44052, avg:28860]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:257543, avg:118068]ns
+MessageParcel WriteCString spend:[min:100, max:238179, avg:117189]ns
+OHIPCParcel ReadCString spend:[min:100, max:59460, avg:29117]ns
+MessageParcel ReadCString spend:[min:100, max:62220, avg:29122]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:262719, avg:117169]ns
+MessageParcel WriteCString spend:[min:100, max:241264, avg:116710]ns
+OHIPCParcel ReadCString spend:[min:100, max:69620, avg:29432]ns
+MessageParcel ReadCString spend:[min:100, max:64925, avg:29457]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:164158, avg:115763]ns
+MessageParcel WriteCString spend:[min:100, max:182277, avg:115148]ns
+OHIPCParcel ReadCString spend:[min:100, max:54548, avg:28796]ns
+MessageParcel ReadCString spend:[min:100, max:59041, avg:28767]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:271532, avg:116648]ns
+MessageParcel WriteCString spend:[min:100, max:241350, avg:116027]ns
+OHIPCParcel ReadCString spend:[min:100, max:70424, avg:29709]ns
+MessageParcel ReadCString spend:[min:100, max:147648, avg:29842]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:145073, avg:113522]ns
+MessageParcel WriteCString spend:[min:100, max:146010, avg:112952]ns
+OHIPCParcel ReadCString spend:[min:100, max:51490, avg:28828]ns
+MessageParcel ReadCString spend:[min:100, max:51970, avg:28832]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:160237, avg:114279]ns
+MessageParcel WriteCString spend:[min:100, max:150583, avg:113720]ns
+OHIPCParcel ReadCString spend:[min:100, max:53282, avg:28920]ns
+MessageParcel ReadCString spend:[min:100, max:49250, avg:28849]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:255662, avg:116296]ns
+MessageParcel WriteCString spend:[min:100, max:232492, avg:115887]ns
+OHIPCParcel ReadCString spend:[min:100, max:48548, avg:28921]ns
+MessageParcel ReadCString spend:[min:100, max:59043, avg:28874]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:147271, avg:115523]ns
+MessageParcel WriteCString spend:[min:100, max:151924, avg:114999]ns
+OHIPCParcel ReadCString spend:[min:100, max:53298, avg:28836]ns
+MessageParcel ReadCString spend:[min:100, max:49560, avg:28782]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:157395, avg:113539]ns
+MessageParcel WriteCString spend:[min:100, max:188576, avg:113444]ns
+OHIPCParcel ReadCString spend:[min:100, max:59980, avg:28846]ns
+MessageParcel ReadCString spend:[min:100, max:52823, avg:28811]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:162736, avg:113426]ns
+MessageParcel WriteCString spend:[min:100, max:156437, avg:113127]ns
+OHIPCParcel ReadCString spend:[min:100, max:49234, avg:28808]ns
+MessageParcel ReadCString spend:[min:100, max:55965, avg:28883]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:201880, avg:118844]ns
+MessageParcel WriteCString spend:[min:100, max:183825, avg:118172]ns
+OHIPCParcel ReadCString spend:[min:100, max:72147, avg:29564]ns
+MessageParcel ReadCString spend:[min:100, max:70309, avg:29561]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:157313, avg:115284]ns
+MessageParcel WriteCString spend:[min:100, max:160411, avg:114901]ns
+OHIPCParcel ReadCString spend:[min:100, max:49351, avg:28886]ns
+MessageParcel ReadCString spend:[min:100, max:176438, avg:28945]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:285278, avg:114133]ns
+MessageParcel WriteCString spend:[min:100, max:192576, avg:113694]ns
+OHIPCParcel ReadCString spend:[min:100, max:49910, avg:28783]ns
+MessageParcel ReadCString spend:[min:100, max:45810, avg:28813]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:159610, avg:114567]ns
+MessageParcel WriteCString spend:[min:100, max:149919, avg:114270]ns
+OHIPCParcel ReadCString spend:[min:100, max:57597, avg:28803]ns
+MessageParcel ReadCString spend:[min:100, max:58688, avg:28760]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:151332, avg:113696]ns
+MessageParcel WriteCString spend:[min:100, max:167092, avg:113245]ns
+OHIPCParcel ReadCString spend:[min:100, max:52492, avg:28753]ns
+MessageParcel ReadCString spend:[min:100, max:39559, avg:28711]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:172966, avg:114965]ns
+MessageParcel WriteCString spend:[min:100, max:160152, avg:114659]ns
+OHIPCParcel ReadCString spend:[min:100, max:62740, avg:28820]ns
+MessageParcel ReadCString spend:[min:100, max:52383, avg:28839]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:142968, avg:114122]ns
+MessageParcel WriteCString spend:[min:100, max:143443, avg:113890]ns
+OHIPCParcel ReadCString spend:[min:100, max:42700, avg:28716]ns
+MessageParcel ReadCString spend:[min:100, max:60693, avg:28781]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:155316, avg:115357]ns
+MessageParcel WriteCString spend:[min:100, max:160836, avg:115149]ns
+OHIPCParcel ReadCString spend:[min:100, max:51837, avg:28825]ns
+MessageParcel ReadCString spend:[min:100, max:49146, avg:28828]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:157102, avg:114294]ns
+MessageParcel WriteCString spend:[min:100, max:196910, avg:113978]ns
+OHIPCParcel ReadCString spend:[min:100, max:57484, avg:28821]ns
+MessageParcel ReadCString spend:[min:100, max:62818, avg:28825]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:222338, avg:114037]ns
+MessageParcel WriteCString spend:[min:100, max:210534, avg:113595]ns
+OHIPCParcel ReadCString spend:[min:100, max:60603, avg:29009]ns
+MessageParcel ReadCString spend:[min:100, max:61817, avg:29036]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:219612, avg:114835]ns
+MessageParcel WriteCString spend:[min:100, max:203084, avg:114625]ns
+OHIPCParcel ReadCString spend:[min:100, max:60196, avg:28940]ns
+MessageParcel ReadCString spend:[min:100, max:57197, avg:28862]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:187771, avg:115439]ns
+MessageParcel WriteCString spend:[min:100, max:211230, avg:115140]ns
+OHIPCParcel ReadCString spend:[min:100, max:60223, avg:28979]ns
+MessageParcel ReadCString spend:[min:100, max:60103, avg:28955]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:236455, avg:115151]ns
+MessageParcel WriteCString spend:[min:100, max:220323, avg:114909]ns
+OHIPCParcel ReadCString spend:[min:100, max:54032, avg:28848]ns
+MessageParcel ReadCString spend:[min:100, max:55957, avg:28824]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:186614, avg:116160]ns
+MessageParcel WriteCString spend:[min:100, max:188829, avg:116060]ns
+OHIPCParcel ReadCString spend:[min:100, max:70889, avg:28989]ns
+MessageParcel ReadCString spend:[min:100, max:62981, avg:29027]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:167401, avg:114092]ns
+MessageParcel WriteCString spend:[min:100, max:173287, avg:113881]ns
+OHIPCParcel ReadCString spend:[min:100, max:62827, avg:29065]ns
+MessageParcel ReadCString spend:[min:100, max:69493, avg:29094]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:183604, avg:117175]ns
+MessageParcel WriteCString spend:[min:100, max:207413, avg:116831]ns
+OHIPCParcel ReadCString spend:[min:100, max:61482, avg:29527]ns
+MessageParcel ReadCString spend:[min:100, max:63760, avg:29665]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:171933, avg:115620]ns
+MessageParcel WriteCString spend:[min:100, max:172633, avg:115367]ns
+OHIPCParcel ReadCString spend:[min:100, max:61129, avg:28903]ns
+MessageParcel ReadCString spend:[min:100, max:70183, avg:28873]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:194364, avg:115780]ns
+MessageParcel WriteCString spend:[min:100, max:213882, avg:115324]ns
+OHIPCParcel ReadCString spend:[min:100, max:60894, avg:28913]ns
+MessageParcel ReadCString spend:[min:100, max:60681, avg:28931]ns
+Test String len:204790, count:2000
+OHIPCParcel WriteCString spend:[min:100, max:173503, avg:115689]ns
+MessageParcel WriteCString spend:[min:100, max:167059, avg:115134]ns
+OHIPCParcel ReadCString spend:[min:100, max:71095, avg:28860]ns
+MessageParcel ReadCString spend:[min:100, max:62959, avg:28807]ns
+OHIPCParcel writeAvg:120698ns, readAvg:30503ns
+MessageParcel writeAvg:120336ns, readAvg:30495ns
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteStringPerformance_001 (40742 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteBufferPerformance_001
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:148080, avg:97061]ns
+MessageParcel WriteBuffer spend:[min:100, max:136488, avg:95936]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:377, avg:43]ns
+MessageParcel ReadBuffer spend:[min:27, max:152, avg:31]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:227264, avg:94188]ns
+MessageParcel WriteBuffer spend:[min:100, max:177150, avg:93119]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:169, avg:41]ns
+MessageParcel ReadBuffer spend:[min:27, max:84, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:144448, avg:96819]ns
+MessageParcel WriteBuffer spend:[min:100, max:134032, avg:95840]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:230, avg:42]ns
+MessageParcel ReadBuffer spend:[min:27, max:103, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:213978, avg:97183]ns
+MessageParcel WriteBuffer spend:[min:100, max:215093, avg:96224]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:187, avg:41]ns
+MessageParcel ReadBuffer spend:[min:27, max:80, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:155998, avg:96170]ns
+MessageParcel WriteBuffer spend:[min:100, max:119098, avg:95171]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:103, avg:40]ns
+MessageParcel ReadBuffer spend:[min:27, max:119, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:201411, avg:96296]ns
+MessageParcel WriteBuffer spend:[min:100, max:165907, avg:95519]ns
+OHIPCParcel ReadBuffer spend:[min:34, max:4215, avg:43]ns
+MessageParcel ReadBuffer spend:[min:27, max:157, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:137047, avg:96258]ns
+MessageParcel WriteBuffer spend:[min:100, max:143144, avg:95416]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:215, avg:41]ns
+MessageParcel ReadBuffer spend:[min:27, max:103, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:139151, avg:97927]ns
+MessageParcel WriteBuffer spend:[min:100, max:148515, avg:97016]ns
+OHIPCParcel ReadBuffer spend:[min:32, max:4991, avg:44]ns
+MessageParcel ReadBuffer spend:[min:27, max:106, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:141463, avg:98756]ns
+MessageParcel WriteBuffer spend:[min:100, max:140489, avg:98030]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:216, avg:51]ns
+MessageParcel ReadBuffer spend:[min:27, max:229, avg:34]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:174453, avg:99009]ns
+MessageParcel WriteBuffer spend:[min:100, max:229591, avg:98508]ns
+OHIPCParcel ReadBuffer spend:[min:32, max:317, avg:50]ns
+MessageParcel ReadBuffer spend:[min:27, max:310, avg:34]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:180818, avg:97245]ns
+MessageParcel WriteBuffer spend:[min:100, max:212611, avg:96506]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:191, avg:42]ns
+MessageParcel ReadBuffer spend:[min:27, max:89, avg:30]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:367231, avg:98733]ns
+MessageParcel WriteBuffer spend:[min:100, max:271751, avg:97528]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:259, avg:54]ns
+MessageParcel ReadBuffer spend:[min:27, max:319, avg:35]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:213414, avg:95402]ns
+MessageParcel WriteBuffer spend:[min:100, max:237325, avg:94642]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:241, avg:43]ns
+MessageParcel ReadBuffer spend:[min:27, max:83, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:133900, avg:95377]ns
+MessageParcel WriteBuffer spend:[min:100, max:144505, avg:94295]ns
+OHIPCParcel ReadBuffer spend:[min:32, max:149, avg:43]ns
+MessageParcel ReadBuffer spend:[min:27, max:291, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:125585, avg:94837]ns
+MessageParcel WriteBuffer spend:[min:100, max:113522, avg:94035]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:149, avg:42]ns
+MessageParcel ReadBuffer spend:[min:27, max:65, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:201193, avg:97136]ns
+MessageParcel WriteBuffer spend:[min:100, max:192511, avg:95886]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:284, avg:47]ns
+MessageParcel ReadBuffer spend:[min:27, max:228, avg:33]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:151005, avg:96877]ns
+MessageParcel WriteBuffer spend:[min:100, max:149560, avg:95922]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:306, avg:49]ns
+MessageParcel ReadBuffer spend:[min:27, max:290, avg:33]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:210521, avg:94821]ns
+MessageParcel WriteBuffer spend:[min:100, max:240161, avg:93958]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:320, avg:41]ns
+MessageParcel ReadBuffer spend:[min:27, max:123, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:277020, avg:110728]ns
+MessageParcel WriteBuffer spend:[min:100, max:217755, avg:109809]ns
+OHIPCParcel ReadBuffer spend:[min:34, max:190, avg:48]ns
+MessageParcel ReadBuffer spend:[min:27, max:106, avg:34]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:198385, avg:115998]ns
+MessageParcel WriteBuffer spend:[min:100, max:189316, avg:115172]ns
+OHIPCParcel ReadBuffer spend:[min:41, max:257, avg:51]ns
+MessageParcel ReadBuffer spend:[min:33, max:147, avg:36]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:162935, avg:115211]ns
+MessageParcel WriteBuffer spend:[min:100, max:159289, avg:114396]ns
+OHIPCParcel ReadBuffer spend:[min:41, max:398, avg:53]ns
+MessageParcel ReadBuffer spend:[min:33, max:111, avg:37]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:137286, avg:94373]ns
+MessageParcel WriteBuffer spend:[min:100, max:131288, avg:93513]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:385, avg:41]ns
+MessageParcel ReadBuffer spend:[min:27, max:101, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:249131, avg:95204]ns
+MessageParcel WriteBuffer spend:[min:100, max:235214, avg:94442]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:115, avg:41]ns
+MessageParcel ReadBuffer spend:[min:27, max:89, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:138198, avg:95698]ns
+MessageParcel WriteBuffer spend:[min:100, max:138723, avg:94897]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:183, avg:41]ns
+MessageParcel ReadBuffer spend:[min:27, max:85, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:188002, avg:95278]ns
+MessageParcel WriteBuffer spend:[min:100, max:196791, avg:94575]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:166, avg:41]ns
+MessageParcel ReadBuffer spend:[min:27, max:97, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:139633, avg:94756]ns
+MessageParcel WriteBuffer spend:[min:100, max:129413, avg:93735]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:4860, avg:44]ns
+MessageParcel ReadBuffer spend:[min:27, max:88, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:126771, avg:94376]ns
+MessageParcel WriteBuffer spend:[min:100, max:129430, avg:93705]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:175, avg:41]ns
+MessageParcel ReadBuffer spend:[min:27, max:91, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:228490, avg:95059]ns
+MessageParcel WriteBuffer spend:[min:100, max:211444, avg:94411]ns
+OHIPCParcel ReadBuffer spend:[min:34, max:149, avg:41]ns
+MessageParcel ReadBuffer spend:[min:27, max:79, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:244335, avg:94814]ns
+MessageParcel WriteBuffer spend:[min:100, max:210359, avg:93843]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:284, avg:41]ns
+MessageParcel ReadBuffer spend:[min:27, max:103, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:140729, avg:94323]ns
+MessageParcel WriteBuffer spend:[min:100, max:139132, avg:93519]ns
+OHIPCParcel ReadBuffer spend:[min:33, max:115, avg:41]ns
+MessageParcel ReadBuffer spend:[min:27, max:131, avg:29]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:275331, avg:114793]ns
+MessageParcel WriteBuffer spend:[min:100, max:252530, avg:114169]ns
+OHIPCParcel ReadBuffer spend:[min:41, max:484, avg:51]ns
+MessageParcel ReadBuffer spend:[min:33, max:147, avg:36]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:152581, avg:114559]ns
+MessageParcel WriteBuffer spend:[min:100, max:186973, avg:113789]ns
+OHIPCParcel ReadBuffer spend:[min:40, max:168, avg:51]ns
+MessageParcel ReadBuffer spend:[min:33, max:145, avg:36]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:162325, avg:114638]ns
+MessageParcel WriteBuffer spend:[min:100, max:151489, avg:114176]ns
+OHIPCParcel ReadBuffer spend:[min:41, max:149, avg:50]ns
+MessageParcel ReadBuffer spend:[min:33, max:251, avg:36]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:162275, avg:114317]ns
+MessageParcel WriteBuffer spend:[min:100, max:163128, avg:113791]ns
+OHIPCParcel ReadBuffer spend:[min:41, max:256, avg:51]ns
+MessageParcel ReadBuffer spend:[min:33, max:96, avg:36]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:163427, avg:114827]ns
+MessageParcel WriteBuffer spend:[min:100, max:171365, avg:114622]ns
+OHIPCParcel ReadBuffer spend:[min:41, max:385, avg:53]ns
+MessageParcel ReadBuffer spend:[min:33, max:205, avg:37]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:158591, avg:114380]ns
+MessageParcel WriteBuffer spend:[min:100, max:167961, avg:113609]ns
+OHIPCParcel ReadBuffer spend:[min:42, max:190, avg:51]ns
+MessageParcel ReadBuffer spend:[min:33, max:118, avg:36]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:213944, avg:115924]ns
+MessageParcel WriteBuffer spend:[min:100, max:223325, avg:115477]ns
+OHIPCParcel ReadBuffer spend:[min:42, max:179, avg:51]ns
+MessageParcel ReadBuffer spend:[min:33, max:598, avg:36]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:243907, avg:116224]ns
+MessageParcel WriteBuffer spend:[min:100, max:254693, avg:115089]ns
+OHIPCParcel ReadBuffer spend:[min:40, max:356, avg:53]ns
+MessageParcel ReadBuffer spend:[min:33, max:113, avg:37]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:169067, avg:115375]ns
+MessageParcel WriteBuffer spend:[min:100, max:180913, avg:114322]ns
+OHIPCParcel ReadBuffer spend:[min:41, max:149, avg:51]ns
+MessageParcel ReadBuffer spend:[min:33, max:128, avg:36]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:170252, avg:115329]ns
+MessageParcel WriteBuffer spend:[min:100, max:176678, avg:114663]ns
+OHIPCParcel ReadBuffer spend:[min:41, max:192, avg:51]ns
+MessageParcel ReadBuffer spend:[min:33, max:105, avg:36]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:273167, avg:118687]ns
+MessageParcel WriteBuffer spend:[min:100, max:279459, avg:117828]ns
+OHIPCParcel ReadBuffer spend:[min:41, max:408, avg:59]ns
+MessageParcel ReadBuffer spend:[min:33, max:367, avg:40]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:273570, avg:117167]ns
+MessageParcel WriteBuffer spend:[min:100, max:205418, avg:116580]ns
+OHIPCParcel ReadBuffer spend:[min:42, max:4838, avg:55]ns
+MessageParcel ReadBuffer spend:[min:33, max:302, avg:37]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:241961, avg:116738]ns
+MessageParcel WriteBuffer spend:[min:100, max:217421, avg:116205]ns
+OHIPCParcel ReadBuffer spend:[min:41, max:157, avg:52]ns
+MessageParcel ReadBuffer spend:[min:33, max:275, avg:36]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:225417, avg:116211]ns
+MessageParcel WriteBuffer spend:[min:100, max:189047, avg:115576]ns
+OHIPCParcel ReadBuffer spend:[min:41, max:170, avg:52]ns
+MessageParcel ReadBuffer spend:[min:33, max:100, avg:36]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:142161, avg:114744]ns
+MessageParcel WriteBuffer spend:[min:100, max:144145, avg:114219]ns
+OHIPCParcel ReadBuffer spend:[min:40, max:125, avg:52]ns
+MessageParcel ReadBuffer spend:[min:33, max:200, avg:36]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:247512, avg:115904]ns
+MessageParcel WriteBuffer spend:[min:100, max:207215, avg:115624]ns
+OHIPCParcel ReadBuffer spend:[min:40, max:217, avg:54]ns
+MessageParcel ReadBuffer spend:[min:33, max:4870, avg:40]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:158542, avg:115070]ns
+MessageParcel WriteBuffer spend:[min:100, max:162009, avg:114122]ns
+OHIPCParcel ReadBuffer spend:[min:41, max:251, avg:52]ns
+MessageParcel ReadBuffer spend:[min:33, max:111, avg:36]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:221841, avg:115193]ns
+MessageParcel WriteBuffer spend:[min:100, max:188161, avg:114483]ns
+OHIPCParcel ReadBuffer spend:[min:41, max:260, avg:51]ns
+MessageParcel ReadBuffer spend:[min:33, max:241, avg:36]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:238034, avg:115126]ns
+MessageParcel WriteBuffer spend:[min:100, max:255990, avg:114502]ns
+OHIPCParcel ReadBuffer spend:[min:42, max:524, avg:51]ns
+MessageParcel ReadBuffer spend:[min:33, max:253, avg:36]ns
+Test Buffer len:204790, count:2000
+OHIPCParcel WriteBuffer spend:[min:100, max:180834, avg:116148]ns
+MessageParcel WriteBuffer spend:[min:100, max:191207, avg:115308]ns
+OHIPCParcel ReadBuffer spend:[min:40, max:204, avg:53]ns
+MessageParcel ReadBuffer spend:[min:33, max:212, avg:37]ns
+OHIPCParcel writeAvg:104945ns, readAvg:47ns
+MessageParcel writeAvg:104154ns, readAvg:32ns
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteBufferPerformance_001 (44893 ms)
+[ RUN      ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteInterfaceTokenPerformance_001
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:11323, avg:2471]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:10437, avg:2525]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:9817, avg:1689]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:8279, avg:1475]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:9827, avg:2315]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:9735, avg:2386]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:10425, avg:1510]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:7779, avg:1321]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7940, avg:2243]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:9574, avg:2319]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:7389, avg:1419]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:7188, avg:1246]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:8377, avg:2238]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7274, avg:2294]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:7074, avg:1426]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6171, avg:1233]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:8013, avg:2264]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7740, avg:2321]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6674, avg:1434]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6266, avg:1251]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:9808, avg:2266]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7873, avg:2321]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:5505, avg:1431]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:8339, avg:1259]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:10899, avg:2257]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:8686, avg:2330]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6595, avg:1449]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6278, avg:1261]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:10060, avg:2354]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:8995, avg:2404]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:2914, avg:1512]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:9408, avg:1330]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:14739, avg:2668]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:15696, avg:2709]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:14940, avg:1920]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:10839, avg:1682]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:8531, avg:2252]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:2445, avg:2291]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:8064, avg:1413]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6415, avg:1237]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:3085, avg:2225]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7569, avg:2312]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6980, avg:1427]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:2122, avg:1234]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:8050, avg:2249]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:6995, avg:2296]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:1712, avg:1409]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:1438, avg:1230]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:3474, avg:2223]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7646, avg:2323]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6108, avg:1416]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:9359, avg:1235]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7589, avg:2234]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7138, avg:2303]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6430, avg:1414]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:5485, avg:1235]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7464, avg:2241]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7975, avg:2311]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6585, avg:1420]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6770, avg:1238]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7065, avg:2230]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:8731, avg:2313]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6906, avg:1413]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6140, avg:1237]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7291, avg:2229]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:8885, avg:2308]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6007, avg:1414]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6470, avg:1240]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:6770, avg:2229]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7582, avg:2302]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:1589, avg:1410]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:7218, avg:1250]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7010, avg:2229]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7408, avg:2303]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6347, avg:1412]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6460, avg:1242]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7260, avg:2233]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7254, avg:2295]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:5925, avg:1422]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6223, avg:1239]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:6958, avg:2245]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:8366, avg:2302]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6339, avg:1421]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6501, avg:1237]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7500, avg:2243]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7378, avg:2302]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6667, avg:1419]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6076, avg:1235]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7549, avg:2241]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7253, avg:2297]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6599, avg:1423]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6749, avg:1235]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7061, avg:2237]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:6984, avg:2298]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:7019, avg:1420]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6747, avg:1237]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7556, avg:2232]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7818, avg:2305]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6648, avg:1424]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6437, avg:1236]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7776, avg:2239]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7412, avg:2297]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6326, avg:1421]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6550, avg:1238]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7683, avg:2242]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:8105, avg:2303]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:16060, avg:1428]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6727, avg:1235]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7926, avg:2244]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7385, avg:2300]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:7472, avg:1422]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:8386, avg:1240]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7615, avg:2246]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7931, avg:2300]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:7043, avg:1418]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6776, avg:1235]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:8597, avg:2246]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:8589, avg:2300]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:5904, avg:1415]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6891, avg:1238]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:8958, avg:2246]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7729, avg:2300]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6776, avg:1420]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6507, avg:1237]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7936, avg:2236]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7497, avg:2295]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6363, avg:1424]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6205, avg:1240]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:8192, avg:2246]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7235, avg:2296]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:5601, avg:1417]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6343, avg:1239]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:8273, avg:2249]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:6652, avg:2291]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6350, avg:1421]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:8159, avg:1241]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7892, avg:2248]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7126, avg:2296]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6002, avg:1415]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:5975, avg:1238]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7634, avg:2242]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7140, avg:2299]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6781, avg:1419]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6735, avg:1234]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7143, avg:2239]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7257, avg:2298]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6320, avg:1417]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6363, avg:1239]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:6685, avg:2241]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:3492, avg:2291]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6368, avg:1430]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:5447, avg:1233]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7583, avg:2303]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:10171, avg:2381]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:7057, avg:1501]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:8577, avg:1299]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7874, avg:2243]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:8272, avg:2305]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6549, avg:1418]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6264, avg:1235]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:8076, avg:2235]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7796, avg:2302]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6434, avg:1425]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:8026, avg:1238]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7296, avg:2243]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7956, avg:2295]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6708, avg:1422]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6139, avg:1236]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:6663, avg:2240]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7025, avg:2293]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:9931, avg:1420]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:5695, avg:1241]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:8055, avg:2235]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7073, avg:2295]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:50531, avg:1447]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:5231, avg:1233]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:8538, avg:2247]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7035, avg:2301]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:7066, avg:1416]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6200, avg:1239]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:6959, avg:2229]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7382, avg:2293]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:7526, avg:1435]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:5673, avg:1233]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7041, avg:2243]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7015, avg:2298]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6339, avg:1419]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6453, avg:1236]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:8496, avg:2236]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:7103, avg:2295]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6054, avg:1430]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:1420, avg:1231]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:6711, avg:2239]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:6476, avg:2296]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6358, avg:1422]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6526, avg:1235]ns
+Test token len:100, count:2000
+OHIPCParcel WriteInterfaceToken spend:[min:100, max:7657, avg:2236]ns
+MessageParcel WriteInterfaceToken spend:[min:100, max:6880, avg:2296]ns
+OHIPCParcel ReadInterfaceToken spend:[min:100, max:6093, avg:1419]ns
+MessageParcel ReadInterfaceToken spend:[min:100, max:6823, avg:1243]ns
+OHIPCParcel writeAvg:2258ns, readAvg:1442ns
+MessageParcel writeAvg:2319ns, readAvg:1256ns
+[       OK ] IpcCApiParcelUnitTest.OH_IPCParcel_TestReadWriteInterfaceTokenPerformance_001 (845 ms)
+[----------] 37 tests from IpcCApiParcelUnitTest (86492 ms total)
+
+[----------] 4 tests from IpcCApiRemoteObjectUnitTest
+[ RUN      ] IpcCApiRemoteObjectUnitTest.RemoteStub_Create_001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IpcCApiRemoteObjectUnitTest.RemoteStub_Create_001 (0 ms)
+[ RUN      ] IpcCApiRemoteObjectUnitTest.RemoteStub_Destroy_001
+[       OK ] IpcCApiRemoteObjectUnitTest.RemoteStub_Destroy_001 (0 ms)
+[ RUN      ] IpcCApiRemoteObjectUnitTest.DeathRecipient_Create_001
+[       OK ] IpcCApiRemoteObjectUnitTest.DeathRecipient_Create_001 (0 ms)
+[ RUN      ] IpcCApiRemoteObjectUnitTest.DeathRecipient_Destroy_001
+[       OK ] IpcCApiRemoteObjectUnitTest.DeathRecipient_Destroy_001 (0 ms)
+[----------] 4 tests from IpcCApiRemoteObjectUnitTest (0 ms total)
+
+[----------] 12 tests from IpcCApiSkeletonUnitTest
+[ RUN      ] IpcCApiSkeletonUnitTest.Skeleton_JoinWorkThread_001
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: JoinThread(true)
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/main/docs/gmock_cook_book.md#knowing-when-to-expect-useoncall for details.
+[       OK ] IpcCApiSkeletonUnitTest.Skeleton_JoinWorkThread_001 (0 ms)
+[ RUN      ] IpcCApiSkeletonUnitTest.Skeleton_StopWorkThread_001
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: StopWorkThread()
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/main/docs/gmock_cook_book.md#knowing-when-to-expect-useoncall for details.
+[       OK ] IpcCApiSkeletonUnitTest.Skeleton_StopWorkThread_001 (0 ms)
+[ RUN      ] IpcCApiSkeletonUnitTest.Skeleton_GetCallingTokenId_001
+[       OK ] IpcCApiSkeletonUnitTest.Skeleton_GetCallingTokenId_001 (0 ms)
+[ RUN      ] IpcCApiSkeletonUnitTest.Skeleton_GetFirstTokenId_001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IpcCApiSkeletonUnitTest.Skeleton_GetFirstTokenId_001 (0 ms)
+[ RUN      ] IpcCApiSkeletonUnitTest.Skeleton_GetSelfTokenId_001
+../../foundation/communication/ipc/test/unittest/common/ipc_capi_skeleton_unittest.cpp:161: Failure
+Expected: (id) > (0), actual: 0 vs 0
+
+[  FAILED  ] IpcCApiSkeletonUnitTest.Skeleton_GetSelfTokenId_001 (0 ms)
+[ RUN      ] IpcCApiSkeletonUnitTest.Skeleton_GetCallingPid_001
+[       OK ] IpcCApiSkeletonUnitTest.Skeleton_GetCallingPid_001 (0 ms)
+[ RUN      ] IpcCApiSkeletonUnitTest.Skeleton_GetCallingUid_001
+../../foundation/communication/ipc/test/unittest/common/ipc_capi_skeleton_unittest.cpp:173: Failure
+Expected equality of these values:
+  uid
+    Which is: 4092
+  0
+
+[  FAILED  ] IpcCApiSkeletonUnitTest.Skeleton_GetCallingUid_001 (0 ms)
+[ RUN      ] IpcCApiSkeletonUnitTest.Skeleton_IsLocalCalling_001
+[       OK ] IpcCApiSkeletonUnitTest.Skeleton_IsLocalCalling_001 (0 ms)
+[ RUN      ] IpcCApiSkeletonUnitTest.Skeleton_SetCallingIdentity_001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IpcCApiSkeletonUnitTest.Skeleton_SetCallingIdentity_001 (0 ms)
+[ RUN      ] IpcCApiSkeletonUnitTest.Skeleton_ResetCallingIdentity_001
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[       OK ] IpcCApiSkeletonUnitTest.Skeleton_ResetCallingIdentity_001 (0 ms)
+[ RUN      ] IpcCApiSkeletonUnitTest.Skeleton_IsHandlingTransaction_001
+[       OK ] IpcCApiSkeletonUnitTest.Skeleton_IsHandlingTransaction_001 (0 ms)
+[ RUN      ] IpcCApiSkeletonUnitTest.Skeleton_SetMaxWorkThreadNum_001
+../../foundation/communication/ipc/test/unittest/common/ipc_capi_skeleton_unittest.cpp:267: Failure
+Expected equality of these values:
+  OH_IPCSkeleton_SetMaxWorkThreadNum(normalCount)
+    Which is: 1901007
+  OH_IPC_SUCCESS
+    Which is: 0
+
+[  FAILED  ] IpcCApiSkeletonUnitTest.Skeleton_SetMaxWorkThreadNum_001 (0 ms)
+[----------] 12 tests from IpcCApiSkeletonUnitTest (1 ms total)
+
+[----------] Global test environment tear-down
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[==========] 53 tests from 3 test suites ran. (86493 ms total)
+[  PASSED  ] 50 tests.
+[  FAILED  ] 3 tests, listed below:
+[  FAILED  ] IpcCApiSkeletonUnitTest.Skeleton_GetSelfTokenId_001
+[  FAILED  ] IpcCApiSkeletonUnitTest.Skeleton_GetCallingUid_001
+[  FAILED  ] IpcCApiSkeletonUnitTest.Skeleton_SetMaxWorkThreadNum_001
+
+ 3 FAILED TESTS

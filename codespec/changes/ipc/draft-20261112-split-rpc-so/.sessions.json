@@ -1,0 +1,54 @@
+{
+  "proposal.md": {
+    "sessions": [
+      "ses_e30c4a9c3ffeXW2oydHcNICAXE"
+    ],
+    "log": [
+      {
+        "session": "ses_e30c4a9c3ffeXW2oydHcNICAXE",
+        "skill": "odk-propose",
+        "time": "2026-11-12T11:52:18Z",
+        "action": "生成"
+      }
+    ]
+  },
+  "spec.md": {
+    "sessions": [
+      "ses_e30c4a9c3ffeXW2oydHcNICAXE"
+    ],
+    "log": [
+      {
+        "session": "ses_e30c4a9c3ffeXW2oydHcNICAXE",
+        "skill": "odk-spec",
+        "time": "2026-11-12T11:56:02Z",
+        "action": "生成"
+      }
+    ]
+  },
+  "design.md": {
+    "sessions": [
+      "ses_e30c4a9c3ffeXW2oydHcNICAXE"
+    ],
+    "log": [
+      {
+        "session": "ses_e30c4a9c3ffeXW2oydHcNICAXE",
+        "skill": "odk-design",
+        "time": "2026-11-12T12:21:15Z",
+        "action": "生成"
+      }
+    ]
+  },
+  "execution-plan.md": {
+    "sessions": [
+      "ses_e30c4a9c3ffeXW2oydHcNICAXE"
+    ],
+    "log": [
+      {
+        "session": "ses_e30c4a9c3ffeXW2oydHcNICAXE",
+        "skill": "odk-plan",
+        "time": "2026-11-12T12:46:49Z",
+        "action": "生成"
+      }
+    ]
+  }
+}

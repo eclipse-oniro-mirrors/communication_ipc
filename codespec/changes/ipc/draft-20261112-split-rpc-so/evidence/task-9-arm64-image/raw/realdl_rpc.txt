@@ -1,0 +1,13 @@
+MODE=rpc
+PSS_BEFORE_KB=499
+RPC_MAPPED_BEFORE=0
+MAPS_HIT ffff17980000-ffff1798d000 r--p 00000000 fe:40 4987                       /system/lib64/platformsdk/libipc_rpc.z.so
+MAPS_HIT ffff1798d000-ffff179a6000 r-xp 0000d000 fe:40 4987                       /system/lib64/platformsdk/libipc_rpc.z.so
+MAPS_HIT ffff179a6000-ffff179a8000 r--p 00026000 fe:40 4987                       /system/lib64/platformsdk/libipc_rpc.z.so
+MAPS_HIT ffff179a8000-ffff179a9000 rw-p 00027000 fe:40 4987                       /system/lib64/platformsdk/libipc_rpc.z.so
+INVOKER_FIRST=0xffff99314cf0
+INVOKER_SECOND=0xffff99314cf0
+PSS_AFTER_KB=794
+PSS_DELTA_KB=295
+RPC_MAPPED_AFTER=1
+RESULT=PASS

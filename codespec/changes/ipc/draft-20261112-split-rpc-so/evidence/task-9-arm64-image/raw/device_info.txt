@@ -1,0 +1,42 @@
+## ls -l /data/local/tmp/imgverify
+total 4059136
+-rwxr-xr-x 1 root root 823816 2026-11-13 21:30 DbinderDataBusInvokerUnitTest
+-rwxr-xr-x 1 root root 672600 2026-11-13 21:30 IPCObjectProxyUnitTest
+-rwxr-xr-x 1 root root 548736 2026-11-13 21:30 IPCProcessSkeletonUnitTest
+-rwxr-xr-x 1 root root 593960 2026-11-13 21:30 IpcObjectStubUnitTest
+-rwxr-xr-x 1 root root 290856 2026-11-13 21:30 IpcRpcLoaderUnitTest
+-rwxr-xr-x 1 root root 250856 2026-11-13 21:30 IpcRpcStaticLinkFailureUnitTest
+-rwxr-xr-x 1 root root 259720 2026-11-13 21:30 IpcRpcStaticLinkUnitTest
+-rw-r--r-- 1 root root 582424 2026-11-13 21:30 libipc_single_test.z.so
+-rwxr-xr-x 1 root root  11512 2026-11-13 21:30 realdl
+
+## md5sum pushed
+f6b56f10c00cdee41a43baf613a08409  /data/local/tmp/imgverify/DbinderDataBusInvokerUnitTest
+3f8ba43fa93d089be48b5e4ada93554a  /data/local/tmp/imgverify/IPCObjectProxyUnitTest
+d41290da90825a1723d29c2eb1829745  /data/local/tmp/imgverify/IPCProcessSkeletonUnitTest
+8fdef834170be1ea298102eda70de844  /data/local/tmp/imgverify/IpcObjectStubUnitTest
+824996d653f9adf0c2d6205dd059de6e  /data/local/tmp/imgverify/IpcRpcLoaderUnitTest
+4c09b20876af8413045ea7058ea3cbb1  /data/local/tmp/imgverify/IpcRpcStaticLinkFailureUnitTest
+bfb005e1a772479a37bdb47dd8a1d5fe  /data/local/tmp/imgverify/IpcRpcStaticLinkUnitTest
+5bb599466f1c8236a3a2d4027b0928b2  /data/local/tmp/imgverify/libipc_single_test.z.so
+d05f2aaf9704261d123a58273ff0b4a7  /data/local/tmp/imgverify/realdl
+
+## system libs
+-rw-r--r-- 1 root root 158472 2026-11-13 11:50 /system/lib64/libdbinder.z.so
+-rw-r--r-- 1 root root  71280 2026-11-13 11:45 /system/lib64/platformsdk/libipc_common.z.so
+-rw-r--r-- 1 root root 169544 2026-11-13 11:50 /system/lib64/platformsdk/libipc_rpc.z.so
+-rw-r--r-- 1 root root 359560 2026-11-13 11:46 /system/lib64/platformsdk/libipc_single.z.so
+
+## md5sum system libs
+048197efed141efff0bc720000bad07f  /system/lib64/platformsdk/libipc_single.z.so
+4fbf631d0a1b5146debc6da6941c1ee7  /system/lib64/platformsdk/libipc_rpc.z.so
+0d966297efcccd2334b29595fd0a2608  /system/lib64/platformsdk/libipc_common.z.so
+0c6734f9ad9ba0840c0664140d71c07b  /system/lib64/libdbinder.z.so
+
+## no core lib in /data/local/tmp/imgverify
+NONE
+
+## uname
+Linux localhost 6.6.101-gc0c10d57367a-dirty #1 SMP PREEMPT Fri Nov 13 19:17:07 CST 2026 aarch64 Toybox
+OpenHarmony 7.1.0.25 
+true 
