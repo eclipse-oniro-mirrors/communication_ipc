@@ -147,17 +147,20 @@ bool DBinderService::ReStartRemoteListener()
 
 void DBinderService::StopRemoteListener()
 {
-    auto lister = std::atomic_exchange(&remoteListener_, std::shared_ptr<DBinderRemoteListener>{});
-    if (lister != nullptr) {
-        remoteListener_->StopListener();
+    auto listener = std::atomic_exchange(&remoteListener_, std::shared_ptr<DBinderRemoteListener>{});
+    if (listener != nullptr) {
+        listener->StopListener();
     }
 }
 
 std::shared_ptr<DBinderRemoteListener> DBinderService::GetRemoteListener()
 {
     auto listener = std::atomic_load(&remoteListener_);
-    if (listener == nullptr && !listener->StartListener()) {
-        return nullptr;
+    if (listener == nullptr) {
+        if (!StartRemoteListener()) {
+            return nullptr;
+        }
+        listener = std::atomic_load(&remoteListener_);
     }
     return listener;
 }
