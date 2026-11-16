@@ -643,7 +643,7 @@ HWTEST_F(DBinderServiceTest, QuerySessionObjectTest002, TestSize.Level1)
     ASSERT_TRUE(dBinderService != nullptr);
     binder_uintptr_t stub = 0;
     std::shared_ptr<struct SessionInfo> Session = nullptr;
-    EXPECT_EQ(dBinderService->AttachSessionObject(Session, stub), true);
+    dBinderService->AttachSessionObject(Session, stub);
     std::shared_ptr<struct SessionInfo> testSession = dBinderService->QuerySessionObject(stub);
     EXPECT_EQ(testSession, Session);
 }
@@ -2592,7 +2592,8 @@ HWTEST_F(DBinderServiceTest, AttachSessionObjectTest001, TestSize.Level1)
     sptr<DBinderService> dBinderService = DBinderService::GetInstance();
     ASSERT_TRUE(dBinderService != nullptr);
     dBinderService->sessionObject_.clear();
-    EXPECT_EQ(dBinderService->AttachSessionObject(object, stub), true);
+    dBinderService->AttachSessionObject(object, stub);
+    EXPECT_EQ(dBinderService->sessionObject_.size(), 1);
 }
 
 /**

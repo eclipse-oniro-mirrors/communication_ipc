@@ -1168,32 +1168,11 @@ void DBinderService::MakeSessionByReplyMessage(std::shared_ptr<struct DHandleEnt
         DBINDER_LOGE(LOG_LABEL, "get stubIndex == 0, it is invalid");
         return;
     }
-    // check whether need to update session
-    std::shared_ptr<struct SessionInfo> oldSession = QuerySessionObject(QueryStubPtr(replyMessage->stub));
-    if (oldSession != nullptr) {
-        if (IsSameSession(oldSession, session) == true) {
-            DBINDER_LOGI(LOG_LABEL, "invoker remote session already, do nothing");
-            return;
-        }
-        // ignore seqNumber overflow here, greater seqNumber means later request
-        if (oldSession->seqNumber <= session->seqNumber) {
-            // remote old session
-            if (!DetachSessionObject(QueryStubPtr(replyMessage->stub))) {
-                DBINDER_LOGE(LOG_LABEL, "failed to detach session object");
-                DfxReportFailEvent(DbinderErrorCode::RPC_DRIVER, RADAR_DETACH_SESSION_FAIL, __FUNCTION__);
-            }
-        } else {
-            // do nothing, use old session, discard session got this time
-            // in this case, old session is requested later, but it comes back earlier
-        }
-    }
 
-    if (!AttachSessionObject(session, QueryStubPtr(replyMessage->stub))) {
-        DBINDER_LOGE(LOG_LABEL, "attach SessionInfo fail");
-        DfxReportFailEvent(DbinderErrorCode::RPC_DRIVER, RADAR_ATTACH_SESSION_FAIL, __FUNCTION__);
-        return;
-    }
+    // try to attach new session
+    AttachSessionObject(session, QueryStubPtr(replyMessage->stub));
 }
+
 
 void DBinderService::WakeupThreadByStub(uint32_t seqNumber)
 {
@@ -1263,11 +1242,19 @@ bool DBinderService::DetachSessionObject(binder_uintptr_t stub)
     return (sessionObject_.erase(stub) > 0);
 }
 
-bool DBinderService::AttachSessionObject(std::shared_ptr<struct SessionInfo> object, binder_uintptr_t stub)
+void DBinderService::AttachSessionObject(std::shared_ptr<struct SessionInfo> object, binder_uintptr_t stub)
 {
     std::unique_lock<std::shared_mutex> lock(sessionMutex_);
-    auto ret = sessionObject_.insert(std::pair<binder_uintptr_t, std::shared_ptr<struct SessionInfo>>(stub, object));
-    return ret.second;
+    auto it = sessionObject_.find(stub);
+    if (it != sessionObject_.end() && IsSameSession(it->second, object)) {
+        DBINDER_LOGI(LOG_LABEL, "invoker remote session already exist");
+        return;
+    }
+    if (it != sessionObject_.end() && it->second->seqNumber >= object->seqNumber) {
+        DBINDER_LOGI(LOG_LABEL, "seqNumber of oldSession is greater");
+        return;
+    }
+    sessionObject_.insert_or_assign(stub, object);
 }
 
 std::shared_ptr<struct SessionInfo> DBinderService::QuerySessionObject(binder_uintptr_t stub)

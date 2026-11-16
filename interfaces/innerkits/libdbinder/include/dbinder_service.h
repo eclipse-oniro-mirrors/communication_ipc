@@ -322,7 +322,7 @@ private:
     bool AttachProxyObject(sptr<IRemoteObject> object, binder_uintptr_t binderObject);
     sptr<IRemoteObject> QueryProxyObject(binder_uintptr_t binderObject);
     bool DetachSessionObject(binder_uintptr_t stub);
-    bool AttachSessionObject(std::shared_ptr<struct SessionInfo> object, binder_uintptr_t stub);
+    void AttachSessionObject(std::shared_ptr<struct SessionInfo> object, binder_uintptr_t stub);
     sptr<IRemoteObject> FindOrNewProxy(binder_uintptr_t binderObject, int32_t systemAbilityId);
     bool CheckDeviceIDsInvalid(const std::string &deviceID, const std::string &localDevID);
     bool CopyDeviceIDsToMessage(std::shared_ptr<struct DHandleEntryTxRx> message,
