@@ -16,6 +16,7 @@
 #ifndef OHOS_IPC_SERVICES_DBINDER_DBINDER_SERVICE_H
 #define OHOS_IPC_SERVICES_DBINDER_DBINDER_SERVICE_H
 
+#include <atomic>
 #include <map>
 #include <memory>
 #include <mutex>

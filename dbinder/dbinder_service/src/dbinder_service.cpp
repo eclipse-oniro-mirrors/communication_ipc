@@ -121,7 +121,7 @@ bool DBinderService::StartRemoteListener()
         DBINDER_LOGI(LOG_LABEL, "start remote listener ok");
         return true;
     }
-    
+
     DBINDER_LOGI(LOG_LABEL, "remote listener already created");
     newListener->StopListener();
     return true;
