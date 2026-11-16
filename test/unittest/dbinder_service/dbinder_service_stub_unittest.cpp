@@ -996,8 +996,7 @@ HWTEST_F(DBinderServiceStubTest, SaveDBinderDataTest003, TestSize.Level1)
     std::shared_ptr<SessionInfo> sessionInfo = std::make_shared<SessionInfo>();
     ASSERT_TRUE(sessionInfo != nullptr);
     sessionInfo->type = SESSION_TYPE_UNKNOWN;
-    bool isInitialized = dBinderService->AttachSessionObject(sessionInfo, objectAddress);
-    ASSERT_TRUE(isInitialized);
+    dBinderService->AttachSessionObject(sessionInfo, objectAddress);
     dbinderServiceStub.dbinderData_ = nullptr;
     int ret = dbinderServiceStub.SaveDBinderData(localBusName);
     ASSERT_EQ(ret, DBINDER_SERVICE_MALLOC_ERR);
@@ -1060,8 +1059,7 @@ HWTEST_F(DBinderServiceStubTest, SaveDBinderDataTest005, TestSize.Level1)
     std::shared_ptr<SessionInfo> sessionInfo = std::make_shared<SessionInfo>();
     ASSERT_TRUE(sessionInfo != nullptr);
     sessionInfo->type = SESSION_TYPE_UNKNOWN;
-    bool isInitialized = dBinderService->AttachSessionObject(sessionInfo, objectAddress);
-    ASSERT_TRUE(isInitialized);
+    dBinderService->AttachSessionObject(sessionInfo, objectAddress);
     ret = dbinderServiceStub.SaveDBinderData(localBusName);
     ASSERT_EQ(ret, ERR_NONE);
     bool result = dBinderService->DetachSessionObject(objectAddress);

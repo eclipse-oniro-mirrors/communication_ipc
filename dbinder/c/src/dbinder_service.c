@@ -442,7 +442,7 @@ static ProxyObject *QueryProxyObject(uintptr_t binderObject)
     return NULL;
 }
 
-static ProxyObject *AttachProxyObject(ProxyObject *proxy)
+static int32_t *AttachProxyObject(ProxyObject *proxy)
 {
     pthread_mutex_lock(&g_proxyObjectList.mutex);
     ProxyObject *existing = NULL;
@@ -451,12 +451,12 @@ static ProxyObject *AttachProxyObject(ProxyObject *proxy)
         if (existing->binderObject == proxy->binderObject) {
             pthread_mutex_unlock(&g_proxyObjectList.mutex);
             RPC_LOG_ERROR("attach failed, proxy already exist");
-            return existing;
+            return ERR_FAILED;
         }
     }
     DLListAdd(&g_proxyObjectList.proxyObject, &proxy->list);
     pthread_mutex_unlock(&g_proxyObjectList.mutex);
-    return proxy;
+    return ERR_NONE;
 }
 
 static void DetachProxyObject(ProxyObject *proxy)
@@ -507,13 +507,12 @@ static ProxyObject *FindOrNewProxy(uintptr_t binderObject, int32_t systemAbility
         return NULL;
     }
 
-    ProxyObject *attached = AttachProxyObject(proxyObject);
-    if (attached != proxyObject) {
+    if (AttachProxyObject(proxyObject) != ERR_NONE) {
         RPC_LOG_ERROR("FindOrNewProxy AttachProxyObject failed");
         RemoveDeathRecipient(*proxyObject->proxy, proxyObject->cbId);
         free(proxyObject->proxy);
         free(proxyObject);
-        return attached;
+        return QueryProxyObject(binderObject);
     }
     return proxyObject;
 }
