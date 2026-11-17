@@ -450,7 +450,7 @@ static ProxyObject *AttachProxyObject(ProxyObject *proxy)
     {
         if (existing->binderObject == proxy->binderObject) {
             pthread_mutex_unlock(&g_proxyObjectList.mutex);
-            RPC_LOG_INFO("attach failed, proxy already exist");
+            RPC_LOG_INFO("proxy already exist");
             return existing;
         }
     }
@@ -500,6 +500,8 @@ static ProxyObject *FindOrNewProxy(uintptr_t binderObject, int32_t systemAbility
     proxyObject->binderObject = binderObject;
     ProxyObject *attached = AttachProxyObject(proxyObject);
     if (attached != proxyObject) {
+        RPC_LOG_INFO("FindOrNewProxy found concurrently created proxy, binderObject: %llu, id:%d ",
+            binderObject, systemAbilityId);
         free(proxyObject->proxy);
         free(proxyObject);
         return attached;

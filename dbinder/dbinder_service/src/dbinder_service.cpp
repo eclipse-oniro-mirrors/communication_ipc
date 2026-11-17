@@ -93,7 +93,7 @@ bool DBinderService::StartDBinderService(std::shared_ptr<RpcSystemAbilityCallbac
     }
 
     std::shared_ptr<RpcSystemAbilityCallback> expect = nullptr;
-    std::atomic_compare_exchange_strong(&dbinderCallback_, &expect, callbackImpl)
+    std::atomic_compare_exchange_strong(&dbinderCallback_, &expect, callbackImpl);
     mainThreadCreated_.store(true, std::memory_order_release);
     return true;
 }
