@@ -62,7 +62,7 @@ DBinderService::~DBinderService()
     noticeProxy_.clear();
     deathRecipients_.clear();
     loadSaReply_.clear();
-    std::atomic_store(&dbinderCallback_, nullptr);
+    std::atomic_store(&dbinderCallback_, std::shared_ptr<RpcSystemAbilityCallback>{});
     DBINDER_LOGI(LOG_LABEL, "dbinder service died");
 }
 
