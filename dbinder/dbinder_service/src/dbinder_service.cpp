@@ -62,7 +62,7 @@ DBinderService::~DBinderService()
     noticeProxy_.clear();
     deathRecipients_.clear();
     loadSaReply_.clear();
-    dbinderCallback_ = nullptr;
+    std::atomic_store(&dbinderCallback_, nullptr);
     DBINDER_LOGI(LOG_LABEL, "dbinder service died");
 }
 
@@ -92,7 +92,8 @@ bool DBinderService::StartDBinderService(std::shared_ptr<RpcSystemAbilityCallbac
         return false;
     }
 
-    dbinderCallback_ = callbackImpl;
+    std::shared_ptr<RpcSystemAbilityCallback> expect = nullptr;
+    std::atomic_compare_exchange_strong(&dbinderCallback_, &expect, callbackImpl)
     mainThreadCreated_.store(true, std::memory_order_release);
     return true;
 }
@@ -786,7 +787,8 @@ bool DBinderService::OnRemoteInvokerMessage(std::shared_ptr<struct DHandleEntryT
         "invoke business service:%{public}llu seq:%{public}u pid:%{public}u stub:%{public}llu tokenId:%{public}u",
         message->binderObject, message->seqNumber, message->pid, (message->stub & BINDER_MASK),
         message->deviceIdInfo.tokenId);
-    if (!dbinderCallback_->IsDistributedSystemAbility(message->binderObject)) {
+    std::shared_ptr<RpcSystemAbilityCallback> dbinderCallback = std::atomic_load(&dbinderCallback_);
+    if (!dbinderCallback->IsDistributedSystemAbility(message->binderObject)) {
         DBINDER_LOGE(LOG_LABEL, "SA:%{public}llu not have distributed capability.", message->binderObject);
         DfxReportFailEvent(DbinderErrorCode::RPC_DRIVER, RADAR_NOT_DISTEIBUTED_SA, __FUNCTION__);
         SendReplyMessageToRemote(MESSAGE_AS_REMOTE_ERROR, DBINDER_SA_NOT_DISTRUBUTED, message);
@@ -798,7 +800,7 @@ bool DBinderService::OnRemoteInvokerMessage(std::shared_ptr<struct DHandleEntryT
         std::lock_guard<std::shared_mutex> lockGuard(loadSaMutex_);
         loadSaReply_.push_back(replyMessage);
     }
-    bool isSaAvailable = dbinderCallback_->LoadSystemAbilityFromRemote(replyMessage->deviceIdInfo.fromDeviceId,
+    bool isSaAvailable = dbinderCallback->LoadSystemAbilityFromRemote(replyMessage->deviceIdInfo.fromDeviceId,
         static_cast<int32_t>(replyMessage->binderObject));
     if (!isSaAvailable) {
         DBINDER_LOGE(LOG_LABEL, "fail to call the system ability:%{public}d",
