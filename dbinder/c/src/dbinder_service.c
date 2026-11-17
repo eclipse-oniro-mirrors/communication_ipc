@@ -500,8 +500,7 @@ static ProxyObject *FindOrNewProxy(uintptr_t binderObject, int32_t systemAbility
     proxyObject->binderObject = binderObject;
     ProxyObject *attached = AttachProxyObject(proxyObject);
     if (attached != proxyObject) {
-        RPC_LOG_INFO("FindOrNewProxy found concurrently created proxy, binderObject: %llu, id:%d ",
-            binderObject, systemAbilityId);
+        RPC_LOG_INFO("FindOrNewProxy found concurrently created proxy, id:%d ", systemAbilityId);
         free(proxyObject->proxy);
         free(proxyObject);
         return attached;
