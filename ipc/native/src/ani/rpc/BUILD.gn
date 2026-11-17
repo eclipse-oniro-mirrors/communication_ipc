@@ -27,6 +27,7 @@ config("ani_rpc_public_config") {
 }
 
 ohos_shared_library("rpc_native_ani") {
+  branch_protector_ret = "pac_ret"
   sources = [
     "src/ani_rpc_error.cpp",
     "src/rpc_ani.cpp",
@@ -51,6 +52,7 @@ ohos_shared_library("rpc_native_ani") {
 }
 
 ohos_shared_library("rpc_ani") {
+  branch_protector_ret = "pac_ret"
   sources = [
     "src/ani_remote_object.cpp",
     "src/ani_rpc_error.cpp",

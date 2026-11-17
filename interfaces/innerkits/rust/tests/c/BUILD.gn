@@ -18,6 +18,7 @@ config("libipc_c_private_config") {
 }
 
 ohos_static_library("ipc_rust_test_c") {
+  branch_protector_ret = "pac_ret"
   include_dirs = [ "include" ]
 
   sources = [ "src/ipc_rust_test.cpp" ]
