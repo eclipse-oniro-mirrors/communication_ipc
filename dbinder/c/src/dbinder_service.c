@@ -442,12 +442,21 @@ static ProxyObject *QueryProxyObject(uintptr_t binderObject)
     return NULL;
 }
 
-static int32_t AttachProxyObject(ProxyObject *proxy)
+static ProxyObject *AttachProxyObject(ProxyObject *proxy)
 {
     pthread_mutex_lock(&g_proxyObjectList.mutex);
+    ProxyObject *existing = NULL;
+    DL_LIST_FOR_EACH_ENTRY(existing, &g_proxyObjectList.proxyObject, ProxyObject, list)
+    {
+        if (existing->binderObject == proxy->binderObject) {
+            pthread_mutex_unlock(&g_proxyObjectList.mutex);
+            RPC_LOG_INFO("proxy already exist");
+            return existing;
+        }
+    }
     DLListAdd(&g_proxyObjectList.proxyObject, &proxy->list);
     pthread_mutex_unlock(&g_proxyObjectList.mutex);
-    return ERR_NONE;
+    return proxy;
 }
 
 static void DetachProxyObject(ProxyObject *proxy)
@@ -487,22 +496,21 @@ static ProxyObject *FindOrNewProxy(uintptr_t binderObject, int32_t systemAbility
         RPC_LOG_ERROR("RpcGetSystemAbility failed, saId: %d", systemAbilityId);
         return NULL;
     }
+
     proxyObject->binderObject = binderObject;
+    ProxyObject *attached = AttachProxyObject(proxyObject);
+    if (attached != proxyObject) {
+        RPC_LOG_INFO("FindOrNewProxy found concurrently created proxy, id:%d", systemAbilityId);
+        free(proxyObject->proxy);
+        free(proxyObject);
+        return attached;
+    }
 
     int32_t ret = AddDeathRecipient(*proxyObject->proxy, DbinderSaDeathRecipient,
         (void *)proxyObject, &proxyObject->cbId);
     if (ret != ERR_NONE) {
         RPC_LOG_ERROR("FindOrNewProxy AddDeathRecipient failed, error %d", ret);
-        free(proxyObject->proxy);
-        free(proxyObject);
-        return NULL;
-    }
-
-    if (AttachProxyObject(proxyObject) != ERR_NONE) {
-        RPC_LOG_ERROR("FindOrNewProxy AttachProxyObject failed");
-        RemoveDeathRecipient(*proxyObject->proxy, proxyObject->cbId);
-        free(proxyObject->proxy);
-        free(proxyObject);
+        DetachProxyObject(proxyObject);
         return NULL;
     }
     return proxyObject;

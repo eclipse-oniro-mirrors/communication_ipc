@@ -35,7 +35,7 @@ namespace OHOS {
 static constexpr OHOS::HiviewDFX::HiLogLabel LOG_LABEL = { LOG_CORE, LOG_ID_RPC_DBINDER_SER, "DBinderService" };
 
 sptr<DBinderService> DBinderService::instance_ = nullptr;
-bool DBinderService::mainThreadCreated_ = false;
+std::atomic<bool> DBinderService::mainThreadCreated_ = false;
 std::mutex DBinderService::instanceMutex_;
 std::shared_ptr<DBinderRemoteListener> DBinderService::remoteListener_ = nullptr;
 constexpr unsigned int BINDER_MASK = 0xffff;
@@ -62,7 +62,7 @@ DBinderService::~DBinderService()
     noticeProxy_.clear();
     deathRecipients_.clear();
     loadSaReply_.clear();
-    dbinderCallback_ = nullptr;
+    std::atomic_store(&dbinderCallback_, std::shared_ptr<RpcSystemAbilityCallback>{});
     DBINDER_LOGI(LOG_LABEL, "dbinder service died");
 }
 
@@ -83,7 +83,7 @@ std::string DBinderService::GetLocalDeviceID()
 
 bool DBinderService::StartDBinderService(std::shared_ptr<RpcSystemAbilityCallback> &callbackImpl)
 {
-    if (mainThreadCreated_) {
+    if (mainThreadCreated_.load(std::memory_order_acquire)) {
         return ReStartRemoteListener();
     }
 
@@ -91,32 +91,40 @@ bool DBinderService::StartDBinderService(std::shared_ptr<RpcSystemAbilityCallbac
     if (!result) {
         return false;
     }
-    mainThreadCreated_ = true;
-    dbinderCallback_ = callbackImpl;
 
+    std::shared_ptr<RpcSystemAbilityCallback> expect = nullptr;
+    std::atomic_compare_exchange_strong(&dbinderCallback_, &expect, callbackImpl);
+    mainThreadCreated_.store(true, std::memory_order_release);
     return true;
 }
 
 // LCOV_EXCL_START
 bool DBinderService::StartRemoteListener()
 {
-    if (remoteListener_ != nullptr) {
+    auto existing = std::atomic_load(&remoteListener_);
+    if (existing != nullptr) {
         DBINDER_LOGI(LOG_LABEL, "remote listener started");
         return true;
     }
 
-    remoteListener_ = std::make_shared<DBinderRemoteListener>();
-    if (remoteListener_ == nullptr) {
+    auto newListener = std::make_shared<DBinderRemoteListener>();
+    if (newListener == nullptr) {
         DBINDER_LOGE(LOG_LABEL, "failed to create remote listener");
         return false;
     }
 
-    if (remoteListener_->StartListener() != true) {
-        StopRemoteListener();
+    if (newListener->StartListener() != true) {
+        DBINDER_LOGE(LOG_LABEL, "failed to start listener");
         return false;
     }
 
-    DBINDER_LOGI(LOG_LABEL, "start remote listener ok");
+    if (std::atomic_compare_exchange_strong(&remoteListener_, &existing, newListener)) {
+        DBINDER_LOGI(LOG_LABEL, "start remote listener ok");
+        return true;
+    }
+
+    DBINDER_LOGI(LOG_LABEL, "remote listener already created");
+    newListener->StopListener();
     return true;
 }
 // LCOV_EXCL_STOP
@@ -124,11 +132,12 @@ bool DBinderService::StartRemoteListener()
 // LCOV_EXCL_START
 bool DBinderService::ReStartRemoteListener()
 {
-    if (remoteListener_ == nullptr) {
+    auto listener = std::atomic_load(&remoteListener_);
+    if (listener == nullptr) {
         DBINDER_LOGE(LOG_LABEL, "restart remote listener got null");
         return false;
     }
-    if (remoteListener_->StartListener() != true) {
+    if (listener->StartListener() != true) {
         DBINDER_LOGE(LOG_LABEL, "restart dbinder server failed");
         StopRemoteListener();
         return false;
@@ -139,18 +148,22 @@ bool DBinderService::ReStartRemoteListener()
 
 void DBinderService::StopRemoteListener()
 {
-    if (remoteListener_ != nullptr) {
-        remoteListener_->StopListener();
-        remoteListener_ = nullptr;
+    auto listener = std::atomic_exchange(&remoteListener_, std::shared_ptr<DBinderRemoteListener>{});
+    if (listener != nullptr) {
+        listener->StopListener();
     }
 }
 
 std::shared_ptr<DBinderRemoteListener> DBinderService::GetRemoteListener()
 {
-    if (remoteListener_ == nullptr && !StartRemoteListener()) {
-        return nullptr;
+    auto listener = std::atomic_load(&remoteListener_);
+    if (listener == nullptr) {
+        if (!StartRemoteListener()) {
+            return nullptr;
+        }
+        listener = std::atomic_load(&remoteListener_);
     }
-    return remoteListener_;
+    return listener;
 }
 
 sptr<DBinderService> DBinderService::GetInstance()
@@ -774,7 +787,8 @@ bool DBinderService::OnRemoteInvokerMessage(std::shared_ptr<struct DHandleEntryT
         "invoke business service:%{public}llu seq:%{public}u pid:%{public}u stub:%{public}llu tokenId:%{public}u",
         message->binderObject, message->seqNumber, message->pid, (message->stub & BINDER_MASK),
         message->deviceIdInfo.tokenId);
-    if (!dbinderCallback_->IsDistributedSystemAbility(message->binderObject)) {
+    std::shared_ptr<RpcSystemAbilityCallback> dbinderCallback = std::atomic_load(&dbinderCallback_);
+    if (!dbinderCallback->IsDistributedSystemAbility(message->binderObject)) {
         DBINDER_LOGE(LOG_LABEL, "SA:%{public}llu not have distributed capability.", message->binderObject);
         DfxReportFailEvent(DbinderErrorCode::RPC_DRIVER, RADAR_NOT_DISTEIBUTED_SA, __FUNCTION__);
         SendReplyMessageToRemote(MESSAGE_AS_REMOTE_ERROR, DBINDER_SA_NOT_DISTRUBUTED, message);
@@ -786,7 +800,7 @@ bool DBinderService::OnRemoteInvokerMessage(std::shared_ptr<struct DHandleEntryT
         std::lock_guard<std::shared_mutex> lockGuard(loadSaMutex_);
         loadSaReply_.push_back(replyMessage);
     }
-    bool isSaAvailable = dbinderCallback_->LoadSystemAbilityFromRemote(replyMessage->deviceIdInfo.fromDeviceId,
+    bool isSaAvailable = dbinderCallback->LoadSystemAbilityFromRemote(replyMessage->deviceIdInfo.fromDeviceId,
         static_cast<int32_t>(replyMessage->binderObject));
     if (!isSaAvailable) {
         DBINDER_LOGE(LOG_LABEL, "fail to call the system ability:%{public}d",
@@ -1413,12 +1427,13 @@ int32_t DBinderService::NoticeDeviceDie(const std::string &deviceID)
     DfxReportDeviceEvent(DbinderErrorCode::RPC_DRIVER, DbinderErrorCode::RPC_RESULT_IDLE,
         DBinderService::ConvertToSecureDeviceID(deviceID).c_str(), __FUNCTION__);
 
-    if (remoteListener_ == nullptr) {
+    auto listener = std::atomic_load(&remoteListener_);
+    if (listener == nullptr) {
         DBINDER_LOGE(LOG_LABEL, "remote listener is null");
         return DBINDER_SERVICE_NOTICE_DIE_ERR;
     }
 
-    if (!remoteListener_->ShutdownSocket(deviceID)) {
+    if (!listener->ShutdownSocket(deviceID)) {
         DBINDER_LOGE(LOG_LABEL, "Shutdown fail");
         // do nothing
     }
