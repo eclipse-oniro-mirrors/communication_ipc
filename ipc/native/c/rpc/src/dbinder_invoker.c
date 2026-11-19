@@ -491,6 +491,13 @@ static ThreadProcessInfo *MakeThreadProcessInfo(uint32_t handle, const char *inB
         free(processInfo);
         return NULL;
     }
+    dbinder_transaction_data *hdr = (dbinder_transaction_data *)processInfo->buffer;
+    if (hdr->sizeOfSelf != size) {
+        RPC_LOG_ERROR("header size mismatch, drop package");
+        free(processInfo->buffer);
+        free(processInfo);
+        return NULL;
+    }
     processInfo->sessionId = handle;
     processInfo->packageSize = size;
 
@@ -653,7 +660,7 @@ void OnMessageAvailable(int sessionId, const void *data, uint32_t len)
     while (readSize + sizeof(dbinder_transaction_data) < len) {
         uint32_t packageSize = HasCompletePackage(data, readSize, len);
         if (packageSize > 0) {
-            StartProcessLoop(handle, data, packageSize);
+            StartProcessLoop(handle, (const char *)data + readSize, packageSize);
             readSize += packageSize;
         } else {
             // If the current is abnormal, the subsequent is no longer processed.
