@@ -14,6 +14,7 @@
  */
 
 #include "ipcobjectproxy_fuzzer.h"
+#include "process_skeleton.h"
 
 namespace OHOS {
 void GetDBinderNegotiationDataFuzzTest001(FuzzedDataProvider &provider)
@@ -110,5 +111,10 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
     OHOS::GetDBinderNegotiationDataFuzzTest003(provider);
     OHOS::GetDBinderNegotiationDataFuzzTest004(provider);
     OHOS::AddDeathRecipientFuzzTest(provider);
+
+    OHOS::ProcessSkeleton *process = OHOS::ProcessSkeleton::GetInstance();
+    if (process != nullptr) {
+        process->NotifyChildThreadStop();
+    }
     return 0;
 }

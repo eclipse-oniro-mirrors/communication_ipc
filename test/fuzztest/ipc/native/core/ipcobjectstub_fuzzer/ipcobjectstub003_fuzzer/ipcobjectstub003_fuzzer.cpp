@@ -14,6 +14,7 @@
  */
 
 #include "ipcobjectstub_fuzzer.h"
+#include "process_skeleton.h"
 
 namespace OHOS {
 void NoticeServiceDieFuzzTest(const uint8_t *data, size_t size)
@@ -62,5 +63,10 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
     OHOS::NoticeServiceDieFuzzTest(data, size);
     OHOS::InvokerDataBusThreadFuzzTest(data, size);
     OHOS::AddAuthInfoFuzzTest(data, size);
+
+    OHOS::ProcessSkeleton *process = OHOS::ProcessSkeleton::GetInstance();
+    if (process != nullptr) {
+        process->NotifyChildThreadStop();
+    }
     return 0;
 }

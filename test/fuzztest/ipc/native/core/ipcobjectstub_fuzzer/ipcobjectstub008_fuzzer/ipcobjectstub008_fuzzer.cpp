@@ -14,6 +14,7 @@
  */
 
 #include "ipcobjectstub_fuzzer.h"
+#include "process_skeleton.h"
 
 namespace OHOS {
 void DBinderPingTransactionFuzzTest(FuzzedDataProvider &provider)
@@ -92,5 +93,10 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
     OHOS::DBinderSearchRefCountFuzzTest(provider);
     OHOS::DBinderDumpTransactionFuzzTest(provider);
     OHOS::DBinderInvokeListenThreadFuzzTest(provider);
+
+    OHOS::ProcessSkeleton *process = OHOS::ProcessSkeleton::GetInstance();
+    if (process != nullptr) {
+        process->NotifyChildThreadStop();
+    }
     return 0;
 }

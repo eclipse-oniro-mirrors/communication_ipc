@@ -18,6 +18,7 @@
 #include "ipc_object_proxy.h"
 #include "ipc_object_stub.h"
 #include "iremote_broker.h"
+#include "process_skeleton.h"
 #include "string_ex.h"
 
 namespace OHOS {
@@ -100,5 +101,10 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
     OHOS::NewInstanceFuzzTest001(provider);
     OHOS::NewInstanceFuzzTest002(provider);
     OHOS::GetObjectSoPathFuzzTest(provider);
+
+    OHOS::ProcessSkeleton *process = OHOS::ProcessSkeleton::GetInstance();
+    if (process != nullptr) {
+        process->NotifyChildThreadStop();
+    }
     return 0;
 }
