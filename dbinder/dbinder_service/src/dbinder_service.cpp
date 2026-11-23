@@ -788,6 +788,12 @@ bool DBinderService::OnRemoteInvokerMessage(std::shared_ptr<struct DHandleEntryT
         message->binderObject, message->seqNumber, message->pid, (message->stub & BINDER_MASK),
         message->deviceIdInfo.tokenId);
     std::shared_ptr<RpcSystemAbilityCallback> dbinderCallback = std::atomic_load(&dbinderCallback_);
+    if (dbinderCallback == nullptr) {
+        DBINDER_LOGE(LOG_LABEL, "dbinderCallback is null, drop invoker message");
+        DfxReportFailEvent(DbinderErrorCode::RPC_DRIVER, RADAR_ERR_INVALID_DATA, __FUNCTION__);
+        SendReplyMessageToRemote(MESSAGE_AS_REMOTE_ERROR, DBINDER_SA_NOT_AVAILABLE, message);
+        return false;
+    }
     if (!dbinderCallback->IsDistributedSystemAbility(message->binderObject)) {
         DBINDER_LOGE(LOG_LABEL, "SA:%{public}llu not have distributed capability.", message->binderObject);
         DfxReportFailEvent(DbinderErrorCode::RPC_DRIVER, RADAR_NOT_DISTEIBUTED_SA, __FUNCTION__);
