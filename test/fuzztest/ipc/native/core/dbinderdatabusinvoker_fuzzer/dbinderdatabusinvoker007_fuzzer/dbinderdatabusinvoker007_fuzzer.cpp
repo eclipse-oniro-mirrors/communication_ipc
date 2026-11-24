@@ -16,6 +16,7 @@
 #include "dbinderdatabusinvoker_fuzzer.h"
 #include "dbinder_base_invoker_process.h"
 #include "dbinder_databus_invoker.h"
+#include "process_skeleton.h"
 #include "securec.h"
 
 using OHOS::DatabusSocketListener;
@@ -88,5 +89,10 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
     OHOS::SetCallerDeviceIDFuzzTest(provider);
     OHOS::SetCallerTokenIDFuzzTest(provider);
     OHOS::CheckAndSetCallerInfoFuzzTest(provider);
+
+    OHOS::ProcessSkeleton *process = OHOS::ProcessSkeleton::GetInstance();
+    if (process != nullptr) {
+        process->NotifyChildThreadStop();
+    }
     return 0;
 }

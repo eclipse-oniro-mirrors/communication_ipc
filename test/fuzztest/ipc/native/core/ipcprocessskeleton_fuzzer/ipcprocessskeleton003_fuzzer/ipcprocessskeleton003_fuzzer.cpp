@@ -17,6 +17,7 @@
 #include "ipc_process_skeleton.h"
 #include "fuzz_data_generator.h"
 #include "message_parcel.h"
+#include "process_skeleton.h"
 #include "string_ex.h"
 
 namespace OHOS {
@@ -107,5 +108,10 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
     OHOS::FindOrNewObjectFuzzTest(data, size);
     OHOS::IsContainsObjectFuzzTest(data, size);
     OHOS::QueryObjectFuzzTest(data, size);
+
+    OHOS::ProcessSkeleton *process = OHOS::ProcessSkeleton::GetInstance();
+    if (process != nullptr) {
+        process->NotifyChildThreadStop();
+    }
     return 0;
 }
