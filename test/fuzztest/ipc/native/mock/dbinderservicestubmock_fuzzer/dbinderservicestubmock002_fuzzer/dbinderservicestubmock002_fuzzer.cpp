@@ -202,7 +202,7 @@ void AddDbinderDeathRecipientFuzzTest(FuzzedDataProvider &provider)
 
     callbackProxy->SetObjectDied(false);
     EXPECT_CALL(mock, ReadRemoteObject).WillOnce(Return(callbackProxy));
-    EXPECT_CALL(mock, GetInstance).WillOnce(Return(nullptr));
+    EXPECT_CALL(mock, GetInstance).WillRepeatedly(Return(nullptr));
     dBinderServiceStub.AddDbinderDeathRecipient(dataOne);
 }
 }
