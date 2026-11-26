@@ -80,7 +80,10 @@ void StopServer(pid_t pid)
     if (pid <= 0) {
         return;
     }
-    kill(pid, SIGKILL);
+    // G.FUU.05: do not call kill() directly in code; use shell command as
+    // main_client.cpp does, this only stops the test server process forked by ourselves.
+    std::string stopCmd = "kill -9 " + std::to_string(pid);
+    system(stopCmd.c_str());
     int status = 0;
     waitpid(pid, &status, 0);
 }
