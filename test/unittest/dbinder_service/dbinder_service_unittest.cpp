@@ -1755,6 +1755,48 @@ HWTEST_F(DBinderServiceTest, OnRemoteInvokerMessageTest004, TestSize.Level1)
 }
 
 /**
+ * @tc.name: OnRemoteInvokerMessageTest005
+ * @tc.desc: Verify OnRemoteInvokerMessage when dbinderCallback is null
+ * @tc.type: FUNC
+ */
+HWTEST_F(DBinderServiceTest, OnRemoteInvokerMessageTest005, TestSize.Level1)
+{
+    sptr<DBinderService> dBinderService = DBinderService::GetInstance();
+    ASSERT_TRUE(dBinderService != nullptr);
+    std::shared_ptr<MockDBinderRemoteListener> mockListener = std::make_shared<MockDBinderRemoteListener>();
+    dBinderService->remoteListener_ = std::static_pointer_cast<DBinderRemoteListener>(mockListener);
+    ASSERT_TRUE(dBinderService->remoteListener_ != nullptr);
+
+    std::shared_ptr<struct DHandleEntryTxRx> message = std::make_shared<DHandleEntryTxRx>();
+    ASSERT_TRUE(message != nullptr);
+    (void)memset_s(message.get(), sizeof(DHandleEntryTxRx), 0, sizeof(DHandleEntryTxRx));
+    message->stubIndex = DBinderService::FIRST_SYS_ABILITY_ID;
+    message->binderObject = DBinderService::FIRST_SYS_ABILITY_ID;
+    message->deviceIdInfo.fromDeviceId[0] = 't';
+
+    DBinderSoftbusClient::GetInstance().sendBytesFunc_ = MockDBinderRemoteListener::SendBytes;
+    PeerSocketInfo info;
+    info.networkId = message->deviceIdInfo.fromDeviceId;
+    int32_t socket = 1001;
+    DBinderRemoteListener::ServerOnBind(socket, info);
+
+    // 保存现场，再置空回调，模拟回调尚未注册时收到远端调用
+    auto oldCallback = dBinderService->dbinderCallback_;
+    std::atomic_store(&dBinderService->dbinderCallback_, std::shared_ptr<RpcSystemAbilityCallback>{});
+    size_t replySizeBefore = dBinderService->loadSaReply_.size();
+
+    bool ret = dBinderService->OnRemoteInvokerMessage(message);
+    EXPECT_FALSE(ret);
+    EXPECT_EQ(MockDBinderRemoteListener::GetInstance().GetResult(), DBINDER_SA_NOT_AVAILABLE);
+    EXPECT_EQ(dBinderService->loadSaReply_.size(), replySizeBefore); // 证明没有进入加载 SA 的入队路径
+
+    // 恢复现场，避免污染后续用例
+    std::atomic_store(&dBinderService->dbinderCallback_, oldCallback);
+    dBinderService->remoteListener_ = nullptr;
+    DBinderSoftbusClient::GetInstance().sendBytesFunc_ = nullptr;
+}
+
+/**
  * @tc.name: GetDatabusNameByProxyTest001
  * @tc.desc: Verify the GetDatabusNameByProxy function
  * @tc.type: FUNC
