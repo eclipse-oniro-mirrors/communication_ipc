@@ -193,6 +193,14 @@ int TestService::TestAccessTokenID64(uint64_t token_expected, uint64_t ftoken_ex
     return 0;
 }
 
+#ifdef CALLING_USER_INFO_ENABLED
+int TestService::TestCallingUserID(uint64_t &userId)
+{
+    userId = IPCSkeleton::GetCallingUserID();
+    return ERR_NONE;
+}
+#endif // CALLING_USER_INFO_ENABLED
+
 int TestService::TestMessageParcelAppend(MessageParcel &dst, MessageParcel &src)
 {
     (void)dst;

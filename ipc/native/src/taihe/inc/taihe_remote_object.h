@@ -63,7 +63,7 @@ public:
     ::taihe::string GetDescriptor();
 
     void SetDescriptor(::taihe::string desc);
-    
+
     bool IsObjectDead();
     
     ::ohos::rpc::rpc::OnRemoteMessageRequestResultUnion OnRemoteMessageRequestWithCallingInfo(int32_t code,

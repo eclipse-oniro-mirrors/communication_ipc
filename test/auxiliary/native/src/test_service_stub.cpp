@@ -72,6 +72,9 @@ void TestServiceStub::InitMessageProcessMap()
     funcMap_[static_cast<uint32_t>(TRANS_ID_UNREGISTER_REMOTE_STUB_OBJECT)] = &TestServiceStub::UnRegisterRemoteStub;
     funcMap_[static_cast<uint32_t>(TRANS_ID_QUERY_REMOTE_PROXY_OBJECT)] = &TestServiceStub::QueryRemoteProxy;
     funcMap_[static_cast<uint32_t>(TRANS_ID_QUERY_THREAD_INVOCATION_STATE)] = &TestServiceStub::ServerThreadInvocationState;
+#ifdef CALLING_USER_INFO_ENABLED
+    funcMap_[static_cast<uint32_t>(TRANS_ID_CALLING_USER_ID)] = &TestServiceStub::ServerCallingUserID;
+#endif // CALLING_USER_INFO_ENABLED
 #ifdef FREEZE_PROCESS_ENABLED
     funcMap_[static_cast<uint32_t>(TRANS_ID_TEST_FREEZE_PROCESS)] = &TestServiceStub::ServerTestFreezeProcess;
 #endif // FREEZE_PROCESS_ENABLED
@@ -216,6 +219,18 @@ int32_t TestServiceStub::ServerAccessTokenId64(MessageParcel &data, MessageParce
     reply.WriteUint64(ftoken);
     return 0;
 }
+
+#ifdef CALLING_USER_INFO_ENABLED
+int32_t TestServiceStub::ServerCallingUserID(MessageParcel &data, MessageParcel &reply)
+{
+    (void)data;
+    uint64_t userId = 0;
+    int32_t ret = TestCallingUserID(userId);
+    ZLOGI(LABEL, "Server GetCallingUserID:%{public}" PRIu64, userId);
+    reply.WriteUint64(userId);
+    return ret;
+}
+#endif // CALLING_USER_INFO_ENABLED
 
 int32_t TestServiceStub::ServerMessageParcelAddped(MessageParcel &data, MessageParcel &reply)
 {

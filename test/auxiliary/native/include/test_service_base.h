@@ -56,8 +56,9 @@ public:
         TRANS_ID_UNREGISTER_REMOTE_STUB_OBJECT = 24,
         TRANS_ID_QUERY_REMOTE_PROXY_OBJECT = 25,
         TRANS_ID_QUERY_THREAD_INVOCATION_STATE = 26,
+        TRANS_ID_CALLING_USER_ID = 27,
 #ifdef FREEZE_PROCESS_ENABLED
-        TRANS_ID_TEST_FREEZE_PROCESS = 27,
+        TRANS_ID_TEST_FREEZE_PROCESS = 28,
 #endif // FREEZE_PROCESS_ENABLED
     };
 public:
@@ -90,6 +91,9 @@ public:
     virtual int TestSendTooManyRequest(int data, int &reply) = 0;
     virtual int TestMultiThreadSendRequest(int data, int &reply) = 0;
     virtual int TestQueryThreadInvocationState() = 0;
+#ifdef CALLING_USER_INFO_ENABLED
+    virtual int TestCallingUserID(uint64_t &userId) = 0;
+#endif // CALLING_USER_INFO_ENABLED
 #ifdef FREEZE_PROCESS_ENABLED
     virtual int TestFreezeProcess() = 0;
 #endif // FREEZE_PROCESS_ENABLED
