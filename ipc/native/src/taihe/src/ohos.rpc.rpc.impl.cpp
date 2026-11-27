@@ -521,8 +521,10 @@ void AshmemImpl::WriteDataToAshmem(::taihe::array_view<uint8_t> buf, int32_t siz
     int32_t ashmemSize = GetAshmemSize();
     if (size <= 0 || size > std::numeric_limits<int32_t>::max() ||
         offset < 0 || offset > std::numeric_limits<int32_t>::max() ||
-        (size + offset) > ashmemSize || ashmemSize < 0) {
-        ZLOGE(LOG_LABEL, "invalid parameter, size:%{public}d offset:%{public}d", size, offset);
+        (size + offset) > ashmemSize || ashmemSize < 0 ||
+        static_cast<size_t>(size) > buf.size()) {
+        ZLOGE(LOG_LABEL, "invalid parameter, size:%{public}d offset:%{public}d buf size:%{public}zu",
+            size, offset, buf.size());
         RPC_TAIHE_ERROR(OHOS::RpcTaiheErrorCode::TAIHE_WRITE_TO_ASHMEM_ERROR);
         return;
     }
@@ -1745,7 +1747,9 @@ int32_t MessageSequenceImpl::ReadFileDescriptor()
 void MessageSequenceImpl::WriteAshmem(::ohos::rpc::rpc::weak::Ashmem ashmem)
 {
     CHECK_NATIVE_OBJECT(nativeParcel_, OHOS::RpcTaiheErrorCode::TAIHE_WRITE_DATA_TO_MESSAGE_SEQUENCE_ERROR);
-    if (!nativeParcel_->WriteAshmem(reinterpret_cast<OHOS::Ashmem *>(ashmem->GetNativePtr()))) {
+    auto nativeAshmem = reinterpret_cast<OHOS::Ashmem *>(ashmem->GetNativePtr());
+    CHECK_NATIVE_OBJECT(nativeAshmem, OHOS::RpcTaiheErrorCode::TAIHE_WRITE_DATA_TO_MESSAGE_SEQUENCE_ERROR);
+    if (!nativeParcel_->WriteAshmem(nativeAshmem)) {
         ZLOGE(LOG_LABEL, "write ashmem failed");
         RPC_TAIHE_ERROR(OHOS::RpcTaiheErrorCode::TAIHE_WRITE_DATA_TO_MESSAGE_SEQUENCE_ERROR);
     }
@@ -1768,6 +1772,10 @@ void MessageSequenceImpl::WriteAshmem(::ohos::rpc::rpc::weak::Ashmem ashmem)
 void MessageSequenceImpl::WriteRawDataBuffer(::taihe::array_view<uint8_t> rawData, int32_t size)
 {
     CHECK_NATIVE_OBJECT(nativeParcel_, OHOS::RpcTaiheErrorCode::TAIHE_WRITE_DATA_TO_MESSAGE_SEQUENCE_ERROR);
+    if (size <= 0 || static_cast<size_t>(size) > rawData.size()) {
+        ZLOGE(LOG_LABEL, "invalid parameter, size:%{public}d rawData size:%{public}zu", size, rawData.size());
+        RPC_TAIHE_ERROR(OHOS::RpcTaiheErrorCode::TAIHE_CHECK_PARAM_ERROR);
+    }
     if (!nativeParcel_->WriteRawData(static_cast<const void*>(rawData.data()), size)) {
         ZLOGE(LOG_LABEL, "write raw data failed");
         RPC_TAIHE_ERROR(OHOS::RpcTaiheErrorCode::TAIHE_WRITE_DATA_TO_MESSAGE_SEQUENCE_ERROR);
