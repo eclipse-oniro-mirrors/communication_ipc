@@ -271,13 +271,6 @@ public:
      */
     static pid_t GetDCallingUid();
 
-    /**
-     * @brief Queries the release status of a stub object.
-     * @return Whether there are stub objects that belong to the target and are not released in the process.
-     * @note This function can only be used for local device processes.
-     * @param targets: name of the SO to be queried.
-     * @since 26.0.0
-     */
     static std::optional<bool> HasSoUnreleasedRemoteObject(const std::unordered_set<std::string> &targets);
 
     /**

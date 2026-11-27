@@ -22,7 +22,6 @@ namespace IpcRust {
 #ifdef CONFIG_IPC_SINGLE
 using namespace IPC_SINGLE;
 #endif
-
 bool SetMaxWorkThreadNum(int maxThreadNum)
 {
     return OHOS::IPCSkeleton::SetMaxWorkThreadNum(maxThreadNum);

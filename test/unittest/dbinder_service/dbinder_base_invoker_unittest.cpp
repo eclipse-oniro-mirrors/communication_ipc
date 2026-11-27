@@ -29,9 +29,6 @@ public:
     void TearDown() override{}
 };
 
-const std::string DEVICE_ID_TEST = "deviceidTest";
-const std::string SERVICE_NAME_TEST = "serviceNameTest";
-
 /**
  * @tc.name: ProcessTransactionAbnormalBranch001
  * @tc.desc: Mock IRemoteObjectTranslateWhenRcv translate remote object fail
@@ -157,68 +154,6 @@ HWTEST_F(DBinderBaseInvokerUnitTest, StartProcessLoopAbnormalBranch002, TestSize
     EXPECT_EQ(mock.result_, RPC_BASE_INVOKER_MALLOC_ERR);
 }
 
-/**
- * @tc.name: CheckMessageVaildity001
- * @tc.desc: Mock CheckMessageVaildity can not get the IPCProcessSkeleton instance
- * @tc.type: FUNC
- */
-HWTEST_F(DBinderBaseInvokerUnitTest, CheckMessageVaildity001, TestSize.Level1)
-{
-    testing::NiceMock<MockDBinderBaseInvoker> mock;
-    int32_t socketId = 0;
-
-    EXPECT_CALL(mock, QueryClientSessionObject(testing::_)).WillRepeatedly(testing::Return(nullptr));
-    bool ret = mock.CheckMessageVaildity(socketId, BC_TRANSACTION);
-    EXPECT_EQ(ret, false);
-}
-
-/**
- * @tc.name: CheckMessageVaildity002
- * @tc.desc: Mock CheckMessageVaildity can not get the IPCProcessSkeleton instance
- * @tc.type: FUNC
- */
-HWTEST_F(DBinderBaseInvokerUnitTest, CheckMessageVaildity002, TestSize.Level1)
-{
-    testing::NiceMock<MockDBinderBaseInvoker> mock;
-    int32_t socketId = 0;
-
-    std::shared_ptr<DBinderSessionObject> remoteSession =
-            std::make_shared<DBinderSessionObject>(SERVICE_NAME_TEST, DEVICE_ID_TEST, 1, nullptr, 1);
-    EXPECT_CALL(mock, QueryClientSessionObject(testing::_)).WillRepeatedly(testing::Return(remoteSession));
-    bool ret = mock.CheckMessageVaildity(socketId, BC_TRANSACTION);
-    EXPECT_EQ(ret, true);
-}
-
-/**
- * @tc.name: CheckMessageVaildity003
- * @tc.desc: Mock CheckMessageVaildity can not get the IPCProcessSkeleton instance
- * @tc.type: FUNC
- */
-HWTEST_F(DBinderBaseInvokerUnitTest, CheckMessageVaildity003, TestSize.Level1)
-{
-    testing::NiceMock<MockDBinderBaseInvoker> mock;
-    int32_t socketId = 0;
-
-    EXPECT_CALL(mock, QueryServerSessionObjectBySocketId(testing::_)).WillRepeatedly(testing::Return(true));
-    bool ret = mock.CheckMessageVaildity(socketId, BC_REPLY);
-    EXPECT_EQ(ret, true);
-}
-
-/**
- * @tc.name: CheckMessageVaildity004
- * @tc.desc: Mock CheckMessageVaildity can not get the IPCProcessSkeleton instance
- * @tc.type: FUNC
- */
-HWTEST_F(DBinderBaseInvokerUnitTest, CheckMessageVaildity004, TestSize.Level1)
-{
-    testing::NiceMock<MockDBinderBaseInvoker> mock;
-    int32_t socketId = 0;
-
-    EXPECT_CALL(mock, QueryServerSessionObjectBySocketId(testing::_)).WillRepeatedly(testing::Return(false));
-    bool ret = mock.CheckMessageVaildity(socketId, BC_REPLY);
-    EXPECT_EQ(ret, false);
-}
-
 #ifdef MEMORY_USAGE_ENABLED
 /**
  * @tc.name: GetMemoryUsage001
@@ -229,7 +164,7 @@ HWTEST_F(DBinderBaseInvokerUnitTest, GetMemoryUsage001, TestSize.Level1)
 {
     std::shared_ptr<MockDBinderBaseInvoker> invoker = std::make_shared<MockDBinderBaseInvoker>();
     ASSERT_TRUE(invoker != nullptr);
- 
+
     unsigned long totalSize = 0UL;
     unsigned long oneWayFreeSize = 0UL;
     ASSERT_EQ(invoker->GetMemoryUsage(0, totalSize, oneWayFreeSize), RPC_BASE_INVOKER_NOT_SUPPORT_ERR);

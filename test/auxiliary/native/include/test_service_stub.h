@@ -50,9 +50,6 @@ private:
     int32_t QueryRemoteProxy(MessageParcel &data, MessageParcel &reply);
     int32_t ServerFlushAsyncCalls(MessageParcel &data, MessageParcel &reply);
     int32_t ServerThreadInvocationState(MessageParcel &data, MessageParcel &reply);
-#ifdef CALLING_USER_INFO_ENABLED
-    int32_t ServerCallingUserID(MessageParcel &data, MessageParcel &reply);
-#endif // CALLING_USER_INFO_ENABLED
 #ifdef FREEZE_PROCESS_ENABLED
     int32_t ServerTestFreezeProcess(MessageParcel &data, MessageParcel &reply);
 #endif // FREEZE_PROCESS_ENABLED
