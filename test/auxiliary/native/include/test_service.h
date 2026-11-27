@@ -56,10 +56,6 @@ public:
     int TestSendTooManyRequest(int data, int &reply) override;
     int TestMultiThreadSendRequest(int data, int &reply) override;
     int TestQueryThreadInvocationState() override;
-#ifdef CALLING_USER_INFO_ENABLED
-    int TestCallingUserID(uint64_t &userId) override;
-#endif // CALLING_USER_INFO_ENABLED
-
 #ifdef FREEZE_PROCESS_ENABLED
     int TestFreezeProcess() override;
 #endif // FREEZE_PROCESS_ENABLED

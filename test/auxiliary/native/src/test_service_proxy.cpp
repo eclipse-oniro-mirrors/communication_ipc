@@ -633,24 +633,6 @@ ERR:
     return ret;
 }
 
-#ifdef CALLING_USER_INFO_ENABLED
-int TestServiceProxy::TestCallingUserID(uint64_t &userId)
-{
-    MessageOption option;
-    MessageParcel dataParcel;
-    MessageParcel replyParcel;
-    int ret = Remote()->SendRequest(TRANS_ID_CALLING_USER_ID, dataParcel, replyParcel, option);
-    if (ret != ERR_NONE) {
-        ZLOGE(LABEL, "SendRequest ret = %{public}d", ret);
-        userId = 0;
-        return ret;
-    }
-    userId = replyParcel.ReadUint64();
-    ZLOGI(LABEL, "Client read calling user id:%{public}" PRIu64, userId);
-    return ERR_NONE;
-}
-#endif // CALLING_USER_INFO_ENABLED
-
 int TestServiceProxy::TestAccessTokenID(int32_t ftoken_expected)
 {
     MessageOption option;

@@ -249,10 +249,10 @@ enum {
 };
 
 enum {
-    STATUS_INIT = 0,
-    STATUS_FIRST_INVOKE,      // before IPC thread processing the first message
-    STATUS_NOT_FIRST_INVOKE,  // after IPC thread processing the first message
-    STATUS_NO_SUPPORT,        // IPC thread non-working state
+    STATUS_INIT = 0, 
+    STATUS_FIRST_INVOKE, // before IPC thread processing the first message
+    STATUS_NOT_FIRST_INVOKE, // after IPC thread processing the first message
+    STATUS_NO_SUPPORT, // IPC thread non-working state
     STATUS_UNKNOWN = -1,
 };
 } // namespace OHOS

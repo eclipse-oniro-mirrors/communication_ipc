@@ -77,7 +77,7 @@ fn context() {
     assert_eq!(value, 0);
 }
 
-/// UT test case for "send_request_ext"
+/// UT test case for "send_reques_ext"
 ///
 /// # brief
 /// 1. Get SAMGR context object
@@ -99,6 +99,7 @@ fn test_send_request_ext() {
     data.write(&0);
     data.write("");
     data.write("");
+
     let mut reply = context.send_request_ext(3, &mut data, option).unwrap();
     let value = reply.read::<i32>().unwrap();
     assert_eq!(value, 0);
