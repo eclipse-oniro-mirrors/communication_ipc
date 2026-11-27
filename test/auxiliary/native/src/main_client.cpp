@@ -283,6 +283,18 @@ void TestCaseQueryThreadInvocationState(std::shared_ptr<TestServiceClient> &test
     }
 }
 
+#ifdef CALLING_USER_INFO_ENABLED
+void TestCaseCallingUserID(std::shared_ptr<TestServiceClient> &testClient)
+{
+    bool ret = testClient->TestCallingUserID();
+    if (!ret) {
+        std::cout << "[FAILED] Execution of TestCaseCallingUserID case failed" <<std::endl;
+    } else {
+        std::cout << "[PASS] Execution of TestCaseCallingUserID case Successful" <<std::endl;
+    }
+}
+#endif // CALLING_USER_INFO_ENABLED
+
 void ExecuteAllTestCase()
 {
     std::shared_ptr<TestServiceClient> testClient = std::make_shared<TestServiceClient>();
@@ -303,6 +315,9 @@ void ExecuteAllTestCase()
     TestCaseRegisterRemoteStub(testClient);
     TestCaseTooManyRequests(testClient);
     TestCaseMultiThreadSendRequest(testClient);
+#ifdef CALLING_USER_INFO_ENABLED
+    TestCaseCallingUserID(testClient);
+#endif // CALLING_USER_INFO_ENABLED
 #ifdef FREEZE_PROCESS_ENABLED
     TestCaseFreezeProcess(testClient);
     TestCaseFreezeAsyncProcess();
