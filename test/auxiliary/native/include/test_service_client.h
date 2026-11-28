@@ -49,7 +49,9 @@ public:
     bool TestFreezeProcess();
 #endif // FREEZE_PROCESS_ENABLED
     bool TestQueryThreadInvocationState();
-
+#ifdef CALLING_USER_INFO_ENABLED
+    bool TestCallingUserID();
+#endif // CALLING_USER_INFO_ENABLED
 private:
     static constexpr HiviewDFX::HiLogLabel LABEL = { LOG_CORE, LOG_ID_TEST, "TestServiceClient" };
     sptr<ITestService> testService_;

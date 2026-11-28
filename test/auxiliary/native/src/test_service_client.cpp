@@ -14,8 +14,10 @@
  */
 
 #include "test_service_client.h"
+#include <cinttypes>
 #include <iostream>
 #include <map>
+#include <unistd.h>
 #include "ipc_debug.h"
 #include "ipc_skeleton.h"
 #include "if_system_ability_manager.h"
@@ -333,4 +335,47 @@ bool TestServiceClient::TestQueryThreadInvocationState()
     }
     return true;
 }
+
+#ifdef CALLING_USER_INFO_ENABLED
+bool TestServiceClient::TestCallingUserID()
+{
+    if (testService_ == nullptr) {
+        ZLOGE(LABEL, "The testService_ object is an empty object");
+        return false;
+    }
+
+    uint64_t localUserId = IPCSkeleton::GetCallingUserID();
+    if (localUserId != 0) {
+        ZLOGE(LABEL, "GetCallingUserID without IPC context should be 0, userId = %{public}" PRIu64, localUserId);
+        return false;
+    }
+
+    uint64_t userId = 0;
+    int ret = testService_->TestCallingUserID(userId);
+    if (ret != ERR_NONE) {
+        ZLOGE(LABEL, "TestCallingUserID function call failed, ret = %{public}d", ret);
+        std::cout << "TestCallingUserID SendRequest failed, ret = " << ret << std::endl;
+        return false;
+    }
+    constexpr uint64_t baseUserRange = 200000;
+    uint64_t expectedUserId = static_cast<uint64_t>(getappuid()) / baseUserRange;
+    if (expectedUserId == 0) {
+        std::cout << "Caller uid " << getappuid()
+                  << " maps to user 0; use ipc_calling_user_id_test for cross-user verification" << std::endl;
+        return true;
+    }
+    if (userId != expectedUserId) {
+        ZLOGE(LABEL, "Server returned unexpected calling user id:%{public}" PRIu64 ", expected:%{public}" PRIu64,
+            userId, expectedUserId);
+        std::cout << "Server returned calling user id " << userId << ", expected " << expectedUserId
+                  << ", caller uid " << getappuid() << std::endl;
+        return false;
+    }
+
+    ZLOGI(LABEL, "Server returned calling user id:%{public}" PRIu64, userId);
+    std::cout << "Server returned calling user id " << userId << ", expected " << expectedUserId
+              << ", caller uid " << getappuid() << std::endl;
+    return true;
+}
+#endif // CALLING_USER_INFO_ENABLED
 } // namespace OHOS
